@@ -1,0 +1,10 @@
+
+package com.hlcsessionbean.qualificationmatrix;
+
+
+/**
+ * This is the business interface for MembershipQualificationMatrix enterprise bean.
+ */
+public interface HLCMembershipQualificationMatrixRemoteBusiness {
+    
+}

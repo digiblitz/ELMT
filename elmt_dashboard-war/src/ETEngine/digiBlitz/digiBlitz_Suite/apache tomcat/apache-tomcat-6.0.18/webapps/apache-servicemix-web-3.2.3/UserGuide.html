@@ -1,0 +1,257 @@
+#-------------------------------------------------------------------------------
+# * * Copyright: 2019 digiBlitz Foundation
+#  * * 
+#  * * License: digiBlitz Public License 1.0 (DPL) 
+#  * * Administered by digiBlitz Foundation. www.digiblitz.org/dpl/
+#  * * 
+#  * * Inventor: Suresh Kannan (Maya Suresh Kannan Balabisegan ) (www.sureshkannan.org)
+#  * * 
+#  * * Authors: Suresh Kannan (Maya Suresh Kannan Balabisegan )& digiBlitz.
+#  * * 
+#  * * "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software in accordance to the rules & restrictions of the digiBlitz Public License."
+#-------------------------------------------------------------------------------
+   <HTML>
+   <TITLE>eBlitz ESB Console</TITLE>
+   <HEAD> 
+
+   <style type="text/css">
+
+/*-------------------------------------
+    SiteNav
+---------------------------------------*/
+
+#siteNav ul {
+    margin-left: 15px;
+    padding-top: 4px;
+    z-index: 1;
+}
+
+#siteNav li {
+    float: left;
+    position: relative;
+	padding-left: 5px;
+    top: 0;
+    left: 0;
+}
+
+#siteNav li a {
+    padding: 8px 20px 8px 12px;
+}
+
+#siteNav li.current a {
+    margin-bottom: 0px;
+}
+
+#siteNav li ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#siteNav ul:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#siteNav li ul li ul {
+    position: relative;
+}
+
+#siteNav li ul li {
+    width: 175px;
+}
+
+#siteNav li > ul {
+    top: auto;
+    left: auto;
+}
+
+#siteNav li:hover ul {
+    display: block;
+}
+
+#siteNav li.current ul {
+    padding-bottom: 1px;
+}
+
+#siteNav li {
+    font-size: 20px;
+    text-align: center;
+}
+
+#siteNav li li {
+    padding-left: 11px;
+}
+
+#siteNav li li li {
+    text-indent: 10px;
+}
+
+#siteNav a {
+    text-decoration: none;
+    display: block;
+}
+
+#siteNav li {
+text-align:"left";
+}
+
+#siteNav li a:link, #siteNav li a:visited {
+    background: transparent url( ../images/site_nav_borders.gif ) bottom right no-repeat;
+    color: #000000;
+}
+
+#siteNav li a:hover {
+    background: #baced7 url( ../images/site_nav_hover_bg.gif ) bottom left repeat-x;
+    color: #24495e;
+}
+
+#siteNav li.current a:link, #siteNav li.current a:visited {
+    background: #f0f5f8 url( ../images/tab-selected-mid.png ) bottom left repeat-x;
+    color: #37454e; /*border-bottom:            1px solid #d7e5ed;*/
+}
+
+#siteNav li ul, #siteNav li.current ul {
+    border-left: 1px solid #bcd1df;
+    border-bottom: 1px solid #bcd1df;
+    border-right: 1px solid #bcd1df;
+}
+
+#siteNav li.over {
+    color: yellow;
+    border: 1px solid red;
+}
+
+/*-------------------------------------
+    SiteNav Ended
+---------------------------------------*/
+
+            #nav ul {
+                margin-left: 0;
+                padding-left: 0;
+                display: inline;
+                font-size: 12 px;
+                font-family: Georgia;
+                color: #ffffff;
+                font-weight: bold;
+                font-style: normal;
+            }
+            
+            #nav ul li {
+                margin-left: 0;
+                /*padding: 3px 15px;*/
+                list-style: none;
+                display: inline;
+            }
+            
+            #nav ul li a {
+                background: transparent none no-repeat scroll left center;
+                /*line-height:80px;*/
+                padding-top: 14.5px;
+                padding-bottom: 14.5px;
+                padding-left: 50px;
+                padding-right: 5px;
+            }
+            
+            #nav ul li a:hover {
+                color: #000;
+            }
+            
+            #nav ul li a.home {
+			       
+                background-image: url(images/home.png);
+            }
+            
+            #nav ul li a.uguide {
+                background-image: url(images/guide.png);
+            }
+            
+            #nav ul li a.dguide {
+                background-image: url(images/dguide.png);
+            }
+            #summary_chart{
+                width:370px;
+                height:250px;
+                float:left;
+            }
+            .sub_h{
+                font-family:Georgia;
+                border-top:#0099FF solid 1px;
+                border-bottom:#0099FF solid 1px;
+                line-height:25px;
+                font-style:normal;	
+                font-weight:normal;
+				font-size:20px;
+                color: 	#006699;			
+            }
+			.sub_h1{
+                font-family:Georgia;
+                line-height:25px;
+                font-style:normal;	
+                font-weight:normal;
+                color: 	#006699;			
+            }
+            #summary_tb{
+                text-align:left;
+                font-family:Georgia;
+                font-style:normal;	
+                font-weight:normal;
+                font-size:11px;
+            }
+            .bl{
+                color:#000;
+            }
+			.b2{
+			font-family:Georgia;
+			 padding-left: 0px;
+			color: #ffffff;
+                font-weight: bold;
+                font-style: normal;
+			}
+			.b3{
+			font-family:Georgia;
+			 padding-left: 50px;
+			color: #000000;
+                font-weight: bold;
+                font-style: normal;
+			}
+.footerTextOne
+	{font-family:Arial,Verdana, Tahoma;
+	font-size:10px;
+	font-weight:bold; 
+	color:#CD5050;
+	text-align:left;
+	padding-top:10px;}
+
+	.footerBg{
+	vertical-align:top; background-color:#fff; background-image:url(../images/bgFooter.jpg); background-repeat:repeat-x; 
+		 background-position:top; height:79px; text-align:left; border-top:1px solid #40668D;}
+        </style>
+       
+
+
+    </head>
+
+    <body bgcolor= "#ffffff">
+    
+	<div class ="b2">
+	 <h2><img  src ="" ></h2></div>
+	<div class ="b3"><h3><b>eBlitz ESB Console User Guide</b></h3></div>
+	 <div class="b3"># Getting Started  	
+<table> 
+
+<tr><td><b>1. First install the required shared libraries using the shared libraries page.</b></td></tr>
+		 <tr><td><b>2. Secondly, install the required components for the service asseblies to be deployed using the components page.</b></td></tr>
+		 <tr><td><b>3. Finally, deploy the service assemblies using the service assemblies page.</b></td></tr>
+
+</table>
+	 </div>
+	
+	</body>
+	</html>

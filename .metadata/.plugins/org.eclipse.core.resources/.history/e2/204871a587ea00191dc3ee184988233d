@@ -1,0 +1,10 @@
+
+package com.hlcadv.masters;
+
+
+/**
+ * This is the business interface for DisplayTypeMaster enterprise bean.
+ */
+public interface HLCDisplayTypeMasterLocalBusiness {
+    
+}

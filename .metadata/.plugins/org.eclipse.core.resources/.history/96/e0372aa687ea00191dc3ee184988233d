@@ -1,0 +1,814 @@
+// JavaScript Document
+//--------------------------------Calendar function---------------------------------------
+function popupCal(val){
+     
+    if(val==1)
+      document.frmMeeAnnualConvRegister.chkDat.value = "chkDat";
+	  val = window.open("javascripts/Calendar.jsp?sDate=" + val ,'Calendar','width=170,height=190,menubar=no,toolbar=no,status=no,resizable=no,scrollbars=no,top=400,left=150');
+    if(val == null){
+      alert("Plz Enable Site Popup Allowed");
+		
+      }
+}
+
+function isnotAlphaNumeric(str){
+	stringCheck="!@#$%^&*()_+|:;{}[]<>?/=-~.,'`0123456789;:"+"\\"+"\""+"\'";
+	f1=1;
+	for(j=0;j<str.length;j++){
+		if(stringCheck.indexOf(str.charAt(j))!=-1){
+			f1=0;
+		}
+	}
+	if(f1==0){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+//============================for Special char=============================
+
+function isnotAlpha(str){
+	
+	stringCheck="!@#$%^&*()_+|:;{}[]<>?/=-~.,'`;:"+"\\"+"\'";
+	f1=1;
+	for(j=0;j<str.length;j++){
+		if(stringCheck.indexOf(str.charAt(j))!=-1){
+			f1=0;
+		}
+	}
+	if(f1==0){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+//-------------------------------------------------------------------------------------
+function isnotInteger(str){
+stringIntCheck="0123456789";
+f2=1;
+for(j=0;j<str.length;j++)
+{ if(stringIntCheck.indexOf(str.charAt(j))==-1)
+ {f2=0;}}
+if(f2==0)
+{
+return true;
+} else { 
+return false;}
+}
+//-----------------------------------------------------------------------------------------------
+//--------------------------function for two decimal points
+function isnotValidDecimal(str){
+if((str.indexOf("."))!=-1)
+{ fr1=str.indexOf('.');
+  mm = (str.substring(fr1,str.length));
+  strnum=(Number(mm.length));
+  if(strnum>3)
+  {return true;}else {return false;}}
+}
+//-------------------------------
+
+
+function oneClear(){
+if(document.frmMeeAnnualConvRegister.chk1.checked)
+	{document.frmMeeAnnualConvRegister.selmem.disabled=false;
+	document.frmMeeAnnualConvRegister.txtTick.disabled=false;
+	document.frmMeeAnnualConvRegister.txtAmt.disabled=false;}
+else{document.frmMeeAnnualConvRegister.selmem.disabled=true;
+	document.frmMeeAnnualConvRegister.txtTick.disabled=true;
+	document.frmMeeAnnualConvRegister.txtAmt.disabled=true;}
+	
+}
+function twoClear(){
+if(document.frmMeeAnnualConvRegister.chk2.checked)
+	{document.frmMeeAnnualConvRegister.selEveMem.disabled=false;
+	document.frmMeeAnnualConvRegister.txtEvetick.disabled=false;
+	document.frmMeeAnnualConvRegister.txtEveAmt.disabled=false;}
+else{document.frmMeeAnnualConvRegister.selEveMem.disabled=true;
+	document.frmMeeAnnualConvRegister.txtEvetick.disabled=true;
+	document.frmMeeAnnualConvRegister.txtEveAmt.disabled=true;}	
+}
+
+function threeClear(){
+if(document.frmMeeAnnualConvRegister.chk3.checked)
+	{document.frmMeeAnnualConvRegister.selAreaRecpMem.disabled=false;
+	document.frmMeeAnnualConvRegister.txtAreaRecptick.disabled=false;
+	document.frmMeeAnnualConvRegister.txtAreaRecpAmt.disabled=false;}
+else{document.frmMeeAnnualConvRegister.selAreaRecpMem.disabled=true;
+	document.frmMeeAnnualConvRegister.txtAreaRecptick.disabled=true;
+	document.frmMeeAnnualConvRegister.txtAreaRecpAmt.disabled=true;}
+	
+}
+
+function checkClear(){
+	document.frmMeeAnnualConvRegister.ccNumber.disabled=false;
+	document.frmMeeAnnualConvRegister.ccCvvid.disabled=false;
+	document.frmMeeAnnualConvRegister.ccType.disabled=false;
+	document.frmMeeAnnualConvRegister.ccName.disabled=false;
+	document.frmMeeAnnualConvRegister.selccExpMonth.disabled=false;
+	document.frmMeeAnnualConvRegister.selccExpYear.disabled=false;
+	document.frmMeeAnnualConvRegister.chkNo.disabled=true;
+	document.frmMeeAnnualConvRegister.chkDat.disabled=true;
+	document.frmMeeAnnualConvRegister.txtBank.disabled=true;
+	
+	document.frmMeeAnnualConvRegister.chkNo.value="";
+	document.frmMeeAnnualConvRegister.chkDat.value="";
+	document.frmMeeAnnualConvRegister.txtBank.value="";	
+
+}
+function cardClear(){
+	document.frmMeeAnnualConvRegister.ccNumber.disabled=true;
+	document.frmMeeAnnualConvRegister.ccCvvid.disabled=true;
+	document.frmMeeAnnualConvRegister.ccType.disabled=true;
+	document.frmMeeAnnualConvRegister.ccName.disabled=true;
+	document.frmMeeAnnualConvRegister.selccExpMonth.disabled=true;
+	document.frmMeeAnnualConvRegister.selccExpYear.disabled=true;
+	document.frmMeeAnnualConvRegister.chkNo.disabled=false;
+	document.frmMeeAnnualConvRegister.chkDat.disabled=false;
+	document.frmMeeAnnualConvRegister.txtBank.disabled=false;	
+	
+	document.frmMeeAnnualConvRegister.ccNumber.value="";
+	document.frmMeeAnnualConvRegister.ccCvvid.value="";
+	document.frmMeeAnnualConvRegister.ccType.selectedIndex=0;
+	document.frmMeeAnnualConvRegister.ccName.value="";
+	document.frmMeeAnnualConvRegister.selccExpMonth.selectedIndex=0;
+	document.frmMeeAnnualConvRegister.selccExpYear.selectedIndex=0;
+
+}
+
+
+function myvalidate(){
+
+//------------------------------------------
+ var chosen="";
+	len = document.frmMeeAnnualConvRegister.radio1.length;
+	
+	for(i=0;i<len;i++){
+		if(document.frmMeeAnnualConvRegister.radio1[i].checked){
+			chosen= document.frmMeeAnnualConvRegister.radio1[i].value;
+
+		}
+
+}
+if(chosen=="yes"){
+if(document.frmMeeAnnualConvRegister.txtUsea.value==""){
+         alert("Enter HLC Number");
+		document.frmMeeAnnualConvRegister.txtUsea.focus();
+			return false;
+	}
+/*if(!(Number(document.frmMeeAnnualConvRegister.txtUsea.value))){
+		alert("Enter valid HLC Number");
+		document.frmMeeAnnualConvRegister.txtUsea.focus();
+		return false;
+	}*/
+if(isnotAlpha(document.frmMeeAnnualConvRegister.txtUsea.value)){
+		alert("Enter valid HLC Number.");
+		document.frmMeeAnnualConvRegister.txtUsea.focus();
+	    	return false;
+	}
+if(document.frmMeeAnnualConvRegister.txtUsea.value.length>20){
+		alert("Enter valid HLC Number.");
+		document.frmMeeAnnualConvRegister.txtUsea.focus();
+		return false;
+	}
+
+
+	
+
+}
+
+if(chosen=="no"){
+
+if(document.frmMeeAnnualConvRegister.txtEmail2.value==""){
+ alert("Enter Email ID");
+document.frmMeeAnnualConvRegister.txtEmail2.focus();
+return false;
+}
+if(document.frmMeeAnnualConvRegister.txtEmail2.value.indexOf(' ')==0){
+			alert("Enter valid Email ID");
+			document.frmMeeAnnualConvRegister.txtEmail2.focus();
+			return false;
+		}
+if(!(document.frmMeeAnnualConvRegister.txtEmail2.value== "")){
+		strmail=document.frmMeeAnnualConvRegister.txtEmail2.value;
+		firstat = strmail.indexOf("@");
+		lastat = strmail.lastIndexOf("@");
+		strmain=strmail.substring(0,firstat);
+		strsub=strmail.substring(firstat,document.frmMeeAnnualConvRegister.txtEmail2.value.length);
+		if(strmail.length>120){
+			alert("Email ID is out of range.");
+			document.frmMeeAnnualConvRegister.txtEmail2.focus();
+			return false;
+		}
+		if(strmain.indexOf('  ')!==-1 || firstat==0 || strsub.indexOf('  ')!==-1 ){
+			alert("Enter valid Email ID.");
+			document.frmMeeAnnualConvRegister.txtEmail2.focus();
+			return false;
+		}
+		/*if(isnotSpecial(strmain) || isnotSpecial(strsub)){
+			alert("Enter valid Email ID.");
+			document.frmMeeAnnualConvRegister.txtEmail2.focus();
+			return false;
+		}*/
+		k=0;
+		strlen=strsub.length;
+		for(i=0;i<strlen-1;i++){
+			if(strsub.charAt(i)=='.'){
+				k=k+1;
+			}
+		}
+		if(k>2){
+			alert("Enter valid Email ID.");
+			document.frmMeeAnnualConvRegister.txtEmail2.focus();
+			return false;
+		}
+		if(firstat==-1 || lastat==-1){
+			alert("Enter valid Email ID.");
+			document.frmMeeAnnualConvRegister.txtEmail2.focus();
+			return false;
+		}
+		if(Number(strmain)){
+			alert("Enter valid Email ID.");
+			document.frmMeeAnnualConvRegister.txtEmail2.focus();
+			return false;
+		}
+		if(firstat != lastat ){
+			alert("Enter valid Email ID.");
+			document.frmMeeAnnualConvRegister.txtEmail2.focus();
+			return false;
+		}
+		firstdot=strmail.indexOf(".",firstat);
+		lastdot=strmail.lastIndexOf(".");
+		if(firstdot == -1 || lastdot == -1 || lastdot==strmail.length-1){
+			alert("Enter valid Email ID.");
+			document.frmMeeAnnualConvRegister.txtEmail2.focus();
+			return false;
+		}
+
+}
+
+}
+//--------------------------------HLC Area------------------------------
+if ( document.frmMeeAnnualConvRegister.selUseaArea.selectedIndex == 0 ){
+    alert ( "Please select any HLC Area." );
+	document.frmMeeAnnualConvRegister.selUseaArea.focus();
+    return false;
+ 	}
+//------------------------------Name of Badge-------------------------------------------------------
+
+
+if(document.frmMeeAnnualConvRegister.txtName.value==""){
+			alert("Enter Name of Badge");
+			document.frmMeeAnnualConvRegister.txtName.focus();
+			return false;
+		}
+if(!(document.frmMeeAnnualConvRegister.txtName.value=="")){
+		if((document.frmMeeAnnualConvRegister.txtName.value.indexOf('  ')!=-1)||(document.frmMeeAnnualConvRegister.txtName.value.indexOf(' ')==0)){
+		alert("Enter Valid Name of Badge");
+		document.frmMeeAnnualConvRegister.txtName.focus();
+		return false;
+	}
+	/*if(isnotAlpha(document.frmMeeAnnualConvRegister.txtName.value)){
+		alert("Enter valid Name of Badge");
+		document.frmMeeAnnualConvRegister.txtName.focus();
+	    	return false;
+	}
+	
+	if(isnotAlphaNumeric(document.frmMeeAnnualConvRegister.txtName.value)){
+		alert("Enter valid Name of Badge");
+		document.frmMeeAnnualConvRegister.txtName.focus();
+	    	return false;
+	}*/
+}
+
+//---------------------------------REGISTRATION INFORMATION--------------------
+//----------------------------------REGISTRATION TYPE-------------------------	
+
+if(document.frmMeeAnnualConvRegister.selRegTyp.value==""){
+        alert ( "Please select a Registration Type." );
+		document.frmMeeAnnualConvRegister.selRegTyp.focus();
+        return false;
+    }
+if(document.frmMeeAnnualConvRegister.selRegTyp.value==2){
+	
+if(!((document.frmMeeAnnualConvRegister.checkbox.checked)||(document.frmMeeAnnualConvRegister.checkbox2.checked)||(document.frmMeeAnnualConvRegister.checkbox3.checked)||(document.frmMeeAnnualConvRegister.checkbox4.checked))){
+		alert("Please Select the Days.");
+		return false;
+	}
+
+
+
+}
+//---------------------------MEMBER TYPE------------------------------------
+if(document.frmMeeAnnualConvRegister.selMemb.selectedIndex==0){
+        alert ( "Please select a Member Type." );
+		document.frmMeeAnnualConvRegister.selMemb.focus();
+        return false;
+    }
+
+//-------------------------------Activity Type----------------------------------	
+if(!((document.frmMeeAnnualConvRegister.chk1.checked)||(document.frmMeeAnnualConvRegister.chk2.checked)||(document.frmMeeAnnualConvRegister.chk3.checked))){
+alert("Please select any Activity Type");
+return false;
+}
+
+
+//-------------------------------Attend the Year-end Awards Luncheon.-------------------------
+
+	
+
+if(document.frmMeeAnnualConvRegister.chk1.checked==true){
+		if(document.frmMeeAnnualConvRegister.selmem.selectedIndex==0){
+        	alert ( "Please select an Member Type in Attend the Year-end Awards Luncheon ." );
+			document.frmMeeAnnualConvRegister.selmem.focus();
+    	    return false;
+	    }
+
+		if(document.frmMeeAnnualConvRegister.txtTick.value==""){
+        	alert ( "Enter Number of Tickets in Attend the Year-end Awards Luncheon." );
+			document.frmMeeAnnualConvRegister.txtTick.focus();
+    	    return false;
+	    }
+		if(isnotAlpha(document.frmMeeAnnualConvRegister.txtTick.value)){
+			alert("Enter Valid Number of Ticket in Attend the Year-end Awards Luncheon.");
+			document.frmMeeAnnualConvRegister.txtTick.focus();
+    		return false;
+	    }
+
+		if(!Number(document.frmMeeAnnualConvRegister.txtTick.value)){
+			alert("Enter valid Number of Ticket in Attend the Year-end Awards Luncheon.");
+			document.frmMeeAnnualConvRegister.txtTick.focus();
+			return false;
+		}
+
+		if(document.frmMeeAnnualConvRegister.txtTick.value.indexOf(' ')==0){
+			alert("Enter Valid Number of Ticket in Attend the Year-end Awards Luncheon.");
+			document.frmMeeAnnualConvRegister.txtTick.focus();
+			return false;
+		}
+
+		if(document.frmMeeAnnualConvRegister.txtTick.value.indexOf('  ')!=-1){
+			alert("Enter Valid Number of Ticket in Attend the Year-end Awards Luncheon.");
+			document.frmMeeAnnualConvRegister.txtTick.focus();
+			return false;
+		}
+}
+
+//-------------------------------------Attend the Evening Hall of Fame Dinner----------------------------------
+if(document.frmMeeAnnualConvRegister.chk2.checked==true){
+		if(document.frmMeeAnnualConvRegister.selEveMem.selectedIndex==0){
+        	alert ( "Please select an Member Type in Attend the Evening Hall of Fame Dinner." );
+			document.frmMeeAnnualConvRegister.selEveMem.focus();
+    	    return false;
+	    }
+
+	if(document.frmMeeAnnualConvRegister.txtEvetick.value==""){
+        	alert ( "Enter Number of Tickets in Attend the Evening Hall of Fame Dinner." );
+			document.frmMeeAnnualConvRegister.txtEvetick.focus();
+    	    return false;
+	    }
+		
+
+		if(!Number(document.frmMeeAnnualConvRegister.txtEvetick.value)){
+			alert("Enter valid Number of Ticket in Attend the Evening Hall of Fame Dinner.");
+			document.frmMeeAnnualConvRegister.txtEvetick.focus();
+			return false;
+		}
+
+		if(document.frmMeeAnnualConvRegister.txtEvetick.value.indexOf(' ')==0){
+			alert("Enter Valid Number of Ticket in Attend the Evening Hall of Fame Dinner.");
+			document.frmMeeAnnualConvRegister.txtEvetick.focus();
+			return false;
+		}
+
+		if(document.frmMeeAnnualConvRegister.txtEvetick.value.indexOf('  ')!=-1){
+			alert("Enter Valid Number of Ticket in Attend the Evening Hall of Fame Dinner.");
+			document.frmMeeAnnualConvRegister.txtEvetick.focus();
+			return false;
+		}
+
+	}
+
+
+
+
+//----------------------------------Attend the Area IV Reception----------------------------
+if(document.frmMeeAnnualConvRegister.chk3.checked==true){
+		if(document.frmMeeAnnualConvRegister.selAreaRecpMem.selectedIndex==0){
+        	alert ( "Please select an Member Type in Attend the Area IV Reception." );
+			document.frmMeeAnnualConvRegister.selAreaRecpMem.focus();
+    	    return false;
+	    }
+	if(document.frmMeeAnnualConvRegister.txtAreaRecptick.value==""){
+        	alert ( "Enter Number of Tickets in Attend the Area IV Reception ." );
+			document.frmMeeAnnualConvRegister.txtAreaRecptick.focus();
+    	    return false;
+	    }
+		
+
+		if(!Number(document.frmMeeAnnualConvRegister.txtAreaRecptick.value)){
+			alert("Enter valid Number of Ticket in Attend the Area IV Reception.");
+			document.frmMeeAnnualConvRegister.txtAreaRecptick.focus();
+			return false;
+		}
+
+		if(document.frmMeeAnnualConvRegister.txtAreaRecptick.value.indexOf(' ')==0){
+			alert("Enter Valid Number of Ticket in Attend the Area IV Reception.");
+			document.frmMeeAnnualConvRegister.txtAreaRecptick.focus();
+			return false;
+		}
+
+		if(document.frmMeeAnnualConvRegister.txtAreaRecptick.value.indexOf('  ')!=-1){
+			alert("Enter Valid Number of Ticket in Attend the Area IV Reception.");
+			document.frmMeeAnnualConvRegister.txtAreaRecptick.focus();
+			return false;
+		}
+
+	}
+
+
+
+
+
+
+
+//================================== For Check & Card Option =======================
+
+	chosen2="";
+	len2 = document.frmMeeAnnualConvRegister.rdoAmt.length ;
+	for(i=0;i<len2;i++){
+		if(document.frmMeeAnnualConvRegister.rdoAmt[i].checked){
+			chosen2= document.frmMeeAnnualConvRegister.rdoAmt[i].value;
+			//alert(document.frmMeeAnnualConvRegister.rdoAmt[i].value);
+		}
+	}
+
+	if(chosen2==""){
+		alert("Check any of the Payment Option.");
+		return false;
+	}
+
+
+//--------------------------Check  Number ---------------------------
+
+	if(chosen2=="check"){
+
+		if(document.frmMeeAnnualConvRegister.chkNo.value==""){
+			alert("Check Number in Check Details cannot be empty");
+			document.frmMeeAnnualConvRegister.chkNo.focus();
+			return false;
+		}
+
+if(!Number(document.frmMeeAnnualConvRegister.chkNo.value)){
+		alert("Enter valid Check Number.");
+		document.frmMeeAnnualConvRegister.chkNo.focus();
+	    	return false;
+	}
+
+	if(document.frmMeeAnnualConvRegister.chkNo.value.length!=16 ){
+			alert(" Check Number in Check Details  should be 16 characters.");
+			document.frmMeeAnnualConvRegister.chkNo.focus();
+			return false;
+		}
+	
+
+	if(isnotAlpha(document.frmMeeAnnualConvRegister.chkNo.value)){
+		alert("Enter valid Check Number.");
+		document.frmMeeAnnualConvRegister.chkNo.focus();
+	    	return false;
+	}
+
+
+if(document.frmMeeAnnualConvRegister.chkNo.value.indexOf(' ')==0){
+		alert("Enter valid Check Number.");
+		document.frmMeeAnnualConvRegister.chkNo.focus();
+		return false;
+	}
+
+	if(document.frmMeeAnnualConvRegister.chkNo.value.indexOf('  ')!=-1){
+		alert("Enter valid Check Number.");
+		document.frmMeeAnnualConvRegister.chkNo.focus();
+		return false;
+	}
+
+
+	if(document.frmMeeAnnualConvRegister.chkNo.value.indexOf('.')!=-1){
+		alert("Enter Valid check number.");
+		document.frmMeeAnnualConvRegister.chkNo.focus();
+		return false;
+	}
+
+
+//=============================== For Check Date ========================
+	if(document.frmMeeAnnualConvRegister.chkDat.value==""){
+		alert("Select Date in Check Details");
+		document.frmMeeAnnualConvRegister.chkDat.focus();
+		return false;
+	}
+
+
+	if(!(document.frmMeeAnnualConvRegister.chkDat.value=="")){
+	
+	var todayDate=new Date();
+	var nowDate=todayDate.getDate();
+	var nowYear=todayDate.getYear();
+	var nowMonth1=todayDate.getMonth();
+	var nowMonth=1+nowMonth1;
+	
+	if(nowDate<10){
+		nowDate="0"+nowDate;
+	}
+
+	if(nowMonth<10){
+		nowMonth="0"+nowMonth;
+	}
+
+	if(!(document.frmMeeAnnualConvRegister.chkDat.value=="")){
+		strdate=document.frmMeeAnnualConvRegister.chkDat.value;
+		mm = Number(strdate.substring(0,2));
+		dd = Number(strdate.substring(3,5));
+		yyyy=(strdate.substring(6,document.frmMeeAnnualConvRegister.chkDat.value.length));
+
+		var now = new Date();
+		var months1 = now.getMonth();
+		var years=now.getYear();
+		var months = 7+months1;
+		year=1+years;
+		
+		if((months<12)&&(mm>months)){
+			alert("Enter valid Date in Payment Details");
+			document.frmMeeAnnualConvRegister.chkDat.focus();
+			return false;
+		}
+
+		if((months1==6)&&(mm>1)&&(mm<6)){
+			alert("Enter valid Date in Payment Details");
+			document.frmMeeAnnualConvRegister.chkDat.focus();
+			return false;
+		}
+		
+		if((months1==7)&&(mm>2)&&(mm<7)){
+			alert("Enter valid Date in Payment Details");
+			document.frmMeeAnnualConvRegister.chkDat.focus();
+			return false;
+		}
+
+		if((months1==8)&&(mm>3)&&(mm<8)){
+			alert("Enter valid Date in Payment Details");
+			document.frmMeeAnnualConvRegister.chkDat.focus();
+			return false;
+		}
+
+		if((months1==9)&&(mm>4)&&(mm<9)){
+			alert("Enter a valid Date in Payment Details");
+			document.frmMeeAnnualConvRegister.chkDat.focus();
+			return false;
+		}
+
+		if((months1==10)&&(mm>5)&&(mm<10)){
+			alert("Enter a valid Date in Payment Details");
+			document.frmMeeAnnualConvRegister.chkDat.focus();
+			return false;
+		}
+
+		if((months1==11)&&(mm>6)&&(mm<11)){
+			alert("Enter valid Date in the Payment Details");
+			document.frmMeeAnnualConvRegister.chkDat.focus();
+			return false;
+		}
+
+		if(yyyy<nowYear){
+			alert("Enter valid Date in the Payment Details");
+			document.frmMeeAnnualConvRegister.chkDat.focus();
+			return false;
+		}
+
+		if((yyyy==nowYear)&&(mm<nowMonth)){
+			alert("Enter valid Date in the Payment Details");
+			document.frmMeeAnnualConvRegister.chkDat.focus();
+			return false;
+		}
+
+		if((dd<nowDate)&&(mm==nowMonth)){
+			alert("Enter valid date in the Payment Details");
+			document.frmMeeAnnualConvRegister.chkDat.focus();
+			return false;
+		}
+
+		if(dd>31){
+			alert("Enter valid date in the Payment Details");
+			document.frmMeeAnnualConvRegister.chkDat.focus();
+			return false;
+		}
+	}
+	}
+
+//===================================In Favor Of====================================
+
+if(document.frmMeeAnnualConvRegister.txtBank.value==""){
+		alert("In Favor of in Payment Information cannot be empty.");
+		document.frmMeeAnnualConvRegister.txtBank.focus();
+		return false;
+	}
+
+	if(document.frmMeeAnnualConvRegister.txtBank.value.length>80){
+		alert("In Favor of in Payment Information is out of range.");
+		document.frmMeeAnnualConvRegister.txtBank.focus();
+		return false;
+	}
+
+	if(isnotAlpha(document.frmMeeAnnualConvRegister.txtBank.value)){
+		alert("Enter valid In Favor of in Payment Information.");
+		document.frmMeeAnnualConvRegister.txtBank.focus();
+    	return false;
+	}
+
+	if(document.frmMeeAnnualConvRegister.txtBank.value.indexOf(' ')==0){
+		alert("Enter Valid In Favor of in Payment Information.");
+		document.frmMeeAnnualConvRegister.txtBank.focus();
+		return false;
+	}
+
+	if(document.frmMeeAnnualConvRegister.txtBank.value.indexOf('  ')!==-1){
+		alert("Enter Valid In Favor of Info in Payment Information.");
+		document.frmMeeAnnualConvRegister.txtBank.focus();
+		return false;
+	}
+
+	if(isnotAlphaNumeric(document.frmMeeAnnualConvRegister.txtBank.value)){
+		alert("Enter valid In Favor of in Payment Information.");
+		document.frmMeeAnnualConvRegister.txtBank.focus();
+    	return false;
+	}
+}
+
+//--------------------------Please charge my card----------------------------------------------
+if(chosen2=="card"){
+		if(document.frmMeeAnnualConvRegister.ccNumber.value==""){
+			alert("Enter Card Number in the Card Details");
+			document.frmMeeAnnualConvRegister.ccNumber.focus();
+			return false;
+		}
+
+		if(!Number(document.frmMeeAnnualConvRegister.ccNumber.value)){
+			alert("Enter valid Card Number in the Card Details");
+			document.frmMeeAnnualConvRegister.ccNumber.focus();
+			return false;
+		}
+
+		if(document.frmMeeAnnualConvRegister.ccNumber.value.length!=16 ){
+			alert(" Card Number in the Card Details should be 16 characters.");
+			document.frmMeeAnnualConvRegister.ccNumber.focus();
+			return false;
+		}
+
+if(document.frmMeeAnnualConvRegister.ccNumber.value.indexOf(' ')==0){
+			alert("Enter valid Card Number in the Card Details.");
+			document.frmMeeAnnualConvRegister.ccNumber.focus();
+			return false;
+		}
+	
+		if(document.frmMeeAnnualConvRegister.ccNumber.value.indexOf('  ')!==-1){
+			alert("Enter valid Card Number in the Card Details.");
+			document.frmMeeAnnualConvRegister.ccNumber.focus();
+			return false;
+	}
+
+
+
+         if(document.frmMeeAnnualConvRegister.ccNumber.value.indexOf('.')!=-1){
+			alert("Enter Valid Number in Card Number.");
+			document.frmMeeAnnualConvRegister.ccNumber.focus();
+			return false;
+		}
+
+//--------for CVV Number -------------------------------------
+
+	if(document.frmMeeAnnualConvRegister.ccCvvid.value==""){
+		alert("Enter valid CVV Number in Card Details");
+		document.frmMeeAnnualConvRegister.ccCvvid.focus();
+		return false;
+	}
+
+
+if(document.frmMeeAnnualConvRegister.ccCvvid.value.indexOf(' ')==0){
+			alert("Enter valid CVV Number in Card Details.");
+			document.frmMeeAnnualConvRegister.ccCvvid.focus();
+			return false;
+		}
+	
+		if(document.frmMeeAnnualConvRegister.ccCvvid.value.indexOf('  ')!==-1){
+			alert("Enter valid CVV Number in Card Details.");
+			document.frmMeeAnnualConvRegister.ccCvvid.focus();
+			return false;
+	}
+
+
+
+	if(document.frmMeeAnnualConvRegister.ccCvvid.value.length>4){
+		alert("Entered CVV Number Exceeds range.");
+		document.frmMeeAnnualConvRegister.ccCvvid.focus();
+		return false;
+	}
+
+	if(document.frmMeeAnnualConvRegister.ccCvvid.value.length<3){
+		alert("Entered CVV Number is below range.");
+		document.frmMeeAnnualConvRegister.ccCvvid.focus();
+		return false;
+	}
+
+	if(document.frmMeeAnnualConvRegister.ccCvvid.value.indexOf('.')!=-1){
+		alert("Enter Valid Number in Cvv Number.");
+
+		document.frmMeeAnnualConvRegister.ccCvvid.focus();
+		return false;
+	}
+	
+	
+	//===================== For card type ================
+		
+if ( document.frmMeeAnnualConvRegister.ccType.selectedIndex == 0 ){
+    alert ( "Please select card type." );
+	document.frmMeeAnnualConvRegister.ccType.focus();
+    return false;
+ 	}
+//----for Print Name on Card ----------------------------------------
+	if(document.frmMeeAnnualConvRegister.ccName.value==""){
+		alert("Print Name in Card Details cannot be empty");
+		document.frmMeeAnnualConvRegister.ccName.focus();
+		return false;
+	}
+
+	if(document.frmMeeAnnualConvRegister.ccName.value.length>80){
+		alert("Print Name in Card Details is out of range.");
+		document.frmMeeAnnualConvRegister.ccName.focus();
+		return false;
+	}
+
+	if(isnotAlpha(document.frmMeeAnnualConvRegister.ccName.value)){
+		alert("Enter valid Card Name.");
+		document.frmMeeAnnualConvRegister.ccName.focus();
+	    return false;
+    }
+
+	if(Number(document.frmMeeAnnualConvRegister.ccName.value)){
+		alert("Enter valid card name");
+		document.frmMeeAnnualConvRegister.ccName.focus();
+		return false;
+	}
+
+	if(document.frmMeeAnnualConvRegister.ccName.value.indexOf(' ')==0){
+		alert("Enter Valid Card Name.");
+		document.frmMeeAnnualConvRegister.ccName.focus();
+		return false;
+	}
+
+	if(document.frmMeeAnnualConvRegister.ccName.value.indexOf('  ')!==-1){
+		alert("Enter Valid Card Name.");
+		document.frmMeeAnnualConvRegister.ccName.focus();
+		return false;
+	}
+
+//---for Expiry month drop down --------------------------------
+
+	var rightNow=new Date();
+	var theYear=rightNow.getYear();
+	var tMonth=rightNow.getMonth();
+	var theMonth=1+tMonth;
+	var theDate=rightNow.getDate();
+
+	if ( document.frmMeeAnnualConvRegister.selccExpMonth.selectedIndex == 0 ){
+		alert ( "Please select a Month." );
+		document.frmMeeAnnualConvRegister.selccExpMonth.focus();
+    	return false;
+	}
+
+	if (document.frmMeeAnnualConvRegister.selccExpYear.value==theYear){
+		 if(document.frmMeeAnnualConvRegister.selccExpYear.value<theMonth){
+			alert("You have selected an Expired Month in card details. Please Select Valid Expiration Month.");
+			document.frmMeeAnnualConvRegister.selccExpYear.focus();
+			return(false);   
+		}
+	}
+
+//-----------for Expiry Year drop down
+
+	if ( document.frmMeeAnnualConvRegister.selccExpYear.selectedIndex == 0 ){
+		alert ( "Please select a year." );
+		document.frmMeeAnnualConvRegister.selccExpYear.focus();
+    	return false;
+	}
+
+
+	if (document.frmMeeAnnualConvRegister.selccExpYear.value<theYear){
+		alert("You have selected an Expired Year in card details. Please Select Valid Expiration Year.");
+		document.frmMeeAnnualConvRegister.selccExpYear.focus();
+		return false;   
+	}
+
+}
+return true;
+}	
+
+

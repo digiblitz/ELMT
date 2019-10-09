@@ -1,0 +1,10 @@
+
+package com.hlckavery.stateless;
+
+
+/**
+ * This is the business interface for kaveryStateless enterprise bean.
+ */
+public interface HLCkaveryStatelessRemoteBusiness {
+    
+}

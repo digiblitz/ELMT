@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jboss>
+    <enterprise-beans>
+        <entity>
+            <ejb-name>HLCMessagingEntityBean</ejb-name>
+            <local-jndi-name>ejb/HLCMsgEntityJNDI</local-jndi-name>
+        </entity>
+        <entity>
+            <ejb-name>HLCMessagedistributionEntityBean</ejb-name>
+            <local-jndi-name>ejb/HLCMsgDistJNDI</local-jndi-name>
+        </entity>
+        <session>
+         <ejb-name>HLCMessageSessionBean</ejb-name>
+         <jndi-name>ejb/HLCMessageJNDI</jndi-name>
+      </session>
+    </enterprise-beans>
+</jboss>

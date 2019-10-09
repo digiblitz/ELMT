@@ -1,0 +1,19 @@
+
+package com.hlcmrm.maps;
+
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.CreateException;
+import java.util.*;
+
+
+/**
+ * This is the local-home interface for MapPrevilege enterprise bean.
+ */
+public interface HLCMapPrevilegeLocalHome extends EJBLocalHome {
+    public HLCMapPrevilegeLocal findByPrimaryKey(String mapPrivilegeId)  throws FinderException;
+    public HLCMapPrevilegeLocal create(String roleId, String privilegeId) throws CreateException;
+    public Collection findByAll() throws FinderException;
+    public Collection findByRoleId(String roleId) throws FinderException;
+    public Collection findByPrivilegeId(String privilegeId) throws FinderException;
+}

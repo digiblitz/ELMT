@@ -1,0 +1,22 @@
+
+package com.hlcadv.masters;
+
+import javax.ejb.EJBLocalObject;
+import java.util.*;
+
+
+
+/**
+ * This is the local interface for IssueMaster enterprise bean.
+ */
+public interface HLCIssueMasterLocal extends EJBLocalObject, HLCIssueMasterLocalBusiness {
+    public Collection getIssue();
+    public void setIssueId(String issueId);
+    public void setIssueName(String issueName);
+    public void setMediaId(String mediaId);
+    public void setActiveStatus(boolean activeStatus);
+    public String getIssueId();
+    public String getIssueName();
+    public String getMediaId();
+    public boolean isActiveStatus();
+}

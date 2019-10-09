@@ -1,0 +1,58 @@
+// JavaScript Document
+
+function myvalidate(){
+	
+	if(document.frmRolMCreatePermission.permissionName.value==""){
+		alert("Enter the PermissionName");
+		document.frmRolMCreatePermission.permissionName.focus();
+		return false;
+		
+	}
+if(document.frmRolMCreatePermission.permissionName.value!=""){
+	if((document.frmRolMCreatePermission.permissionName.value.indexOf('  ')!=-1)||(document.frmRolMCreatePermission.permissionName.value.indexOf(' ')==0)){
+		alert("Enter the valid PermissionName");
+		document.frmRolMCreatePermission.permissionName.focus();
+		return false;
+		
+	}	
+	if(document.frmRolMCreatePermission.permissionName.value.length > 80){
+		alert("Enter the valid PermissionName");
+		document.frmRolMCreatePermission.permissionName.focus();
+		return false;
+		
+	}
+	
+}
+	
+
+	return true;
+}
+
+//-----------------------------------for frmRolMEditprocesss---------------------------------------------
+function myvalidate1(){
+	
+	if(document.frmRolMEditPermission.permissionName.value==""){
+		alert("Enter the PermissionName");
+		document.frmRolMEditPermission.permissionName.focus();
+		return false;
+		
+	}
+if(document.frmRolMEditPermission.permissionName.value!=""){
+	if((document.frmRolMEditPermission.permissionName.value.indexOf('  ')!=-1)||(document.frmRolMEditPermission.permissionName.value.indexOf(' ')==0)){
+		alert("Enter the valid PermissionName");
+		document.frmRolMEditPermission.permissionName.focus();
+		return false;
+		
+	}	
+	if(document.frmRolMEditPermission.permissionName.value.length > 80){
+		alert("Enter the valid PermissionName");
+		document.frmRolMEditPermission.permissionName.focus();
+		return false;
+		
+	}
+	
+}
+	
+
+	return true;
+}

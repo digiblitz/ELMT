@@ -1,0 +1,10 @@
+
+package com.hlcevent.edu;
+
+
+/**
+ * This is the business interface for EducationalSession enterprise bean.
+ */
+public interface HLCEducationalSessionRemoteBusiness {
+    
+}

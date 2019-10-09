@@ -1,0 +1,194 @@
+ 
+
+ 
+ 
+ 
+function arCheck(){
+	
+	 
+	var b = document.myform.addR_num.value;
+	 
+    if(b!="" && b.indexOf(' ')!=0){
+		 
+		   additionalRiderDetails();
+	   
+	 }
+	 else{
+			// addRiderClear();
+											document.getElementById("addR_num").value = "";
+											document.getElementById("additionalRider").value = "";
+											document.getElementById("lastRider").value = "";
+											document.getElementById("addRPhone").value = "";
+											document.getElementById("addRprefix").value = "";
+											document.getElementById("addREmail").value = ""; 
+											document.getElementById("addRStreet").value = "";
+											document.getElementById("addRCity").value = "";
+											document.getElementById("addRState").value = ""; 
+											document.getElementById("addRZipcode").value = "";  
+											document.getElementById("addRCell").value = ""; 
+			 
+	 }
+}
+var req;
+     function additionalRiderDetails(){
+		 param = document.myform.addR_num.value;
+		 
+			var  url = null;
+			if(param.length==0)
+			return;
+			url = "annualAjax.do?method=memberDetail&memberId="+escape(param);
+			if (window.ActiveXObject){ 
+				req = new ActiveXObject("Microsoft.XMLHTTP"); 
+			} 
+			else if (window.XMLHttpRequest){ 
+				req = new XMLHttpRequest(); 
+			} 
+			req.onreadystatechange = processAddRider;         
+			req.open("GET", url, true);
+			req.send(null);  
+} 
+   /** 
+    * This is the call back method 
+    * If the call is completed when the readyState is 4 
+    * and if the HTTP is successfull when the status is 200 
+    * update the profileSection DIV 
+    */ 
+         function processAddRider(){ 
+    			if (req.readyState == 4){ 
+						  // alert(req.status);
+							if(req.status == 200){ 
+							 
+								 var xmlDoc = req.responseXML.documentElement;
+								  //  var userNoId =xmlDoc.getElementsByTagName('userNo')[0].childNodes[0].nodeValue;
+									var firstName =xmlDoc.getElementsByTagName('firstName')[0].childNodes[0].nodeValue;
+									var lastName =xmlDoc.getElementsByTagName('lastName')[0].childNodes[0].nodeValue; 
+									var phone =xmlDoc.getElementsByTagName('phone')[0].childNodes[0].nodeValue; 
+									var userId =xmlDoc.getElementsByTagName('userId')[0].childNodes[0].nodeValue; 
+									var dob =xmlDoc.getElementsByTagName('dob')[0].childNodes[0].nodeValue; 
+									var prefix =xmlDoc.getElementsByTagName('prefix')[0].childNodes[0].nodeValue; 
+									var emailId =xmlDoc.getElementsByTagName('emailId')[0].childNodes[0].nodeValue; 
+									var address1 =xmlDoc.getElementsByTagName('address1')[0].childNodes[0].nodeValue; 
+									//var address2 =xmlDoc.getElementsByTagName('address2')[0].childNodes[0].nodeValue; 
+									var city =xmlDoc.getElementsByTagName('city')[0].childNodes[0].nodeValue; 
+									var state =xmlDoc.getElementsByTagName('state')[0].childNodes[0].nodeValue; 
+									 
+									var zip =xmlDoc.getElementsByTagName('zip')[0].childNodes[0].nodeValue; 
+									var mobile =xmlDoc.getElementsByTagName('mobile')[0].childNodes[0].nodeValue; 
+									//var faxNo =xmlDoc.getElementsByTagName('faxNo')[0].childNodes[0].nodeValue; 
+									
+								 
+									var addfirstNameObj = document.getElementById("additionalRider");
+								    var addlastNameObj = document.getElementById("lastRider");
+									var addphoneObj = document.getElementById("addRPhone"); 
+							      //  var userObj = document.getElementById("userDetId"); 
+									var addprefixObj = document.getElementById("addRprefix");  
+									var addemailIdObj = document.getElementById("addREmail");  
+									var addaddress1Obj = document.getElementById("addRStreet");  
+								 
+									var addcityObj = document.getElementById("addRCity");  
+									var addstateObj = document.getElementById("addRState");  
+									 
+									var addzipObj = document.getElementById("addRZipcode");  
+									var addmobileObj = document.getElementById("addRCell");  
+								 
+								 
+									
+								     addfirstNameObj.value =  firstName;
+								     addlastNameObj.value = lastName ;
+									 addphoneObj.value = phone ; 
+							      
+									 addprefixObj.value =  prefix;  
+									 addemailIdObj.value = emailId ;  
+									 addaddress1Obj.value =  address1;  
+									// address2Obj.value =  address2;  
+									 addcityObj.value = city ;  
+									 addstateObj.value = state ;  
+									 
+									 addzipObj.value = zip ;  
+									 addmobileObj.value = mobile ;  
+									
+									
+							} 
+											if(req.status==500) {
+											//addRiderClear();
+											document.getElementById("addR_num").value = "";
+											document.getElementById("additionalRider").value = "";
+											document.getElementById("lastRider").value = "";
+											document.getElementById("addRPhone").value = "";
+											document.getElementById("addRprefix").value = "";
+											document.getElementById("addREmail").value = ""; 
+											document.getElementById("addRStreet").value = "";
+											document.getElementById("addRCity").value = "";
+											document.getElementById("addRState").value = ""; 
+											document.getElementById("addRZipcode").value = "";  
+											document.getElementById("addRCell").value = ""; 
+											alert("Membership Id is not valid");
+											document.myform.addR_num.focus();
+											}
+											else{ 
+												
+											} 
+						}	
+						
+					} 
+		
+ 
+ //-------------------------------- User status validation Ajax Script ------------------------------------------------
+var httpRequest;
+function usrStat(){
+if(document.myform.newAddFirstNameIdComp.value!="" && document.myform.newAddFirstNameIdComp.value.indexOf(' ')!=0){
+   var chsUserName=document.myform.newAddFirstNameIdComp.value;
+   /** 
+    * This method is called when the author is selected 
+    * It creates XMLHttpRequest object to communicate with the  
+    * servlet  
+    */ 
+        url= "UsrSignupAjax.do?process=checkusrnam&chsUserName="+chsUserName; 
+        if (window.ActiveXObject){ 
+            httpRequest = new ActiveXObject("Microsoft.XMLHTTP"); 
+        } 
+        else if (window.XMLHttpRequest){ 
+            httpRequest = new XMLHttpRequest(); 
+        } 
+        httpRequest.open("GET", url, true); 
+        httpRequest.onreadystatechange =processUser; 
+        httpRequest.send(null); 
+   } 
+   }
+   /** 
+    * This is the call back method 
+    * If the call is completed when the readyState is 4 
+    * and if the HTTP is successfull when the status is 200 
+    * update the profileSection DIV 
+    */ 
+    function processUser(){ 
+   
+        if (httpRequest.readyState == 4){ 
+            if(httpRequest.status == 200){ 
+                //get the XML send by the servlet 
+                 var salutationXML = httpRequest.responseXML.getElementsByTagName("userstatus")[0]; 
+                 var salutationText = salutationXML.childNodes[0].nodeValue; 
+                 updateHTML(salutationXML); 
+            } 
+            else{ 
+                alert("Error loading page\n"+ httpRequest.status +":"+ httpRequest.statusText); 
+            } 
+        } 
+    } 
+   /** 
+    * This function parses the XML and updates the  
+    * HTML DOM by creating a new text node is not present 
+    * or replacing the existing text node. 
+    */ 
+    function updateHTML(salutationXML){ 
+        //The node valuse will give actual data 
+        var salutationText = salutationXML.childNodes[0].nodeValue; 
+		if(salutationText != "false"){
+			alert("Company Name already Exists Chose Another !");
+			document.myform.newAddFirstNameIdComp.value="";
+			document.myform.newAddFirstNameIdComp.focus();
+		}
+    } 
+
+
+

@@ -1,0 +1,10 @@
+
+package com.hlcadv.advertise;
+
+
+/**
+ * This is the business interface for Advertise enterprise bean.
+ */
+public interface HLCAdvertiseLocalBusiness {
+    
+}

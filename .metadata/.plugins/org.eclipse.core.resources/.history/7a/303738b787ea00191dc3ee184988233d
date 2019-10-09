@@ -1,0 +1,44 @@
+package com.mrm.actionform;
+/*
+ * InsertOrgHLCEventRegActionForm.java
+ *
+ * Created on August 17, 2006, 4:57 PM
+ */
+
+import javax.servlet.http.HttpServletRequest;
+import org.apache.struts.action.ActionErrors;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.action.ActionMessage;
+
+/**
+ *
+ * @author karthikeyan
+ * @version
+ */
+
+public class InsertOrgHLCEventRegActionForm extends org.apache.struts.action.ActionForm {
+    
+    private String esecid;
+       
+    /**
+     * @return
+     */
+   public void setEventsecid(String str) {
+        esecid = str;
+    }
+   
+    public String getEventsecid() {
+        return esecid;
+    }
+   
+ public void set(String str) {
+        esecid = str;
+    }
+   
+    public String get() {
+        return esecid;
+    }   
+
+        
+    }
+

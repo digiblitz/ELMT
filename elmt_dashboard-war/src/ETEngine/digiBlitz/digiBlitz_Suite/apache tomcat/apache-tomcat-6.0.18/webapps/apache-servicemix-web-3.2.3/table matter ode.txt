@@ -1,0 +1,32 @@
+#-------------------------------------------------------------------------------
+# * * Copyright: 2019 digiBlitz Foundation
+#  * * 
+#  * * License: digiBlitz Public License 1.0 (DPL) 
+#  * * Administered by digiBlitz Foundation. www.digiblitz.org/dpl/
+#  * * 
+#  * * Inventor: Suresh Kannan (Maya Suresh Kannan Balabisegan ) (www.sureshkannan.org)
+#  * * 
+#  * * Authors: Suresh Kannan (Maya Suresh Kannan Balabisegan )& digiBlitz.
+#  * * 
+#  * * "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software in accordance to the rules & restrictions of the digiBlitz Public License."
+#-------------------------------------------------------------------------------
+<tr><td><b>1.In a Web Application </b></td></tr>
+		<tr><td>  <b>-Deploying the WAR</b></td></tr>
+		
+		<tr><td>
+Get the WAR file in the distribution root directory, rename it to ode.war and copy this file to Tomcat's webapp directory. Start Tomcat and Ode should be up and running. You should get the Axis2 welcome page under http://localhost:8080/ode. The Ode WAR includes its own embedded database (Derby) so you don't have to worry about configuring any external database for now .
+<br></td></tr>
+<br>
+		<tr><td><b><br>-Deploying a Process in Ode</b></br></td></tr>
+		<tr><td>
+Each deployment is a directory with all relevant deployment artifacts. At the minimum it will contain the deployment descriptor, one or more process definitions (BPEL or .cbp), WSDL and XSDs (excluding those compiled into the .cbp). It may also contain other files, such as SVGs or XSLs. The deployment descriptor is a file named deploy.xml (see the next paragraoh for its description).
+
+During deployment, the process engine loads all documents from the deployment descriptor. Loading documents allow it to reference processes, service and schema definitions using fully qualified names, and import based on namespaces instead of locations.
+
+To deploy in Ode, just copy the whole directory containing your artifacts (the directory itself, not only its content) in the path %DEPLOYMENT_ROOT%/WEB-INF/processes (in Tomcat it would be %TOMCAT_HOME%/webapps/ode/WEB-INF/processes).
+<br></td></tr>
+
+    	<tr><td></td></tr>
+		<br></br>
+            
+  

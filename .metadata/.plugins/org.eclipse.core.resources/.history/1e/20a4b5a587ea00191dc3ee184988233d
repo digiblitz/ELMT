@@ -1,0 +1,10 @@
+
+package com.hlcrole.management;
+
+
+/**
+ * This is the business interface for BrahmaputraSession enterprise bean.
+ */
+public interface HLCBrahmaputraSessionRemoteBusiness {
+    
+}

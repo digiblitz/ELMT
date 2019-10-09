@@ -1,0 +1,26 @@
+
+package com.hlcadv.masters;
+
+import javax.ejb.EJBLocalObject;
+import java.util.*;
+
+
+/**
+ * This is the local interface for MapPrice enterprise bean.
+ */
+public interface HLCMapPriceLocal extends EJBLocalObject, HLCMapPriceLocalBusiness {
+    public Collection getMapPrice();
+    public void setAdvMapId(String advMapId);
+    public void setDisplayTypeId(String displayTypeId);
+    public void setDisplaySubTypeId(String displaySubTypeId);
+    public void setFrequencyId(String frequencyId);
+    public void setMediaId(String mediaId);
+    public void setPrice(String price);
+    public String getAdvMapId();
+    public String getDisplayTypeId();
+    public String getDisplaySubTypeId();
+    public String getFrequencyId();
+    public String getMediaId();
+    public String getPrice();
+  
+}

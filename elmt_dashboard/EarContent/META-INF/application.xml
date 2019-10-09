@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application id="Application_ID" version="1.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/application_1_4.xsd">
+	<display-name>elmt_dashboard</display-name>
+	<module id="WebModule_1455518023006">
+		<web>
+			<web-uri>elmt_dashboard-war.war</web-uri>
+			<context-root>elmt</context-root>
+		</web>
+	</module>
+	<module id="EjbModule_1455518023057">
+		<ejb>elmt_dashboard-ejb.jar</ejb>
+	</module>
+	<module id="EjbModule_1455518128012">
+		<ejb>ELMTAccountsEJB.jar</ejb>
+	</module>
+	<module id="EjbModule_1455518567258">
+		<ejb>ELMTAdvertiseEJB.jar</ejb>
+	</module>
+	<module id="EjbModule_1455518597914">
+		<ejb>ELMTdBSystinetManage.jar</ejb>
+	</module>
+	<module id="EjbModule_1455518658015">
+		<ejb>ELMTEducationalActivityEJB.jar</ejb>
+	</module>
+	<module id="EjbModule_1455518688624">
+		<ejb>ELMTFormRegistration.jar</ejb>
+	</module>
+	<module id="EjbModule_1455518715046">
+		<ejb>ELMTHorseForm.jar</ejb>
+	</module>
+	<module id="EjbModule_1455518743036">
+		<ejb>ELMTHorseMembershipStatusMaster.jar</ejb>
+	</module>
+	<module id="EjbModule_1455518770900">
+		<ejb>ELMTHorseServiceTypeMaster.jar</ejb>
+	</module>
+	<module id="EjbModule_1455518807089">
+		<ejb>ELMTHorseStateful.jar</ejb>
+	</module>
+	<module id="EjbModule_1455518842984">
+		<ejb>ELMTHumanMember.jar</ejb>
+	</module>
+	<module id="EjbModule_1455518875316">
+		<ejb>ELMTInventory.jar</ejb>
+	</module>
+	<module id="EjbModule_1455518900014">
+		<ejb>ELMTMeetings.jar</ejb>
+	</module>
+	<module id="EjbModule_1455518927323">
+		<ejb>ELMTMembershipTypeMaster.jar</ejb>
+	</module>
+	<module id="EjbModule_1455518978474">
+		<ejb>ELMTMessage.jar</ejb>
+	</module>
+	<module id="EjbModule_1455519010072">
+		<ejb>ELMTMessageEJB.jar</ejb>
+	</module>
+	<module id="EjbModule_1455519045734">
+		<ejb>ELMTMRMAdmin.jar</ejb>
+	</module>
+	<module id="EjbModule_1455519079849">
+		<ejb>ELMTMRMAdminCountryMailPrice.jar</ejb>
+	</module>
+	<module id="EjbModule_1455519119365">
+		<ejb>ELMTMRMRefund.jar</ejb>
+	</module>
+	<module id="EjbModule_1455519138083">
+		<ejb>ELMTNonUSEAOrgMaster.jar</ejb>
+	</module>
+	<module id="EjbModule_1455519161305">
+		<ejb>ELMTOnlineEntries.jar</ejb>
+	</module>
+	<module id="EjbModule_1455519188907">
+		<ejb>ELMTPaymentBeanEJB.jar</ejb>
+	</module>
+	<module id="EjbModule_1455519212168">
+		<ejb>ELMTRoleManagementEJB.jar</ejb>
+	</module>
+	<module id="EjbModule_1455519243245">
+		<ejb>ELMTRoleManagementSubSystemEJB.jar</ejb>
+	</module>
+	<module id="EjbModule_1455519268274">
+		<ejb>ELMTSponsorEJB.jar</ejb>
+	</module>
+	<module id="EjbModule_1455519291396">
+		<ejb>ELMTStrategicViewManagament.jar</ejb>
+	</module>
+	<module id="EjbModule_1455519311377">
+		<ejb>ELMTUserManagement.jar</ejb>
+	</module>
+	<module id="EjbModule_1455519335115">
+		<ejb>ELMTVaigaiEJB.jar</ejb>
+	</module>
+</application>

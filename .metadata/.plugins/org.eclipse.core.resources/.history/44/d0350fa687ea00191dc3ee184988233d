@@ -1,0 +1,113 @@
+
+				<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" id="fullHeight" class="menuTableBg">
+				  <tr>
+					<td class="alignTop"><br />
+					
+						<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" id="leftMenuTab">
+						  <tr>
+							<td class="menuTabLftTopCrnr"></td>
+							<td class="menuTab"></td>
+							<td class="menuTabRghtTopCrnr"></td>
+						  </tr>
+						  <tr>
+							<td class="menuTabLft"></td>
+							<td class="menuTabBg">
+								<table width="100%" border="0" align="center" cellpadding="0" cellspacing="1">
+                                  <tr>
+                                    <td height="20" class="alignLeft"><span class="textBold">&nbsp;&nbsp;&nbsp;Browse Other Sub-Departments</span> </td>
+                                  </tr>
+                                  <tr>
+                                    <td height="25" class="menuLinkbg">&nbsp;
+                                      <select name="select2" id="select2" class="selectboxOne">
+                                        <option>Select One</option>
+                                        <option selected="selected">Roles & Privileges</option>
+                                      </select>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td height="25" class="menuLinkbg">&nbsp;&nbsp;<input type="button" name="Submit" value="Browse" style="width:55px;" class="gradBtn" /></td>
+                                  </tr>
+                                </table>
+							</td>
+							<td class="menuTabRght"></td>
+						  </tr>
+						  <tr>
+							<td class="menuTabLftBotCrnr"></td>
+							<td class="menuTabBot"></td>
+							<td class="menuTabRghtBotCrnr"></td>
+						  </tr>
+						</table>
+						
+						<!-- 
+						<br />
+					
+						<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" id="leftMenuTab">
+						  <tr>
+							<td class="menuTabLftTopCrnr"></td>
+							<td class="menuTab"></td>
+							<td class="menuTabRghtTopCrnr"></td>
+						  </tr>
+						  <tr>
+							<td class="menuTabLft"></td>
+							<td class="menuTabTwoBg">
+								
+								<table width="100%" border="0" align="center" cellpadding="0" cellspacing="1">
+                                  <tr>
+                                    <td height="20" class="alignLeft"><span class="textBold">&nbsp;&nbsp;&nbsp;Related Links</span> </td>
+                                  </tr>
+								  <tr>
+                                    <td height="20" class="menuLinkbg"><span class="textBold">&curren; Manage Roles </span></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="20" class="menuLinkbg">&raquo; <a href="#" class="linkFour">Create Roles</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="20" class="menuLinkbg">&raquo; <a href="#" class="linkFour">Manage A Role</a></td>
+                                  </tr>
+								  <tr>
+                                    <td height="20" class="menuLinkbg">&nbsp;&nbsp;&nbsp;&nbsp;&raquo; <a href="#" class="linkThree">View List of Roles</a></td>
+                                  </tr>
+								  <tr>
+                                    <td height="20" class="menuLinkbg">&nbsp;&nbsp;&nbsp;&nbsp;&raquo; <a href="#" class="linkThree">Edit Roles </a></td>
+                                  </tr>
+								  <tr>
+                                    <td height="20" class="menuLinkbg">&nbsp;</td>
+                                  </tr>
+								  <tr>
+                                    <td height="20" class="menuLinkbg"><span class="textBold">&curren; Manage Role Mapping </span></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="20" class="menuLinkbg">&raquo; <a href="#" class="linkFour">Map A Role To Entity </a></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="20" class="menuLinkbg">&raquo; <a href="#" class="linkFour">Manage Role Mapping </a></td>
+                                  </tr>
+								  <tr>
+                                    <td height="20" class="menuLinkbg">&nbsp;&nbsp;&nbsp;&nbsp;&raquo; <a href="#" class="linkThree">View List of Mapped Roles </a></td>
+                                  </tr>
+								  <tr>
+                                    <td height="20" class="menuLinkbg">&nbsp;&nbsp;&nbsp;&nbsp;&raquo; <a href="#" class="linkThree">Edit Mapped Roles </a></td>
+                                  </tr>
+								  <tr>
+                                    <td height="20" class="menuLinkbg">&raquo; <a href="#" class="linkFour">Map A Role To User </a></td>
+                                  </tr>
+								  <tr>
+								    <td height="20" class="menuLinkbg">&nbsp;</td>
+							      </tr>
+                                </table>
+							
+							</td>
+							<td class="menuTabRght"></td>
+						  </tr>
+						  <tr>
+							<td class="menuTabLftBotCrnr"></td>
+							<td class="menuTabBot"></td>
+							<td class="menuTabRghtBotCrnr"></td>
+						  </tr>
+						</table>
+						<br />
+					 -->
+
+					</td>
+				  </tr>
+				</table>

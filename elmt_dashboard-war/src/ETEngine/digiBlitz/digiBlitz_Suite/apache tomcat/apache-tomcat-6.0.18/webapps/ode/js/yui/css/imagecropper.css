@@ -1,0 +1,19 @@
+#-------------------------------------------------------------------------------
+# * * Copyright: 2019 digiBlitz Foundation
+#  * * 
+#  * * License: digiBlitz Public License 1.0 (DPL) 
+#  * * Administered by digiBlitz Foundation. www.digiblitz.org/dpl/
+#  * * 
+#  * * Inventor: Suresh Kannan (Maya Suresh Kannan Balabisegan ) (www.sureshkannan.org)
+#  * * 
+#  * * Authors: Suresh Kannan (Maya Suresh Kannan Balabisegan )& digiBlitz.
+#  * * 
+#  * * "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software in accordance to the rules & restrictions of the digiBlitz Public License."
+#-------------------------------------------------------------------------------
+/*
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.5.2
+*/
+.yui-crop{position:relative;}.yui-crop .yui-crop-mask{position:absolute;top:0;left:0;height:100%;width:100%;}.yui-crop .yui-resize{position:absolute;top:10px;left:10px;}.yui-crop .yui-crop-resize-mask{position:absolute;top:0;left:0;height:100%;width:100%;background-position:-10px -10px;overflow:hidden;}.yui-skin-sam .yui-crop .yui-crop-mask{background-color:#000;opacity:.5;filter:alpha(opacity=50);}.yui-skin-sam .yui-crop .yui-resize{border:1px dashed #fff;}

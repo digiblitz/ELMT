@@ -1,0 +1,10 @@
+
+package com.hlcform.user;
+
+
+/**
+ * This is the business interface for ArabianSeaEntityUser enterprise bean.
+ */
+public interface HLCArabianSeaEntityUserLocalBusiness {
+    
+}

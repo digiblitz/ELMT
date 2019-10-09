@@ -1,0 +1,21 @@
+package com.hlcevent.activity;
+
+import com.hlccommon.util.HLCActivityOrganizerVO;
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.CreateException;
+import java.util.*;
+
+/**
+ * This is the local-home interface for ActivityOrganizer enterprise bean.
+ */
+public interface HLCActivityOrganizerLocalHome extends EJBLocalHome {
+    public HLCActivityOrganizerLocal create(HLCActivityOrganizerVO objActivityDet,Vector publication) throws CreateException;
+    public HLCActivityOrganizerLocal findByPrimaryKey(String activityMeetingId) throws FinderException;
+    public Collection findByAll() throws FinderException;
+    public Collection findByActivityOrganizerRequestStatus(String requestStatus) throws FinderException;
+    public Collection findByActivityOrganizerRequestStatusByOrganizer(String organizerId, String requestStatus) throws FinderException;
+    public Collection findByActivityName(String activityName) throws FinderException;
+    public Collection findByActivityDate(Date activityDate) throws FinderException;
+    public Collection findByActivityOrganizerId(String activityOrganizerId) throws FinderException;
+}

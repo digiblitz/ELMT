@@ -1,0 +1,24 @@
+
+package com.hlcmro.masters;
+
+import javax.ejb.EJBLocalObject;
+import java.util.Date;
+
+/**
+ * This is the local interface for TentativeTimeSchedule enterprise bean.
+ */
+public interface HLCTentativeTimeScheduleLocal extends EJBLocalObject, HLCTentativeTimeScheduleLocalBusiness {
+    //getter
+    public String getTimeScheduleId();
+    public String getEventId();
+    public Date getDay();
+    public String getPhase();
+    public String getTime();
+
+    //setter
+    public void setTimeScheduleId(String timeScheduleId);
+    public void setEventId(String eventId);
+    public void setDay(Date day);
+    public void setPhase(String phase);
+    public void setTime(String time);
+}

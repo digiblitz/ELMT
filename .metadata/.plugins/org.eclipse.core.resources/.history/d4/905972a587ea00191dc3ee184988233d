@@ -1,0 +1,20 @@
+
+package com.hlcadv.masters;
+
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.CreateException;
+import java.util.*;
+
+
+/**
+ * This is the local-home interface for IssueMaster enterprise bean.
+ */
+public interface HLCIssueMasterLocalHome extends EJBLocalHome {
+    public HLCIssueMasterLocal findByPrimaryKey(String issueId)  throws FinderException;
+    public HLCIssueMasterLocal create(String issueName, String mediaId) throws CreateException;
+    public Collection findByAll() throws FinderException;
+    public Collection findByIssueName(String issueName) throws FinderException;
+    public Collection findByIssueEditName(String issueId, String issueName) throws FinderException;
+    public Collection findByMediaId(String mediaId) throws FinderException;
+}

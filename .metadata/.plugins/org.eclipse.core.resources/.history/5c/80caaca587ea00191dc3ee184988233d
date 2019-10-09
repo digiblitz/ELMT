@@ -1,0 +1,10 @@
+
+package com.hlcmrm.rolemanagement.masters;
+
+
+/**
+ * This is the business interface for Privilege enterprise bean.
+ */
+public interface HLCPrivilegeLocalBusiness {
+    
+}

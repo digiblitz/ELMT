@@ -1,0 +1,19 @@
+
+package com.hlchorse.member.status;
+
+import javax.ejb.EJBLocalObject;
+
+
+/**
+ * This is the local interface for ArabianSeaHorseMembershipStatus enterprise bean.
+ */
+public interface HLCArabianSeaHorseMembershipStatusLocal extends EJBLocalObject, HLCArabianSeaHorseMembershipStatusLocalBusiness {
+    
+    public void setStatusId(String statusId);
+    public void setStatusName(String statusName);
+    public void setDescription(String Description);
+    
+    public String getStatusId();
+    public String getStatusName();
+    public String getDescription();
+}

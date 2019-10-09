@@ -1,0 +1,21 @@
+
+package com.hlcmember.type.master;
+
+import com.hlcmember.type.util.HLCMembershipTypeMaster;
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.CreateException;
+import java.util.*;
+
+/**
+ * This is the local-home interface for ArabianSeaMembershipTypeMaster enterprise bean.
+ */
+public interface HLCArabianSeaMembershipTypeMasterLocalHome extends EJBLocalHome {
+    
+    public HLCArabianSeaMembershipTypeMasterLocal create(HLCMembershipTypeMaster objMemTypeMaster) throws CreateException;
+    public HLCArabianSeaMembershipTypeMasterLocal findByPrimaryKey(String membershipTypeId)  throws FinderException;
+    public Collection findByMembershipTypeName(String membershipTypeName) throws FinderException;
+    public Collection findByMembershipTypeDetails() throws FinderException;
+    
+    
+}

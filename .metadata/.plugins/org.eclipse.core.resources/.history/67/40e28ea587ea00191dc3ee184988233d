@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jboss>
+    <enterprise-beans>
+        <entity>
+            <ejb-name>HLCArabianSeaCountryMailPriceBean</ejb-name>
+            <local-jndi-name>ejb/HLCMailPriceJNDI</local-jndi-name>
+        </entity>
+        <session>
+         <ejb-name>HLCKaveryCountryMailPriceSeaaionBean</ejb-name>
+         <jndi-name>ejb/HLCKaveryMailPriceJNDI</jndi-name>
+      </session>
+    </enterprise-beans>
+</jboss>

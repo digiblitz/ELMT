@@ -1,0 +1,13 @@
+
+<%@ page isErrorPage="true" %>
+<html>
+<body>
+
+An Application Error 1 has occurred.<br>
+    The error class is
+    
+    <%= exception.getMessage() %>
+
+
+</body>
+</html>

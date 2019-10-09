@@ -1,0 +1,14 @@
+
+package com.hlcmsg.groups;
+
+import java.rmi.RemoteException;
+import javax.ejb.CreateException;
+import javax.ejb.EJBHome;
+
+
+/**
+ * This is the home interface for MessageSession enterprise bean.
+ */
+public interface HLCMessageSessionRemoteHome extends EJBHome {
+    public HLCMessageSessionRemote create()  throws CreateException, RemoteException;
+}

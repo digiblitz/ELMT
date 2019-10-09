@@ -1,0 +1,14 @@
+
+package com.hlcmro.org;
+
+import java.rmi.RemoteException;
+import javax.ejb.CreateException;
+import javax.ejb.EJBHome;
+
+
+/**
+ * This is the home interface for VaigaiSession enterprise bean.
+ */
+public interface HLCVaigaiSessionRemoteHome extends EJBHome {
+    HLCVaigaiSessionRemote create()  throws CreateException, RemoteException;
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jboss>
+    <enterprise-beans>
+        <entity>
+            <ejb-name>HLCmullaiyarDamEntityBean</ejb-name>
+            <local-jndi-name>ejb/HLCMullaiyarDamJNDI</local-jndi-name>
+        </entity>
+        <entity>
+            <ejb-name>HLCMullaiyarDamICPEntityBean</ejb-name>
+            <local-jndi-name>ejb/HLCMullaiyarDamICPJNDI</local-jndi-name>
+        </entity>
+         <entity>
+            <ejb-name>HLCMullaiyarDamICPUserBean</ejb-name>
+            <local-jndi-name>ejb/HLCMullaiyarDamICPUserJNDI</local-jndi-name>
+        </entity>
+        <session>
+         <ejb-name>HLCVaigaiSessionBean</ejb-name>
+         <jndi-name>ejb/HLCVaigaiSessionJNDI</jndi-name>
+      </session>
+    </enterprise-beans>
+</jboss>

@@ -1,0 +1,10 @@
+
+package com.hlcspnr.plan;
+
+
+/**
+ * This is the business interface for SponsorPlan enterprise bean.
+ */
+public interface HLCSponsorPlanLocalBusiness {
+    
+}

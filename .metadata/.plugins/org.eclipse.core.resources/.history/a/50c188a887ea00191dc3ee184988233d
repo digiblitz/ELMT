@@ -1,0 +1,20 @@
+<table width="165" border="0" cellspacing="0" cellpadding="0" class="text3">
+    <tr>
+	 <td width="165" height="400" valign="top">
+	 <div id="ddleftmenubar" class="markermenu" >
+<ul>
+<li><a href="frmRolMCreateUser.jsp" rel="ddsubmenu7">Create User</a></li>
+<li><a href="#" rel="ddsubmenu8">View User</a></li>
+<li><a href="#" rel="ddsubmenu7">Edit User</a></li>
+<li><a href="#" rel="ddsubmenu8">Delete User</a></li>
+
+</ul>
+  </div>
+<script type="text/javascript">
+ddlevelsmenu.setup("ddleftmenubar", "sidebar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
+     </script>
+  
+	 </td>
+	</tr>
+   </table>
+  

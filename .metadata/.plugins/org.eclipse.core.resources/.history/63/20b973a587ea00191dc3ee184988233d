@@ -1,0 +1,10 @@
+
+package com.hlcadv.masters;
+
+
+/**
+ * This is the business interface for MediaMaster enterprise bean.
+ */
+public interface HLCMediaMasterLocalBusiness {
+    
+}

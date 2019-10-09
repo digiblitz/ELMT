@@ -1,0 +1,26 @@
+// JavaScript Document
+function frmSalesCheck(){
+	if(document.frmAssignSalesPerson.salesPersonId.value==""){
+		alert("Enter Sales Person ID in Sales Person's Detail.");
+		document.frmAssignSalesPerson.salesPersonId.focus();
+		return false;
+	}
+	if(document.frmAssignSalesPerson.salesPersonId.value.indexOf(' ')==0){
+		alert("Enter Valid Sales Person ID.");
+		document.frmAssignSalesPerson.salesPersonId.focus();
+		return false;
+	}
+
+	if(document.frmAssignSalesPerson.salesPersonId.value.length>80){
+		alert("Entered Sales Person's ID is out of range.");
+		document.frmAssignSalesPerson.salesPersonId.focus();
+		return false;
+	}
+
+	if(document.frmAssignSalesPerson.salesPersonId.value.indexOf('  ')!==-1){
+		alert("Enter Valid Sales Person ID.");
+		document.frmAssignSalesPerson.salesPersonId.focus();
+		return false;
+	}
+	return true;
+}

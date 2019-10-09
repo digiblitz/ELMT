@@ -1,0 +1,25 @@
+
+package com.hlcadv.masters;
+
+import javax.ejb.EJBLocalObject;
+import java.util.*;
+
+
+/**
+ * This is the local interface for DisplaySubTypeMaster enterprise bean.
+ */
+public interface HLCDisplaySubTypeMasterLocal extends EJBLocalObject, HLCDisplaySubTypeMasterLocalBusiness {
+    public Collection getDisplaySubType();
+    public void setDisplaySubTypeId(String displaySubTypeId);
+    public void setDisplaySubTypeName(String displaySubTypeName);
+    public void setDisplayTypeId(String displayTypeId);
+    public void setDisplaySubTypeDescription(String displaySubTypeDescription);
+    public void setActiveStatus(boolean activeStatus);
+    
+    public String getDisplaySubTypeId();
+    public String getDisplaySubTypeName();
+    public String getDisplayTypeId();
+    public String getDisplaySubTypeDescription();
+    public boolean isActiveStatus();
+    
+}

@@ -1,0 +1,24 @@
+
+package com.hlcmro.masters;
+
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.CreateException;
+import java.util.*;
+import com.hlcmro.util.HLCOtherDetailsVO;
+
+
+
+
+/**
+ * This is the local-home interface for OtherDetail enterprise bean.
+ */
+public interface HLCOtherDetailLocalHome extends EJBLocalHome {
+    
+    public HLCOtherDetailLocal findByPrimaryKey(String otherId)  throws FinderException;
+    public HLCOtherDetailLocal create(HLCOtherDetailsVO objOtherDetVO) throws CreateException;
+    public Collection findByAll() throws FinderException;
+    public Collection findByEventId(String eventId) throws FinderException;
+  
+    
+}

@@ -1,0 +1,27 @@
+
+package com.hlchorse.service;
+
+import com.hlchorse.service.util.HLCHorseServiceTypeMaster;
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.CreateException;
+import java.util.*;
+
+/**
+ * This is the local-home interface for ArabianSeaHorseServiceType enterprise bean.
+ */
+public interface HLCArabianSeaHorseServiceTypeLocalHome extends EJBLocalHome {
+    
+    public HLCArabianSeaHorseServiceTypeLocal findByPrimaryKey(String key)  throws FinderException;
+    
+    public HLCArabianSeaHorseServiceTypeLocal create(HLCHorseServiceTypeMaster objHorseTypeMaster) throws CreateException;
+    
+    //Debugs Starts by Lakshmi
+  //  public Collection findByHorseTypeName(String horseTypeName,String userTypeId) throws FinderException;
+    public Collection findByHorseTypeName(String horseTypeId,String horseTypeName,String userTypeId) throws FinderException;
+    //Debugs Ends by Lakshmi
+    
+    public Collection findByHorseServiceTypeDatails() throws FinderException;
+    
+    
+}

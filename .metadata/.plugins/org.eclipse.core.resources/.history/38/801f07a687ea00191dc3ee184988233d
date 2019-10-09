@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+ <HEAD>
+  <TITLE> digiBlitz ESB Developers Guide </TITLE>
+ </HEAD>
+    <body bgcolor= "#ffffff">
+    
+	 <table width="1345">
+	   <tr><td width="1349" height="121" background="newHeaderGrad.PNG" > 
+	   <p>&nbsp;</p>
+    </td></tr>
+<tr><td height="426">
+  <p><strong>digiBlitz ESB</strong> is an ESB (Enterprise Service Bus) that combines the functionality of a Service Oriented Architecture (SOA) and an Event Driven Architecture (EDA)  to create an agile, enterprise ESB.</p>
+  <p>The Enterprise Service Bus (ESB)- which can be defined as middleware that brings together both integration technologies and runtime services to make business services widely available for reuse - offers the best solution for meeting today's enterprise application integration challenges by providing a software infrastructure that enables SOA.</p>
+  <p><strong><u>Prerequisites : </u></strong></p>
+  
+  <UL>
+	<LI>Java Developer Kit (JDK) 1.5.x (Java 5). For downloading and installation, please refer to: <A href="http://java.sun.com/javase/downloads/" rel="nofollow">http://java.sun.com/javase/downloads/</A> </LI>
+	<LI>Apache Maven 2.x. For downloading and installation, please refer to: <A href="http://maven.apache.org/users/index.html" rel="nofollow">http://maven.apache.org/users/index.html</A> </LI>
+	<LI>Apache Servicemix-3.2.3. For downloading, please refer to: <A href="http://servicemix.apache.org/download.html" rel="nofollow">http://servicemix.apache.org/download.html</A> &amp;  extract the download into a directory of your choice. Add <em>$SERVICEMIX_HOME</em> directory to <em>$SERVICEMIX_HOME</em> environment variable and add <em>$SERVICEMIX_HOME/bin</em> directory to <em>$PATH</em> environment variable.  </LI>
+	<LI>Graphviz - Graph Visualization Software for component and endpoint visualisation. For downloading and installation, please refer to: <A href="http://www.graphviz.org/Download.php" rel="nofollow">http://www.graphviz.org/Download.php</A> </LI>
+	<!--<LI><A href="http://ws.apache.org/axis2/" rel="nofollow">Apache Axis2 </A>: Web service stack</LI>
+    <LI><A href="http://www.soapui.org/" rel="nofollow">SoapUI</A>: Free and open source desktop application for inspecting, invoking, developing, simulating/mocking and functional/load/compliance testing of web services.</LI>
+    <LI><A href="http://www.eclipse.org/bpel/" rel="nofollow">Eclipse BPEL designer </A> :The designer plugins provide the capability to design the BPEL processes and deploy the same to the ODE server.</LI> -->
+    </UL>
+	
+	
+	<p><strong><u>Documentation : </u></strong></p>
+	
+	<UL>
+	<LI>For Users' Guide, please refer to: <A href="http://servicemix.apache.org/users-guide.html" rel="nofollow">Users' Guide</A> </LI>
+	<LI>For Tutorials for writing service assemblies & service units, please refer to: <A href="http://servicemix.apache.org/tutorials.html" rel="nofollow">Tutorials</A> </LI>
+	<LI>For details of JBI components, please refer to: <A href="http://servicemix.apache.org/components-list.html" rel="nofollow">Standard JBI components</A> </LI>
+	<LI>For related useful articals, please refer to: <A href="http://servicemix.apache.org/articles.html" rel="nofollow">Related Articals</A> </LI>
+	</UL>
+	
+	
+	</td>
+</tr></table>
+ </BODY>
+</HTML>

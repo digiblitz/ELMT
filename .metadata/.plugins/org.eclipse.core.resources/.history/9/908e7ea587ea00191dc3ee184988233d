@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jboss>
+    <enterprise-beans>
+        <entity>
+            <ejb-name>HLCArabianSeaHorseMembershipStatusBean</ejb-name>
+            <local-jndi-name>ejb/HLCMemberServiceJNDI</local-jndi-name>
+        </entity>
+        <session>
+         <ejb-name>HLCKaveryStatelessMembershipServiceBean</ejb-name>
+         <jndi-name>ejb/HLCKaveryMemberJNDI</jndi-name>
+      </session>
+    </enterprise-beans>
+</jboss>

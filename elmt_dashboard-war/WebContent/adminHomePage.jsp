@@ -1,0 +1,185 @@
+#-------------------------------------------------------------------------------
+# * * Copyright: 2019 digiBlitz Foundation
+#  * * 
+#  * * License: digiBlitz Public License 1.0 (DPL) 
+#  * * Administered by digiBlitz Foundation. www.digiblitz.org/dpl/
+#  * * 
+#  * * Inventor: Suresh Kannan (Maya Suresh Kannan Balabisegan ) (www.sureshkannan.org)
+#  * * 
+#  * * Authors: Suresh Kannan (Maya Suresh Kannan Balabisegan )& digiBlitz.
+#  * * 
+#  * * "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software in accordance to the rules & restrictions of the digiBlitz Public License."
+#-------------------------------------------------------------------------------
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ page import="java.util.*" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Business Service Center</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/ddlevelsmenu-base.css" />
+        <link rel="stylesheet" type="text/css" href="css/ddlevelsmenu-topbar.css" />
+        <link rel="stylesheet" type="text/css" href="css/ddlevelsmenu-sidebar.css" />
+
+        <link rel="stylesheet" type="text/css" href="css/EAframe.css" />
+        <link rel="stylesheet" type="text/css" href="css/Usermenu.css" />
+        <link rel="stylesheet" type="text/css" href="css/table.css" />
+
+<script type="text/javascript" src="js/ddlevelsmenu.js">
+
+/***********************************************
+* All Levels Navigational Menu- (c) Dynamic Drive DHTML code library (http://www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+
+
+</head>
+<body>
+<!-- Code starts for setting width and border of Web Page -->
+<table align="center" width="100%" height="100%" cellpadding="0" bgcolor="#cccccc">
+
+
+<tr>
+<td>
+<table align="center"  width="950" bgcolor="#ffffff">
+<tr>
+<td><!-- Code Ends -->
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+              <tr>
+                <!-- header starts here--> 
+                <%@ include file = "ADV_header.jsp" %> 
+				  <!-- header starts here--> 
+              </tr>
+			  
+			  <tr>
+  <td align="right" bgcolor="#ffffff" class="text">&nbsp;
+  </td>
+ </tr>
+              
+              <tr>
+                <td bgcolor="#eeeeee" class="bg" height="25" align="right"><span class ="text1"> You have Logged In as a Admin </span></td>
+              </tr>
+              <tr>
+                <td align="right" bgcolor="#ffffff" class="text">&nbsp; </td>
+				</tr>
+              <tr>
+                <td bgcolor="#eeeeee" class="bg" height="25"><span class="text1">As an Administrator, you can Create,Edit or Delete Roles and Views and also Assign or Unassign Roles and/or Views of Users through User Management.</span></td>
+              </tr>
+              <tr>
+                <td width="20" height="60">&nbsp;</td>
+              </tr>
+              <tr>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="0" height="420">
+                    <tr>
+                      <td valign="top" align="center"><img src="images/view.JPG" width="411" height="296" /></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table>
+
+<!--Top Drop Down Menu 1 HTML-->
+
+<ul id="ddsubmenu1" class="ddsubmenustyle">
+<li><a href="#">Item 1a</a></li>
+<li><a href="#">Item 2a</a></li>
+<li><a href="#">Item Folder 3a</a>
+  <ul>
+  <li><a href="#">Sub Item 3.1a</a></li>
+  <li><a href="#">Sub Item 3.2a</a></li>
+  <li><a href="#">Sub Item 3.3a</a></li>
+  <li><a href="#">Sub Item 3.4a</a></li>
+  </ul>
+</li>
+<li><a href="#">Item 4a</a></li>
+<li><a href="#">Item Folder 5a</a>
+  <ul>
+  <li><a href="#">Sub Item 5.1a</a></li>
+  <li><a href="#">Item Folder 5.2a</a>
+    <ul>
+    <li><a href="#">Sub Item 5.2.1a</a></li>
+    <li><a href="#">Sub Item 5.2.2a</a></li>
+    <li><a href="#">Sub Item 5.2.3a</a></li>
+    <li><a href="#">Sub Item 5.2.4a</a></li>
+    </ul>
+  </li>
+	</ul>
+</li>
+<li><a href="#">Item 6a</a></li>
+</ul>
+
+
+<!--Top Drop Down Menu 2 HTML-->
+
+<ul id="ddsubmenu2" class="ddsubmenustyle">
+<li><a href="#">Item 1b</a></li>
+<li><a href="#">Item 2b</a></li>
+<li><a href="#">Item Folder 3b</a>
+  <ul>
+  <li><a href="#">Sub Item 3.1b</a></li>
+  <li><a href="#">Sub Item 3.2b</a></li>
+  <li><a href="#">Sub Item 3.3b</a></li>
+  <li><a href="#">Sub Item 3.4b</a></li>
+  </ul>
+</li>
+<li><a href="#">Item 4b</a></li>
+<li><a href="#">Item Folder 5b</a>
+  <ul>
+  <li><a href="#">Sub Item 5.1b</a></li>
+  <li><a href="#">Item Folder 5.2b</a>
+    <ul>
+    <li><a href="#">Sub Item 5.2.1b</a></li>
+    <li><a href="#">Sub Item 5.2.2b</a></li>
+    <li><a href="#">Sub Item 5.2.3b</a></li>
+    </ul>
+  </li>
+	</ul>
+</li>
+<li><a href="#">Item 6b</a></li>
+</ul>
+
+<!--Top Drop Down Menu 3 HTML-->
+
+<ul id="ddsubmenu3" class="ddsubmenustyle">
+<li><a href="#">Image Optimizer</a></li>
+<li><a href="#">FavIcon Generator</a></li>
+<li><a href="#">Email Riddler</a></li>
+<li><a href="#">htaccess Password</a></li>
+<li><a href="#">htaccess Banning</a></li>
+</ul>
+
+
+<!--Top Drop Down Menu 4 HTML-->
+
+<ul id="ddsubmenu4" class="ddsubmenustyle">
+<li><a href="#">XYZ-IED</a></li>
+<li><a href="#">Image Optimizer</a></li>
+<li><a href="#">FavIcon Generator</a></li>
+<li><a href="#">Email Riddler</a></li>
+<li><a href="#">htaccess Password</a></li>
+<li><a href="#">htaccess Banning</a></li>
+</ul>
+
+<!--Top Drop Down Menu 5 HTML-->
+
+<ul id="ddsubmenu5" class="ddsubmenustyle">
+<li><a href="#">Image Optimizer</a></li>
+<li><a href="#">FavIcon Generator</a></li>
+<li><a href="#">Email Riddler</a></li>
+<li><a href="#">htaccess Password</a></li>
+<li><a href="#">htaccess Banning</a></li>
+</ul>
+
+
+            <!-- Code starts for setting width and border of Web Page -->
+          </td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<!-- Code Ends -->
+</body>
+</html>

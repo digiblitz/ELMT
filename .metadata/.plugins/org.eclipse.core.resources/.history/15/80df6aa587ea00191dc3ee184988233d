@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss>
+   <enterprise-beans>
+     <entity>
+        <ejb-name>HLCMediaMasterBean</ejb-name>
+        <local-jndi-name>HLCMediaMasterLocalHome</local-jndi-name>
+    </entity>
+    
+     <entity>
+        <ejb-name>HLCDimensionBean</ejb-name>
+        <local-jndi-name>HLCDimensionLocalHome</local-jndi-name>
+    </entity>
+    
+    <entity>
+        <ejb-name>HLCIssueMasterBean</ejb-name>
+        <local-jndi-name>HLCIssueMasterLocalHome</local-jndi-name>
+    </entity>
+
+    
+    <entity>
+        <ejb-name>HLCDisplayTypeMasterBean</ejb-name>
+        <local-jndi-name>HLCDisplayTypeMasterLocalHome</local-jndi-name>
+    </entity>
+    
+    <entity>
+        <ejb-name>HLCDisplaySubTypeMasterBean</ejb-name>
+        <local-jndi-name>HLCDisplaySubTypeMasterLocalHome</local-jndi-name>
+    </entity>
+    
+    <entity>
+        <ejb-name>HLCMapPriceBean</ejb-name>
+        <local-jndi-name>HLCMapPriceLocalHome</local-jndi-name>
+    </entity>
+    
+    <entity>
+        <ejb-name>HLCDimensionDetailBean</ejb-name>
+        <local-jndi-name>HLCDimensionDetailLocalHome</local-jndi-name>
+    </entity>
+    
+     <entity>
+        <ejb-name>HLCAdsDetailBean</ejb-name>
+        <local-jndi-name>HLCAdsDetailLocalHome</local-jndi-name>
+    </entity>
+    
+     <entity>
+        <ejb-name>HLCAdvertiseBean</ejb-name>
+        <local-jndi-name>HLCAdvertiseLocalHome</local-jndi-name>
+    </entity>
+    
+    
+     <session>
+        <ejb-name>HLCAdvertiseSessionBean</ejb-name>
+        <jndi-name>ejb/HLCAdvertiseSessionBean</jndi-name>
+    </session>
+    
+   </enterprise-beans>
+</jboss>

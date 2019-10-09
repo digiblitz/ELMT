@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jboss>
+    <enterprise-beans>
+        <entity>
+            <ejb-name>HLCUjaniDamEntityBean</ejb-name>
+            <local-jndi-name>ejb/HLCUjaniDamEntityJNDI</local-jndi-name>
+        </entity>
+        <session>
+         <ejb-name>HLCKrishnaStatelessBean</ejb-name>
+         <jndi-name>ejb/HLCKrishnaStatelessJNDI</jndi-name>
+      </session>
+      <session>
+         <ejb-name>HLCMembershipQualificationMatrixBean</ejb-name>
+         <jndi-name>ejb/HLCMembershipQualificationMatrixJNDI</jndi-name>
+      </session>
+    </enterprise-beans>
+</jboss>

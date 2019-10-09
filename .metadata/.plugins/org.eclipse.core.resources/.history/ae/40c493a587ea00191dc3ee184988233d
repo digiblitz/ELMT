@@ -1,0 +1,10 @@
+
+package com.hlcmrm.statless;
+
+
+/**
+ * This is the business interface for RefundSession enterprise bean.
+ */
+public interface HLCRefundSessionRemoteBusiness {
+    
+}

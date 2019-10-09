@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+.style1 {
+	font-size: xx-large;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style3 {
+	font-size: large;
+	font-weight: bold;
+}
+.style5 {
+	font-size: large;
+	font-weight: bold;
+	color: #0066CC;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style6 {
+	color: #0066CC;
+	font-weight: bold;
+}
+.style7 {
+	font-size: x-large;
+	font-weight: bold;
+	color: #0066CC;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style8 {
+	font-size: xx-large;
+	font-weight: bold;
+	color: #0066CC;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style9 {color: #0066CC}
+.style11 {font-weight: bold; color: #0066CC; font-size: large;}
+.style13 {font-family: Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+
+<body>
+<p align="left" class="style1"><img src="../eBlitzLogo.gif" width="145" height="72" /></p>
+<p class="style13"><span class="style3">eBlitz Suite</span><br />
+  <span class="style3"> Version: 1.0</span></p>
+<p class="style13">&nbsp;</p>
+<p class="style13"><span class="style11">Installation and  Deployment Guide</span><br />
+  Document Release Date: September 2009 <br />
+  Software Release Date: September 2009</p>
+<p class="style13"><span class="style6">Legal Notices</span><br />
+    <em>Warranty</em><br />
+The only warranties for eBlitz Suite products and  services are set forth in the express warranty statements accompanying such  products and services. Nothing herein should be construed as constituting an  additional warranty.eBlitz shall not be liable for technical or editorial  errors or omissions contained herein.</p>
+<p class="style13">The information contained herein is subject  to change without notice.</p>
+<p class="style13"><em>Restricted Rights Legend</em></p>
+<p class="style13">Confidential computer software. Valid  license from eBlitz Suite required for possession, use or copying. Consistent with  FAR 12.211 and 12.212, Commercial Computer Software, Computer Software  Documentation, and Technical Data for Commercial Items are licensed to the U.S.  Government under vendor's standard commercial license.</p>
+<p class="style13"><em>Third-Party Web Site</em></p>
+<p class="style13">eBlitz Suite provides links to external third-party  Web sites to help you find supplemental information. Site content and  availability may change without notice. eBlitz makes no representations or  warranties whatsoever as to site content or availability.</p>
+<p class="style13"><em>Copyright Notices</em></p>
+<p class="style13">' Copyright 2009 eBlitz Inc.</p>
+<p class="style13"><em>Trademark Notices</em></p>
+<p class="style13">Java&nbsp;  is a US trademark of Sun Microsystems, Inc. Microsoft , Windows&nbsp; and Windows XP&nbsp; are U.S. registered trademarks of Microsoft  Corporation. IBM , AIX&nbsp; and  WebSphere&nbsp; are trademarks or registered  trademarks of International Business Machines Corporation in the United States  and/or other countries. BEA&nbsp; and  WebLogic&nbsp; are registered trademarks of  BEA Systems, Inc. JBOSS is registered trademark of REDHAT.</p>
+<p class="style13">&nbsp;</p>
+<p class="style7">About this Guide</p>
+<p class="style13">Welcome to eBlitz Suite, the foundation of  Service Oriented Enterprise Architecture, providing an enterprise with a single  place to organize, understand, and manage information in its SOA. The  standards-based architecture of SO-EA maximizes interoperability with other SOA  products.</p>
+<p class="style5">How This Guide is organized</p>
+<p class="style13">This guide describes how to setup an  environment and deploy eBlitz Suite to it.</p>
+<p class="style13">This guide contains the following information:</p>
+
+<p class="style13">&nbsp;</p>
+<p class="style5">Support</p>
+<p class="style13">You can visit the eBlitz Software Support  Web site at:<br />
+<p class="style13">&nbsp;</p>
+ <strong><a href="http://www.digiblitz.com">http://eblitzinc.com</a></strong></p>
+
+<p class="style13">eBlitz Software Support Online provides  customer self-solve capabilities. It provides a fast and efficient way to  access interactive technical support tools needed to manage your business. As a  valued support customer, you can benefit by using the eBlitz Software Support  web site to:</p>
+<p class="style13">&bull; Search  for knowledge documents of interest<br />
+  &bull; Submit  and track support cases and enhancement requests <br />
+  &bull; Download  software patches <br />
+  &bull; Manage  support contracts <br />
+  &bull; Look  up eBlitz support contacts <br />
+  &bull; Review  information about available services <br />
+  &bull; Enter  into discussions with other software customers <br />
+  &bull; Research  and register for software training </p>
+<p class="style13">&nbsp;</p>
+<p class="style5">Prerequisites</p>
+<p class="style13">The following hardware and software is  required to run eBlitz Suite:</p>
+<p class="style13"><span class="style11">Hardware</span><br />
+  Hardware requirements vary depending on  sizing and deployment type.<br />
+For a distributed, production environment,  the requirements are:</p>
+<p class="style13">&bull; For  each physical node, an Intel Pentium Dual Core processor, 2 GB RAM, 1 GB free  disk space and a network card that supports 1 Gb/sec.<br />
+  &bull; Network  bandwidth of 1 Gb/sec or higher.</p>
+<p class="style13">For development and evaluation purposes,eBlitz Suite can run on a single machine, even on a notebook.</p>
+<p class="style13">The hardware requirements in this case are:</p>
+<p class="style13">&bull; Intel  Pentium IV processor, 1 GB RAM, 1-2 GB free disk space and a network card  that supports 100 Mb/sec.</p>
+<p class="style13">&bull; Network  bandwidth of 100Mb/sec or higher.</p>
+<p class="style5">Software</p>
+<p class="style13">Each physical node must have the following  software:</p>
+<p class="style13">&bull; Java  SE Development Kit 6u10 (You can download this from <a href="http://java.sun.com/javase/downloads/index.jsp">http://java.sun.com/javase/downloads/index.jsp</a>)<br />
+  &bull; JAVA_HOME  environment variable set to point to the  Java JDK.<br />
+  &bull; PATH  and CLASSPATH  environment variable set to point to the  Java JDK Bin and JRE Bin. <br />
+</p>
+<p class="style5">Supported Platforms</p>
+<p class="style13">eBlitz supports the following Operating  System and browsers:</p>
+<p class="style13">&bull; Microsoft  Windows 2003 Server <br />
+  &bull; Microsoft  Internet Explorer 6 and 7<br />
+  &bull; Mozilla  Firefox 2</p>
+<p class="style13">eBlitz Suite supports the following  combinations of application servers, JDKs and backend databases.</p>
+<p class="style13">Supported Platforms on Windows</p>
+<p class="style13"><strong>Windows Server 2003 on x86 Platforms</strong><br />
+<p class="style13">&nbsp;</p>
+    <p class="style8"><strong>Basic Installation</strong></p>
+<p class="style13">The GUI installer is the easiest way to  install eBlitz suite. However, it may not be suitable for all the configuration  options required by production environments.</p>
+<p class="style13">Production installation and deployment is  described in detail in <span class="style9">Chapter 4, Deploying eBlitz Suite</span></p>
+<p class="style13">This chapter contains the following  sections:<br />
+  <span class="style6">&bull; Using the GUI Installer<br />
+&bull; After GUI Installation</span></p>
+<p class="style5">Using the GUI Installer</p>
+<p class="style13">Before using the GUI Installer make sure  that you have a correctly setup environment.<br />
+  For hardware and software requirements, and  supported platforms, see <span class="style9">Chapter 1, Getting Started.</span><br />
+  For an evaluation environment, you need  valid credentials to a configured database. For details, see Preparing Database  Section.</p>
+<p class="style13">JBoss does not require any additional  configuration for evaluation purposes. If you are using the GUI installation  for a production environment with JBoss or for a different application server,  see <span class="style9">Setting Up Application Servers Section.</span></p>
+<p class="style13"><strong>&nbsp;</strong></p>
+<p class="style13"><strong>To install using the Installation Wizard:</strong></p>
+<ol start="1" type="1" class="style13">
+  <li>Make sure the JBOSS Application Server or any other server is not running. </li>
+  <li>Do one of the following: </li>
+  <ol start="1" type="a">
+    <li>Execute the file<strong> eBlitzSuite .jar</strong>,        located on the installation CD or in your distribution directory. </li>
+    <li>Execute the following command: </li>
+  </ol>
+</ol>
+<p class="style13"><strong>java -jar eBlitzSuite.jar</strong><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The  Installation Wizard opens displaying the Welcome page.</p>
+<ol start="3" type="1" class="style13">
+  <li>In the Welcome page, eBlitz line of Products are shown. Click on       Next. eBlitz Suite Description page opens. </li>
+  <li>In eBlitz Suite Description Page, review the hardware       and software requirements, and then click Next. </li>
+  <li>In the License page review the license, select <strong>I Accept the       Terms of the License Agreement </strong>and       then click Next. Servlet Container page opens. </li>
+    <li>In the servlet container page, default selected servlet container is Apache tomcat and click Next. </li>
+  <li>Servlet container installation folder location page opens. The default location of apache-tomcat-6.0.18 servlet container installation folder is:       C:/eBlitz/apache tomcat. If there is any such folder exists in the same       location, please move the folder to some other location. Click on Next. </li>
+  <li>In the Application Server page, default selected application       server is JBOSS-4.2.2 and click Next. </li>
+  <li>Application Server installation folder location page opens. The       default location of JBOSS-4.2.2 Application Server installation folder is:       C:/eBlitz/jboss-4.2.2.GA. If there is any such folder exists in the same       location, please move the folder to some other location. Click on Next. </li>
+  <li>In the ESB page, default selected ESB is eBlitz ESB      and click Next. </li>
+  <li>In the Governance page, default selected governance tool is eBlitz Governance and click Next. </li>
+  <li>In the BPEL Engine page, default selected BPEL tool is eBlitz BPEL Engine and click Next. </li>
+  <li>The installer validates the data image. The installer verifies the       data and the eBlitzSuite Platform V1.0 installation process starts. </li>
+  <li>In the Installation Progress page, track each step of the       installation. When the installation is complete, click Finish to exit the       installation wizard. </li>
+</ol>
+
+ 
+
+<p class="style8">4 After the Installation</p>
+<ul>
+  <li class="style13"><strong>To start the eBlitz Suite ,go to the All Programs menu of the system ,under eBlitz click on start eBlitz suite. </strong></li>
+  <li class="style13"><strong>This starts the application server which is JBoss by default.Then click on the start console in the eBlitz Suite</strong>. </li>
+  <li class="style13"><strong>The console would be launched and then the BPEL ,ESB and Governance tools could be initiated from the START button on the console. </strong></li>
+  <li class="style13"><strong>Also links have been provided to navigate to the console of the respective tools .</strong></li>
+  <li class="style13"><strong>The STOP button would stop the underlying tool. </strong></li>
+</ul>
+<p><strong></strong></p>
+<p class="style13">&nbsp;</p>
+<p class="style13">&nbsp;</p>
+<p class="style13">&nbsp;</p>
+<p class="style13">&nbsp;</p>
+</body>
+</html>

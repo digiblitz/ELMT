@@ -1,0 +1,109 @@
+#-------------------------------------------------------------------------------
+# * * Copyright: 2019 digiBlitz Foundation
+#  * * 
+#  * * License: digiBlitz Public License 1.0 (DPL) 
+#  * * Administered by digiBlitz Foundation. www.digiblitz.org/dpl/
+#  * * 
+#  * * Inventor: Suresh Kannan (Maya Suresh Kannan Balabisegan ) (www.sureshkannan.org)
+#  * * 
+#  * * Authors: Suresh Kannan (Maya Suresh Kannan Balabisegan )& digiBlitz.
+#  * * 
+#  * * "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software in accordance to the rules & restrictions of the digiBlitz Public License."
+#-------------------------------------------------------------------------------
+/*function myvalidate(){
+
+//-------------------------------------Contact Type name------------------------------------------------------------
+
+if((document.frmCreateContactType.txtcontactname.value=="")||(document.frmCreateContactType.txtcontactname.value.indexOf(' ')==0))
+   {alert(" Contact Type name cannot be empty ");
+     document.frmCreateContactType.txtcontactname.focus();
+    return false; }
+	
+	if((document.frmCreateContactType.txtcontactname.value.length >80 ))
+ {alert(" Contact Type name exceeds the maximum of 80 characters");
+  document.frmCreateContactType.txtcontactname.focus();
+ return false;}
+ 
+ 
+    return true;
+    }*/
+<!--Start:[ContactMgt] For Contact Type Addition, Editing and Deletion changes dated 30-Mar-2011-->
+    function myvalidate(obj)
+{
+
+	vFlag = false;
+		if(obj.txtcontactname.value==""){
+		alert("Please enter valid Contact Type");
+		obj.txtcontactname.focus();
+		return false;
+	}
+
+      for(var i=0;i<obj.elements.length;i++)
+	{
+		if(obj.elements[i].type=='text')
+		{
+			if((obj.elements[i].value.length > 0) && ((obj.elements[i].value.indexOf('	') == 0) || (obj.elements[i].value.lastIndexOf('	') == (obj.elements[i].value.length-1)) ||
+			(obj.elements[i].value.indexOf(' ') == 0) || (obj.elements[i].value.lastIndexOf(' ') == (obj.elements[i].value.length-1))))
+			{
+				
+				obj.elements[i].value = obj.elements[i].value.trim();
+                obj.elements[i].focus();
+				vFlag = true;
+			}
+		}
+	}
+
+	if(vFlag==true)
+	{
+		alert("Leading and Trailing spaces will be trimmed. Please submit again.");
+		return false;
+	}
+
+	if((obj.txtcontactname.value.length >50 )){
+		alert("Contact Type cannot have more than 50 characters");
+		obj.txtcontactname.focus();
+		return false;
+	}
+
+		
+	if(obj.txtcontactdescription.value=="")
+        {
+		alert(" Please enter valid Description");
+		obj.txtcontactdescription.focus();
+		return false;
+	}
+
+	
+
+	if((obj.txtcontactdescription.value.length >150 )){
+		alert("Description cannot have more than 150 characters");
+		obj.txtcontactdescription.focus();
+		return false;
+	}
+
+	if(obj.ContactType.value=="")
+        {
+		alert(" Please select valid Type");
+		obj.ContactType.focus();
+		return false;
+	}
+
+	if(document.getElementById(obj.name).status1.checked==false && document.getElementById(obj.name).status2.checked==false){
+		alert("Please choose the Status");
+        return false;
+	}
+
+return true;
+
+}
+
+
+    function clearFields(){
+           document.frmCreateContactType.txtcontactname.value="";
+           document.frmCreateContactType.txtcontactdescription.value="";
+           document.frmCreateContactType.ContactType.selectedIndex="selected";
+           document.getElementById('frmCreateContactType').status1.checked=false;
+           document.getElementById('frmCreateContactType').status2.checked=false;
+           return true;
+}
+<!--End:[ContactMgt] For Contact Type Addition, Editing and Deletion changes dated 30-Mar-2011-->

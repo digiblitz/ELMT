@@ -1,0 +1,10 @@
+
+package com.hlcnonhlc.stateless;
+
+
+/**
+ * This is the business interface for KaveryNonUSEAOrgSession enterprise bean.
+ */
+public interface HLCKaveryNonHLCOrgSessionRemoteBusiness {
+    
+}

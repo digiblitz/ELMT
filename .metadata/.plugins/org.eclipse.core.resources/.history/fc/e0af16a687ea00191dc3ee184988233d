@@ -1,0 +1,29 @@
+ 
+function chk(){
+	
+//==================================== For Radio Button ==============================	
+		 
+		if(document.frmMeeAdminEduActRegiApprove.comments.value==""){
+			alert("Enter a comments");
+			document.frmMeeAdminEduActRegiApprove.comments.focus();
+			return false;
+		}
+		if(document.frmMeeAdminEduActRegiApprove.comments.value.indexOf(' ')==0){
+		alert("Please avoid  unwanted white space");
+		document.frmMeeAdminEduActRegiApprove.comments.focus();
+		return false;
+	      }
+		if(document.frmMeeAdminEduActRegiApprove.comments.value.length>1024){
+			alert("Comments is out of range");
+			document.frmMeeAdminEduActRegiApprove.comments.focus();
+			return false;
+		}
+		if(document.frmMeeAdminEduActRegiApprove.comments.value.indexOf('  ')!==-1){
+		alert("Please avoid  unwanted white space");
+		document.frmMeeAdminEduActRegiApprove.comments.focus();
+		return false;
+	   }
+	return true;
+	}
+ 
+ 

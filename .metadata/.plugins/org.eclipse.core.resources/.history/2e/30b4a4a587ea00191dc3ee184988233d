@@ -1,0 +1,18 @@
+
+package com.hlcentitybean.ujanidam;
+
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.CreateException;
+import java.util.*;
+
+/**
+ * This is the local-home interface for UjaniDamEntity enterprise bean.
+ */
+public interface HLCUjaniDamEntityLocalHome extends EJBLocalHome {
+    
+    HLCUjaniDamEntityLocal findByPrimaryKey(String key)  throws FinderException;
+    public HLCUjaniDamEntityLocal create(String newEventId,String organizerId,String eventTitle,Date beginDat,Date endDat,String areaId,
+            String stateId,int compYear,String eventTypeId,String eventLevelNames,String oldEventId)  throws CreateException;
+    public HLCUjaniDamEntityLocal create(String proCalId,String eventId,String eventTypeId,String eventLevelId)  throws CreateException; 
+}

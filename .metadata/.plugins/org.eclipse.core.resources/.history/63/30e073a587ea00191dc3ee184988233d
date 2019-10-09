@@ -1,0 +1,19 @@
+
+package com.hlcadv.masters;
+
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.*;
+import java.util.*;
+
+
+/**
+ * This is the local-home interface for MediaMaster enterprise bean.
+ */
+public interface HLCMediaMasterLocalHome extends EJBLocalHome {
+   public HLCMediaMasterLocal findByPrimaryKey(String mediaId)  throws FinderException;
+   public HLCMediaMasterLocal create(String mediaName , String mediaDescription) throws CreateException;
+   public Collection findByAll() throws FinderException;
+   public Collection findByMediaName(String mediaName) throws FinderException;
+   public Collection findByEditMediaName(String mediaId, String mediaName) throws FinderException;
+}

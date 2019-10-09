@@ -1,0 +1,10 @@
+
+package com.hlcmrm.rolemanagement.masters;
+
+
+/**
+ * This is the business interface for RoleMaster enterprise bean.
+ */
+public interface HLCRoleMasterLocalBusiness {
+    
+}

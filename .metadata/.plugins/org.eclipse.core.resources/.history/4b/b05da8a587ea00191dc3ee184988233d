@@ -1,0 +1,10 @@
+
+package com.hlcpayment;
+
+
+/**
+ * This is the business interface for Payment enterprise bean.
+ */
+public interface HLCPaymentLocalBusiness {
+    
+}

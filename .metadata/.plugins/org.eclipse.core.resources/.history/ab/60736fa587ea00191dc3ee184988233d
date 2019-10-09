@@ -1,0 +1,23 @@
+package com.hlcadv.masters;
+
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import java.util.List;
+import java.util.Collection;
+import javax.ejb.CreateException;
+
+
+/**
+ * This is the local-home interface for DimensionDetail enterprise bean.
+ */
+public interface HLCDimensionDetailLocalHome extends EJBLocalHome {
+
+    public HLCDimensionDetailLocal findByPrimaryKey(String dimensionId)  throws FinderException;
+    public HLCDimensionDetailLocal create(String displaySubTypeId , String dimensionTypeId, String mediaId, String dimensionName, String height,
+             String width,  String units,  String imagePath) throws CreateException;
+    public Collection findByAll() throws FinderException;
+    public List findByMediaTypeAndDisplayType(String mediaId, String displayId) throws FinderException;
+    
+   // public Collection findByDimensionTypeName(String dimensionTypeName) throws FinderException; 
+    
+}

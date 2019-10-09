@@ -1,0 +1,17 @@
+
+package com.hlcspnr.sponsor;
+
+import java.rmi.RemoteException;
+import javax.ejb.CreateException;
+import javax.ejb.EJBHome;
+
+
+/**
+ * This is the home interface for SponsorSession enterprise bean.
+ */
+public interface HLCSponsorSessionRemoteHome extends EJBHome {
+    
+    HLCSponsorSessionRemote create()  throws CreateException, RemoteException;
+    
+    
+}

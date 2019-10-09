@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejb-jar version="2.1" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/ejb-jar_2_1.xsd">
+    <display-name>HumanMember</display-name>
+    <enterprise-beans>
+        <session>
+            <display-name>kaverystatelessSB</display-name>
+            <ejb-name>HLCkaverystatelessBean</ejb-name>
+            <home>com.hlcform.stateless.HLCkaverystatelessRemoteHome</home>
+            <remote>com.hlcform.stateless.HLCkaverystatelessRemote</remote>
+            <ejb-class>com.hlcform.stateless.HLCkaverystatelessBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+        </session>
+        <entity>
+            <display-name>ArabianSeaEntityUserEB</display-name>
+            <ejb-name>HLCArabianSeaEntityUserBean</ejb-name>
+            <local-home>com.hlcform.user.HLCArabianSeaEntityUserLocalHome</local-home>
+            <local>com.hlcform.user.HLCArabianSeaEntityUserLocal</local>
+            <ejb-class>com.hlcform.user.HLCArabianSeaEntityUserBean</ejb-class>
+            <persistence-type>Bean</persistence-type>
+            <prim-key-class>java.lang.String</prim-key-class>
+            <reentrant>false</reentrant>
+        </entity>
+        </enterprise-beans>
+    <assembly-descriptor>
+ 
+        <container-transaction>
+            <method>
+                <ejb-name>HLCArabianSeaEntityUserBean</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>HLCkaverystatelessBean</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        </assembly-descriptor>
+    </ejb-jar>
+

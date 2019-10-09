@@ -1,0 +1,17 @@
+
+package com.hlcsessionbean.qualificationmatrix;
+
+import java.rmi.RemoteException;
+import javax.ejb.CreateException;
+import javax.ejb.EJBHome;
+
+
+/**
+ * This is the home interface for MembershipQualificationMatrix enterprise bean.
+ */
+public interface HLCMembershipQualificationMatrixRemoteHome extends EJBHome {
+    
+    HLCMembershipQualificationMatrixRemote create()  throws CreateException, RemoteException;
+    
+    
+}

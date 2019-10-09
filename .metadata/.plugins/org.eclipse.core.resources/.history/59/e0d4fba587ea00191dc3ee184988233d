@@ -1,0 +1,2726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+   <!-- ============ Data source Configuration=========================== -->
+   
+    <!--data-sources>
+      <data-source>
+        <set-property property="autoCommit"
+                      value="false"/>
+        <set-property property="description"
+                      value="Example Data Source Configuration"/>
+        <set-property property="driverClass"
+                      value="org.postgresql.Driver"/>
+        <set-property property="maxCount"
+                      value="4"/>
+        <set-property property="minCount"
+                      value="2"/>
+        <set-property property="password"
+                      value="mypassword"/>
+        <set-property property="url"
+                      value="jdbc:postgresql://localhost/mydatabase"/>
+        <set-property property="user"
+                      value="myusername"/>
+      </data-source>
+    </data-sources-->
+    <!--***************************************** Karthik Form Beans************************************************************-->   
+    <form-beans>
+        
+        <form-bean name="insertOrgHLCEventRegActionForm" type="com.mrm.actionform.InsertOrgHLCEventRegActionForm"/>
+        <form-bean name="insertHorseRegActionForm" type="com.mrm.actionform.InsertHorseRegActionForm"/>
+        <form-bean name="insertUserRegActionForm" type="com.mrm.actionform.InsertUserRegActionForm"/>
+        <form-bean name="renewHorseRegActionForm" type="com.mrm.actionform.RenewHorseRegActionForm"/>
+        <form-bean name="horseRegActionForm" type="com.mrm.actionform.HorseRegActionForm"/>
+        <form-bean name="updateHorseRegActionForm" type="com.mrm.actionform.RenewUpdateHorseRegActionForm"/>
+        <form-bean name="updateUserRegActionForm" type="com.mrm.actionform.UpdateUserRegActionForm"/>
+        
+        
+        <!--***************************************** punitha Form Beans************************************************************-->    	  
+        <form-bean name="FormChennaiServlet" type="com.sponsor.actionform.FormChennaiServlet"/>
+        <form-bean name="FormChennaiServlet" type="com.sponsor.actionform.FormChennaiServlet"/>
+        <form-bean name="FormContract" type="com.sponsor.actionform.FormContract"/>
+        <form-bean name="FormEventOrgRenewal" type="com.mee.actionform.FormEventOrgRenewal"/>
+        <form-bean name="formAdvertisement" type="com.adv.actionform.FormAdvertisement"/>
+        <form-bean name="searchAdvertisement" type="com.adv.actionform.SearchAdvertisement"/>
+        <form-bean name="FormSponsorPayment" type="com.sponsor.actionform.FormSponsorPayment"/>
+        <form-bean name="searchAdvtForm" type="com.adv.actionform.SearchAdvtForm"/>
+        <form-bean name="omnibusInsert" type="com.adv.actionform.FormOmnibus"/>
+        <form-bean name="FormAdvertisePrice" type="com.adv.actionform.FormAdvertisePrice"/>
+        <form-bean name="FormPriceSearch" type="com.adv.actionform.FormPriceSearch"/>
+        <form-bean name="FormInsuranceEdu" type="com.mee.actionform.InsuranceEduForm"/>
+        <form-bean name="FormMadhurai" type="com.mee.actionform.FormMadhurai"/>
+        <form-bean name="AnnRegPaymentForm" type="com.mee.actionform.AnnRegPaymentForm"/>
+        <form-bean name="UpgradeHorseReg" type="com.mrm.actionform.FormHorseUpgrade"/>
+        <form-bean name="FormAddRidOwnPay" type="com.mrm.actionform.FormAddRidOwnPay"/>
+        
+        <form-bean name="uploadEARActionForm" type="com.mrm.actionform.uploadEARActionForm"/>
+        
+        
+        <!-- Meetings -->
+        <form-bean name="FormInsuranceEdu" type="com.mee.actionform.InsuranceEduForm"></form-bean>
+        <form-bean name="FormAdminOrgListing" type="com.mee.actionform.AdminOrgListingForm"/>
+        <form-bean name="AnnualRegForm" type="com.mee.actionform.AnnualRegForm"/>
+        <form-bean name="AnnualRegActionForm" type="com.mee.actionform.AnnualRegActionForm"/>
+        <form-bean name="HorseCompDataMapActionForm" type="com.mee.actionform.HorseCompDataMapActionForm"/>
+        <form-bean name="UploadRegDataActionForm" type="com.mee.actionform.UploadRegDataActionForm"/>
+        
+        <!-- Messages  -->
+        <form-bean name="contactForm" type="com.message.actionform.InsertAddContactForm"/>
+        <form-bean name="groupForm" type="com.message.actionform.GroupForm"/>
+        <form-bean name="myMessageForm" type="com.message.actionform.MyMessageForm"/>
+        <form-bean name="postGroupForm" type="com.message.actionform.InsertPostMessageForm"/>
+        <form-bean name="messageDBForm" type="com.message.actionform.MessageDBActionForm"/>
+        <form-bean name="inviteGroupForm" type="com.message.actionform.InsertInviteGroupForm"/>
+        <form-bean name="MessageActionForm" type="com.message.actionform.MessageActionForm"/>
+        
+        <!-- Online Entries -->
+        <form-bean name="updateUserRegActionForm" type="com.mrm.actionform.UpdateUserRegActionForm"/>
+        <form-bean name="EventEntryPaymentForm" type="com.oee.actionform.EventEntryPaymentForm"/>
+        <form-bean name="uploadActionForm" type="com.oee.actionform.UploadResultsActionForm"/>
+        
+        <!-- Project Entries -->
+        <form-bean name="newProject" type="com.message.actionform.ProjectActionForm" />
+        <form-bean name="GraphActionForm" type="com.mrm.actionform.ReportActionForm" />
+        <form-bean name="viewActionForm" type="com.view.action.viewActionForm" />
+		
+		  <form-bean
+            name="fileUploadForm"
+            type="fileUpload.FileUploadForm"/>
+            <form-bean
+            name="strategicViewManagementForm"
+            type="com.StrgViewMgmnt.StrategicViewManagementForm"/>
+    </form-beans>
+    
+  <global-exceptions></global-exceptions>
+    <!-- ========== Global Forward Definitions ==================================================================== -->
+    <global-forwards>
+        <forward name="login" path="/login.jsp"/>
+        <forward name="novaPage" path="/frmAllPayment.jsp"/>
+        <forward name="construct" path="/jsp/undrConstruct.jsp"/>
+        <!--Dhivya Here: Added for missing action tags-->
+         <forward name="testing" path="/jsp/testpaypal.jsp"/>
+         <!--Ends Here-->
+    </global-forwards> 
+    
+   <action-mappings>
+        
+        <!-- **************************************** Accounts Module ************************************************ -->
+        <action path="/acctrans"
+                type="com.acc.action.AccTransAction">
+            <forward name="frmAccTrasaction" path="/jsp/accounts/frmAccTransactionDetails.jsp"></forward>
+            <forward name="frmAccMemberTrasaction" path="/jsp/accounts/frmAccMembershipTransactionDetails.jsp"></forward>
+            <forward name="listTransDet" path="/jsp/accounts/frmAccListingTransDet.jsp"/>
+            <forward name="detailTrans" path="/jsp/accounts/frmAdminholdTrans.jsp"/>
+            <forward name="syncData" path="/jsp/accounts/frmSynchronisedTransDet.jsp"/>
+        </action>
+        
+        <action path="/QBXMLRequest"
+                scope="request"            
+                type="com.acc.action.QBXMLRequestAction">
+            <forward name="index" path="/index.jsp"/>
+            <forward name="QBSuccess" path="/jsp/accounts/frmAccTransactionSuccess.jsp"/>
+            <forward name="QBError" path="/jsp/accounts/frmAccTransactionError.jsp"/>
+            <forward name="QBSalesAddSuccess" path="/QBXMLResponse.do?process=QBSARes"/>
+            <forward name="QBConfigNotes" path="/jsp/accounts/frmAccTransactionQBConfig.jsp"/>
+        </action>
+        
+       
+        
+        <action path="/QBXMLResponse"
+                scope="request"            
+                type="com.acc.action.QBXMLResponseAction">
+            <forward name="index" path="/index.jsp"/>
+            <forward name="QBSalesAddFailure" path="/jsp/accounts/frmAccSalesRecAddTransFailure.jsp"/>
+            <forward name="QBError" path="/jsp/accounts/frmAccTransactionError.jsp"/>
+            <forward name="QBSalesAddResSuccess" path="/jsp/accounts/frmAccTransactionSuccess.jsp"/>
+            <!-- <forward name="QBSalesAddResSuccess" path="/jsp/accounts/frmAccSalesRecAddTransFailure.jsp"/> -->
+        </action>
+        
+        
+        <action path="/TransactDet" type="com.mrm.action.TransactionProcess" scope="request">
+            <forward name="transacMap" path="/jsp/membership/frmTransactionEntry.jsp" />
+            <forward name="confMap" path="/jsp/membership/frmTransactionEntryConf.jsp" />
+            <forward name="edittransac" path="/jsp/membership/frmEditTransacEntry.jsp" />               
+            <forward name="listtransac" path="/jsp/membership/frmLstTransacEntry.jsp" />
+            
+        </action>
+        
+        <action path="/overPaySection" type="com.mrm.action.AdminRefundOverpay" scope="request">
+            <forward name="listPay" path="/jsp/membership/frmlistingOverpayments.jsp"/>
+            <forward name="listApprove" path="/jsp/membership/frmOverpayApprove.jsp"/>
+            <forward name="listPend" path="/jsp/membership/frmOverpayPendingDet.jsp"/>
+        </action>
+        
+        
+        <!-- ******************************* Account Item Master Action ****************************  -->
+
+        <action path="/ItemMaster" type="com.acc.action.ItemMasterAction" scope="request">
+            <forward name="addItemMaster" path="/jsp/accounts/frmCreateItem.jsp"/>
+            <forward name="editItemMaster" path="/jsp/accounts/frmEditItem.jsp"/>
+            <forward name="listItemMaster" path="/jsp/accounts/frmItemMasterList.jsp"/>
+            <forward name="itemMasterConf" path="/jsp/accounts/frmItemMasterConf.jsp"/>
+        </action>
+        
+        <!-- ******************************* Account Sub Item Ajax Action ****************************  -->        
+
+        <action path="/SubItemAjaxAction" type="com.acc.action.SubItemAjaxAction" scope="request"/>        
+        
+        <!-- ******************************* Chart Account Master Action ****************************  -->
+
+        <action path="/ChartAccMaster" type="com.acc.action.ChartOfAccountAction" scope="request">
+            <forward name="addAccMaster" path="/jsp/accounts/frmCreateAccount.jsp"/>
+            <forward name="editAccMaster" path="/jsp/accounts/frmEditAccount.jsp"/>
+            <forward name="listAccMaster" path="/jsp/accounts/frmAccMasterList.jsp"/>
+            <forward name="itemAccConf" path="/jsp/accounts/frmAccountMasterConf.jsp"/>
+            <forward name="listSingleAccDet" path="/jsp/accounts/frmSingleAccDet.jsp"/>
+        </action>
+        
+        
+        <action path="/contract"
+                name="FormContract"
+                type="com.sponsor.action.ActionContract">
+            <forward name="frmSponsorMyRequest" path="/jsp/sponsor/frmSponsorMyRequest.jsp"/> 
+            <forward name="successcontract"  path="/jsp/sponsor/frmSuccessContract.jsp"/>
+        </action>
+        
+        <action 
+            path="/SponsorshipPlan" 
+            type="com.sponsor.action.ActionSponsorshipPlan">
+            <forward name="sponsoradd" path="/jsp/sponsor/frmSponsorshipPlanAdd.jsp"/>
+            <forward name="sponsorlist" path="/jsp/sponsor/frmSponsorshipPlanList.jsp"/>
+            <forward name="sponsoredit" path="/jsp/sponsor/frmSponsorshipPlanEdit.jsp"/>
+            <forward name="sponsordelete" path="/jsp/sponsor/frmSponsorPlanDelete.jsp"/>
+            <forward name="successplan"  path="/jsp/sponsor/frmSuccessPlan.jsp"/>
+            <forward name="success"  path="/jsp/sponsor/frmSuccessTemplate.jsp"/>
+            <forward name="successUpdate"  path="/jsp/sponsor/frmSuccessUpdate.jsp"/>
+        </action>
+        <!--=========================================Sponsor home details====================================================        -->
+        <action path="/Sponsor"
+                type="com.sponsor.action.ActionSponsorOwnPlanList">
+            <forward name="frmSponsorOwnPlanList" path="/jsp/sponsor/frmSponsorOwnPlanList.jsp"/>
+            <forward name="frmSponsorPlanDetails" path="/jsp/sponsor/frmSponsorPlanDetails.jsp"/>
+            <forward name="frmSponsorMyplan" path="/jsp/sponsor/frmSponsorMyplan.jsp"/>
+            <forward name="frmSponsorStatus" path="/jsp/sponsor/frmSponsorStatus.jsp"/>
+        </action>    
+        <!--*****************************************Action Mappings Sponsorship Request Form*************************************-->                
+        <action path="/SponsorRequest" 
+                type="com.sponsor.action.ActionSponsorRequest">
+            <forward name="sponsorrequest" path="/jsp/sponsor/frmSponsorRequestNew.jsp"/>
+            <forward name="success"  path="/jsp/sponsor/frmSuccessTemplate.jsp"/>
+        </action>
+        
+        <action path="/AdminHorseEdit" type="com.mrm.action.AdminHorseEditAction">
+            <forward name="adminEdit" path="/jsp/membership/AdminHorseEditReg.jsp"/>
+            <forward name="horseUpdateSuccess" path="/jsp/membership/HorseAdminUpdateSuccess.jsp"/>
+            <forward name="frmAdminHorseRequestFrmEdit" path="/jsp/membership/frmAdminHorseRequestFrmEdit.jsp"/>
+        </action>
+        
+        <action path="/RegHorseListing" type="com.mrm.action.RegHorseListingAction" scope="request">
+            <forward name="frmHorseMemberList" path="/jsp/membership/admin-horse-regi-listing.jsp"/>
+            <forward name="ViewMemberList" path="/jsp/membership/ViewHorseRegistration.jsp"/>
+            <forward name="DispOwnerDetails" path="/jsp/membership/frmMemOwnerDetails.jsp"/>
+            <forward name="DispRiderDetails" path="/jsp/membership/frmMemRiderDetails.jsp"/>
+            <forward name="ApproveDetails" path="/jsp/membership/ApproveHorseRegistration.jsp"/>
+            <forward name="UserDetails" path="/jsp/membership/user-horse-regi-listing.jsp"/>            
+            <forward name="UpgradeDetails" path="/jsp/membership/UpgradeHorseRegistration.jsp"/>
+            <forward name="frmMrmRiderLisitng" path="/jsp/membership/frmMrmRiderLisitng.jsp"/> 
+            <forward name="UserViewMemberList" path="/jsp/membership/UserViewHorseRegistration.jsp"/> 
+            <forward name="ViewHorseRelationDetails" path="/jsp/membership/ViewHorseRegistrationUser.jsp"/>
+            <forward name="successApprovePage" path="/jsp/membership/approveOwnerRiderSuccess.jsp"/>
+            <forward name="UserDegradeMemberList" path="/jsp/membership/UsrDegradeHorseRegi.jsp"/>
+            <forward name="PermissionDenied" path="/jsp/membership/frmPermissionDeniedDegrade.jsp"/>
+            <forward name="admin-horse-request-listing" path="/jsp/membership/admin-horse-request-listing.jsp"/>
+            <forward name="HorseRidOwnChngReq" path="/jsp/membership/HorseRidOwnChngReq.jsp"/>
+            <forward name="UserPayFailDetails" path="/jsp/membership/user-horse-failPay-listing.jsp"/>  
+            <forward name="ToPayFailedTransac" path="/jsp/membership/HorsePaymentFailedDetails.jsp"/>
+            <forward name="userHorseSearchDetail" path="/jsp/membership/userHorseSearchDetail.jsp"/>
+            <forward name="RegHorseApproveOwnRidSuccess" path="/jsp/membership/RegHorseApproveOwnRidSuccess.jsp"/>
+            <forward name="changeRiderOwnStatus" path="/jsp/membership/changeRiderOwnStatus.jsp"/>
+            <forward name="ToDuePayFailedTransac" path="/jsp/membership/HorseDuePaymentFailedDetails.jsp"/>
+            <forward name="ToPayAddChngTransac" path="/jsp/membership/HorseAddChngPayFailDetails.jsp"/>
+            <forward name="ToAddChngDuePayFailTransac" path="/jsp/membership/HorseAddChngDuePayFailDetails.jsp"/>
+            <forward name="AdminHorseDetail" path="/jsp/membership/AdminHorseDetail.jsp"/>
+            <forward name="AdminHorseSearch" path="/jsp/membership/AdminHorseSearch.jsp"/>
+            <forward name="adminTransNtry" path="/jsp/membership/frmHorseTransacAdminDet.jsp"/>
+            <forward name="adminchngeTransNtry" path="/jsp/membership/frmHorseChngreqTransacDet.jsp"/>
+                <!--*****************************************Action SATHEESH START MMMA_0010: Human/Non-Human relationships *************************************-->
+
+               <forward name="admin-horse-request-list" path="/jsp/membership/admin-horse-request-list.jsp"/>
+                <forward name="admin-horserequest-listing" path="/jsp/membership/Admin-MemAddHorseOwner.jsp"/>
+                <forward name="admin-horserequest-listingEdit" path="/jsp/membership/frmMemHorseEditOwner.jsp"/>
+        </action>
+         <!--*****************************************Action SATHEESH END MMMA_0010: Human/Non-Human relationships *************************************-->
+        
+        <!--*****************************************Action Mappings Sponsorship *************************************-->                              
+        <action path="/Sponsorship"
+                name ="FormChennaiServlet"
+                type="com.sponsor.action.ActionChennaiServlet">
+            
+            <forward name="pendingReq"  path="/Sponsorship.do?pro=p0"/>
+            <forward name="frmSponsorRejectRequest"  path="/jsp/sponsor/frmSponsorRejectRequest.jsp"/>
+            <forward name="frmSponsorMyRequest" path="/jsp/sponsor/frmSponsorMyRequest.jsp"/>   
+            
+            <forward name="success"  path="/jsp/sponsor/frmSuccessTemplate.jsp"/>
+            <forward name="frmSponsorPlanManagement" path="/jsp/sponsor/frmSponsorPlanManagement.jsp" /> 
+            <forward name="frmSponsorPendingRequest" path="/jsp/sponsor/frmSponsorPendingRequest.jsp" /> 
+            <forward name="frmSponsorPendingRequestForSalesPerson" path="/jsp/sponsor/frmSponsorPendingSalespersonRequest.jsp" /> 
+            <forward name="frmSponsorActiveRequest" path="/jsp/sponsor/frmSponsorActiveRequest.jsp" /> 
+            <forward name="frmSponsorSalesPerson" path="/jsp/sponsor/frmSponsorSalesPerson.jsp" /> 
+            <forward name="frmSponsorBillingSchedule" path="/jsp/sponsor/frmSponsorBillingSchedule.jsp" /> 
+            <forward name="frmSponsorAfterBilling" path="/jsp/sponsor/frmSponsorAfterBilling.jsp" /> 
+            <forward name="frmSponsorStatus" path="/jsp/sponsor/frmSponsorStatus.jsp" /> 
+            <forward name="frmSponsorAssingSalesPerson" path="/jsp/sponsor/frmSponsorAssingSalesPerson.jsp" /> 
+            <forward name="frmAssignSalesPersonConfirmation" path="/jsp/sponsor/frmAssignSalesPersonConfirmation.jsp" /> 
+            <forward name="frmSponsorSalesPersonEdit" path="/jsp/sponsor/frmSponsorSalesPersonEdit.jsp" /> 
+            <forward name="frmSponsorSalesPersonPaymentView" path="/jsp/sponsor/frmSponsorSalesPersonPaymentView.jsp" /> 
+            <forward name="frmSponsorStatus" path="/jsp/sponsor/frmSponsorStatus.jsp" /> 
+            <forward name="frmSponsorAfterBillingSposor" path="/jsp/sponsor/frmSponsorAfterBillingSposor.jsp" /> 
+            <forward name="frmSponsorPaymentDet" path="/jsp/sponsor/frmSponsorPaymentDet.jsp" /> 
+            <forward name="frmSuccessBilling" path="/jsp/sponsor/frmSuccessBilling.jsp" /> 
+        </action>
+        <!--*****************************************sponsor payment action*************************************-->      
+        <action path="/Payment"
+                name ="FormSponsorPayment"
+                type="com.sponsor.action.ActionPaymentSponsor">
+            <forward name="successPayment" path="/jsp/sponsor/frmSuccessPayment.jsp" /> 
+            <forward name="successPaymentRedir" path="/jsp/sponsor/frmSponRedirNova.jsp" />
+        </action>
+        
+        <action path="/ActionBillingSchedule" 
+                type="com.sponsor.action.ActionBillingSchedule">
+            <forward name="successPayment" path="/jsp/sponsor/frmSuccessPayment.jsp"/>
+        </action>
+        <!--===========================================================Advetisement Module Starts Here====================================-->
+
+        <action path="/advertisement"
+                type="com.adv.action.ActionAdvertisement" >
+            
+            <forward name="frmAdvMediaAdd" path="/jsp/advertise/frmAdvMediaAdd.jsp"/>
+            <forward name="frmAdvMediaList" path="/jsp/advertise/frmAdvMediaList.jsp"/>
+            <forward name="MediaList" path="/advertisement.do?advProcess=advMediaLst"/>
+            <forward name="frmAdvMediaEdit" path="/jsp/advertise/frmAdvMediaEdit.jsp"/>
+            <forward name="frmAdvMediaDelete" path="/jsp/advertise/frmAdvMediaDelete.jsp"/>
+            <forward name="frmAdvMediaConfirmation" path="/jsp/advertise/frmAdvMediaConfirmation.jsp"/>
+            <!--==========================================Advetisement Dimension Add, delete, edit, list====================================-->
+            <forward name="frmAdvDimensionAdd" path="/jsp/advertise/frmAdvDimensionAdd.jsp"/>
+            <forward name="frmAdvDimensionList" path="/jsp/advertise/frmAdvDimensionList.jsp"/>
+            <forward name="frmAdvDimensionEdit" path="/jsp/advertise/frmAdvDimensionEdit.jsp"/>
+            <forward name="frmAdvDimensionDelete" path="/jsp/advertise/frmAdvDimensionDelete.jsp"/>
+            <forward name="frmAdvDimensionConfirmation" path="/jsp/advertise/frmAdvDimensionConfirmation.jsp"/>
+            
+            <!--============================================Advetisement Issue Add, delete, edit, list====================================-->        
+            <forward name="frmAdvIssueAdd" path="/jsp/advertise/frmAdvIssueAdd.jsp"/> 
+            <forward name="IssueList" path="/advertisement.do?advProcess=advIssueLst"/> 
+            <forward name="frmAdvIssueList" path="/jsp/advertise/frmAdvIssueList.jsp"/> 
+            <forward name="frmAdvIssueEdit" path="/jsp/advertise/frmAdvIssueEdit.jsp"/>  
+            <forward name="frmAdvIssueDelete" path="/jsp/advertise/frmAdvIssueDelete.jsp"/>
+            <forward name="issueUpdateConf" path="/jsp/advertise/frmAdvissueUpdateConf.jsp"/>
+            <forward name="frmAdvIssueConfirmation" path="/jsp/advertise/frmAdvIssueConfirmation.jsp"/>
+            <!--============================================ Advetisement Display type Add, delete, edit, list====================================-->
+            <forward name="frmAdvDisplayTypeAdd" path="/jsp/advertise/frmAdvDisplayTypeAdd.jsp"/>  
+            <forward name="frmAdvDisplayTypeList" path="/jsp/advertise/frmAdvDisplayTypeList.jsp"/>  
+            <forward name="dispList" path="/advertisement.do?advProcess=advDispTypeLst"/>
+            <forward name="frmAdvDisplayTypeEdit" path="/jsp/advertise/frmAdvDisplayTypeEdit.jsp"/>  
+            <forward name="frmAdvDisplayTypeDelete" path="/jsp/advertise/frmAdvDisplayTypeDelete.jsp"/> 
+            <forward name="frmAdvDispTypeConfirmation" path="/jsp/advertise/frmAdvDispTypeConfirmation.jsp"/>
+            <!--===========================================================Advetisement Display Sub Type Add, delete, edit, list====================================-->     
+            <forward name="frmAdvDisplaySubTypeAdd" path="/jsp/advertise/frmAdvDisplaySubTypeAdd.jsp"/>
+            <forward name="frmAdvHome" path="/jsp/advertise/frmAdvHome.jsp"/>
+            <forward name="list" path="/advertisement.do?advProcess=advDispSubTypeLst"/>
+            <forward name="frmAdvDisplaySubTypeDelete" path="/jsp/advertise/frmAdvDisplaySubTypeDelete.jsp"/>
+            <forward name="frmAdvDisplaySubTypeList" path="/jsp/advertise/frmAdvDisplaySubTypeList.jsp" /> 
+            <forward name="frmAdvDisplaySubTypeEdit" path="/jsp/advertise/frmAdvDisplaySubTypeEdit.jsp" /> 
+            <forward name="frmAdvDispSubTypeConfirmation" path="/jsp/advertise/frmAdvDispSubTypeConfirmation.jsp"/>
+        </action>  
+        <!--========================================================Dimension Details Add, delete, edit, list====================================-->       
+        <action path="/advertise"
+                scope="request"
+                type="com.adv.action.ActionAdvertise"
+                name="formAdvertisement"
+                parameter="method">
+            <forward name="frmAdvDimensionDetailsAdd" path="/jsp/advertise/frmAdvDimensionDetailsAdd.jsp"/>
+            <forward name="frmAdvDimensionDetailsEdit" path="/jsp/advertise/frmAdvDimensionDetailsEdit.jsp"/>  
+            <forward name="frmAdvDimensionDetailsDelete" path="/jsp/advertise/frmAdvDimensionDetailsDelete.jsp"/>  
+            <forward name="frmAdvDimensionDetailsList" path="/jsp/advertise/frmAdvDimensionDetailsList.jsp"/>  
+            <forward name="updateList" path="/advSearch.do?method=search"/> 
+            <forward name="addList" path="/advertise.do?method=newAdd"/>         
+            <forward name="frmAdvHome" path="/jsp/advertise/frmAdvHome.jsp"/>  
+            <forward name="frmAdvDetailDisplay" path="/jsp/advertise/frmAdvDimensionDetailsDisplay.jsp"/>  
+            <forward name="confirmView" path="/jsp/advertise/frmDimensionAddConfirmation.jsp"/>
+        </action>
+        
+        <action path="/advSearch" 
+                type="com.adv.action.SearchAdvAction"
+                name="searchAdvtForm"
+                parameter="method"> 
+            <forward name="frmAdvDimensionDetailsList" path="/jsp/advertise/frmAdvDimensionDetailsList.jsp"/>  
+        </action> 
+        
+        
+        <action path="/AdvertisePrice"
+                type="com.adv.action.ActionAdvertisePrice"
+                scope="request">
+            <forward name="frmAdvUsrPricematrixList" path="/jsp/advertise/frmAdvUsrPricematrixList.jsp"/>
+            <forward name="frmAdvMyRequest" path="/jsp/advertise/frmAdvMyRequest.jsp"/>
+            <forward name="advViewMyAds" path="/jsp/advertise/advViewMyAds.jsp"/>
+            <forward name="frmAdvHome" path="/jsp/advertise/frmAdvHome.jsp"/>  
+            <forward name="frmAdvAvailableMedia" path="/jsp/advertise/frmAdvAvailableMedia.jsp"/>
+            <forward name="frmAdvDimDetail" path="/jsp/advertise/frmAdvSubTypeDimensionDisplay.jsp"/>
+            <forward name="advManifestUpdatedDetails" path="/jsp/advertise/advManifestUpdatedDetails.jsp"/>
+        </action>   
+        
+        <action path="/advertiseAdmin"
+                type="com.adv.action.ActionAdvertiseAdmin" >
+            <forward name="frmAdvAdminRequestView" path="/jsp/advertise/frmAdvAdminRequestView.jsp"/>
+            <forward name="frmAdvManifestRequestView" path="/jsp/advertise/frmAdvManifestRequestView.jsp"/>
+            <forward name="advViewOmnibus" path="/jsp/advertise/advViewOmnibus.jsp"/>
+            <forward name="frmAdsDetailsView" path="/jsp/advertise/frmAdsDetailsView.jsp"/>
+            <forward name="frmAdvManifestUpdateList" path="/jsp/advertise/frmAdvManifestUpdateList.jsp"/>
+            <forward name="frmAdvManifestUpdate" path="/jsp/advertise/frmAdvManifestUpdate.jsp"/>
+            
+            <forward name="frmAdvManifestEdit" path="/jsp/advertise/frmAdvManifestEdit.jsp"/>
+            <forward name="advAdminManifestUpdatedDetails" path="/jsp/advertise/advAdminManifestUpdatedDetails.jsp"/>
+            
+        </action> 
+        
+      
+
+        <action path="/Demographic" type="com.mrm.action.HorseColorAction" scope="request">
+
+         <!--Start:[DemographicDetails] For Demographic Type Addition, Editing and Deletion changes dated 11-Apr-2011 by Deepa-->
+
+            <forward name="frmAddDemo" path="/jsp/membership/frmDemographicAdd.jsp"/>
+            <forward name="frmListDemo" path="/jsp/membership/frmDemographicList.jsp"/>
+            <forward name="frmListDemograph" path="/Demographic.do?horseprocess=list"/>
+            <forward name="frmEditDemo" path="/jsp/membership/frmDemographicEdit.jsp"/>
+            <!--forward name="frmHorseColorConf" path="/jsp/membership/frmMemHorseColorConf.jsp"/-->
+<!--End:[DemographicDetails] For Demographic Type Addition, Editing and Deletion changes dated 11-Apr-2011 by Deepa-->
+
+              <!--Dhivya Here: Demographic Category-->
+
+          <forward name="frmAddNonHuman" path="/jsp/membership/frmAddNonHumanDemographic.jsp"/>
+           <forward name="frmListNonHumanDemo" path="/jsp/membership/frmListNonHumanDemographic.jsp"/>
+            <forward name="frmEditNonHumanDemo" path="/jsp/membership/frmEditNonHumanDemographic.jsp"/>
+             <forward name="frmNewListNonHumanDemo" path="/Demographic.do?horseprocess=reqList"/>
+
+            <!--Ends Here-->
+
+        </action>
+
+        <action path="/dropDown" 
+                type="com.adv.action.AjaxActionAdvertise"
+                parameter="method"
+                scope="request">
+            <forward name="frmAdvDimensionDetailsAdd" path="/jsp/advertise/frmAdvDimensionDetailsAdd.jsp"/>
+        </action>
+        <!--============================================Advetisement Omnibus Insertion=============================================================================-->
+        <action path="/OmnibusInsert" 
+                name="omnibusInsert"
+                type="com.adv.action.ActionOmnibusInsert" 
+                parameter="method"
+                scope="request" >
+            <forward name="frmAdvOmnibus" path="/jsp/advertise/frmAdvOmnibus.jsp"/>
+            <forward name="omniBus" path="/OmnibusInsert.do?advInsert=initLoad"/>
+            <forward name="frmAdvMagazine" path="/jsp/advertise/frmAdvMagazine.jsp"/>
+            <forward name="comingSoon" path="/jsp/advertise/comingSoon.jsp"/>
+            <forward name="successInsert" path="/jsp/advertise/frmAdvMagPostConfirmation.jsp"/>
+            <forward name="successInsertRedir" path="/jsp/advertise/frmAdvRedirNova.jsp"/>
+        </action>
+        
+        <action path="/MagazineOminibus" 
+                type="com.adv.action.MagazineOminibus">
+            <forward name="successInsert" path="/jsp/advertise/frmAdvMagPostConfirmation.jsp"/>
+        </action>
+        <!--===============================================================Meetings Module Starts==================================== -->
+
+        <!--*****************************************Action Mappings Event Renewal Form*************************************-->
+        <action path="/EventOrgRenewal" 
+                type="com.mee.action.ActionEventOrgRenewal"
+                name="FormEventOrgRenewal"
+                scope="request">
+            <forward name="frmEventOrgRenewal" path="/jsp/meetings/frmEventOrgRenewal.jsp"/>
+            <forward name="success"  path="/frmSuccessTemplate.jsp"/>
+            <forward name="frmMeeOrgStatus"  path="/jsp/meetings/frmMeeOrgStatus.jsp"/>
+            <forward name="frmEventOrgRenewalView"  path="/jsp/meetings/frmEventOrgRenewalView.jsp"/>
+            <forward name="frmEventOrgRenewalListing"  path="/jsp/meetings/frmEventOrgRenewalListing.jsp"/>
+            <forward name="frmEventOrgRenewalListingforOrg"  path="/jsp/meetings/frmEventOrgRenewalListingforOrg.jsp"/>
+            <forward name="frmMeeRenewalSuccess"  path="/jsp/meetings/frmMeeRenewalSuccess.jsp"/>
+            <forward name="frmMeeRenewalSuccessRedir"  path="/jsp/meetings/frmMeeEndorseRedirNova.jsp"/>
+            
+            <forward name="frmMeeAdminEventListings"  path="/jsp/meetings/frmMeeAdminEventListings.jsp"/>
+            <forward name="frmMeeOrgEventListings"  path="/jsp/meetings/frmMeeOrgEventListings.jsp"/>
+            <forward name="frmMeeMapAreaZip" path="/jsp/meetings/frmMeeMapAreaZip.jsp"/>
+            <forward name="frmMeeEditMapACAreaMaster" path="/jsp/meetings/frmMeeEditMapACAreaMaster.jsp"/>
+            <forward name="frmMeeACAreaMapListing" path="/jsp/meetings/frmMeeACAreaMapListing.jsp"/>
+            <forward name="frmMeeEditMapACAreaMaster" path="/jsp/meetings/frmMeeEditMapACAreaMaster.jsp"/>
+            <forward name="frmMeeAreaChairDetails" path="/jsp/meetings/frmMeeAreaChairDetails.jsp"/>
+            <forward name="frmMeeMapACAreaMaster" path="/jsp/meetings/frmMeeMapACAreaMaster.jsp"/>
+            <forward name="redirFrmMeeMapACAreaMaster" path="/EventOrgRenewal.do?eventProcess=mapAreaAndAreaChairListing"/>
+            <forward name="redirfrmMeeACAreaMapListing" path="/EventOrgRenewal.do?eventProcess=mapAreaAndAreaChairListing"/>
+            <forward name="viewEventDetails" path="/jsp/meetings/frmEventOrgRegAdminView.jsp"/>
+            <forward name="errorPage" path="/jsp/meetings/regErrorPage.jsp"/>
+            <forward name="frmLstMapStateZip" path="/jsp/meetings/frmListMapStateZip.jsp"/>
+            <forward name="alreadyExists" path="/jsp/meetings/frmOrgEventExist.jsp"/>
+            <forward name="frmEventOrgRenewalApprove" path="/jsp/meetings/frmEventOrgRenewalApprove.jsp"/>
+            <forward name="frmEventOrgRenewalEditSuccess" path="/jsp/meetings/frmEventOrgRenewalEditSuccess.jsp"/>
+            <forward name="forEndorseSuccess" path="/OrganizerHLCEventReg.do?process=reg"/>
+            
+        </action>
+        
+        <action path="/EventOrgRenewalPayment"
+                type="com.mee.action.ActionEventOrgRenewalPayment">
+            <forward name="frmMeeRenewalSuccess"  path="/jsp/meetings/frmMeeRenewalSuccess.jsp"/>
+            <forward name="forEndorseSuccess" path="/OrganizerHLCEventReg.do?process=reg"/>
+        </action>
+        
+        <action path="/endorseRetryPay" 
+                type="com.mee.action.EndorseRetryPayAction"
+                name="FormEventOrgRenewal"
+                scope="request">
+            <forward name="frmEndorseRetryPayment" path="/jsp/meetings/frmEndorseRetryPayment.jsp"/> 
+            <forward name="forEndorseSuccess" path="/OrganizerHLCEventReg.do?process=reg"/>
+            <forward name="frmMeeRenewalSuccess" path="/jsp/meetings/frmMeeRenewalSuccess.jsp"/>
+            <forward name="frmMeeOrgEventListings"  path="/jsp/meetings/frmMeeOrgEventListings.jsp"/>
+        </action>
+        
+        <action path="/endorseRetryCardPay"
+                type="com.mee.action.EndorseRetryCardPayAction">
+            <forward name="frmMeeRenewalSuccess"  path="/jsp/meetings/frmMeeRenewalSuccess.jsp"/>
+            <forward name="forEndorseSuccess" path="/OrganizerHLCEventReg.do?process=reg"/>
+        </action>
+        
+        <action path="/eventPendPayment" 
+                type="com.mee.action.EventRegPendingPaymentAction"
+                name="FormEventOrgRenewal">
+            <forward name="ViewpendingPayment" path="/jsp/meetings/EventRegPayFailDetails.jsp"/>
+            <forward name="frmEventRegPendingPay" path="/jsp/meetings/frmEventRegPendingPay.jsp"/>
+            <forward name="forChkSuccess" path="/jsp/meetings/frmEventRegPendingChkSuccess.jsp"/>
+        </action>
+        
+        <action path="/eventCardPay" type="com.mee.action.EventRegPendingCardPayAction">
+            <forward name="frmEventRegPendingCardSuccess" path="/jsp/meetings/frmEventRegPendingCardSuccess.jsp"/>
+            <forward name="cardDecline" path="/jsp/meetings/frmEventRegRetryPendPay.jsp"/>
+        </action>
+        
+        
+        <action path="/eduActivity"
+                type="com.mee.action.ActionMadhurai"
+                name="FormMadhurai">
+            <forward name="neweduactivity" path="/jsp/meetings/frmMeeEduActivity.jsp"/>
+            <forward name="frmMeeEduActEditCnf" path="/jsp/meetings/frmMeeEduActEditCnf.jsp"/>
+            <forward name="frmMeeEduActSuccess" path="/jsp/meetings/frmMeeEduActSuccess.jsp"/>
+            <forward name="frmMeeEduActSuccessRedir" path="/jsp/meetings/frmMeeEduActRedirNova.jsp"/>
+        </action>
+        
+        <action path="/eduActivityPayment"
+                type="com.mee.action.ActionMadhuraiPayment">
+            <forward name="frmMeeEduActSuccess" path="/jsp/meetings/frmMeeEduActSuccess.jsp"/>
+        </action>
+        
+        <action path="/map"
+                type="com.mee.action.MemEventLevelMapAction">
+            <forward name="newMap" path="/jsp/meetings/frmMemEventLevelMap.jsp" />
+            <forward name="successMap" path="/map.do?process=mapProcess"/>
+            <forward name="goToPriorityMap" path="/jsp/meetings/frmMemPriorityMap.jsp"/>
+            <forward name="AfterMapping" path="/map.do?process=mapPriorityProcess"/>
+            
+        </action>
+        
+        <action path="/mapValidate"
+                type="com.mrm.action.MapValidationAction">
+            <forward name="newMapValidate" path="/jsp/membership/frmMapValidation.jsp"/>
+            <forward name="successMapValidate" path="/jsp/membership/frmMapSuccessValidate.jsp"/>
+        </action>
+        
+        
+        <action path="/meeting"
+                type="com.mee.action.ActionMeeting"
+                scope="request">
+            
+            <forward name="frmMeeAdminEduActRegiListing" path="/jsp/meetings/frmMeeAdminEduActRegiListing.jsp"/>
+            <forward name="frmMeeAdminEduActRegiApprove" path="/jsp/meetings/frmMeeAdminEduActRegiApprove.jsp"/>
+            <forward name="frmMeeUserEduActInsureRegiListing" path="/jsp/meetings/frmMeeUserEduActInsureRegiListing.jsp"/>
+            <forward name="errorPage" path="/jsp/meetings/error.jsp"/>
+            
+            <!-- organisation details-->
+            <forward name="frmMeeOrgUserEduActRegiListing" path="/jsp/meetings/frmMeeOrgUserEduActRegiListing.jsp"/>
+            <forward name="frmMeeOrgEduActRegiListing" path="/jsp/meetings/frmMeeOrgEduActRegiListing.jsp"/>
+            <forward name="frmMeeOrgEduActRegiDetails" path="/jsp/meetings/frmMeeOrgEduActRegiDetails.jsp"/>
+            <forward name="frmMeeOrgUserEduActRegiListing" path="/jsp/meetings/frmMeeOrgUserEduActRegiListing.jsp"/>
+            <forward name="frmMeeOrgUserEduActInsureApprove" path="/jsp/meetings/frmMeeOrgUserEduActInsureApprove.jsp"/>
+            <forward name="frmMeeEduEditActivity" path="/jsp/meetings/frmMeeEduEditActivity.jsp"/>
+            <forward name="frmMemUserDetails" path="/jsp/membership/frmMemUserDetails.jsp"/>
+            <forward name="frmMemUserDetailsLoginView" path="/jsp/membership/frmMemUserDetailsLoginView.jsp"/>
+            <!-- user details-->
+            <forward name="frmMeeUserEduActInsureRegiListing" path="/jsp/meetings/frmMeeUserEduActInsureRegiListing.jsp"/>
+            <forward name="frmMeeUserEduMeeListing" path="/jsp/meetings/frmMeeUserEduMeeListing.jsp"/>
+            <forward name="frmMeeUserEduActInsureDetails" path="/jsp/meetings/frmMeeUserEduActInsureDetails.jsp"/>
+            <forward name="frmMeeUserEduActInsureDetailsOrg" path="/jsp/meetings/frmMeeUserEduActInsureDetailsOrg.jsp"/>
+            <forward name="frmMeeUserViewDetEdu" path="/jsp/meetings/frmMeeUserViewDetEdu.jsp"/>
+            <forward name="frmMeeInsureEduAct"  path="/jsp/meetings/frmMeeInsureEduAct.jsp"/>
+        </action>
+        <!---***************************************** Junior Software Engineer********************************************-->
+        <!---*****************************************Refund Level One Action(Ganapathy)********************************************-->
+        <action path="/actionRefundRuleOne" type="com.mee.action.master.ActionRefundRuleOne">
+            <forward name="frmMeeRefundRuleCreate" path="/jsp/meetings/frmMeeRefundLeveOneCreate.jsp"/>
+            <forward name="frmRefundRuleActivate" path="/jsp/meetings/frmMeeRefunfLevelOneActivate.jsp"/>
+            <forward name="frmRefundRuleEdit" path="/jsp/meetings/frmMeeRefunfLevelOneEdit.jsp"/>
+            <forward name="frmRefundRuleDelete" path="/jsp/meetings/frmMeeRefunfLevelOneDelete.jsp"/>
+            <forward name="frmRefundRuleList" path="/jsp/meetings/frmMeeRefundLevelOneList.jsp"/>
+            <forward name="addConfirmation" path="/jsp/meetings/frmRefundTypeConfirmation.jsp" />
+            <forward name="Confirmation" path="/jsp/meetings/frmRefundTypeUpdation.jsp" />       
+        </action>
+        <!--****************************************Action for RefunRule SubType (Gopi)******************************************-->     
+        <action path="/refundsubtype"
+                type="com.mee.action.master.ActionRefundRuleSubType">
+            <forward name="frmMeeRefundSubTypeAdd" path="/jsp/meetings/frmMeeRefunSubTypeCreate.jsp"/>
+            <forward name="frmMeeRefundSubTypeList" path="/jsp/meetings/frmMeeRefunSubTypeList.jsp"/>
+            <forward name="frmMeeRefundLevelEdit" path="/jsp/meetings/frmMeeRefunSubTypeEdit.jsp"/>
+            <forward name="frmMeeRefundLevelDelete" path="/jsp/meetings/frmMeeRefunSubTypeDelete.jsp"/>
+            <forward name="frmMeeRefundLevelConf" path="/jsp/meetings/frmMeeRefundLevelConf.jsp"/>
+            <forward name="frmMeeRefundSubTypeLevelConfUpt" path="/jsp/meetings/frmMeeRefundSubTypeLevelConfUpt.jsp"/>
+            <forward name="frmMeeRefundSubTypeStatusConf" path="/jsp/meetings/frmMeeRefundSubTypeStatusConf.jsp"/>
+        </action>
+        
+        <!--****************************************Action for Event Type (Dhivya)******************************************-->   
+        <action path="/eventtype"
+                type="com.mee.action.master.ActionEventType">
+            <forward name="frmMeeEventTypeAdd" path="/jsp/meetings/frmMeeEventTypeAdd.jsp"/>
+            <forward name="frmMeeEventTypeList" path="/jsp/meetings/frmMeeEventTypeList.jsp"/>
+            <forward name="frmMeeEventTypeEdit" path="/jsp/meetings/frmMeeEventTypeEdit.jsp"/>
+            <forward name="frmMeeEventTypeDelete" path="/jsp/meetings/frmMeeEventTypeDelete.jsp"/>
+            <forward name="frmMeeEventTypeActivate" path="/jsp/meetings/frmMeeEventTypeActivate.jsp"/>
+            <forward name="confirmation" path="/jsp/meetings/frmMeeEventTypeConf.jsp"/>
+            <forward name="ListCnf" path="/jsp/meetings/frmMeeEventTypeListConf.jsp"/>
+            <forward name="UpdateCnf" path="/jsp/meetings/frmMeeEventTypeUpdateConf.jsp"/>
+            
+        </action>
+        <!--****************************************Action for Officials (Elamaran)******************************************-->  
+        <action path="/OfficialsDet" 
+                type="com.mee.action.master.OfficialsDetAction" >
+            <forward name="createOfficial" path="/jsp/membership/frmOfficialsDetCreate.jsp"/>
+            <forward name="addOfficial" path="/jsp/membership/frmOfficialsDetConf.jsp"/>
+            <forward name="dispOfficial" path="/jsp/membership/frmOfficialsDetList.jsp"/>
+            <forward name="editOfficial" path="/jsp/membership/frmOfficialsDetEdit.jsp"/>
+            <forward name="deactivateOfficial" path="/jsp/membership/frmOfficialsDetDelete.jsp"/>
+            <forward name="activateOfficial" path="/jsp/membership/frmOfficialsDetActivate.jsp"/>
+            <forward name="conEditOfficial" path="/jsp/membership/frmOfficialsUpdateConf.jsp"/>
+            <forward name="conActivateOfficial" path="/jsp/membership/frmOfficialsUpdateConf.jsp"/>
+            <forward name="conDeactivateOfficial" path="/jsp/membership/frmOfficialsUpdateConf.jsp"/>
+        </action>
+        <!--**************************************** Action for Divisions (Vairamuthu) **************************************-->
+        <action path="/actionDivisionEventType" 
+                type="com.mee.action.master.DivisionEventTypeMasterAction">
+            <forward name="frmMeeDivisionEventTypeCreate" path="/jsp/meetings/frmMeeDivisionEventTypeCreate.jsp"/>
+            <forward name="frmDivisionEventTypeActivate" path="/jsp/meetings/frmMeeDivisionEventTypeActivate.jsp"/>
+            <forward name="frmDivisionEventTypeEdit" path="/jsp/meetings/frmMeeDivisionEventTypeEdit.jsp"/>
+            <forward name="frmDivisionEventTypeDelete" path="/jsp/meetings/frmMeeDivisionEventTypeDelete.jsp"/>
+            <forward name="frmDivisionEventList" path="/jsp/meetings/frmMeeDivisionEventList.jsp"/>
+            <forward name="addConfirmation" path="/jsp/meetings/frmMeeDivisionEventConf.jsp" />
+            <forward name="Confirmation" path="/jsp/meetings/frmMeeDivisionEventConfUpt.jsp" />
+        </action>
+        <!--****************************************Action for Event Level (Vidhya)******************************************-->  
+        <action path="/actionEventLevel"
+                type="com.mee.action.master.EventLevelMasterAction">
+            <forward name="frmMeeEventLevelCreate" path="/jsp/meetings/frmMeeEventLevelCreate.jsp"/>
+            <forward name="frmMeeEventLevelList" path="/jsp/meetings/frmMeeEventLevelList.jsp"/>
+            <forward name="frmMeeEventLevelEdit" path="/jsp/meetings/frmMeeEventLevelEdit.jsp"/>
+            <forward name="frmMeeEventLevelDelete" path="/jsp/meetings/frmMeeEventLevelDelete.jsp"/>
+            <forward name="frmMeeEventLevelActivate" path="/jsp/meetings/frmMeeEventLevelActivate.jsp"/>
+            <forward name="frmMeeEventLevelConf" path="/jsp/meetings/frmMeeEventLevelConf.jsp"/>
+            <forward name="frmMeeEventLevelEditConf" path="/jsp/meetings/frmMeeEventLevelEditConf.jsp"/>
+            <forward name="frmMeeEventLevelStatusConf" path="/jsp/meetings/frmMeeEventLevelStatusConf.jsp"/>
+        </action>
+        
+        <action path="/EvntLvlTypeMap" type="com.mrm.action.EventLvlTypMapAction">
+            <forward name="lvlmap" path="/jsp/meetings/frmMemEventTypeMap.jsp"/>
+            <forward name="successMap" path="/jsp/meetings/SuccessEvntLvlMap.jsp"/>
+        </action>
+        
+        <!--****************************************Action for Dressage & Arena(Hari)******************************************-->  
+        <action path="/DressageDet" type="com.mrm.action.DressageDetAction">
+            <forward name="frmDressageLvlAdd" path="/jsp/membership/frmDressageLvlDetCreate.jsp"/>
+            <forward name="frmDressageLvlEdit" path="/jsp/membership/frmDressageLvlDetEdit.jsp"/>
+            <forward name="frmDressageLvlDelete" path="/jsp/membership/frmDressageLvlDetDelete.jsp"/>
+            <forward name="frmDressageLvlConf" path="/jsp/membership/frmDressageLvlDetConf.jsp"/>  
+            <forward name="frmDressageLvlList" path="/jsp/membership/frmDressageLvlDetList.jsp"/> 
+            <!--    Size     -->
+            <forward name="frmDressageSizeAdd" path="/jsp/membership/frmDressageSizeDetCreate.jsp"/>
+            <forward name="frmDressageSizeEdit" path="/jsp/membership/frmDressageSizeDetEdit.jsp"/>
+            <forward name="frmDressageSizeDelete" path="/jsp/membership/frmDressageSizeDetDelete.jsp"/>
+            <forward name="frmDressageSizeConf" path="/jsp/membership/frmDressageSizeDetConf.jsp"/>  
+            <forward name="frmDressageSizeList" path="/jsp/membership/frmDressageSizeDetList.jsp"/>     
+        </action>
+        <!-- shiva files -->         
+                 
+        <action path="/insEduAct"
+                scope="request"
+                type="com.mee.action.InsuranceEduAction"     
+                name="FormInsuranceEdu"> 
+            <forward name="frmMeeHome"  path="/jsp/meetings/frmMeeUserEduSuccess.jsp"/>
+        </action>
+        
+        <!-- Hari hara kumar Struts -->
+        <action path="/AnnualTcktDetails" type="com.mee.action.AnnualtcktListingAction" scope="request">
+            <forward name="AddAnnualTkt" path="/jsp/meetings/frmMeeAnnuTicketAdd.jsp"/>
+            <forward name="ConfirAnnualTckt" path="/jsp/meetings/frmMeeAnnuConfirm.jsp"/>      
+            <forward name="EditAnnualTkt" path="/jsp/meetings/frmMeeAnnuTicketEdit.jsp"/>
+            <forward name="ViewAnnualTkt" path="/jsp/meetings/frmMeeAnnuTicketListing.jsp"/>
+        </action>
+        <!-- *****************************************Merchant Details Page**************************************************** -->   
+        <action path="/Merchantdetails" type="com.mee.action.MerchantAction" scope="request">
+            <forward name="AddMerchantDet" path="/jsp/merchantAccountDetail.jsp"/>
+            <forward name="UpdateMerchantDet" path="/jsp/ConfMerchantUpdate.jsp"/>
+        </action>
+        <!-- *********************************** Donation Details Page ****************************************************** -->
+        <action path="/Donationdetails" type="com.mrm.action.DonateAction" scope="request">
+            <forward name="frmAddDonationDetails" path="/jsp/membership/frmAddDonationDetails.jsp"/>
+            <forward name="frmAddDonationDetails" path="/jsp/membership/frmAddDonationDetails.jsp"/>                
+            <forward name="frmEditDonationDetails" path="/jsp/membership/frmEditDonationDetails.jsp"/>
+            <forward name="frmDonationList" path="/jsp/membership/frmDonationList.jsp"/>                
+            <forward name="frmDonationConfir" path="/jsp/membership/frmDonationConfirmation.jsp"/>
+        </action>      
+        
+        
+        <action path="/webSiteDonation" 
+                type="com.mrm.action.WebSiteDonationAction" >
+            <forward name="frmViewDonationDetails" path="/jsp/membership/frmWebSiteDonation.jsp"/>
+            <forward name="insertDonation" path="/jsp/membership/frmWebSiteDonationConf.jsp"/>
+        </action>
+        <!--******************************** Breed Action Details Page *************************************--> 
+        <action path="/BreedDetails" type="com.mrm.action.BreedAction" scope="request">
+            <forward name="frmAddBreedDet" path="/jsp/membership/frmMemAddBreedDet.jsp"/>
+            <forward name="frmBreedList" path="/jsp/membership/frmMemBreedList.jsp"/>
+            <!-- Starts:[MemMgnt] For Breed Characteristic Detail Management Dated:21-4-2011-->
+            <forward name="frmBrdCharList" path="/jsp/membership/frmBrdCharDetList.jsp"/>
+            <forward name="frmBrdCharListRe" path="/BreedDetails.do?breedProcess=listBreedCharDetail"/>
+            <forward name="frmAddBrdCharDet" path="/jsp/membership/frmAddBreedCharDet.jsp"/>
+            <forward name="frmEditBrdCharDet" path="/jsp/membership/frmEditBreedCharDet.jsp"/>
+             <!--Ends:[MemMgnt] For Breed Characteristic Detail Management Dated:21-4-2011-->
+            <forward name="frmEditBreedDet" path="/jsp/membership/frmMemEditBreedDet.jsp"/>
+            <forward name="frmBreedConf" path="/jsp/membership/frmMemBreedConf.jsp"/>
+            <forward name="frmAddSpecies" path="/jsp/membership/frmMemAddSpecies.jsp"/>
+            <forward name="frmMemEditSpecies" path="/jsp/membership/frmMemEditSpecies.jsp"/>
+            <forward name="frmMemSpeciesList" path="/jsp/membership/frmMemSpeciesList.jsp"/>
+            <!--Start:[RoleMgt] Added a new entry to display Roles List after Add, Edit or Delete by Kalai dated 10-Mar-2011-->
+            <forward name="frmMemSpeciesListRe" path="/BreedDetails.do?breedProcess=speciesView"/>
+            <!--End:[RoleMgt] Added a new entry to display Roles List after Add, Edit or Delete by Kalai dated 10-Mar-2011-->
+
+         <!--Dhivya Here (Species Breed Mgt)-->
+            <forward name="frmSpeciesBreedMgt" path="/jsp/membership/frmSpeciesBreedMgt.jsp"/>
+             <forward name="frmReDirectPage" path="/BreedDetails.do?breedProcess=speciesBreedsMgt"/>
+              <!--Ends Here-->
+
+			<!--Satheesh-Start- MMMA_0008:For each species, allow for customer definition of breed characteristic categories-->
+              <forward name="frmSpeciescharList" path="/jsp/membership/addSpeciesCharLis.jsp"/>
+              <forward name="frmCharList" path="/jsp/membership/addSpeciesCharAdd.jsp"/>
+              <forward name="frmCharEdit" path="/jsp/membership/addSpeciesCharEdit.jsp"/>
+              <!--Satheesh-End- MMMA_0008:For each species, allow for customer definition of breed characteristic categories-->
+
+      <!--Dhivya Here (Breed Characteristics [Category and Details Management)-->
+            <forward name="frmBreedCategDet" path="/jsp/membership/frmBrdCharacDetailsMgt.jsp"/>
+              <forward name="frmReDirectListPage" path="/BreedDetails.do?breedProcess=retBreedCategoryDets"/>
+           
+              <!--Ends Here-->
+
+        </action>    
+        <!--******************************** Horse Color Details Page *************************************-->    
+
+        <action path="/HorseColorDetails" type="com.mrm.action.HorseColorAction" scope="request">
+            <forward name="frmAddHorseDet" path="/jsp/membership/frmMemHorseColorAdd.jsp"/>
+            <forward name="frmListHorseDet" path="/jsp/membership/frmMemHorseColorBreedList.jsp"/>
+            <forward name="frmEditHorseDet" path="/jsp/membership/frmMemHorseColorEdit.jsp"/>
+            <forward name="frmHorseColorConf" path="/jsp/membership/frmMemHorseColorConf.jsp"/>       
+        </action>
+        
+        <action path="/Publication" type="com.mrm.action.PublicationDetAction" scope="request">
+            <forward name="frmPubliMasterAdd" path="/jsp/membership/frmPubliMasterAdd.jsp"/>
+            <forward name="frmPubliMasterEdit" path="/jsp/membership/frmPubliMasterEdit.jsp"/>                
+            <forward name="frmPubliMasterDelete" path="/jsp/membership/frmPubliMasterDelete.jsp"/>
+            <forward name="frmPubliMasterList" path="/jsp/membership/frmPubliMasterList.jsp"/>                
+            <forward name="frmPubliMasterConf" path="/jsp/membership/frmPubliMasterConf.jsp"/>
+        </action> 
+        
+        <!-- Hari hara kumar Struts -->
+
+
+        <action path="/recap"
+                type="com.mee.action.ActionOrganiserRecap">
+            <forward name="frmMeeEduActRecap" path="/jsp/meetings/frmMeeEduActRecap.jsp"/>
+            <forward name="frmMeeOrgEduActRecapListing" path="/jsp/meetings/frmMeeOrgEduActRecapListing.jsp"/>
+            <forward name="frmMeeEduOrgRecapSuccess" path="/jsp/meetings/frmMeeEduOrgRecapSuccess.jsp"/>
+            <forward name="frmMeeOrgEduActRecapDetails" path="/jsp/meetings/frmMeeOrgEduActRecapDetails.jsp"/>
+            <forward name="approveList" path="/recap.do?recapProcess=viewListRecapAdmin"/>
+            <forward name="frmMeeOrgEduActRecapMyListing" path="/jsp/meetings/frmMeeOrgEduActRecapMyListing.jsp"/>
+            <forward name="frmMeeOrgEduActRecapMyDetails" path="/jsp/meetings/frmMeeOrgEduActRecapMyDetails.jsp"/>
+        </action>
+        
+        
+        <!--============================================Karthik Action starts==========================================================-->
+
+        <!--*****************************************Action for Organizer HLC Event Registration *************************************--> 
+        <action path="/OrganizerHLCEventReg" type="com.mee.action.OrganizerHLCEventRegAction" input="/Home.jsp" scope="request">
+            <forward name="OrganizerHLCEventReg" path="/jsp/meetings/frmEventOrgReg.jsp"/>
+            <forward name="checkConfirmation" path="/jsp/meetings/frmEventOrgRegSuccess.jsp"/>
+            <forward name="cardConfirmation" path="/jsp/meetings/frmEventOrgRegCardSuccess.jsp"/>
+            <forward name="confirmation" path="/jsp/meetings/frmMainEventRegSuccess.jsp"/>
+            <forward name="orgRegEligibility" path="/jsp/meetings/event-Org-Reg-Eligibility.jsp"/>
+            <forward name="toRequestReg" path="/jsp/meetings/frmEventRequestReg.jsp"/>
+            <forward name="toRequestConfirmation" path="/jsp/meetings/frmEventReqSuccess.jsp"/>
+            <!--Dhivya Here: Added for missing action tags-->
+            <forward name="toOmnibusUpdate" path="/jsp/meetings/frmEventOrgUpdate.jsp"/>
+            <forward name="toOmnibusUpdateSuccess" path="/EventOrgRenewal.do?eventProcess=eventViewOrg"/>
+            <forward name="bckToOmnibusUpdateSuccess" path="/OrganizerHLCEventReg.do?process=initUpdate"/>
+            <!--Ends Here-->
+
+        </action>        
+        
+        <!-- ********* List New Event Registrations ********* -->
+        <action path="/eventRegList" type="com.mee.action.EventRegListing">
+            <forward name="toEventRegList" path="/jsp/meetings/frmListEventRegistration.jsp"/>
+            <forward name="toRequestRegEdit" path="/jsp/meetings/frmEditEventRequestReg.jsp"/>
+            <forward name="EventRegEditSuccess" path="/eventRegList.do?cmd=eventReg"/>
+            <forward name="toRequestApprove" path="/jsp/meetings/frmApproveEventRequestReg.jsp"/>
+            <forward name="EventRegApproveSuccess" path="/eventRegList.do?cmd=eventReg"/>
+            <forward name="frmViewNewEventReg" path="/jsp/meetings/frmViewNewEventReg.jsp"/>
+            <forward name="errorPage" path="/jsp/meetings/regErrorPage.jsp"/>
+            <forward name="frmMeeUserNewEveRegListing" path="/jsp/meetings/frmMeeUserNewEveRegListing.jsp"/>
+        </action>
+        
+        
+        <!--*****************************************Action for Edit Event Oragnizer Details Action *************************************--> 	
+                       
+        <action path="/editEventDetails"
+                type="com.mee.action.EventOrgRegEditAction"
+                scope="request">
+            
+            <forward name="dispEditEventDetails" path="/jsp/meetings/frmEventOrgRegEdit.jsp"/>
+            <forward name="viewEventDetails" path="/jsp/meetings/frmEventOrgRegView.jsp"/>
+            <forward name="listEventDet" path="/EventOrgRenewal.do?eventProcess=eventViewOrg"/>
+            
+        </action>         
+        
+        <!--*****************************************Action for Insert Organizer HLC Event Registration Action *************************************--> 
+        <action path="/InsertOrgHLCEventReg" name="insertOrgHLCEventRegActionForm" type="com.mrm.action.InsertOrgHLCEventRegAction"     input="/jsp/membership/OrganizerHLCEventReg.jsp" scope="request">
+            <forward name="Op1" path="/jsp/membership/Op.jsp"/>
+        </action>   
+        
+        <!-- ********************************* Action for Setting Up Event Registration Dates & Price *********************** -->
+        <action path="/eventRegPriceCRUD"
+                scope="request"
+                type="com.mee.action.EventRegPriceAction">
+            <forward name="frmMeeEventRegPriceAdd" path="/jsp/meetings/frmMeeEventRegPriceAdd.jsp"/>
+            <forward name="frmMeeEventRegPriceAddConf" path="/jsp/meetings/frmMeeEventRegPriceAddConf.jsp"/>
+            <forward name="frmMeeEventRegPriceList" path="/jsp/meetings/frmMeeEventRegPriceList.jsp"/>
+            <forward name="frmMeeEventRegPriceEdit" path="/jsp/meetings/frmMeeEventRegPriceEdit.jsp"/>
+            <forward name="frmMeeEventRegPriceView" path="/jsp/meetings/frmMeeEventRegPriceView.jsp"/>
+            <forward name="frmEventRegSetDate" path="/jsp/meetings/frmEventRegSetDate.jsp"/>
+            <forward name="frmMeeEventRegDateAddConf" path="/jsp/meetings/frmMeeEventRegDateAddConf.jsp"/>
+        </action>
+        
+        
+        <!--*****************************************Action for Insert Membership Registration Action *************************************--> 
+        <action path="/insertMembershipReg" type="com.mrm.action.MembershipRegInsertAction" input="/member-registration.jsp" scope="request">
+            <forward name="confirm" path="/jsp/membership/desc-membership-status.jsp"/>
+            <forward name="successInsertRedirHuman" path="/jsp/membership/frmMMSHumanMemNova.jsp"/>
+        </action>
+        
+        <!--*****************************************Action for Display Human Membership Registration / Renewal,dgrade,upgrade Action *************************************--> 
+      
+        <action path="/MembershipReg" type="com.mrm.action.MembershipRegistrationAction" input="/Home.jsp" scope="request">
+            <forward name="MembershipReg" path="/jsp/membership/member-registration.jsp"/>
+            <forward name="MembershipRenewal" path="/jsp/membership/member-registration-renewal.jsp"/>
+            
+            <forward name="alreadymemb" path="/jsp/membership/memb-reg-eligibility.jsp"/>
+            <forward name="notaMemb" path="/jsp/membership/memb-reg-ren-eligibility.jsp"/>
+            <forward name="membView" path="/jsp/membership/view-member-regi.jsp"/>
+            <forward name="approveMemb" path="/jsp/membership/approve-memberSearch-regi.jsp"/>
+            <forward name="frmMemberSearchList" path="/jsp/membership/frmMemberSearchList.jsp"/>
+            <forward name="memberPayment" path="/jsp/membership/view-member-payment.jsp"/>
+            <forward name="home" path="/index.jsp"/>
+            <forward name="DispOwnerDetails" path="/jsp/membership/frmMemOwnerDetails.jsp"/>
+            <forward name="listalldonations" path="/jsp/membership/frmMemListAllDonations.jsp"/>
+            <forward name="famMembView" path="/jsp/membership/frmViewFamilyMember-Regi.jsp"/>
+        </action>    
+        
+        <action path="/MemberRenCardPay" type="com.mrm.action.MemberRenCardPay" >
+            <forward name="confirm" path="/jsp/membership/frmMembershipRegCardSuccess.jsp"/>
+            <forward name="decline" path="/jsp/membership/frmMMSHumanMemNovaDecline.jsp"/>
+        </action>
+        
+        <action path="/MembershipRenewal" type="com.mrm.action.MembershipRenewalAction" input="/member-registration-renewal.jsp" scope="request">
+            <forward name="renewalPage" path="/jsp/membership/member-registration-renewal.jsp"/>
+            <forward name="confirm" path="/jsp/membership/desc-membership-status.jsp"/>
+        </action>
+        
+        
+        <!--*****************************************Action for Renew MembershipType Dropdown Ajax Action 
+        *************************************--> 
+        <action path="/RenewMembTypAjax" type="com.mrm.action.RenewMembTypAjaxAction" parameter="method">
+            
+        </action>
+        
+        
+        <!--***************************************** Member Country Mail Prize  Action ************************** -->
+   
+        <action path="/MembCtryPrizeAjax" type="com.mrm.action.MemberCtryPriceAjaxAction" scope="request" >
+            
+        </action> 
+        
+        <!--*****************************************Action for Display Horse Registration Action *************************************--> 
+        <action input="/Home.jsp" 
+                path="/HorseReg" 
+                scope="request"
+                type="com.mrm.action.HorseRegAction">
+            <forward name="HorseRegistration" path="/jsp/membership/HorseRegistration.jsp"/>
+            <forward name="NotRegisteredHorse" path="/jsp/membership/NotRegisteredHorse.jsp"/>
+        </action>
+        <action path="/horseRegEdit" 
+                type="com.mrm.action.HorseRegEditAction"
+                name="FormAddRidOwnPay"
+                scope="request">
+            <forward name="successInsertRedirNewHorseReg" path="/jsp/membership/frmMMSHorseRegiNova.jsp"/>
+            <forward name="frmHorseSuccessRedir" path="/jsp/membership/frmHorseRegEditNova.jsp"/>
+            <forward name="HorseSuccess" path="/jsp/membership/HorseSuccess.jsp"/>
+            <forward name="error" path="/jsp/membership/error.jsp"/>
+            <forward name="userListing" path="/RegHorseListing.do?process=UserListing"/>
+        </action>
+        
+        <action path="/noveRegEdit" 
+                type="com.mrm.action.HorseNotRegisteredAction"
+                scope="request">
+            <forward name="confirm" path="/jsp/membership/HorseCardSuccess.jsp"/>
+            <forward name="decline" path="/jsp/membership/frmMemHorPaymentNovaDecline.jsp"/>                            
+        </action>
+        
+        <!--*****************************************Action for Insert Horse Registration Action *************************************--> 
+        <action path="/InsertHorseReg" 
+                type="com.mrm.action.InsertHorseRegAction"
+                name="insertHorseRegActionForm"
+                input="/jsp/membership/HorseRegistration.jsp"
+                scope="request">
+            <forward name="Op" path="/jsp/membership/post-confirmation-page.jsp"/>
+            <forward name="successInsertRedirNewHorseReg" path="/jsp/membership/frmMMSHorseRegiNova.jsp"/>
+            <forward name="frmHorseSuccessRedir" path="/jsp/membership/frmMMSHorseRegiNova.jsp"/>
+            <forward name="HorseSuccess" path="/jsp/membership/HorseSuccess.jsp"/>
+            <forward name="error" path="/jsp/membership/error.jsp"/>                                
+        </action>
+        
+        <action path="/horserRidOwnAdd" 
+                type="com.mrm.action.HorseRegActionAdd" 
+                scope="request">
+            <forward name="goToAddRid" path="/jsp/membership/HorseRegAdd.jsp"></forward>
+            <forward name="goToAddRidOwn" path="/jsp/membership/HorseRegAddRidOwn.jsp"></forward>
+            <forward name="goToAddRidSuccess" path="/jsp/membership/HorseRegAddSuccess.jsp"></forward>
+            <forward name="error" path="/jsp/membership/error.jsp"/>
+        </action>
+        
+        <action path="/addOwnRidPay"
+                type="com.mrm.action.ActionAddRidOwnPay"
+                name="FormAddRidOwnPay"
+                scope="request">
+            <forward name="HorseRidOwnSuccess" path="/jsp/membership/HorseRidOwnSuccess.jsp"/>
+            <forward name="goToAddRidOwn" path="/jsp/membership/HorseRegAddRidOwn.jsp"/>
+            <forward name="HorseOwnerDir" path="/jsp/membership/frmHorseOwnRidNova.jsp"/>
+        </action>
+        
+        <action path="/adminPay"
+                type="com.mrm.action.ActionChngPayByAdmin"
+                name="UpgradeHorseReg"
+                scope="request">
+            <forward name="ChngPayAdminSuccess" path="/jsp/membership/HorseChngPayAdminSuccess.jsp"/>
+            <forward name="goToChngPay" path="/jsp/membership/frmMrmHorseRegFinalize.jsp"/>
+            <forward name="AdminNovaRedir" path="/jsp/membership/frmHorseAdminNova.jsp"/>
+        </action>
+        <action path="/novaAction"
+                type="com.mrm.action.HorseAdminChngPayAction"
+                scope="request">
+            <forward name="confirm" path="/jsp/membership/HorseChngPayAdminSuccess.jsp"/>
+            <forward name="decline" path="/jsp/membership/frmHorseAdminDecline.jsp"/>
+        </action>
+        
+        <action path="/chngHorseName"
+                type="com.mrm.action.AdminChangeHorseRequest"
+                name="UpgradeHorseReg"
+                scope="request">
+            <forward name="ChngPayAdminSuccess" path="/jsp/membership/HorseChangeAdminSuccess.jsp"/>
+            <forward name="goToChngPay" path="/jsp/membership/AdminHorseChngRequest.jsp"/>
+            <forward name="AdminNovaRedir" path="/jsp/membership/frmHorseChangeAdminNova.jsp"/>
+        </action>
+        
+        <action path="/chngHorseNova"
+                type="com.mrm.action.AdminChangeHorseNovaAction"
+                scope="request">
+            <forward name="confirm" path="/jsp/membership/HorseChangeAdminSuccess.jsp"/>
+            <forward name="decline" path="/jsp/membership/frmHorseChangeAdminDecline.jsp"/>
+        </action>
+        
+        <action path="/PayemntRidOwn"
+                type="com.mrm.action.ActionPaymentRidOwn">
+            <forward name="confirm" path="/jsp/membership/HorseOwnerCardSuccess.jsp"/> 
+            <forward name="decline" path="/jsp/membership/frmChngOwnRiderHorPayNovaDecline.jsp"/>
+        </action>
+        
+        <action path="/changeOwnRidPay"
+                type="com.mrm.action.ActionChangeRidOwnPay"
+                name="FormAddRidOwnPay"
+                scope="request">
+            <forward name="changeRidOwnSuccess" path="/jsp/membership/changeRidOwnSuccess.jsp"/>
+            <forward name="goToAddRidOwn" path="/jsp/membership/HorseRegChngRidOwn.jsp"/>
+            <forward name="ChangeOwnerDir" path="/jsp/membership/ChangeHorseOwnRidNova.jsp"/>
+            
+        </action>
+        
+        
+        <action path="/changeownridpaym"
+                type="com.mrm.action.ActionChangeOwnRidPayment"
+                scope="request">
+            <forward name="confirm" path="/jsp/membership/changeRidOwnCardSuccess.jsp"/>
+            <forward name="decline" path="/jsp/membership/frmChngOwnRiderHorPayNovaDecline.jsp"/>
+        </action>
+        
+        <!--*****************************************Action for Renew Horse Registration Action *************************************--> 
+        <action path="/RenewHorseReg" 
+                type="com.mrm.action.RenewHorseRegAction" 
+                name="renewHorseRegActionForm"
+                input="/Home.jsp" scope="request">
+            <forward name="RenewHorseReg" path="/jsp/membership/RenewHorseRegistration.jsp"/>
+            <forward name="ViewHorseReg" path="/jsp/membership/ViewHorseRegistration.jsp"/>
+            <forward name="renewalfailed" path="/jsp/membership/renew-horse-status-page.jsp"/>
+        </action>
+        
+        
+        <!--*****************************************Action for Update Horse Registration Action *************************************--> 
+        <action path="/UpdateHorseReg"
+                type="com.mrm.action.RenewUpdateHorseRegAction" 
+                name="updateHorseRegActionForm"
+                input="/jsp/membership/EditHorseRegistration.jsp" 
+                scope="request">
+            <forward name="RenewUpdateHorseReg" path="/jsp/membership/post-confirmation-page.jsp"/>
+            <forward name="successInsertRedirHorseRen" path="/jsp/membership/frmMMSHorseRegiRenewUpgDowngraNova.jsp"/>
+        </action>
+        
+        <action path="/editHorse" type="com.mrm.action.ActionEditHorse" scope="request">
+            <forward name="EditHorseRegistration" path="/jsp/membership/EditHorseRegistration.jsp"/>
+            <forward name="horseUpdateSuccess" path="/jsp/membership/HorseUpdateSuccess.jsp"/>
+            <forward name="UserViewMemberList" path="/jsp/membership/UserViewHorseRegistration.jsp"/>
+            <forward name="PermissionDenied" path="/jsp/membership/frmPermissionDenied.jsp"/>
+            <forward name="editHorseTrainerDetails" path="/jsp/membership/editHorseTrainerDetails.jsp"/>
+            <forward name="TrainerUpdate" path="/jsp/membership/HorseTrainerUpdateSuccess.jsp"/>
+        </action>
+        
+        <action path="/horseupdate" type="com.mrm.action.ActionHorseUserUpdate" scope="request">
+            <forward name="updateSuccess" path="/jsp/membership/HorseUpdateSuccess.jsp"/>
+        </action>
+        
+        <action path="/AdminHorseReqEdit" type="com.mrm.action.HorseReqEditAction">
+            <forward name="Success" path="/jsp/membership/adminReqEditSuccess.jsp"/> 
+        </action>
+        
+        <!--*****************************************Action For Update Failed RePayments Section *************************************-->                 
+        <action path="/ChngeRePay" type="com.mrm.action.ChangeRidOwnPayDecline" name="UpgradeHorseReg" scope="request">
+            <forward name="goToChangeRepay" path="/jsp/membership/Horse-Chng-OwnRider-fail-payment.jsp"/>
+            <forward name="UserDuePayMessage" path="/jsp/membership/UserDuePayMessage.jsp"/>
+            <forward name="frmHorseSuccessRedir" path="/jsp/membership/frmChngRidOwnNova.jsp"/>
+            <forward name="changeRidOwnSuccess" path="/jsp/membership/changeRidOwnSuccess.jsp" />
+        </action>
+        
+        <!--*****************************************Action For Updated Failed RePayments *************************************-->                 
+        <action path="/ChngeNovaRePay" type="com.mrm.action.ChangeRidOwnDeclineNova" scope="request">
+            <forward name="decline" path="/jsp/membership/frmChngOwnRiderHorPayNovaDecline.jsp"/>
+            <forward name="frmHorseSuccessRedir" path="/jsp/membership/frmChngRidOwnNova.jsp"/>
+            <forward name="PayConf" path="/jsp/membership/changeRidOwnCardSuccess.jsp" />
+        </action>	
+        
+        <!--*****************************************Action for Insert User Registration Action *************************************--> 	
+                       
+        <action path="/InsertUserReg"
+                type="com.mrm.action.InsertUserRegAction"
+                name="insertUserRegActionForm"
+                input="/jsp/membership/UserRegistration.jsp"
+                scope="request">
+            <forward name="Confirmation" path="/jsp/membership/frmMembUserRegiCnf.jsp"/>
+        </action>
+        
+        
+        <!--*****************************************Action for Display Edit User Registration Action *************************************--> 	
+        <action   path="/EditUserReg"
+                  type="com.mrm.action.EditUserRegAction"
+                  name="updateUserRegActionForm"
+                  input="EditUserReg.jsp"
+                  scope="request">
+            <forward name="EditUserReg" path="/jsp/membership/EditUserReg.jsp"/>
+            <forward name="ViewUserReg" path="/jsp/membership/ViewUserReg.jsp"/>
+            <forward name="UserReg" path="/jsp/membership/UserRegistration.jsp"/>
+            <forward name="confirmation" path="/jsp/membership/post-confirmation-page.jsp"/>
+            <forward name="NewSignDisp" path="/jsp/membership/UserSignup.jsp"/>
+            <forward name="frmsearchSignup" path="/jsp/membership/UserRegistrationSearch.jsp"/>
+            
+        </action>
+        <!--*****************************************Admin search and register for a user Action *************************************--> 	
+               
+        <action path="/SearchSignUp" type="com.mrm.action.UsrSearchSignup" input="UserRegistrationSearch.jsp" scope="request">
+            <forward name="confirm" path="/jsp/membership/SearchSignupConf.jsp"/>
+        </action>       
+        
+        <!--*****************************************Action for Display Human Membership Registration / Renewal,dgrade,upgrade status validate Ajax Action *************************************--> 	
+        <action   path="/MembStatusAjaxAction"
+                  type="com.mrm.action.MembStatusAjaxAction"
+                  scope="request">
+        </action>
+        
+        <!--*****************************************User Signup Ajax Usr ID Validate Action *************************************--> 	
+                   
+        <action path="/UsrSignupAjax"
+                type="com.mrm.action.UsrSignupAjaxAction"
+                scope="request">
+            
+        </action>
+        
+        
+        <action path="/ActionHorseUpgrade" type="com.mrm.action.ActionHorseUpgrade" input="/jsp/membership/UpgradeHorseRegistration.jsp" 
+                name="UpgradeHorseReg" scope="request">
+            <forward name="frmHorseSuccessRedir" path="/jsp/membership/frmMMSHorseRegiNova.jsp"/>
+            <forward name="frmUpgradeHorseSuccess" path="/jsp/membership/frmMMSHorseUpgradeRegiNova.jsp"/>
+            <forward name="SuccessFrm" path="/jsp/membership/UpgradeHorseSuccess.jsp"/>        
+            <forward name="error" path="/jsp/membership/error.jsp"/>
+            <forward name="success" path="/jsp/membership/UpgradeFEHYEHHorseSuccess.jsp"/>
+        </action>	  
+        
+        <action path="/UpgradeHorse" 
+                type="com.mrm.action.UpgradeAction" >
+            <forward name="confirm" path="/jsp/membership/HorseUpgradeCardSuccess.jsp"/>
+            <forward name="decline" path="/jsp/membership/frmMemHorPaymentNovaDecline.jsp"/>
+        </action>    
+        
+        
+        
+        <!--*****************************************Action for User Signup Details Action *************************************--> 	
+                       
+        <action path="/UsrSignupDetails"
+                type="com.mrm.action.UsrSignupDetailsAction"
+                name="insertUserRegActionForm"                 
+                scope="request">
+            
+            <forward name="usrExVal" path="/jsp/membership/UserSignup.jsp"/>
+            <forward name="newReg" path="/EditUserReg.do?status=register"/>
+            <forward name="successLogin" path="/jsp/membership/frm-UsrSignup-login-Conf.jsp"/>
+            <forward name="secQaFail" path="/jsp/membership/frm-UsrSignup-Confirmation.jsp"/>
+            <forward name="usrDetailSecQA" path="/jsp/membership/UserSignupAlert.jsp"/>
+            <forward name="exMemb" path="/MemberSignupDetails.do?process=secQaVal"/>
+            
+        </action>
+        
+        
+        
+        <!--*****************************************Action for Member Signup Details Action *************************************--> 	
+                       
+        <action path="/MemberSignupDetails"
+                type="com.mrm.action.MemberSignupDetailsAction"
+                
+                scope="request">
+            
+            <forward name="usrExVal" path="/jsp/membership/memberDetail.jsp"/>
+            <forward name="dsntExist" path="/jsp/membership/frm-membSignup-Qafail.jsp"/>
+            <forward name="NewMemSignDisp" path="/jsp/membership/memberCreateLogin.jsp"/>
+            <forward name="newMembReg" path="/jsp/membership/memberDetail.jsp"/>
+            <forward name="successLogin" path="/jsp/membership/frm-memberSignup-Confirmation.jsp"/>
+            <forward name="secQaFail" path="/jsp/membership/frm-membSignup-Qafail.jsp"/>
+            <forward name="usrDetailSecQA" path="/jsp/membership/memberAccountAlert.jsp"/>
+            <forward name="regSuccess" path="/jsp/membership/frmMembUserRegiCnf.jsp"/>
+            
+        </action>
+        
+        <!--*****************************************Action Mappings For Member/User sign up*************************************-->                
+        <action path="/MemberUsrSignUp" 
+                type="com.mrm.action.MemberUserSignupAction"
+                name="updateUserRegActionForm"
+                scope="request">
+            
+            <forward name="UserDetial" path="/jsp/membership/UserMemberSignupAlert.jsp"/>
+            <forward name="UserSignup" path="/jsp/membership/MemberUserSignup.jsp"/>
+            <forward name="searchFail"  path="/jsp/membership/MemUsrSignup-SearchFail.jsp"/>
+            <forward name="UserAuth" path="/jsp/membership/memberUserSignupAuth.jsp"/>
+            <forward name="UserReg" path="/jsp/membership/MemberUserRegistration.jsp"/>
+            <forward name="EmpMapReg" path="/jsp/membership/EmployeeMappingRegistration.jsp"/>
+            <forward name="editUserDet" path="/jsp/membership/editMemberUserSignUp.jsp"/>
+            <forward name="changeSuccess" path="/jsp/membership/change-pwd-conf.jsp"/>
+            <forward name="Confirmation" path="/jsp/membership/post-confirmation-page.jsp"/>
+            <forward name="usrNoMatch" path="/jsp/membership/MemUsrSignup-NoMatchConf.jsp"/>
+            <forward name="ReLogin" path="/login.jsp" />
+         </action>
+        
+        <!--*****************************************Action for Update Edit User Registration Action *************************************--> 	
+        <action   path="/UpdateEditUserReg"
+                  type="com.mrm.action.UpdateUserRegAction"
+                  name="updateUserRegActionForm"
+                  input="EditUserReg.jsp"
+                  scope="request">
+            
+            <forward name="Confirmation" path="/jsp/membership/post-confirmation-page.jsp"/>
+            <forward name="changePwd" path="/changePwd.do?process=Change"/>
+            <forward name="fromEventEntry" path="/OEEDemo.do?process=UserListing"/>        
+        </action>
+        
+        
+        <!--*****************************************Action for Login Action *************************************--> 	
+                   
+        <action   path="/MemberLogin"
+                  type="com.mrm.action.MemberLoginAction"
+                  scope="request">
+            <forward name="callMainBoard" path="/roles.do?roleProcess=initDashboard"/> 
+            <forward name="LoginSuccess" path="/index.jsp"/>
+            <forward name="ReLogin" path="/login.jsp"/>
+             <forward name="callErrorPage" path="/errorPage.jsp"/>
+            
+        </action>
+        
+        <!--*****************************************Action for Rider Info Ajax Action *************************************--> 	
+        <action   path="/RiderInfoAjaxAction"
+                  type="com.mrm.action.RiderInfoAjaxAction"
+                  scope="request">
+        </action>
+        
+        <!-- ***************************************************** Horse service Type Action ********************************  -->    
+    
+        <action path="/horseServiceMaster" 
+                type="com.mrm.action.adminmaster.HorseServiceAction">
+            
+            <forward name="horsemembCreatetype" path="/jsp/membership/horsememb-create-service-type.jsp" />
+            <forward name="hrsServiceList" path="/jsp/membership/horsememb-service-list.jsp" />
+            <forward name="hrsServiceEdit" path="/jsp/membership/horsememb-edit-service-type.jsp" />
+            <forward name="hrsServiceDelete" path="/jsp/membership/horsememb-delete-service-type.jsp" />
+            <forward name="hrsServiceViewSingle" path="/jsp/membership/horsememb-viewsingle-service-type.jsp" />
+            <forward name="humanmembCreatetype" path="/jsp/membership/HumanMembCreateServiceType.jsp" />
+            <forward name="humServiceList" path="/jsp/membership/HumanMembServicesList.jsp" />
+            <forward name="humServiceEdit" path="/jsp/membership/HumanMembEditServiceType.jsp" />
+            <forward name="admin" path="/jsp/membership/frmHorse-Service-Confirmation.jsp" />
+            
+        </action> 
+        <!--<action path="/HumanServiceMaster"
+                type="com.mrm.action.adminmaster.HumanServiceAction">
+            <forward name="humanmembCreatetype" path="/jsp/membership/humanmemb-create-service-type.jsp" />
+            <forward name="humServiceList" path="/jsp/membership/humanmemb-services-list.jsp" />
+            <forward name="humServiceEdit" path="/jsp/membership/humanmemb-edit-service-type.jsp" />
+        </action>-->
+        
+        <!-- ***************************************************** Membership Type Insert Action ********************************  -->    
+        <action path="/memberMaster"
+                type="com.mrm.action.adminmaster.MembershipTypeInsertAction" >
+            <forward name="membershipCrea" path="/jsp/membership/membership-create-memb-type.jsp" />
+            <forward name="membershipList" path="/jsp/membership/membership-view-membership-list.jsp" />
+            <forward name="membershipEdit" path="/jsp/membership/membership-edit-memb-type.jsp" />
+            <forward name="membershipDelete" path="/jsp/membership/membership-delete-membership-type.jsp" />
+            <forward name="membershipViewSingle" path="/jsp/membership/membership-viewsingle-membership-type.jsp" />
+            
+            
+            <forward name="admin" path="/jsp/membership/frm-membTyp-Confirmation.jsp" />
+        </action> 
+         <!-- ***************************************************** nonhuman-Membership Type Insert Action ********************************  -->
+          <action path="/nonmemberMaster"
+                type="com.mrm.action.adminmaster.NonhumanMembershipTypeInsertAction" >
+            <forward name="membershipCrea" path="/jsp/membership/nonhuman-membership-create-memb-type.jsp" />
+            <forward name="membershipList" path="/jsp/membership/nonhuman-membership-view-membership-list.jsp" />
+            <forward name="membershipEdit" path="/jsp/membership/nonhuman-membership-edit-memb-type.jsp" />
+            <forward name="membershipDelete" path="/jsp/membership/membership-delete-membership-type.jsp" />
+            <forward name="membershipViewSingle" path="/jsp/membership/membership-viewsingle-membership-type.jsp" />
+
+
+            <forward name="admin" path="/jsp/membership/frm-membTyp-Confirmation.jsp" />
+        </action>
+        <!-- ******************************* Membership Create Type Master *************************************************************-->
+    
+        <action path="/memberdisp" type="com.mrm.action.adminmaster.MembershipTypeAction" input="/jsp/membership/createMember.jsp"  scope="request">
+            <forward name="membershipdisplay" path="/jsp/membership/membership-create-memb-type.jsp" />
+        </action> 
+        
+        
+        
+        <!--***************************************** Member Status Master Action ************************** -->
+        <action path="/member1" type="StatusMasterAction" input="/jsp/membership/membership-create-status-master.jsp"  scope="request">
+            
+            <forward name="statusMaster" path="/jsp/membership/statusMaster.jsp"/>
+            
+        </action>                                 
+        
+        
+        
+        <!-- ********************************************** Contact Type Action ********************************************** -->
+
+        <action path="/contact" type="com.mrm.action.adminmaster.ContactTypeAction" scope="request">
+            <forward name="home" path="/jsp/membership/frmContact-Typ-Confirmation.jsp"/>
+            <forward name="addcontacttype"   path="/jsp/membership/membership-create-contact-type.jsp"/>
+            <forward name="lstcontacttype"   path="/jsp/membership/membership-list-contact-type.jsp"/>
+            <!--Start:[ContactMgt] For Contact Type Addition, Editing and Deletion changes dated 30-Mar-2011-->
+          <forward name="LstContactType" path="/contact.do?conprocess=list"/>
+            <!--End:[ContactMgt] For Contact Type Addition, Editing and Deletion changes dated 30-Mar-2011-->
+            <forward name="edtcontacttype"   path="/jsp/membership/membership-edit-contact-type.jsp"/>
+            <forward name="dltcontacttype"   path="/jsp/membership/membership-delete-contact-type.jsp"/>
+        </action>
+        
+        <!-- ************************************************** Country Mail Price ******************************************* -->    
+    
+        <action path="/countrymail"
+                type="com.mrm.action.adminmaster.CountryMailPriceServiceAction">
+            <forward name="home" path="/jsp/membership/frmCtryMail-Confirmation.jsp"/>
+            <forward name="membership-assign-country-mailprice" path="/jsp/membership/membership-assign-country-mailprice.jsp"/>
+            <forward name="membership-country-mail-list" path="/jsp/membership/membership-country-mail-list.jsp"/>
+            <forward name="lstPrice" path="/countrymail.do?countryProcess=lstCountrymail"/>
+            <forward name="membership-delete-country-mailprice" path="/jsp/membership/membership-delete-country-mailprice.jsp"/>
+            <forward name="membership-edit-country-mailprice" path="/jsp/membership/membership-edit-country-mailprice.jsp"/>
+        </action>   
+        
+        
+        <!-- ***************************************************** Horse service Type Action ********************************  -->    
+    
+        <action path="/input" type="com.mrm.action.adminmaster.HorseServiceAction" input="/jsp/membership/horsememb-create-service-type.jsp"  scope="request">
+            
+            <forward name="horseService" path="/jsp/membership/horseService.jsp"/>
+        </action> 
+        
+        
+        <!-- ***************************************************** Membership Type Insert Action ********************************  -->    
+         
+        <action path="/member" type="com.mrm.action.adminmaster.MembershipTypeInsertAction" input="/jsp/membership/membership-create-memb-type.jsp"  scope="request">
+            
+            <forward name="memberSuccess" path="/jsp/membership/memberSuccess.jsp"/>
+            
+        </action>     
+        
+        <!-- ******************************* Membership Create Type Master *************************************************************-->
+    
+        <action path="/memberdisp" type="com.mrm.action.adminmaster.MembershipTypeAction" input="/jsp/membership/createMember.jsp"  scope="request">
+            
+            <forward name="membershipdisplay" path="/jsp/membership/membership-create-memb-type.jsp" />
+        </action> 
+        
+        <!-- ********************************************* Non Usea Org Type Master Action *******************************************-->
+       
+        <action path="/nonhlc" type="com.mrm.action.adminmaster.NonHLCAction"  input="/jsp/membership/membership-add-nonUseaOrg.jsp" scope="request">
+            
+            <forward name="nonUseaAdd" path="/jsp/membership/nonhlcsuccess.jsp"/>
+            <forward name="nonUseaAddPage" path="/jsp/membership/membership-add-nonUseaOrg.jsp"/>
+            <forward name="ListDisp" path="/jsp/membership/membership-nonUseaOrglist-list.jsp"/>
+            <forward name="nonUseaList" path="/nonhlc.do?process=List"/>
+            <forward name="nonUseaEdDisp" path="/jsp/membership/membership-edit-nonUseaOrg.jsp"/>
+            <forward name="nonUseaAddConfirm" path="/jsp/membership/frmNon-UseaConfirmation.jsp"/>
+            <forward name="nonUseaDelConfirm" path="/jsp/membership/frmNon-UseaDelete.jsp"/>
+            
+            
+        </action> 
+        
+        <!--***************************************** Member Status Master Action ************************** -->
+        <action path="/member1" type="StatusMasterAction" input="/jsp/membership/membership-create-status-master.jsp"  scope="request">
+            
+            <forward name="statusMaster" path="/jsp/membership/statusMaster.jsp"/>
+            
+        </action>      
+        
+        <!--***************************************** Horse Reg List Action ************************** -->
+   
+        <action path="/HorseRegList" type="com.mrm.action.HorseRegListActions" input="/jsp/membership/HorseRegList.jsp"  scope="request">
+            
+            <forward name="HorseRegList" path="/jsp/membership/Op.jsp"/>
+            
+        </action>  
+        
+        <!--***************************************** Horse Member List based on MemberId Action ************************** -->
+   
+        <action path="/HorseMemberList" type="com.mrm.action.OwnerHorseListAction" scope="request">
+            <forward name="HorseMemberListing" path="/jsp/membership/horsememb-horse-listing.jsp"/>
+        </action>
+        
+        <!--***************************************** Refund Request Insert Master Action ************************** -->
+   
+        <action path="/RefundReq" type="com.mrm.action.RefundReqInsertAction" input="/jsp/membership/refund-request.jsp"  scope="request">
+            
+            <forward name="RefundReq" path="/jsp/membership/refund-request.jsp"/>
+            <forward name="confirm" path="/jsp/membership/refund-confirmation.jsp"/>
+            
+        </action>     
+        
+        <!--***************************************** Refund Request Display Action ************************** -->
+   
+        <action path="/RefundReqDisp" type="com.mrm.action.RefundReqDispAction" input="/jsp/membership/refund-request.jsp"  scope="request">
+            
+            
+            <forward name="RefundApply" path="/jsp/membership/refund-request.jsp"/>
+            <forward name="RefundDenied" path="/jsp/membership/refund-not-exist-memb.jsp"/>
+            
+        </action>   
+        
+        <!--***************************************** User Refund Claim Display Action ************************** -->
+   
+        <action path="/UsrRefundClaimDisp" type="com.mrm.action.UsrRefundClaimDispAction" scope="request" input="/jsp/membership/usr_refund-request-viewstatus.jsp" >
+            
+            <forward name="UsrRefundClaimDisp" path="/jsp/membership/usr_refund_claim.jsp"/>
+            <forward name="UsrRefundClaimView" path="/UsrRefundReqListAction.do"/>
+            
+        </action>      
+        
+        <!--***************************************** User Refund Claim Action ************************** -->
+   
+        <action path="/UsrRefClaim" type="com.mrm.action.UsrRefClaimAction" input="/jsp/membership/usr_refund_claim.jsp" scope="request" >
+            
+            <forward name="UsrRefClaim" path="/UsrRefundReqListAction.do"/>
+            
+        </action>       
+        
+        <!--***************************************** Refund Admin Pending List Action ************************** -->
+   
+        <action path="/RefundList" type="com.mrm.action.RefundListAction" input="/home.jsp"  scope="request">
+            
+            <forward name="RefundList" path="/jsp/membership/refund-application-listing.jsp"/>
+            <forward name="RefundApproveDisp" path="/jsp/membership/refund-approve.jsp"/>
+            
+        </action> 
+        
+        <!--***************************************** Refund Admin Approve Action ************************** -->
+   
+        <action path="/RefundReqApproveAction" type="com.mrm.action.RefundReqApproveAction" input="/jsp/membership/refund-approve.jsp"  scope="request">
+            
+            <forward name="RefundListAction" path="/RefundList.do"/>
+            
+            
+        </action>   
+        
+        <!--***************************************** User Refund Request Action ************************** -->
+   
+        <action path="/UsrRefundReqListAction" type="com.mrm.action.UsrRefundReqListAction" scope="request">
+            
+            <forward name="UsrRefundReqList" path="/jsp/membership/usr_refund-request-list.jsp"/>
+            <forward name="refund-request-viewstatus" path="/jsp/membership/usr_refund-request-viewstatus.jsp"/>  
+            <forward name="RefundDenied" path="/jsp/membership/refund-not-exist-memb.jsp"/>
+        </action>   
+        
+        <!--***************************************** Admin Refund Pending & Active List Action *************** -->
+   
+        <action path="/AdminRefundStatusDisp" type="com.mrm.action.AdminRefundStatusDispAction" input="home.jsp" scope="request" >
+            
+            <forward name="AdminRefundStatusList" path="/jsp/membership/refund-admin-status-list.jsp"/>
+            <forward name="AdminRefundApprove" path="/jsp/membership/admin_refund-approve.jsp"/>           
+            
+        </action>          
+        
+        <!--***************************************** Logout Action ************************** -->
+   
+        <action path="/logout" type="com.mrm.action.LogoutAction" >
+            <forward name="success" path="/login.jsp"/>
+            <forward name="callMainBoard" path="/roles.do?roleProcess=initDashboard"/> 
+            <forward name="LoginSuccess" path="/index.jsp"/>
+            <forward name="ReLogin" path="/login.jsp"/>
+            <forward name="frmMemberSearchResultList" path="/jsp/membership/frmMemberSearchResultList.jsp"/>
+     <!---Dhivya Here: AdminUserLogOut-->
+             <forward name="bckAdminProcess" path="/logout.do?adminUserProcess=adminUserLogOut"/>
+
+        <!--Ends Here-->
+        </action>
+        
+        <!--***************************************** Admin Mrmber reg listing Action ************************** -->
+
+        <action path="/MemberRegiList"
+                type="com.mrm.action.MemberRegiListAction" 
+                scope="request">
+            <forward name="displayMemberRegiList" path="/jsp/membership/MemberRegiList.jsp" />
+            <forward name="displayMemberInfo" path="/jsp/membership/member-registration-approve.jsp" />
+            <forward name="horseDetApprove" path="/jsp/membership/MemberRegiList-horseApprove.jsp" />
+            <forward name="adminTransac" path="/jsp/membership/frmTransacAdminDet.jsp"/>
+            <forward name="index" path="/index.jsp"/>        
+        </action>
+        
+        <!--***************************************** Admin Registered User Listing Action ************************** -->
+        <action path="/UserRegList" type="com.mrm.action.MemberUserListAction" input="/jsp/membership/membership-user-list.jsp"  scope="request">
+            
+            <forward name="displayMemberUserList" path="/jsp/membership/membership-user-list.jsp"/>
+            
+        </action>         
+        
+        <!--***************************************** Admin Display Detail about User Listing Action ************************** -->
+        <action path="/ViewUserList" type="com.mrm.action.MemberUserListAction" input="/jsp/membership/membership-user-detail.jsp"  scope="request">
+            
+            <forward name="displayMemberDetail" path="/jsp/membership/membership-user-detail.jsp"/>
+            
+        </action>
+        
+        <!--################################################### Meetings #################################################--> 
+         
+         
+        <!--*****************************************Action for Meetings ICP Organizer Registration *************************************--> 
+        <action path="/IcpInsert" name="eventOrgRegActionForm" type="com.mee.action.IcpInsertAction" input="/meetings-icp-assessment-form.jsp" scope="request">
+            <forward name="IcpRegView" path="/jsp/meetings/meetings-icp-assessment-form.jsp"/>
+            <forward name="confirm" path="/jsp/meetings/post-confirmation-page.jsp"/>
+        </action>  
+        
+        <!--*****************************************Action for Meetings ICP User Registration List *************************************--> 
+        <action path="/IcpUsrList" type="com.mee.action.UserIcpListAction" scope="request">
+            <forward name="IcpUsrRegDetails" path="/jsp/meetings/frmMeeUserICPAssessInsureDetails.jsp"/>
+            <forward name="IcpUsrRegList" path="/jsp/meetings/frmMeeUserICPRegiListing.jsp"/>
+        </action>       
+        
+        <!--***************************************** Action for ICP User available Meetings List *************************************--> 
+        <action path="/IcpUsrMeetList" type="com.mee.action.UsrMeetListAction" scope="request">
+            <forward name="IcpUsrMeetList" path="/jsp/meetings/frmMeeUserICPMeeListing.jsp"/>
+            <forward name="IcpUsrMeetListApply" path="/jsp/meetings/frmMeeUserICPAssessApply.jsp"/>
+            <forward name="IcpUsrMeetListAppDisp" path="/jsp/meetings/frmMeeUserICPAssessInsure.jsp"/>
+            <forward name="IcpUsrMeetListAppConf" path="/jsp/meetings/mee-confirmation-icp-user-regi.jsp"/>
+            
+        </action>   
+        
+        <!--*****************************************Action for ICP Organizer Registration List *************************************--> 
+        <action path="/IcpOrgRegList" type="com.mee.action.IcpOrgRegListAction" scope="request">
+            <forward name="IcpOrgRegView" path="/jsp/meetings/frmMeeOrgUserICPAssessInsureApprove.jsp"/>
+            <forward name="IcpOrgRegList" path="/jsp/meetings/frmMeeOrgUserICPRegiListing.jsp"/>
+            <forward name="IcpOrgRegInitList" path="/jsp/meetings/frmMeeOrgUserICPRegiListing.jsp"/>
+        </action>           
+        
+        <!--*****************************************Action for ICP Organizer Registration Form *************************************--> 
+        <action path="/IcpOrgRegFrm" type="com.mee.action.IcpOrgRegAction" scope="request">
+            <forward name="IcpOrgRegDisp" path="/jsp/meetings/frmMeeOrgICPAssessRegi.jsp"/>
+            <forward name="IcpOrgRegConfirm" path="/jsp/meetings/mee-confirmation-icp-org-regi.jsp"/>
+            <forward name="IcpOrgRegEdit" path="/jsp/meetings/frmMeeOrgICPAssessEDITRegi.jsp"/>
+            <forward name="successInsertRedirIcp" path="/jsp/meetings/frmMMSIcpRegiNova.jsp"/>
+            
+        </action> 
+        <!--*****************************************Action for ICP Organizer List Page *************************************--> 
+        <action path="/ICPOrgListApp" type="com.mee.action.ActionICPEdit" scope="request">
+            <forward name="IcpOrgRegEdit" path="/jsp/meetings/frmOrgICPAssessEDITRegi.jsp"/>
+            <forward name="IcpOrgRegConfirm" path="/jsp/meetings/frmMeeICPOrgRegiConf.jsp"/>
+        </action>
+        
+        <!--******************************** Action for MRO Organizer Registration Form Ajax Action *************************************--> 
+
+        <action path="/OrgRegFrmAjax" type="com.mrm.action.OrgRegAjaxAction" scope="request">
+            
+        </action>            
+        
+        <!-- ********************************** shiva files *************************************** -->         
+                 
+        <action path="/memberInfo"
+                type="com.mrm.action.UserDetailsAjaxAction"
+                scope="request"
+                parameter="method" >
+        </action>
+        
+        <action path="/annualAjax"
+                type="com.mee.action.AjaxAction"
+                scope="request"
+                parameter="method" >
+        </action>  
+        
+        
+        <action path="/listAdminOrg"
+                scope="request"
+                type="com.mee.action.AdminOrgListingAction"     
+                name="FormAdminOrgListing" 
+                parameter="method" >            
+            <forward name="success"      path="/jsp/meetings/frmMeeAdminICPRegiListing.jsp"/>
+            <forward name="orgView"      path="/jsp/meetings/frmMeeOrgICPRegiListing.jsp"/>
+            <forward name="viewOrgPage" path="/jsp/meetings/frmMeeAdminICPAssessRegiApprove.jsp"/>
+            <forward name="searchPage"  path="/listAdminOrg.do?method=searchAdmin"/> 
+            <forward name="viewOrgStatus"  path="/jsp/meetings/frmMeeOrgICPAssessRegiDetails.jsp"/> 
+            <forward name="AdminList" path="/jsp/meetings/frmMeeAdminICPRegiListing.jsp"/>              
+            <forward name="ApprovePage" path="/jsp/meetings/frmMeeAdminICPAssessInsureApprove.jsp"/>
+        </action>
+        
+        <!-- ***************************************** Annual Meeting ************************************************* -->
+
+        <!--***************************************** Update Event Registration Type Master************************** -->
+        <action path="/SetDateMaster" type="com.mee.action.AdminSetDateMasterAction"   
+                scope="request" input="/jsp/meetings/frmMeeAdminSetDateMaster.jsp">            
+            <forward name="frmMeeAdminSetDateMaster" path="/jsp/meetings/frmMeeAdminSetDateMaster.jsp"/>
+            <forward name="conformUpdate" path="/jsp/meetings/mee-confirmation-set-date-master.jsp"/>
+        </action>
+        <!--***************************************** Organizer Annual Convention Registration Listing ************************** -->
+        <action path="/AnnualConRegList" type="com.mee.action.MeeOrgAnnConRegiListings"   
+                scope="request" input="/jsp/meetings/frmMeeOrgAnnConRegiListings.jsp">            
+            <forward name="MeeOrgAnnConRegiListings" path="/jsp/meetings/frmMeeOrgAnnConRegiListings.jsp"/>
+            <forward name="MeeOrgAnnConRegiDetail" path="/jsp/meetings/frmMeeOrgAnnConvRegiDetails.jsp"/>
+        </action>
+        <!--***************************************** Admin Annual Convention Registration Listing  ************************** -->     
+        <action path="/AnnualRegList" type="com.mee.action.AdminAnnualRegListAction" 
+                input="/jsp/meetings/frmMeeAdminAnnConRegiListings.jsp"  scope="request">
+            <forward name="displayAnnualConList" path="/jsp/meetings/frmMeeAdminAnnConRegiListings.jsp"/>
+            <forward name="displayAnnualConDetail" path="/jsp/meetings/frmMeeAdminAnnConvRegiApprove.jsp"/>
+            <forward name="displayAnnualConDetail" path="/jsp/meetings/frmMeeAdminAnnConvRegiApprove.jsp"/>
+            <forward name="frmMeeAdminAnnConvRegiDetail" path="/jsp/meetings/frmMeeAdminAnnConvRegiDetail.jsp"/>
+            <forward name="frmMeeAdminAnnConvRegiStatusApprove" path="/jsp/meetings/frmMeeAdminAnnConvRegiStatusApprove.jsp"/>
+            <forward name="frmMeeAdminAnnConvRegiStatusDetails" path="/jsp/meetings/frmMeeAdminAnnConvRegiStatusDetails.jsp"/> 
+            <forward name="frmMeeAdminAnnConRegiDetailtedList" path="/jsp/meetings/frmMeeAdminAnnConRegiDetailtedList.jsp"/>
+            <forward name="frmMeeUserAnnConRegiListings" path="/jsp/meetings/frmMeeUserAnnConRegiListings.jsp"/>
+            <forward name="frmMeeUserAnnConvRegiDetail" path="/jsp/meetings/frmMeeUserAnnConvRegiDetail.jsp"/>
+        </action>
+        <!--***************************************** AJAX BASED Meeting Price Detail Master Display Drop down list For Activity ************************** -->
+        <action path="/meeAjaxPriceMasterList" type="com.mee.action.AjaxPriceDetailMaster" 
+                input="/jsp/meetings/mee-price-detail-master-Ajax.jsp"  scope="request" parameter="method">
+            <forward name="ajaxPriceDetailMaster" path="/jsp/meetings/mee-price-detail-master-Ajax.jsp"/>
+        </action>
+        <!--***************************************** Add Meeting Price Detail Master For Activity ************************** -->
+        <action path="/addPriceMasterList" type="com.mee.action.AddMeePriceDetailMasterAction"   
+                scope="request" input="/jsp/meetings/mee-price-detail-master-Ajax.jsp">            
+            <forward name="ajaxPriceDetailMaster" path="/meeAjaxPriceMasterList.do?method=mediaDimType"/>
+            <forward name="confirmViw" path="/jsp/meetings/mee-confirmation-price-master.jsp"/>
+            <forward name="frmMeeAdminAnnConPriceDetailListings" path="/jsp/meetings/frmMeeAdminAnnConPriceDetailListings.jsp"/>
+            <forward name="frmMeeAdminAnnConPriceDetailEdit" path="/jsp/meetings/frmMeeAdminAnnConPriceDetailEdit.jsp"/>
+            <forward name="frmMeeAdminAnnConPriceDetailView" path="/jsp/meetings/frmMeeAdminAnnConPriceDetailView.jsp"/>
+            <forward name="frmMeeAdminAnnConPriceDetailView" path="/jsp/meetings/frmMeeAdminAnnConPriceDetailView.jsp"/>
+        </action>
+        
+        <action path="/specification"
+                scope="request"            
+                type="com.mee.action.SpecificationMasterAction">
+            <forward name="frmCreateSpecificationType" path="/jsp/meetings/frmCreateSpecificationType.jsp"/>
+            <forward name="frmCreateSuccess" path="/jsp/meetings/frmCreateSuccess.jsp"/> 
+            <forward name="frmEditSpecificationType" path="/jsp/meetings/frmEditSpecificationType.jsp"/>
+            <forward name="editSingleSpecDetail" path="/specification.do?specProcess=initUpdate"/>
+            <forward name="listSpecMaster" path="/jsp/meetings/frmSpecTypeMasterListing.jsp"/>
+        </action>
+        
+        
+        <!--***************************************** Annual Meeting Registration ************************** -->
+        <action path="/annualConRegAction" 
+                type="com.mee.action.AnnualConRegAction"  
+                scope="request">            
+            <forward name="formView" path="/jsp/meetings/frmMeeAnnualConvRegister.jsp"/>  
+            <forward name="confirmView" path="/jsp/membership/post-confirmation-page.jsp"/>  
+        </action>
+        
+        <action path="/AnnRegPayment"
+                type="com.mee.action.AnnRegPaymentAction"
+                name="AnnRegPaymentForm"
+                scope="request"> 
+            <forward name="frmMeeEduActSuccessRedir" path="/jsp/meetings/frmMeeAnnualConvRegPaymentNova.jsp" />
+            <forward name="cnf" path="/jsp/meetings/frmMeeAnnualSuccess.jsp"/>
+        </action>
+        
+        <action path="/annualPaymentcard"
+                type="com.mee.action.ActionAnnualPayment">
+            <forward name="cardcnf" path="/jsp/meetings/frmMeeCardSuccess.jsp"/>
+            <forward name="decline" path="/jsp/meetings/frmMeeAnnualConvRegPaymentNovaDecline.jsp"/>
+            
+        </action>
+        
+        <action path="/annConRegInsert" 
+                type="com.mee.action.AnnConRegInsertAction"
+                name="AnnualRegActionForm"
+                scope="request"> 
+            <forward name="cnf" path="/jsp/meetings/frmMeeAnnualRegAddCnf.jsp"/>
+            <forward name="finalize" path="/jsp/meetings/frmMeeAnnualConvRegFinalize.jsp"/>
+            <forward name="append" path="/annualConRegAction.do?annProcess=initAnnual"/>  
+            <forward name="redirToReg" path="/annualConRegAction.do?annProcess=initAnnual"/>
+        </action>
+        
+        <action path="/AnnualPendDet" type="com.mee.action.AnnualRegiPayment" scope="request" name="UpgradeHorseReg">
+            <forward name="listDet" path="/jsp/meetings/frmAnnualDetailDisp.jsp"/>
+            <forward name="failPay" path="/jsp/meetings/frmAnnMeetFailPay.jsp"/>
+            <forward name="retryPay" path="/jsp/meetings/frmAnnDeclinePay.jsp"/>
+            <forward name="successPay" path="/jsp/meetings/frmAnnualPayCnf.jsp"/>
+        </action>
+        
+        <action path="/AnnualCardPaymnt" type="com.mee.action.AnnuaCardlFailPayment" scope="request" >
+            <forward name="retryPay" path="/jsp/meetings/frmAnnDeclinePay.jsp"/>
+            <forward name="failPay" path="/jsp/meetings/frmAnnMeetFailPay.jsp"/>
+            <forward name="successPay" path="/jsp/meetings/frmAnnualPayCnf.jsp"/>            
+        </action>
+        
+        <action path="/AnnualAdditionalTckt" type="com.mee.action.AnnualAdditionalTckt" scope="request" name="AnnRegPaymentForm">
+            <forward name="addTcktpge" path="/jsp/meetings/frmMeeAnnualAddMoreTckts.jsp"/>
+            <forward name="successPay" path="/jsp/meetings/frmAdditonalAnnualPayCnf.jsp"/>
+            <forward name="failPay" path="/jsp/membership/frmAddtnlAnnFailPay.jsp"/>
+        </action>
+        
+        <action path="/AdditonalCardPay" type="com.mee.action.AddtnlTcktsCardPay" scope="request">
+            <forward name="successPay" path="/jsp/meetings/frmAdditonalAnnualPayCnf.jsp"/>
+            <forward name="retryPay" path="/jsp/meetings/frmAddntnlAnnDeclinePay.jsp"/>
+            <forward name="failPay" path="/jsp/meetings/frmAnnMeetFailPay.jsp"/>
+        </action>
+        
+        <!--*****************************************November 17 2006 ************************** -->   
+        <action path="/SearchHorse"
+                type="com.mrm.action.SearchHorseAction" >
+            <forward name="frmMemExistingHorse" path="/jsp/membership/horseSearch.jsp"/>
+            <forward name="horseCnf" path="/jsp/membership/frmMemHorseFound.jsp"/>
+            <forward name="goToHorseReg" path="/HorseReg.do"/>
+            <forward name="frmMemHorseResult" path="/jsp/membership/frmMemHorseResult.jsp"/>
+            <forward name="frmHorseSearchResult" path="/jsp/membership/frmSearchHorseResult.jsp"/>
+            <forward name="AdminSearchHorseResult" path="/jsp/membership/AdminSearchHorseResult.jsp"/>
+            <forward name="AdminHorseSearch" path="/jsp/membership/AdminHorseSearch.jsp"/>
+        </action>
+        <action path="/ownRidDet" type="com.mrm.action.ActionOwnerAndRiderDetail" scope="request">
+            <forward name="HorseMemberDetails" path="/jsp/membership/HorseMemberDetails.jsp"/>
+            <forward name="DispOwnerDetails" path="/jsp/membership/frmMemOwnerDetails.jsp"/>
+        </action>    
+        
+        <action path="/Owner" 
+                type="com.mrm.action.ActionEditOwner"
+                scope="request">
+            <forward name="editHorseOwnerDetails" path="/jsp/membership/editHorseOwnerDetails.jsp"/>
+            <forward name="ownerUpdate" path="/jsp/membership/HorseOwnerUpdateSuccess.jsp"/>
+            <forward name="error" path="/jsp/membership/error.jsp"/>
+        </action>
+        
+        
+        <action path="/SearchList"
+                type="com.mrm.action.SearchAction">
+            <forward name="frmMemberSearchResultList" path="/jsp/membership/frmMemberSearchResultList.jsp"/>
+            <forward name="frmMemberSearchList" path="/jsp/membership/frmMemberSearchList.jsp"/>
+            <!--For Debug Starts-->
+             <forward name="displayMemberUserList" path="/UserRegList.do?"/>
+              <!--For Debug Ends-->
+            <forward name="redirLogin" path="/MemberLogin.do"/>
+            <forward name="empSearchList" path="/jsp/employee/frmEmployeeSearchList.jsp"/>
+            
+            
+        </action>
+		
+		   <!--***************************************** Strategic Artifacts ************************** --> 
+     
+        <action path="/artifact"
+                type="com.StrgViewMgmnt.StrategicViewManagement"
+                name="strategicViewManagementForm">
+            <forward name="strategicHome" path="/strategicHome.jsp"/>
+            <forward name="strategicBSC" path="/strategicBSC.jsp"/>
+            <forward name="strategicOrder" path="/strategicOrder.jsp"/>
+            <forward name="strategicOrderToCash" path="/strategicOrderToCash.jsp"/>
+            <forward name="strategicOrderEntry" path="/strategicOrderEntry.jsp"/>
+            <forward name="addArtifact" path="/addArtifact.jsp"/>
+            <forward name="LoginSuccess" path="/index.jsp" />
+            <forward name="initAddArtifact" path="/addArtifact.jsp" />
+            
+              <forward name="frmAddArtifact" path="/jsp/artifacts/frmAddArtifact.jsp"/>
+            <forward name="frmEditArtifact" path="/jsp/artifacts/frmEditArtifact.jsp"/>
+            <forward name="frmListArtifacts" path="/jsp/artifacts/frmListArtifacts.jsp"/>       
+            <forward name="frmRedrListArtifacts" path="/artifact.do?process=artifactList"/>   
+            <forward name="errRedirArtifact" path="/jsp/artifacts/frmAddArtifact.jsp?err=str"/>
+            <forward name="errRedirEditArtifact" path="/jsp/artifacts/frmEditArtifact.jsp?err=str"/> 
+            
+        </action>
+        <!--***************************************** November 17 2006 ************************** --> 
+     
+        <!--***************************************** Message Distribution ************************** -->
+
+        <action path="/messages"
+                type="com.msg.action.ActionMessage"
+                name="MessageActionForm"
+                scope = "request">
+            <forward name="redirfrmMsgInbox" path="/messages.do?msgProcess=inbox"/>
+            <forward name="frmMsgConfirmSend" path="/jsp/messages/frmMsgConfirmSend.jsp"/>
+            <forward name="frmMsgInbox" path="/jsp/messages/frmMsgInbox.jsp"/>
+            <forward name="frmMsgMessageView" path="/jsp/messages/frmMsgMessageView.jsp"/>
+            <forward name="frmMsgComposeMessage" path="/jsp/messages/frmMsgComposeMessage.jsp"/>
+            <forward name="frmMsgHome" path="/frmMsgHome.jsp"/>
+        </action>
+        
+        <action path="/bulkmail" type="com.msg.action.BulkMessageAction" scope="request">
+            <forward name="frmMsgConfirmSend" path="/jsp/messages/frmBulkMsgConfirmSend.jsp"/>
+            <forward name="goToBulkMail" path="/jsp/messages/frmMsgSendBulkMail.jsp"/>
+            <forward name="frmMsgConfirmFailed" path="/jsp/messages/frmMsgConfirmFailed.jsp"/>
+        </action>
+        
+        <action path="/contactAction" type="com.message.action.InsertAddContactAction"   
+                name="contactForm"  parameter="method" scope="request" 
+                input="/jsp/messages/frmMsgAddContact.jsp" >            
+            <forward name="formView" path="/jsp/messages/frmMsgAddContact.jsp"/> 
+            <forward name="formEditView" path="/jsp/messages/frmMsgEditContact.jsp"/>
+            <forward name="addressView" path="/jsp/messages/frmMsgAddressBookView.jsp"/>
+            <forward name="searchBackView" path="/contactAction.do?method=search"/>
+            <forward name="displayView" path="/jsp/messages/frmMsgContactDetailsView.jsp"/>
+            <forward name="confirmView" path="/jsp/messages/frmContactConfirmCreate.jsp"/> 
+            <forward name="cancelAddView" path="/contactAction.do?method=initAdd"/>
+            <forward name="cancelEditView" path="/contactAction.do?method=initEdit"/>
+        </action>
+        
+        <action path="/groupAction" type="com.message.action.GroupAction"   
+                name="groupForm"  parameter="method" scope="request">            
+            <forward name="formView" path="/jsp/messages/frmGrpCreateGroup.jsp"/> 
+            <forward name="editView" path="/jsp/messages/frmGrpEditGroup.jsp"/>
+            <forward name="searchView" path="/jsp/messages/frmGrpSearchGroup.jsp"/>
+            <forward name="searchBackView" path="/groupAction.do?method=search"/>
+            <forward name="confirmView" path="/jsp/messages/frmGrpConfirmCreate.jsp"/> 
+            <forward name="cancelAddView" path="/groupAction.do?method=initAdd"/>
+            <forward name="cancelEditView" path="/groupAction.do?method=initEdit"/>
+            <forward name="errorView" path="/groupAction.do?method=initAdd"/>  
+            <forward name="deleteView" path="/myMsgAction.do?method=Group"/>   
+        </action>
+        
+        <action path="/myMsgAction" type="com.message.action.MyMessageAction"   
+                name="myMessageForm"  parameter="method" scope="request"  >            
+            <forward name="myGrpView" path="/jsp/messages/frmGrpMyGroups.jsp"/> 
+            <forward name="myGrpMemView" path="/jsp/messages/frmGrpMyGroupMembers.jsp"/>
+            <forward name="myGrpDetailsView" path="/jsp/messages/frmGrpMyGroupDetails.jsp"/>
+            <forward name="editView" path="/jsp/messages/frmGrpEditGroup.jsp"/>
+            <forward name="searchView" path="/jsp/messages/frmGrpSearchGroup.jsp"/>
+            <forward name="myMsgView" path="/jsp/messages/frmGrpMyGroupMessages.jsp"/>
+            <forward name="confirmView" path="/jsp/messages/frmGrpConfirmCreate.jsp"/> 
+            <forward name="cancelAddView" path="/groupAction.do?method=initAdd"/>
+            <forward name="cancelEditView" path="/groupAction.do?method=initEdit"/>
+            <forward name="cancelEditView" path="/groupAction.do?method=initEdit"/>
+            <forward name="deleteView" path="/jsp/messages/frmGrpRemoveMember.jsp"/>
+            <forward name="deleteConfirmView" path="/myMsgAction.do?method=myGroup"/>
+        </action>
+        <action path="/postAction" type="com.message.action.InsertPostMessageAction"   
+                name="postGroupForm"  parameter="method" scope="request" input="/jsp/messages/frmGrpPostMessage.jsp" >
+            <forward name="formView" path="/jsp/messages/frmGrpPostMessage.jsp"/> 
+            <forward name="confirmView" path="/jsp/messages/postsucess.jsp"/> 
+        </action>
+        
+        <action path="/inviteAction" type="com.message.action.InsertInviteGroupAction"   
+                name="inviteGroupForm"  parameter="method" scope="session"  >
+            <forward name="formView" path="/jsp/messages/frmGrpInvitePeople.jsp"/> 
+            <forward name="editView" path="/jsp/messages/frmGrpInviteModerator.jsp"/>
+            <forward name="confirmView" path="/jsp/messages/postsucess.jsp"/>
+            <forward name="confirmModeratorView" path="/jsp/messages/frmUpdateModerator.jsp"/>
+        </action>
+        
+        
+        <action path="/joingroup"
+                scope="request"            
+                type="com.message.action.JoinGroupAction"
+                name="insertUserRegActionForm">
+            <forward name="frmGrpJoinUserValidate" path="/jsp/messages/frmGrpJoinUserValidate.jsp"/>
+            <forward name="frmGrpLogSuccess" path="/jsp/messages/frmGrpLogSuccess.jsp"/> 
+        </action>
+        
+        
+        <!--******************************** Action for Address Book Distribution List *************************************--> 
+
+        <action path="/AddrDistList" type="com.msg.action.AddrDistAction" scope="request">
+            <forward name="DistListView" path="/jsp/messages/frmMsgDistListDetailsView.jsp"/>
+            <forward name="displayDList" path="/jsp/messages/frmMsgCreateDistList.jsp"/>
+            <forward name="listDistList" path="/jsp/messages/frmMsgDistListView.jsp"/>
+            <forward name="editDistList" path="/jsp/messages/frmMsgEditDistList.jsp"/>
+            <forward name="viewDistList" path="/AddrDistList.do?process=listDistList"/>
+            <forward name="detViewDistList" path="/AddrDistList.do?process=View"/>
+            
+            <forward name="Confirm" path="/jsp/meetings/mee-confirmation-icp-org-regi.jsp"/>
+        </action>
+        
+        <!--***************************************** Role Managements ************************** -->         
+        <action path="/roles"
+                type="com.role.action.ActionRoleMangement" >
+            <forward name="frmRolMCreateRole" path="/jsp/roles/frmRolMCreateRole.jsp"/>
+            <forward name="frmRolMEditRole" path="/jsp/roles/frmRolMEditRole.jsp"/>
+            <forward name="frmRolMListRoles" path="/jsp/roles/frmRolMListRoles.jsp"/>
+            <!--Start:[RoleMgt] Added a new entry to display Roles List after Add, Edit or Delete by Kalai dated 10-Mar-2011-->
+            <forward name="frmRolMgtListRoles" path="/roles.do?roleProcess=roleList"/>
+            <forward name="errRedirRolMgtListRoles" path="/jsp/roles/frmRolMListRoles.jsp?err=str"/>
+            <!--End:[RoleMgt] Added a new entry to display Roles List after Add, Edit or Delete by Kalai dated 10-Mar-2011-->
+            <forward name="errRedirRole" path="/jsp/roles/frmRolMCreateRole.jsp?err=str"/>
+            <forward name="errRedirEditRole" path="/jsp/roles/frmRolMEditRole.jsp?err=str"/>
+            
+             <forward name="viewpoint" path="/include/viewPointHeader.jsp"/>
+            <forward name="frmRolMCreatePrivileges" path="/jsp/roles/frmRolMCreatePrivileges.jsp"/>
+            <forward name="frmRolMEditPrivileges" path="/jsp/roles/frmRolMEditPrivileges.jsp"/>
+            <forward name="frmRolMListPrivileges" path="/jsp/roles/frmRolMListPrivileges.jsp"/>
+            <forward name="errRedirPriv" path="/jsp/roles/frmRolMCreatePrivileges.jsp?err=str"/>
+            <forward name="errRedirEditPriv" path="/jsp/roles/frmRolMEditPrivileges.jsp?err=str"/>
+            
+            <forward name="frmRolMCreatePermission" path="/jsp/roles/frmRolMCreatePermission.jsp"/>
+            <forward name="frmRolMEditPermission" path="/jsp/roles/frmRolMEditPermission.jsp"/>
+            <forward name="frmRolMListPermissions" path="/jsp/roles/frmRolMListPermissions.jsp"/>
+            <forward name="errRedirPerm" path="/jsp/roles/frmRolMCreatePermission.jsp?err=str"/>
+            <forward name="errRedirEditPerm" path="/jsp/roles/frmRolMEditPermission.jsp?err=str"/>
+            
+            <forward name="frmRolMCreateEntity" path="/jsp/roles/frmRolMCreateEntity.jsp"/>
+            <forward name="frmRolMEditEntity" path="/jsp/roles/frmRolMEditEntity.jsp"/>
+            <forward name="frmRolMListEntities" path="/jsp/roles/frmRolMListEntities.jsp"/>
+            <forward name="errRedirEntity" path="/jsp/roles/frmRolMCreateEntity.jsp?err=str"/>
+            <forward name="errRedirEditEntity" path="/jsp/roles/frmRolMEditEntity.jsp?err=str"/>
+            
+            <forward name="frmRolMPriviPermissionMapping" path="/jsp/roles/frmRolMPriviPermissionMapping.jsp"/>
+            <forward name="frmRolMPrivilegeEntityMapping" path="/jsp/roles/frmRolMPrivilegeEntityMapping.jsp"/>
+            <forward name="frmRolMEntityRoleMapping" path="/jsp/roles/frmRolMEntityRoleMapping.jsp"/>  
+            <forward name="frmRolMRoleMapping" path="/jsp/roles/frmRolMRoleMapping.jsp"/>
+            <forward name="frmRolMUserRoleMapping" path="/jsp/roles/frmRolMUserRoleMapping.jsp"/>
+            <forward name="redirectFromEntPrivMap" path="/roles.do?roleProcess=entPrivSelect"/> 
+            <forward name="redirectFromRolEntMap" path="/roles.do?roleProcess=roleEntSelect"/>
+            <forward name="redirectFromUserRolesMap" path="/roles.do?roleProcess=initUserRole"/>
+            <forward name="successRoleAssigned" path="/jsp/roles/frmRolAssignCnf.jsp"/>
+            
+            <forward name="redirectFromRolesEntityPrivMap" path="/roles.do?roleProcess=initSelectRoleEntPriv"/>
+            <forward name="LoginSuccess" path="/index.jsp"/>
+            
+            <forward name="frmRolEntityList" path="/jsp/roles/frmRolEntityList.jsp"/>
+            <forward name="menu-roles-leftmenu" path="/jsp/roles/frmRoleMainboardEntity.jsp"/>
+            <forward name="frmRoleHome" path="/frmRoleHome.jsp"/>
+            <forward name="LoginSuccessNoRole" path="/index-no-role.jsp" />
+            <forward name="frmUserRoleAssignAccessDenied" path="/jsp/roles/frmUserRoleAssignAccessDenied.jsp" />
+            <forward name="frmUserRequestRole" path="/roles.do?roleProcess=initDashboard" />
+             <forward name="empSearchList" path="/jsp/employee/frmEmployeeSearchList.jsp"/>
+              <forward name="redirectUserSearchList" path="/SearchList.do?searchProcess=searchEmp"/>
+                 <forward name="dispRoletoUser" path="/jsp/employee/frmDisplayRoleToUser.jsp"/>
+                 <forward name="frmSupRolMRoleMapping" path="/jsp/employee/frmSupRoleMRoleMapping.jsp"/>
+                 <forward name="redirectToMapSuccess" path="/roles.do?roleProcess=initSelectSupRoleEntPriv"/>
+                 <forward name="dispRoleEntPriMap" path="/jsp/employee/frmDisplayRolEntPri.jsp"/>
+                 
+                 
+                 
+                 
+              
+        </action>
+        
+        <action path="/msgDB"
+                scope="request"
+                type="com.message.action.MessageDBAction"
+                name="messageDBForm"
+                parameter="method">
+            <forward name="reqListView" path="/jsp/messages/frmMsgMyDownloadRequestList.jsp"/>
+            <forward name="confirmView" path="/jsp/messages/frmMsgConfirmDwnlRequest.jsp"/>
+            <forward name="adminListView" path="/jsp/messages/frmMsgAdminDwnlRequestList.jsp"/>
+            <forward name="myDatabaseView" path="/jsp/messages/frmMsgDatabases.jsp"/> 
+            <forward name="amountView" path="/jsp/messages/frmMsgRequestDatabases.jsp"/>  
+            <forward name="adminApproveView" path="/jsp/messages/frmMsgDatabaseReqsApprove.jsp"/>  
+            <forward name="userReqView" path="/jsp/messages/frmMsgDatabaseReqsDetails.jsp"/> 
+            <forward name="excelView" path="/jsp/messages/exportExcel.jsp"/>  
+            <forward name="confirmView" path="/jsp/messages/sucessForm.jsp"/> 
+        </action>
+        
+        <action path="/inviteUser"
+                scope="request"
+                validate="true"
+                type="com.message.action.InviteUser"
+                name="insertUserRegActionForm">
+            <forward name="loginView" path="/login.jsp"/>
+            <forward name="UserReg" path="/jsp/membership/frmMessageUserRegistration.jsp"/> 
+            <forward name="confirmation" path="/jsp/membership/post-confirmation-page.jsp"/>
+        </action>
+        <!--*****************************************Action for User Registration Activation Action *************************************--> 	
+        <action path="/uservalidate"
+                type="com.mrm.action.UsrRegActivateAction"
+                scope="request">
+            <forward name="redirLogin" path="/login.jsp"/>
+        </action>
+        <!--*****************************************Action for Forget Password Action *************************************--> 	
+        <action path="/forgotPwd"
+                type="com.mrm.action.ForgotPasswordAction"
+                scope="request">
+            <forward name="resetPwd" path="/resetPassword.jsp"/>
+            <forward name="resetPwdConf" path="/resetPasswordCnf.jsp"/>
+            <forward name="forgetPwdDisp" path="/forgotPassword.jsp"/>
+            <forward name="forgetPwdConf" path="/forgotUsernameCnf.jsp"/>
+            <forward name="nologinName" path="/jsp/membership/MemberUserSignup.jsp"/>
+        </action>  
+        <!--*****************************************Action for Change Password Action *************************************--> 	
+        <action path="/changePwd"
+                type="com.mrm.action.ChangePasswordAction"
+                scope="request">
+            
+            <forward name="changePwdDisp" path="/jsp/membership/changePassword.jsp"/>
+            <forward name="changeSuccess" path="/jsp/membership/change-pwd-conf.jsp"/>
+        </action> 
+        
+        <!--*****************************************Action for  ICP Organizer Registration Payment *************************************-->         
+        <action path="/IcpOrgRegPayment" 
+                type="com.mee.action.IcpOrgRegPaymentAction" >
+            <forward name="IcpOrgRegConfirm" path="/jsp/meetings/mee-confirmation-icp-org-regi.jsp"/>
+        </action>
+        <!--*****************************************Action for Renew Horse Registration Payment *************************************-->         
+        <action path="/HorseMemberRenewPayment" 
+                type="com.mrm.action.HorseMembRenewPayAction" >
+            <forward name="confirm" path="/jsp/membership/post-confirmation-page.jsp"/>
+        </action>
+        <!--*****************************************Action for New Horse Registration Payment *************************************-->         
+        <action path="/NewHorseMemberPayment" 
+                type="com.mrm.action.NewHorseMembPayAction" >
+            <forward name="confirm" path="/jsp/membership/HorseCardSuccess.jsp"/>
+            <forward name="decline" path="/jsp/membership/frmMemHorPaymentNovaDecline.jsp"/>
+            
+        </action>
+        
+        <!--*****************************************Action for Horse Re-Payment *************************************-->         
+        <action path="/Horserrepay" type="com.mrm.action.HorseCardRePayAction" name="UpgradeHorseReg" 
+                input="/jsp/membership/Horse-card-fail-payment.jsp" scope="request">
+            <forward name="repay" path="/jsp/membership/Horse-card-fail-payment.jsp"/>
+            <forward name="error" path="/jsp/membership/error.jsp"/>
+            <forward name="decline" path="/jsp/membership/frmMemHorRePaymentNovaDecline.jsp"/>
+            <forward name="frmHorseSuccessRedir" path="/jsp/membership/frmMMSHorseRepayNova.jsp"/>
+            <forward name="backtoList" path="/jsp/membership/HorseCheckPaySuccess.jsp" />
+            <forward name="UserDuePayMessage" path="/jsp/membership/UserDuePayMessage.jsp"/>
+        </action>       
+        
+        <!--*****************************************Action for After Decline *************************************-->                 
+        <action path="/Horserepay" type="com.mrm.action.HorsePayDeclineAction" scope="request">
+            <forward name="decline" path="/jsp/membership/frmMemHorRePaymentNovaDecline.jsp"/>
+            <forward name="frmHorseSuccessRedir" path="/jsp/membership/frmMMSHorseRepayNova.jsp"/>
+            <forward name="backtoList" path="/jsp/membership/Horserepay-Confirm.jsp" />
+        </action>
+        
+        <!--*****************************************Action for  Membership Registration Payment *************************************-->         
+        <action path="/HumanMemberPaymentAction" 
+                type="com.mrm.action.HumanMemberPaymentAction" >
+            <forward name="confirm" path="/jsp/membership/frmMembershipRegCardSuccess.jsp"/>
+            <forward name="decline" path="/jsp/membership/frmMMSHumanMemNovaDecline.jsp"/>
+            
+        </action>
+        
+        <!--***************************************** Admin Change Payment for Mrmber Action ************************** -->
+
+        <action path="/AdminMembPayment"
+                type="com.mrm.action.AdminMembPaymentAction" 
+                scope="request">
+            <forward name="dispPayment" path="/jsp/membership/membership-admin-payment.jsp" />
+            <forward name="backtoList" path="/jsp/membership/admin-MemberPay-Confirm.jsp" />
+            <forward name="redirectNova" path="/jsp/membership/frmMMSAdminMemNova.jsp"/>       
+            
+        </action>   
+        
+        <!--***************************************** Admin Change Payment for Mrmber Nova Action ************************** -->
+
+        <action path="/AdminMembPaymentNova"
+                type="com.mrm.action.AdminMembNovaPayAction" 
+                scope="request">
+            <forward name="backtoList" path="/jsp/membership/admin-MemberPay-Confirm.jsp" />     
+            <forward name="decline" path="/jsp/membership/frmMMSAdminMemPayNovaDecline.jsp"/>
+        </action>           
+        
+        <!--***************************************** User Donation Action ************************** -->
+        
+        <action path="/DonationAction" 
+                type="com.mrm.action.UserDonationAction" >
+            <forward name="frmViewDonationDetails" path="/jsp/membership/donation-program.jsp"/>
+            <forward name="insertDonation" path="/jsp/membership/frmUserDonationConf.jsp"/>
+            <forward name="frmDonationUserList" path="/jsp/membership/frmDonationUserList.jsp"/>
+            <forward name="donateNovaPayment" path="/jsp/membership/frmMMSUserDonateNova.jsp"/>
+        </action>
+        
+        <!--*****************************************Action for  User Donation Form Payment *************************************-->         
+        
+        <action path="/DonationPayAction" 
+                type="com.mrm.action.UsrDonationPaymentAction" >
+            <forward name="insertDonation" path="/jsp/membership/frmUserDonationConf.jsp"/>
+            <forward name="decline" path="/jsp/membership/frmDonateDecline.jsp"/>
+        </action>
+        <!--*****************************************DUE *************************************-->  
+        <action path="/userDuePay"
+                type="com.mrm.action.ActionDuePayByUser"
+                name="UpgradeHorseReg"
+                scope="request">
+            <forward name="DuePayUserSuccess" path="/jsp/membership/frmUserDuePaySuccess.jsp"/>
+            <forward name="goToDuePay" path="/jsp/membership/frmMrmHorseDueAmount.jsp"/>
+            <forward name="UserDueNovaRedir" path="/jsp/membership/frmUserDueNova.jsp"/>
+            <forward name="UserDuePayMessage" path="/jsp/membership/UserDuePayMessage.jsp"/>
+        </action>
+        <action path="/novaDueAction"
+                type="com.mrm.action.HorseUserDuePayAction"
+                scope="request">
+            <forward name="confirm" path="/jsp/membership/HorseDuePayUserSuccess.jsp"/>
+            <forward name="decline" path="/jsp/membership/frmHorseUserDueDecline.jsp"/>
+        </action>
+        
+        
+        <!--*****************************************Action for  Membership Manual Registration / Renew thru PDF *************************************-->         
+        
+        <action path="/membershipDloadPDF"
+                scope="request"            
+                type="com.mrm.action.membershipDloadPDF">
+            
+            <forward name="regConf" path="/jsp/membership/memb-reg-PDF-conf.jsp"/>
+            
+        </action>
+        
+        <!--***************************************** Horse Competition Data Mapping Action *************** -->
+   
+        <action path="/horseCompDataMap"
+                type="com.mee.action.HorseCompDataMapping" 
+                name="HorseCompDataMapActionForm"
+                scope="request" >
+            
+            <forward name="viewUpload" path="/jsp/meetings/uploadHorseCompExcel.jsp"/>
+            <forward name="uploadConf" path="/jsp/meetings/uploadHorseCompExcel_conf.jsp"/>
+            <forward name="mapColumns" path="/jsp/meetings/HorseCompExcel_mapping.jsp"/>
+            <forward name="listUploadDetails" path="/jsp/meetings/list-uploaded-exceldetails.jsp"/>
+            <forward name="formatInfo" path="/jsp/meetings/uploadHorseCompExcel_format_error.jsp"/>
+            <forward name="mappingConf" path="/jsp/meetings/comp_mapping_success_conf.jsp"/>
+            <forward name="mappingError" path="/jsp/meetings/comp_mapping_errorPage.jsp"/>
+            <forward name="delConf" path="/jsp/meetings/comp_mapping_delConf.jsp"/>
+        </action>  
+        
+        <action path="/horseRegExcelData"
+                type="com.mee.action.UploadRegDataAction"
+                name="UploadRegDataActionForm"
+                scope="request" >
+            <forward name="viewUpload" path="/jsp/meetings/frmMemUploadHorseReg.jsp"/>
+            <forward name="uploadConf" path="/jsp/meetings/frmMemUploadRegConfirm.jsp"/>
+            <forward name="listUploadDetails" path="/jsp/meetings/frmMemLstUploadReg.jsp"/>
+            <forward name="formatInfo" path="/jsp/meetings/uploadHorseCompExcel_format_error.jsp"/>
+            <forward name="mapColumns" path="/jsp/meetings/frmMemHorseRegExcelMapping.jsp"/>
+            <forward name="mappingConf" path="/jsp/meetings/frmComRegMappingConfirm.jsp"/>
+            <forward name="mappingError" path="/jsp/meetings/comp_mapping_errorPage.jsp"/>
+            <forward name="delConf" path="/jsp/meetings/frmMapDelConfirm.jsp"/>
+            <forward name="index" path="/index.jsp"/>
+        </action>
+        
+        <!--*****************************************Suresh Here for Competition Registration *************************************-->         
+        <action path="/competitionReg"
+                scope="request"            
+                type="com.mee.action.ActionCompetitionRegistration">
+            <forward name="indexList" path="/horseRegExcelData.do?process=listUploadDetails"/>
+            <forward name="index" path="/index.jsp"/>
+            <forward name="frmCompRegException" path="/jsp/meetings/frmCompRegException.jsp"/>
+            <forward name="indexList" path="/jsp/meetings/frmCompRegException_Conf.jsp"/>
+            <forward name="resultException" path="/jsp/meetings/frmCompResultException.jsp"/>
+            <forward name="resultConf" path="/jsp/meetings/frmCompResultException_Conf.jsp"/>
+            
+        </action>
+        
+        <!-- *********************** NSF Charge *********************** -->
+        
+        <action path="/NSFChargePayment" type="com.mrm.action.NSFChargeAction" scope="request" 
+                name="UpgradeHorseReg" input="/jsp/membership/frmNSFPaymentPage.jsp">
+            <forward name="payConf" path="/jsp/membership/NSFChargePaySuccess.jsp" />
+            <forward name="viewDetail" path="/jsp/membership/frmNSFChargeDet.jsp"/>
+            <forward name="payProceed" path="/jsp/membership/frmNSFPaymentPage.jsp"/>
+        </action>
+        
+        <action path="/NSFPayment" type="com.mrm.action.NSFChargePayment" scope="request"  >
+            <forward name="payConf" path="/jsp/membership/NSFChargePaySuccess.jsp" />
+            <forward name="payFailure" path="/jsp/membership/NSFChargePayFailure.jsp" />            
+        </action>
+        
+        
+        <action path="/dropDownHrRel" 
+                type="com.mrm.action.ActionAJAXCompetitionValidation"
+                parameter="method"
+                scope="request">
+            <forward name="index" path="/index.jsp"/>
+        </action>
+		
+		  <!-- ***************************** File Upload************************************************************ -->
+      
+    
+  
+        <action path="/CvsUser" 
+                type="cvsMgmnt.ArtifactCVSUserMgmntAction"
+                scope="request"
+                input="/jsp/cvsMgmnt/addCVSuser.jsp">
+            <forward name="success" path="/jsp/cvsMgmnt/addCVSuser.jsp" />
+        </action>
+        
+        <action
+            path="/uploadArifactInCVS"
+            type="fileUpload.FileUploadAction"
+            name="fileUploadForm"
+            scope="request"
+            input="/jsp/fileUpload/uploadArtifact.jsp">
+            <forward name="success" path="/jsp/fileUpload/commitSuccess.jsp"/>
+        </action>
+        
+        <action
+            path="/downloadArifactFromCVS"
+            type="cvsMgmnt.ArtifactCVSMgmntAction"
+            scope="request">
+            <forward name="success" path="/jsp/fileUpload/downloadDocument.jsp"/>
+        </action>
+        
+        <action path="/arifactLinkOnRemotePC" forward="/jsp/fileUpload/downloadFileFromRemotePC.jsp" />
+        
+        <action path="/downloadArifactFromRemotePC" forward="/jsp/fileUpload/downloadDocument.jsp" />
+        
+        <action path="/artifactCVSMgmnt" forward="/jsp/cvsMgmnt/ArtifactCVSMgmnt.jsp" /> 
+        
+        
+        
+        
+        <!-- ***************************** Online Entries ************************************************************ -->
+        
+        <!-- Event Calendar -->
+        
+        <action path="/calender" 
+                type="com.oec.action.calendarAction" 
+                scope="request"
+                parameter="method">
+            <forward name="frmAddCalDetails" path="/jsp/onlineEntries/frmAddCalDetails.jsp" />
+            <forward name="frmCalDetailsSuccess" path="/jsp/onlineEntries/frmCalDetailsSuccess.jsp"/>
+            <forward name="frmOnlineEventDetailsEdit" path="/jsp/onlineEntries/frmOnlineEventDetailsEdit.jsp"/>
+            <forward name="frmEventDetailEditSuccess" path="/jsp/onlineEntries/frmEventDetailEditSuccess.jsp"/>
+            <forward name="frmStaffEventDetailEditSuccess" path="/jsp/onlineEntries/frmStaffEventDetailEditSuccess.jsp"/>
+            <forward name="frmAreaChairEventDetailEditSuccess" path="/jsp/onlineEntries/frmAreaChairEventDetailEditSuccess.jsp"/>
+            <forward name="frmOECAreaChairEdit" path="/jsp/onlineEntries/frmOECAreaChairEdit.jsp"/>
+            <forward name="frmOECStaffEdit" path="/jsp/onlineEntries/frmOECStaffEdit.jsp"/>
+            <forward name="frmOECSearchEvents" path="/jsp/onlineEntries/frmOECSearchEvents.jsp"/>
+            <forward name="frmOECSearchEventsView" path="/jsp/onlineEntries/frmOECSearchEventsView.jsp"/>
+        </action>
+        
+        <action path="/OECalendar"
+                scope="request"
+                type="com.oec.action.OnlineEntriesCalendarAction">
+            <forward name="orgList" path="/jsp/onlineEntries/frmOECOrganizerList.jsp"/>
+            <forward name="singleEventView" path="/jsp/onlineEntries/frmOECSingleEventView.jsp"/>
+            <forward name="singleEventApprove" path="/jsp/onlineEntries/frmOECSingleEventOrgApprove.jsp"/>
+            <forward name="singleEventApproveSuccess" path="/OECalendar.do?cmd=initCalendarList"/>
+            <forward name="acList" path="/jsp/onlineEntries/frmOECAreaChairList.jsp"/>
+            <forward name="areaChairView" path="/jsp/onlineEntries/frmOECAreaChairView.jsp"/>
+            <forward name="areaChairApprove" path="/jsp/onlineEntries/frmOECAreaChairApprove.jsp"/>
+            <forward name="areaChairApproveSuccess" path="/OECalendar.do?cmd=initACList"/>
+        </action>
+        
+        <action path="/entrylist" 
+                type="com.oec.action.OnlineEntriesListAction" 
+                scope="request"
+                parameter="method">
+            <forward name="frmProCalUseaStaffList" path="/jsp/onlineEntries/frmProCalUseaStaffList.jsp" />
+            <forward name="frmProCalUseaStaffApprove" path="/jsp/onlineEntries/frmProCalUseaStaffApprove.jsp" />
+            <forward name="EventApproveSuccess" path="/entrylist.do?process=initList"/>
+            <forward name="frmProCalUseaStaffView" path="/jsp/onlineEntries/frmProCalUseaStaffView.jsp"/>
+            <forward name="frmFinalizedEventCalendar" path="/jsp/onlineEntries/frmFinalizedEventCalendar.jsp"/>
+            <forward name="frmFinalizedEventCalendarView" path="/jsp/onlineEntries/frmFinalizedEventCalendarView.jsp"/>
+        </action>
+        
+        <!-- Event Entry -->
+        
+        <action path="/OEEValidate"
+                scope="request"
+                type="com.oec.action.OEEValidationAction">
+            <forward name="initInsert" path="/jsp/onlineEntries/frmInsertQualificationDetails.jsp"/>
+            <forward name="insertSuccess" path="/jsp/onlineEntries/frmInsertQualificationDetails.jsp"/>
+            <forward name="frmEditQualificationDetails" path="/jsp/onlineEntries/frmEditQualificationDetails.jsp"/>
+            <forward name="updateSuccess" path="/jsp/onlineEntries/frmEditQualificationDetails.jsp"/>
+        </action> 
+        
+        <action path="/OEEValidateView"
+                scope="request"
+                type="com.oee.action.OEEValidationViewAction"
+                parameter="method">
+            <forward name="frmViewQualificationDetails" path="/jsp/onlineEntries/frmViewQualificationDetails.jsp"/>
+        </action>
+        
+        <action path="/OEEAddPrice"
+                scope="request"
+                type="com.oee.action.AddPriceAction">
+            <forward name="frmOEEInsertPriceDetails" path="/jsp/onlineEntries/frmOEEInsertPriceDetails.jsp"/>
+            <forward name="frmOEENewItemCreate" path="/jsp/onlineEntries/frmOEENewItemCreate.jsp"/>
+            <forward name="frmOEEViewPriceDetails" path="/jsp/onlineEntries/frmOEEViewPriceDetails.jsp"/>
+            <forward name="frmOEEEditPriceDetails" path="/jsp/onlineEntries/frmOEEEditPriceDetails.jsp"/>
+            <forward name="frmOEEOrgViewPriceDetails" path="/jsp/onlineEntries/frmOEEOrgViewPriceDetails.jsp"/>
+            <forward name="frmOEEOrgEditPriceDetails" path="/jsp/onlineEntries/frmOEEOrgEditPriceDetails.jsp"/>
+            <forward name="frmOEEPriceDetailsSuccess" path="/jsp/onlineEntries/frmOEEPriceDetailsSuccess.jsp"/>
+            <forward name="frmOEEPriceEditSuccess" path="/jsp/onlineEntries/frmOEEPriceEditSuccess.jsp"/>
+            <forward name="frmOEEPriceACEditSuccess" path="/jsp/onlineEntries/frmOEEPriceACEditSuccess.jsp"/>
+        </action>
+        
+        
+        <action path="/OEEDemo" 
+                scope="request" 
+                type="com.oee.action.DemographyAction">
+            <forward name="frmDemographyDetList" path="/jsp/onlineEntries/frmDemographyDetList.jsp"/>
+            <forward name="UserDetails" path="/jsp/onlineEntries/frmDemographyDetList.jsp"/>
+        </action>
+        
+        <action path="/OEELogin"
+                scope="request"
+                type="com.oee.action.OEELoginAction">
+            <forward name="toLogin" path="/frmEventEntryLogin.jsp"/>
+            <forward name="loginSuccess" path="/OEEDemo.do?process=initDemoList"/>
+        </action> 
+        
+        <action path="/OEEAddTrainer"
+                scope="request"
+                type="com.oee.action.AddTrainerAction">
+            <forward name="frmOEETrainerDet" path="/jsp/onlineEntries/frmOEETrainerDet.jsp"/>
+            <forward name="frmOEETrainerDetSuccess" path="/validation.do?cmd=initValidation"/>
+            <forward name="frmValidationProcess" path="/validation.do?cmd=initValidation"/>
+        </action>
+        
+        <action path="/ChampLevel"
+                scope="request"
+                type="com.oee.action.OEEMapChampionshipLevel"
+                parameter="method">
+            <forward name="frmChampLevelMap" path="/jsp/onlineEntries/frmChampLevelMap.jsp"/>
+        </action>
+        
+        <action path="/validation" 
+                scope="request"
+                type="com.oee.action.EventEntryValidationAction">
+            <forward name="valid" path="/jsp/onlineEntries/frmEventEntryValidation.jsp"/>
+            <forward name="validatedResult" path="/jsp/onlineEntries/frmEventEntryValidationResults.jsp"/>
+            <forward name="toPayment" path="/jsp/onlineEntries/frmEventEntryPayment.jsp"/>
+            <forward name="viewValidatedResult" path="/jsp/onlineEntries/frmViewEventEntryDetails.jsp"/>
+            <forward name="toUpload" path="/jsp/onlineEntries/frmUploadResults.jsp"/>
+            <forward name="selAnotherHorse" path="/OEEDemo.do?process=UserListing"/>
+            <forward name="toFinalPayment" path="/jsp/onlineEntries/frmEventEntryFinalPayment.jsp"/>
+        </action>
+        
+        <action path="/OEEPriceItem"
+                scope="request"
+                type="com.oee.action.PriceItemAction">
+            <forward name="frmOEEPriceItemCreate" path="/jsp/onlineEntries/frmOEEPriceItemCreate.jsp"/>
+            <forward name="frmOEECreateConf" path="/jsp/onlineEntries/frmOEECreateConf.jsp"/>
+            <forward name="frmOEEPriceItemList" path="/jsp/onlineEntries/frmOEEPriceItemList.jsp"/>
+            <forward name="frmOEEPriceItemEdit" path="/jsp/onlineEntries/frmOEEPriceItemEdit.jsp"/>
+        </action>
+        
+        <action path="/upload" 
+                type="com.oee.action.UploadResultsAction" name="uploadActionForm"
+                scope="request" >
+            <forward name="viewUpload" path="/jsp/onlineEntries/frmUploadResults.jsp"/>
+            <forward name="uploadConf" path="/jsp/onlineEntries/frmUploadSuccess.jsp"/>
+            <forward name="selAnotherHorse" path="/OEEDemo.do?process=UserListing"/>
+            <forward name="toFinalPayment" path="/jsp/onlineEntries/frmEventEntryFinalPayment.jsp"/>
+        </action>
+        
+        <action path="/payment" 
+                type="com.oee.action.EventEntryPaymentAction" name="EventEntryPaymentForm"
+                scope="request" >
+            <forward name="toPayment" path="/jsp/onlineEntries/frmEventEntryFinalPayment.jsp"/>
+            <forward name="paymentSuccess" path="/jsp/onlineEntries/frmPaymentSuccess.jsp" />
+        </action>
+        
+        <action path="/paymentConfirm" type="com.oee.action.EventEntryPaymentConfirmAction" scope="request">
+            <forward name="paymentSuccess" path="/jsp/onlineEntries/frmPaymentSuccess.jsp" />
+        </action>
+        
+        <action path="/OEEAddFixedPrice"
+                scope="request"
+                type="com.oee.action.AddFixedPriceAction">
+            <forward name="frmOEEStaffInsertPrice" path="/jsp/onlineEntries/frmOEEStaffInsertPrice.jsp"/>
+            <forward name="frmOEEStaffViewPrice" path="/jsp/onlineEntries/frmOEEStaffViewPrice.jsp"/>
+            <forward name="frmOEEStaffEditPrice" path="/jsp/onlineEntries/frmOEEStaffEditPrice.jsp"/>
+            <forward name="frmOEEPriceDetailsSuccess" path="/jsp/onlineEntries/frmOEEPriceDetailsSuccess.jsp"/>
+            <forward name="frmOEEStaffPriceSuccess" path="/jsp/onlineEntries/frmOEEStaffPriceSuccess.jsp"/>
+            <forward name="frmOEEStaffEditSuccess" path="/jsp/onlineEntries/frmOEEStaffEditSuccess.jsp"/>
+        </action>
+        
+        <action path="/OEMOrgCompReg"
+                scope="request"
+                type="com.oem.action.OrgCompRegListAction">
+            <forward name="frmOEMOrgCompRegList" path="/jsp/onlineEntries/frmOEMOrgCompRegList.jsp"/>
+            <forward name="frmOEMOrgCompRegView" path="/jsp/onlineEntries/frmOEMOrgCompRegView.jsp"/>
+            <forward name="frmOEMOrgCompRegApprove" path="/jsp/onlineEntries/frmOEMOrgCompRegApprove.jsp"/>
+            <forward name="CompRegApproveSuccess" path="/OEMOrgCompReg.do?cmd=initEventTitleList"/>
+        </action>
+        
+        <action path="/ParticipantList"
+                scope="request"
+                type="com.oem.action.ParticipantCompRegListAction">
+            <forward name="frmOEMParticipantList" path="/jsp/onlineEntries/frmOEMParticipantList.jsp"/>
+            <forward name="frmOEMParticipantView" path="/jsp/onlineEntries/frmOEMParticipantView.jsp"/>                 
+        </action>
+        
+        <action path="/OEROrgCompRes"
+                scope="request"
+                type="com.oer.action.OrgCompResultAction">
+            <forward name="frmOEROrgCompResList" path="/jsp/onlineEntries/frmOEROrgCompResList.jsp"/>
+        </action>
+        
+        <action path="/ParticipantResult"
+                scope="request"
+                type="com.oer.action.ParticipantCompResultAction">
+            <forward name="frmOERParticipantCompResList" path="/jsp/onlineEntries/frmOERParticipantCompResList.jsp"/> 
+            <forward name="frmOERParticipantCompResView" path="/jsp/onlineEntries/frmOERParticipantCompResView.jsp"/> 
+        </action>
+
+ <!--Dhivya Here: Added for missing action tags-->
+
+        <action path="/areaMember"
+            scope="request"
+            type="com.mrm.action.ActionAreaMembership">
+            <forward name="frmMyAreaRidProgram" path="/jsp/membership/frmMyAreaRidProgram.jsp"/>
+            <forward name="frmMyAreaProgCheckSuccess" path="/jsp/membership/frmMyAreaProgCheckSuccess.jsp"/>
+
+        </action>
+
+
+   <action path="/areaMemberPayment"
+            scope="request"
+            type="com.mrm.action.ActionAreaMembershipPayment">
+            <forward name="confirm" path="/jsp/membership/frmMyAreaProgCardSuccess.jsp" />
+            <forward name="decline" path="/jsp/membership/frmAreaRidProgramNovaDecline.jsp"/>
+
+        </action>
+        <!--Ends Here-->
+        <action path="/orgAndStaffResultList"
+                scope="request"
+                type="com.oer.action.OrgStaffCompResultAction">
+            <forward name="frmOEROrgnazierCompResList" path="/jsp/onlineEntries/frmOEROrgnazierCompResList.jsp"/> 
+            <forward name="frmOERStaffCompResList" path="/jsp/onlineEntries/frmOERStaffCompResList.jsp"/> 
+        </action>
+        
+        <action path="/uploadEAR"
+                name="uploadEARActionForm"
+                scope="request"
+                type="com.mrm.action.uploadEARAction">
+            <forward name="frmUploadEARFile" path="/jsp/membership/frmUploadEARFile.jsp"/> 
+            
+        </action> 
+<!--Dhivya Here: Added for missing action tags-->
+       <action path="/temppaypal"
+            scope="request"
+            type="com.mrm.action.PayPalAction">
+            <forward name="horseRegistration" path="/NewHorseMemberPayment.do"/>
+            <forward name="riderOwnerChange" path="/changeownridpaym.do"/>
+            <forward name="addRiderOwner" path="/PayemntRidOwn.do"/>
+            <forward name="notRegisteredHorse" path="/noveRegEdit.do"/>
+            <forward name="membershipRenewal" path="/MemberRenCardPay.do"/>
+            <forward name="successPage" path="/jsp/membership/frmPayPalSuccess.jsp"/>
+            <!-- <forward name="membRegServe" path="/HumanMemberPaymentAction.do"/> -->
+            <forward name="memberRegistration" path="/HumanMemberPaymentAction.do"/>
+            <forward name="upgradeHorseRegistration" path="/UpgradeHorse.do"/>
+            <forward name="AreaMembership" path="/areaMemberPayment.do"/>
+            <forward name="payDecline" path="/jsp/membership/frmPayPalDecline.jsp"/>
+            <forward name="donateServe" path="/DonationPayAction.do"/>
+            <forward name="educationRegistration" path="/eduActivityPayment.do"/>
+            <forward name="EndorsedFormRegistration" path="/EventOrgRenewalPayment.do"/>
+            <forward name="annualMeetingRegistration" path="/annualPaymentcard.do"/>
+            <forward name="addtnlTcktsPurchase" path="/AdditonalCardPay.do"/>
+        </action>
+  <!--Ends Here-->
+        <action path="/OrganizerUSEAEventReg" type="com.mrm.action.OrganizerUSEAEventRegAction" input="/Home.jsp" scope="request">
+            <forward name="OrganizerUSEAEventReg" path="/jsp/meetings/frmEventOrgReg.jsp"/>
+            <forward name="checkConfirmation" path="/jsp/meetings/frmEventOrgRegSuccess.jsp"/>
+            <forward name="cardConfirmation" path="/jsp/meetings/frmEventOrgRegCardSuccess.jsp"/>
+            <forward name="confirmation" path="/jsp/meetings/frmMainEventRegSuccess.jsp"/>
+            <forward name="orgRegEligibility" path="/jsp/meetings/event-Org-Reg-Eligibility.jsp"/>
+            <forward name="toRequestReg" path="/jsp/meetings/frmEventRequestReg.jsp"/>
+            <forward name="toRequestConfirmation" path="/jsp/meetings/frmEventReqSuccess.jsp"/>
+            <forward name="toOmnibusUpdate" path="/jsp/meetings/frmEventOrgUpdate.jsp"/>
+            <forward name="toOmnibusUpdateSuccess" path="/EventOrgRenewal.do?eventProcess=eventViewOrg"/>
+            <forward name="bckToOmnibusUpdateSuccess" path="/OrganizerHLCEventReg.do?process=initUpdate"/>
+
+        </action> 
+        
+        <!-- ******************************* CLASS Master Action ****************************  -->
+        <action path="/ClassAdd"
+                scope="request"
+                type="com.acc.action.ClassAddAction">
+            <forward name="classAdd" path="/jsp/accounts/classAdd.jsp"/>
+            <forward name="classAddSuccess" path="/jsp/accounts/classAddSuccess.jsp"/>
+            <forward name="classList" path="/jsp/accounts/ClassList.jsp"/>
+            <forward name="frmEditClassName" path="/jsp/accounts/frmAccEditClassName.jsp"/>
+
+        </action> 
+        
+       
+        
+        <action path="/listProjects" type="com.msg.action.ListProjectsAction" scope="request">
+            <forward name="success" path = "/jsp/messages/listProjects.jsp" />
+        </action>
+        
+        <action path="/viewProjectDetails" scope="request" forward="/jsp/messages/viewProjectDetails.jsp" />
+        
+        <action path="/editProject" scope="request" forward="/jsp/messages/createEditProject.jsp" />
+
+      
+      
+      <action path="/project" name="newProject" type="com.msg.action.ActionProject" scope="request" input="/jsp/messages/createEditProject.jsp">
+          <forward name="projectAdded"  path="/listProjects.do" />
+          <forward name="editProject"   path="/jsp/messages/viewProjectDetails.jsp" />
+      </action>
+   
+      
+   <action path="/reportList" scope="request"  forward="/jsp/messages/showReportList.jsp" />
+      <action path="/createGraphByXLS" scope="request" forward="/jsp/messages/createGraphByXLS.jsp" />
+      <action path="/createSalesGraph" scope="request" forward="/jsp/messages/createSalesGraph.jsp" />
+     <action path="/humanMemberReport" scope="request" forward="/jsp/membership/createHumanMemberReports.jsp" /> 
+     <action path="/horseMemberReport" scope="request" forward="/jsp/membership/createHorseMemberReports.jsp" />
+     <action path="/generateReports"  name="GraphActionForm" scope="request" type="com.msg.action.ActionReport">
+          <forward name="xlsToPieGraph" path="/jsp/messages/showGraph.jsp"  />
+          <forward name="xlsToBarGraph" path="/jsp/messages/generateBarFromXLS.jsp"  />
+           <forward name="xlsTo3DGraph" path="/jsp/messages/generate3DFromXLS.jsp" />
+           <forward name="xlsToLineGraph" path="/jsp/messages/generateXYLineFromXLS.jsp" />
+           <forward name="xlsToWaterFall" path="/jsp/messages/generateWaterFallFromXLS.jsp" />
+      </action>
+      
+      <action path="/MakeChart"
+        scope="request"
+        type="com.acc.action.AccTransAction">
+            <forward name="generateDailyBarReport" path="/jsp/messages/generateBarFromDB.jsp"/>
+            <forward name="generateDailyPieReport" path="/jsp/messages/generatePieFromDB.jsp"/>
+            <forward name="generateDaily3DReport" path="/jsp/messages/generate3DFromDB.jsp"/>
+            <forward name="generateMonthlyBarReport" path="/jsp/messages/generateMonthlyBarFromDB.jsp"/>
+            <forward name="generateMonthlyPieReport" path="/jsp/messages/generateMonthlyPieFromDB.jsp"/>
+            <forward name="generateMonthly3DReport" path="/jsp/messages/generateMonthly3DFromDB.jsp"/>
+            <forward name="generateAreaPieReport" path="/jsp/messages/generateAreaPieFromDB.jsp"/>
+            <forward name="generateRegPieReport" path="/jsp/messages/generateRegPieFromDB.jsp"/>
+            <forward name="generateYearlySalesReport" path="/jsp/messages/generateYearlySalesReport.jsp"/>
+            <forward name="generatePieAreaReport" path="/jsp/messages/generateRegAreaPieFromDB.jsp" />
+            <forward name="generateDailyBarTabularReport" path="/jsp/messages/generateDailyBarTabularReport.jsp" redirect="true" />
+            <forward name="generateMonthlyBarTabularReport" path="/jsp/messages/generateMonthlyBarTabularReport.jsp" redirect="true" />
+            <forward name="generatePieAreaTabularReport" path="/jsp/messages/generatePieAreaTabularReport.jsp" redirect="true" /> 
+            <forward name="generateRegPieTabularReport" path="/jsp/messages/generateRegPieFromDBTabular.jsp" redirect="true" />
+            
+       </action>
+       
+       <action path="/HumanMemberReports" type="com.mrm.action.HumanMemberReports" >
+           <forward name="humanMemberNumberStatusWise" path="/jsp/membership/generateReportsStatusWiseMembersNumber.jsp" />
+            <forward name="humanMemberNumberMemberShipWise" path="/jsp/membership/generateReportsHumanMemberNumberMemberShipWise.jsp" />
+            <forward name="humanSpecificMembershipStatusWise" path="/jsp/membership/generateReportshumanSpecificMembershipStatusWise.jsp" />
+            <forward name="humanMembersAreaWise" path="/jsp/membership/generateReportshumanMembersAreaWise.jsp" />
+            <forward name="totalHumanAllAreasStatusWise" path="/jsp/membership/generateHumanMembersAllAreasByStatus.jsp" />
+            <forward name="humanMembersAllMemberhipTypesByArea" path="/jsp/membership/generateTotalHumanAllMembershipsAreaWise.jsp" />
+            <forward name="humanMembersAllMemberhipTypesByAreaAndStatus" path="/jsp/membership/generateHumanMembersAllMemberhipTypesByAreaAndStatus.jsp" />
+            <forward name="humanMembersSpecificAreaAndMembershipType" path="/jsp/membership/generateHumanMembersSpecificAreaAndMembershipType.jsp" />
+            <forward name="humanMembersSpecificAreaAndMembershipTypeAndStatus" path="/jsp/membership/generateHumanMembersSpecificAreaAndMembershipTypeAndStatus.jsp" />
+            <forward name="humanMemberNumberStatusWiseTabular" path="/jsp/membership/humanMemberNumberStatusWiseTabular.jsp" redirect="true" />
+            <forward name="humanMemberNumberMemberShipWiseTabular" path="/jsp/membership/humanMemberNumberMemberShipWiseTabular.jsp" redirect="true" />
+            <forward name="humanSpecificMembershipStatusWiseTabular" path="/jsp/membership/humanSpecificMembershipStatusWiseTabular.jsp" redirect="true" />
+            <forward name="totalHumanAllAreasStatusWiseTabular" path="/jsp/membership/totalHumanAllAreasStatusWiseTabular.jsp" redirect="true" />
+            <forward name="humanMembersAllMemberhipTypesByAreaTabular" path="/jsp/membership/humanMembersAllMemberhipTypesByAreaTabular.jsp" redirect="true" />
+            <forward name="humanMembersAllMemberhipTypesByAreaAndStatusTabular" path="/jsp/membership/humanMembersAllMemberhipTypesByAreaAndStatusTabular.jsp" redirect="true" />
+            <forward name="humanMembersSpecificAreaAndMembershipTypeTabular" path="/jsp/membership/humanMembersSpecificAreaAndMembershipTypeTabular.jsp" redirect="true" />
+            <forward name="humanMembersSpecificAreaAndMembershipTypeStatusTabular" path="/jsp/membership/humanMembersSpecificAreaAndMembershipTypeStatusTabular.jsp" redirect="true" />
+             
+       </action>
+       <action path="/DonationReport" type="com.acc.action.DonationReports" >
+           <forward name="totalDonationAmount" path="/jsp/membership/generateDonationAmountReport.jsp" />
+           <forward name="totalDonationAmountForAllDonationItems" path="/jsp/membership/generateDonationAmountForAllDonationItemsReport.jsp" />
+           <forward name="totalDonationAmountTabular" path="/jsp/membership/totalDonationAmountTabular.jsp" redirect="true" />
+           <forward name="totalDonationAmountForAllDonationItemsTabular" path="/jsp/membership/totalDonationAmountForAllDonationItemsTabular.jsp" redirect="true" />
+       </action>
+       <action path="/HorseMemberReports" type="com.mrm.action.HorseMemberReports" >
+        <forward name="horseMemberNumberStatusWise" path="/jsp/membership/generateHorseReportStatusWise.jsp" />
+        <forward name="horseMemberNumberMemberShipWise" path="/jsp/membership/generateReportsHorseMemberNumberMemberShipWise.jsp" />
+                <forward name="horseSpecificMemberShipAndStatusWise" path="/jsp/membership/generateReportsHorseSpecificMemberShipAndStatusWise.jsp" />
+        <forward name="newlyRegHorseMembersMeberShipWise" path="/jsp/membership/generateNewlyRegHorseCountMembership.jsp" />
+                   <forward name="HorseMembersYearlyEventsWise" path="/jsp/membership/generateHorseMembersYearlyEvents.jsp" />
+                   <forward name="horseMembersEventsMembershipWise" path="/jsp/membership/generateHorseMembersEventsMembershipsWise.jsp" />
+                   <forward name="horseMemberNumberStatusWiseTabular" path="/jsp/membership/horseMemberNumberStatusWiseTabular.jsp" redirect="true" />
+                   <forward name="horseMemberNumberMemberShipWiseTabular" path="/jsp/membership/horseMemberNumberMemberShipWiseTabular.jsp" redirect="true" />
+                   <forward name="horseSpecificMemberShipAndStatusWiseTabular" path="/jsp/membership/horseSpecificMemberShipAndStatusWiseTabular.jsp" redirect="true" />
+                   <forward name="newlyRegHorseMembersMeberShipWiseTabular" path="/jsp/membership/newlyRegHorseMembersMeberShipWiseTabular.jsp" redirect="true" />
+                   <forward name="HorseMembersYearlyEventsWiseTabular" path="/jsp/membership/HorseMembersYearlyEventsWiseTabular.jsp" redirect="true" />
+                   <forward name="horseMembersEventsMembershipWiseTabular" path="/jsp/membership/horseMembersEventsMembershipWiseTabular.jsp" redirect="true" />
+    </action>
+     <action path="/eventReportsGeneration" type="com.oee.action.EventReports">
+         <forward name="eventsYearWise" path="/jsp/onlineEntries/generateYearlyEventsReports.jsp" />
+         <forward name="eventsAreaWiseForEventType" path="/jsp/onlineEntries/generateEventsAreaWiseForEventType.jsp" />
+         <forward name="humanMembersParticipatedInEvents" path="/jsp/onlineEntries/generateHumanMembersParticipatedInEvents.jsp"  />
+         <forward name="eventsYearWiseTabular" path="/jsp/onlineEntries/generateYearlyEventsTabularReports.jsp" redirect="true" />
+       <forward name="eventsAreaWiseTabular"  path="/jsp/onlineEntries/eventAreaWiseTabular.jsp" redirect="true" />
+       <forward name="eventsTypeWiseTabular" path="/jsp/onlineEntries/eventsTypeWiseTabular.jsp" redirect="true" />
+       <forward name="humanMembersParticipatedInEventsTabular" path="/jsp/onlineEntries/humanMembersParticipatedInEventsTabular.jsp" redirect="true" />
+       <forward name="getHumanMembersParticipatedEventTypeWiseTabular" path="/jsp/onlineEntries/getHumanMembersParticipatedEventTypeWiseTabular.jsp" redirect="true" />
+       <forward name="getHumanMembersParticipatedMembershipsWiseTabular" path="/jsp/onlineEntries/getHumanMembersParticipatedMembershipsWiseTabular.jsp" redirect="true" />
+       <forward name="eventsAreaWiseForEventTypeTabular" path="/jsp/onlineEntries/eventsAreaWiseForEventTypeTabular.jsp" redirect="true" /> 
+       <forward name="eventsAreaWiseForEventTypeTabularRe" path="/jsp/onlineEntries/eventsAreaWiseForEventTypeTabularRe.jsp" redirect="true" />
+	    <forward name="eventsAreaWise" path="/jsp/onlineEntries/generateUnitSalesReports.jsp"/>
+     </action>
+       <action path="/showEventReportList" scope="request" forward="/jsp/onlineEntries/showEventReportList.jsp" />
+       <action path="/showMemberReportList" scope="request" forward="/jsp/membership/showMemberReportList.jsp" />
+       <action path="/showFinanceReportList" scope="request" forward="/jsp/accounts/showFinanceReportList.jsp" />
+       <action path="/eventReport" scope="request" forward="/jsp/onlineEntries/createEventReports.jsp" />
+       <action path="/areaGraph" scope="request"  forward="/jsp/messages/createAreaGraph.jsp" />
+       <action path="/memberGraph" scope="request"  forward="/jsp/messages/createMemberGraph.jsp" />
+	   
+	     
+        <action path="/showReportTypes" scope="request" forward="/jsp/roles/reportTypes.jsp" />
+        <action path="/salesReportByValue" scope="request" forward="/jsp/roles/salesReportByValue.jsp" /> 
+        <action path="/salesReportByVolume" scope="request" forward="/jsp/roles/salesReportByVolume.jsp" />
+        <action path="/showSalesReportByValue"  scope="request" forward="/jsp/roles/showSalesReportByValue.jsp" /> 
+        <action path="/showSalesReportByVolume"  scope="request" forward="/jsp/roles/showSalesReportByVolume.jsp" /> 
+        <action path="/purchaseRequition" scope="request" forward="/jsp/roles/purchaseRequisitionReport.jsp" />
+        <action path="/showPurchaseRequisitionReport" scope="request" forward="/jsp/roles/showPurchaseRequisitionReport.jsp" />
+       
+	   
+	      <action path="/salesReport" scope="request"
+                type="com.mrm.action.SalesReport">
+            <forward name="showSalesReport" path="/jsp/roles/showSalesReports.jsp"/>
+            <forward name="frmTabular" path="/jsp/roles/frmTabular.jsp" redirect="true"/>
+            <forward name="frmItemTabular" path="/jsp/roles/frmItemTabular.jsp" redirect="true"/>
+            <forward name="frmSalesTabular" path="/jsp/roles/frmSalesTabular.jsp" redirect="true"/>
+            <forward name="salesMessage" path="/jsp/roles/salesErrorMessage.jsp" />
+            <forward name="salesVolumeMessage" path="/jsp/roles/salesVolumeErrorMessage.jsp" />
+        </action> 
+		
+		 <action path="/showAllReports" scope="request" forward="/jsp/roles/SelectReport.jsp" />
+		 
+		  <action path="/purchaseRequisitionReport" scope="request" type="com.mrm.action.PurchaseRequisitionReport" >
+            <forward name="purchaseRequisitionPeriodWise" path="/jsp/roles/showStatusWisePurchaseRequisition.jsp" /> 
+            <forward name="purchaseRequisitionParticularStatus" path="/jsp/roles/generatePerStatusPurchaseRequisitions.jsp" />
+            
+            <forward name="frmPurchaseTabular" path="/jsp/roles/frmPurchaseTabular.jsp" redirect="true"/>
+            <forward name="frmPurchaseStatusTabular" path="/jsp/roles/frmPurchaseStatusTabular.jsp" redirect="true"/>
+            <forward name="getStockAvail" path="/jsp/roles/getStockAvailReq.jsp" />
+            <forward name="stockReqAndAvailTabular" path="/jsp/roles/getStockReqAndAvailTabular.jsp" redirect="true" />
+
+            <forward name="frmStockTabular" path="/jsp/roles/frmStockTabular.jsp" redirect="true"  />
+            <forward name="frmSuppliedStockTabular" path="/jsp/roles/frmSuppliedStockTabular.jsp" redirect="true"  />
+            
+
+            <forward name="purchaseRequisitionMessage" path="/jsp/roles/purchaseRequisitionMessage.jsp" />
+            <forward name="stockReqAndAvailMessage" path="/jsp/roles/stockReqAndAvailMessage.jsp" />
+
+        </action>
+		
+		 <action path="/stockRequirement" scope="request" forward="/jsp/roles/stockReqAndAvail.jsp" />
+        
+             
+         <action path="/treeStructure" scope="request" type="treeStructure.TreeStructureAction" >
+             <forward name="selectRole" path="/jsp/roles/frmSelectRole.jsp" />
+            <forward name="success" path="/jsp/roles/TreeStructure.jsp" />
+        </action>
+        
+		<!--action path="/artifactMapping"
+                type="com.view.action.ViewAction" >
+            <forward name="frmArtifactMapList" path="/jsp/artifacts/frmArtifactMapList.jsp"/>
+            <forward name="frmArtifactMapSucess" path="/jsp/artifacts/frmArtiMapSuccess.jsp"/>
+            <forward name="frmRedArtifactMapList" path="artifactMapping.do?artiMapProcess=initArtifactMap"/>
+     
+        </action-->
+		
+     <action path="/changeTitle" scope="request" forward="/jsp/messages/changeTitle.jsp" />
+        <action path="/newTitleAction" type="com.message.action.ChangeTitle" scope="request" >
+            <forward name="newTitle" path="/jsp/membership/TitleChanged.jsp" />
+        </action>
+        
+        
+        <!--  action path="/artifact"
+                type="com.view.action.ViewAction" >
+            <forward name="frmAddArtifact" path="/jsp/artifact/frmAddArtifact.jsp"/>
+            <forward name="frmEditArtifact" path="/jsp/roles/frmEditArtifact.jsp"/>
+            <forward name="frmListArtifacts" path="/jsp/roles/frmListArtifacts.jsp"/>       
+            <forward name="frmRedrListArtifacts" path="/artifact.do?roleProcess=artifactList"/>   
+            <forward name="errRedirArtifact" path="/jsp/roles/frmAddArtifact.jsp?err=str"/>
+            <forward name="errRedirEditArtifact" path="/jsp/roles/frmEditArtifact.jsp?err=str"/> 
+        </action-->
+        
+        <!-- Action for Content View Page -->
+           <action path="/frameworkContent" 
+                type="com.view.action.FrameworkContentAction"
+                 scope="request">
+            <forward name="contentView" path="/jsp/content/frmEIDFramework.jsp"/>
+           </action>
+           
+         <!-- Action for Content View Page -->
+           <action path="/viewMaster"
+                scope="request"            
+                type="com.view.action.ViewMasterAction">
+            <forward name="frmGroupList" path="/jsp/masters/frmGroupList.jsp"/>
+            <forward name="frmFrameworkMap" path="/jsp/masters/frmFrameworkMap.jsp"/>
+            <forward name="frmGroupAdd" path="/jsp/masters/frmGroupAdd.jsp"/>
+            <forward name="frmGroupEdit" path="/jsp/masters/frmGroupEdit.jsp"/>
+			 <forward name="frmAddListgroups" path="/jsp/masters/frmAddListgroups.jsp"/>
+            <forward name="frmEditGroups" path="/jsp/masters/frmEditGroups.jsp"/>
+            <forward name="frmAddGroups" path="/jsp/masters/frmAddGroups.jsp"/>
+            <forward name="frmAddEditGroupsRedirect" path="/viewMaster.do?process=initGroupView"/>
+          <forward name="frmListViewsRoleUser" path="/jsp/masters/frmListViewsRoleUser.jsp"/> 
+            <forward name="frmListLobViewPoint" path="/jsp/masters/frmListLobViewPoint.jsp"/> 
+            
+        </action>
+		
+        
+      <action path="/artifactMapping" name="viewActionForm" scope="request"
+                type="com.view.action.ViewAction" >
+          
+		  <forward name="frmArtifactMapList" path="/jsp/artifacts/frmArtifactMapList.jsp"/>
+             <forward name="frmArtifactMapSucess" path="/jsp/artifacts/frmArtiMapSuccess.jsp"/>
+            <!-- forward name="frmRedArtifactMapList" path="/artifactMapping.do?artiMapProcess=loadArtifact"/-->
+            <forward name="frmViewPointMapList" path="/jsp/artifacts/frmViewPointMapping.jsp"/>
+            
+            <forward name="frmRedArtifactMapList" path="/artifactMapping.do?artiMapProcess=initArtifactMap"/>
+             <forward name="frmMappedViewPointList" path="/jsp/artifacts/frmMappedViewPointList.jsp"/>
+            
+     
+        </action>
+        
+        <action path="/InsertEmpReg"
+                type="com.mrm.action.EmplMapRegistrationAction" 
+                 name="insertUserRegActionForm"
+                input="/jsp/membership/EmployeeMappingRegistration.jsp"
+                scope="request">
+          
+		 <forward name="frmEmpRegSucc" path="/jsp/employee/frmEmpRegSucc.jsp"/>
+            
+     
+        </action>
+         <action path="/ExterApp"
+                type="com.view.action.ExternalApplicationAction" 
+               
+                scope="request">
+          
+		 <forward name="frmExternalApp" path="/jsp/extapp/frmExternalApp.jsp"/>
+		  <forward name="frmSLNApp" path="/jsp/extapp/frmSLN.jsp"/>
+		 
+            
+    
+        </action>
+        
+        <action path="/EngineMgt"
+                type="com.digiSuite.ETEngineAction" 
+               
+                scope="request">
+          
+		 <forward name="frmEngine" path="/eBlitzConsole.jsp"/>
+            
+    
+        </action>
+        
+          <action path="/SysMgmt"
+                type="com.systinet.action.SystinetManagementAction"
+               
+                parameter="process"
+                scope="request">
+            <forward name="callArtifact" path="/jsp/systinet/SystinetArtifactList.jsp"/>
+              <forward name="BPvotinglist" path="/jsp/systinet/SystinetBPVotingList.jsp"/>
+                 <forward name="WSvotinglist" path="/jsp/systinet/SystinetWSVotingList.jsp"/>
+             <forward name="callSysAdd" path="/jsp/systinet/SystinetAccountCreation.jsp"/>
+             <forward name="callArtifactadd" path="/jsp/systinet/SystinetArtifactadd.jsp"/>
+			 <forward name="callstage" path="/SysMgmt.do?process=callAddStage"/>
+			 
+			 
+			   <forward name="callBundle" path="/jsp/systinet/frmViewBundles.jsp"/>
+               <forward name="callBundleEdit" path="/jsp/systinet/frmViewBundleEdit.jsp"/>
+               <forward name="callBPReq" path="/jsp/systinet/frmBpRequest.jsp"/>
+               <forward name="callBPM" path="/jsp/systinet/frmViewBPM.jsp"/>
+                  <forward name="frmmodifybpm" path="/jsp/systinet/Systinetfrmmodifybpm.jsp"/>
+             <forward name="callBPMEdit" path="/jsp/systinet/Systinetfrmrequestbpm.jsp"/>
+               <!-- start systinet digiblitz technoglogies -20/2/2012 -->
+              <forward name="callArtiList" path="/jsp/systinet/frmViewArtifacts.jsp"/>
+               <forward name="callPopup" path="/jsp/systinet/frmViewPopup.jsp"/>
+               <forward name="callArtiWsList" path="/jsp/systinet/frmViewWSArtifacts.jsp"/>
+                <forward name="callWSPopup" path="/jsp/systinet/frmViewWSPopup.jsp"/>
+                  <forward name="callbprocess" path="/jsp/systinet/Systinetbusinessprocess.jsp"/>
+              
+                <forward name="callwebprocess" path="/jsp/systinet/Systinetwebservice.jsp"/>
+                  <forward name="artifactlist" path="/jsp/systinet/Systinetartifactlist.jsp"/>
+                    <forward name="votinglist" path="/jsp/systinet/SystinetVotingList.jsp"/>
+                   <!-- end systinet digiblitz technoglogies -20/2/2012 -->
+            
+        </action>
+        
+        
+        <action path="/stock"
+                type="com.stock.action.StockMaintenanceAction"
+                scope="request">
+         
+			   <forward name="courseMaint" path="/jsp/stockMaster/frmAddNewCourse.jsp"/>
+			   <forward name="progMaint" path="/jsp/stockMaster/frmAddNewProgram.jsp"/>
+			   <forward name="pressMaint" path="/jsp/stockMaster/frmAddNewPress.jsp"/>
+			   <forward name="warehouseMaint" path="/jsp/stockMaster/frmWarehouseMaster.jsp"/>
+			   <forward name="printOrder" path="/jsp/stockMaster/frmPrintingOrder.jsp"/>
+			   <forward name="inward" path="/jsp/stockMaster/frmInwardEntry.jsp"/>
+			   <forward name="centreMaint" path="/jsp/stockMaster/frmAddNewCentre.jsp"/>
+			   <forward name="indentRequest" path="/jsp/stockMaster/frmIndentRequest.jsp"/>
+ 			   <forward name="SRDDRequest" path="/jsp/stockMaster/frmSRDDRequest.jsp"/>
+ 			   <forward name="matIssue" path="/jsp/stockMaster/frmIssueDetails.jsp"/>
+ 			   <forward name="pendingIssue" path="/jsp/stockMaster/frmPendingIssue.jsp"/>
+ 			   <forward name="courseIssue" path="/jsp/stockMaster/frmCourseIssueDetails.jsp"/>
+ 			   
+ 			   <forward name="inwardReport" path="/jsp/stockReport/frmInwardReport.jsp"/>
+ 			    <forward name="pressReport" path="/jsp/stockReport/frmWorkOrderReport.jsp"/>
+ 			    <forward name="requestReport" path="/jsp/stockReport/frmRequestReport.jsp"/>
+ 			    <forward name="issueReport" path="/jsp/stockReport/frmIssueReport.jsp"/>
+ 			    <forward name="stockStatus" path="/jsp/stockReport/frmStockStatus.jsp"/>
+ 			    <forward name="issueProReport" path="/jsp/stockReport/frmIssueProReport.jsp"/>
+ 			    
+ 			     			    
+        </action>
+        
+    </action-mappings>
+	        <!--*****************************************Message Resource******************************************************-->
+    <message-resources parameter="ApplicationResources" />
+    <!-- ========== Plug Ins Configuration ================================== -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property property="pathnames" 
+                      value="/WEB-INF/validator-rules.xml,
+        /WEB-INF/validation.xml" />                                   
+    </plug-in>
+  <!--message-resources parameter="com.yourcompany.struts.ApplicationResources" /-->
+  
+
+  
+  
+  
+  
+</struts-config>
+

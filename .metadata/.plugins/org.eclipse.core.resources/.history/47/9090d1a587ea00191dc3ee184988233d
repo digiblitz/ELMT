@@ -1,0 +1,14 @@
+
+package com.hlcmro.display;
+
+import java.rmi.RemoteException;
+import javax.ejb.CreateException;
+import javax.ejb.EJBHome;
+
+
+/**
+ * This is the home interface for OrganizerFormDisplay enterprise bean.
+ */
+public interface HLCVaigaiStatelessRemoteHome extends EJBHome {
+   public HLCVaigaiStatelessRemote create()  throws CreateException, RemoteException;
+}

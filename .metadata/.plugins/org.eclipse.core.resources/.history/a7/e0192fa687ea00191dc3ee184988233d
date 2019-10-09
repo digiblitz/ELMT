@@ -1,0 +1,44 @@
+
+function validateUser(){
+
+var lenquest = document.frmUserSignup.info_rad.length;
+var chosenquest="";
+//alert("inside");
+//salert(lenquest);
+if(lenquest==undefined)
+{
+	if(!document.frmUserSignup.info_rad.checked)
+	{
+		alert("please choose one of profile");
+		return false;
+	}
+	
+}
+else
+{
+//alert(lenquest);
+for(i=0;i<lenquest;i++)
+{
+if(document.frmUserSignup.info_rad[i].checked)
+ { chosenquest= document.frmUserSignup.info_rad[i].value; }
+
+}
+if(chosenquest=="")
+{
+	alert("please choose one of profile");
+	return false;
+}
+}
+
+  
+return true;
+}
+
+
+
+
+
+
+
+
+

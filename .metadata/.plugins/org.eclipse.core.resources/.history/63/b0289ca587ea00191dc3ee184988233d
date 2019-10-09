@@ -1,0 +1,17 @@
+
+package com.hlcmember.type.stateless;
+
+import java.rmi.RemoteException;
+import javax.ejb.CreateException;
+import javax.ejb.EJBHome;
+
+
+/**
+ * This is the home interface for KaveryMembershipTypeSession enterprise bean.
+ */
+public interface HLCKaveryMembershipTypeSessionRemoteHome extends EJBHome {
+    
+    public HLCKaveryMembershipTypeSessionRemote create()  throws CreateException, RemoteException;
+    
+    
+}

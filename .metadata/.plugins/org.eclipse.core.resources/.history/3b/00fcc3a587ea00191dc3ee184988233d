@@ -1,0 +1,19 @@
+
+package com.hlcmro.masters;
+
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.CreateException;
+import java.util.Collection;
+
+
+
+/**
+ * This is the local-home interface for JudgeDetail enterprise bean.
+ */
+public interface HLCJudgeDetailLocalHome extends EJBLocalHome {
+    public HLCJudgeDetailLocal findByPrimaryKey(String judgeId)  throws FinderException;
+    public HLCJudgeDetailLocal create(String eventId,String judgeTypeId,String judgeNames) throws CreateException;
+    public Collection findByAll() throws FinderException;
+    public Collection findByEventId(String eventId) throws FinderException;
+}

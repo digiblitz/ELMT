@@ -1,0 +1,10 @@
+
+package com.hlcevent.activity;
+
+
+/**
+ * This is the business interface for OrganizerRecap enterprise bean.
+ */
+public interface HLCOrganizerRecapLocalBusiness {
+    
+}

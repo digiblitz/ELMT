@@ -1,0 +1,26 @@
+
+package com.hlcmro.masters;
+
+import javax.ejb.EJBLocalObject;
+
+
+/**
+ * This is the local interface for CogginsDetail enterprise bean.
+ */
+public interface HLCCogginsDetailLocal extends EJBLocalObject, HLCCogginsDetailLocalBusiness {
+    public String getCogginsId();
+    public String getEventId();
+    public String getAllState();
+    public String getInState();
+    public String getOutOfState();
+    public String getNoState();
+    public String getOthers();
+    //Setters methods
+    public void setCogginsId(String cogginsId);
+    public void setEventId(String eventId);
+    public void setAllState(String allState);
+    public void setInState(String inState);
+    public void setOutOfState(String outOfState) ;
+    public void setNoState(String noState);
+    public void setOther(String others);
+}

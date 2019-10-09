@@ -1,0 +1,10 @@
+
+package com.hlcsessionbean.krishna;
+
+
+/**
+ * This is the business interface for KrishnaStateless enterprise bean.
+ */
+public interface HLCKrishnaStatelessRemoteBusiness {
+    
+}

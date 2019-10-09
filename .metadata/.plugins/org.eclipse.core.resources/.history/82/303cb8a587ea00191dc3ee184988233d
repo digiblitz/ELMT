@@ -1,0 +1,10 @@
+
+package com.hlcspnr.schedule;
+
+
+/**
+ * This is the business interface for SponsorPaymentSchedule enterprise bean.
+ */
+public interface HLCSponsorPaymentScheduleLocalBusiness {
+    
+}

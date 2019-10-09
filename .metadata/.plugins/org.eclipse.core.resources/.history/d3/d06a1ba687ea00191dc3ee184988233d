@@ -1,0 +1,60 @@
+// JavaScript Document
+
+function manifestUpdate(){
+
+//====================== For Issue Type ====================================
+	if(document.frmAdvManifestUpdate.chkIssueId.value==""){
+        alert("Please select Issue Type.");
+		document.frmAdvManifestUpdate.chkIssueId.focus();
+        return false;
+    }
+
+//===================== For Advertisement Dimension =========================
+	if(document.frmAdvManifestUpdate.selWinDimchkIssue.value==""){
+        alert("Please select Advertisement Dimension.");
+		document.frmAdvManifestUpdate.selWinDimchkIssue.focus();
+        return false;
+    }
+
+//======================= For Page Number ===================================
+	if(document.frmAdvManifestUpdate.txtPage.value==""){
+		alert("Enter Page Number.");
+		document.frmAdvManifestUpdate.txtPage.focus();
+		return false;
+	}
+	if(!Number(document.frmAdvManifestUpdate.txtPage.value)){
+		alert("Enter valid Page Number.");
+		document.frmAdvManifestUpdate.txtPage.focus();
+		return false;
+	}
+	if(document.frmAdvManifestUpdate.txtPage.value.indexOf('.')!=-1){
+		alert("Enter valid Page Number.");
+		document.frmAdvManifestUpdate.txtPage.focus();
+		return false;
+	}
+	if(document.frmAdvManifestUpdate.txtPage.value.length>7){
+		alert("Enter valid Page Number.");
+		document.frmAdvManifestUpdate.txtPage.focus();
+		return false;
+	}
+
+//======================== For Special Placements ===========================
+	if(document.frmAdvManifestUpdate.txtSpecial.value==""){
+		alert("Enter Special Placements.");
+		document.frmAdvManifestUpdate.txtSpecial.focus();
+		return false;
+	}
+
+//======================= For Special Instructions ==========================
+	if(document.frmAdvManifestUpdate.txtSpInstructions.value==""){
+		alert("Enter Special Instructions.");
+		document.frmAdvManifestUpdate.txtSpInstructions.focus();
+		return false;
+	}
+	if(document.frmAdvManifestUpdate.txtSpInstructions.value.length>1024){
+		alert("Entered Special Instructions is out of Range.");
+		document.frmAdvManifestUpdate.txtSpInstructions.focus();
+		return false;
+	}
+	return true;
+}

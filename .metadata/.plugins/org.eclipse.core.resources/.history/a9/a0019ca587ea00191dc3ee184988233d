@@ -1,0 +1,10 @@
+
+package com.hlcmember.type.stateless;
+
+
+/**
+ * This is the business interface for KaveryMembershipTypeSession enterprise bean.
+ */
+public interface HLCKaveryMembershipTypeSessionRemoteBusiness {
+    
+}

@@ -1,0 +1,274 @@
+#-------------------------------------------------------------------------------
+# * * Copyright: 2019 digiBlitz Foundation
+#  * * 
+#  * * License: digiBlitz Public License 1.0 (DPL) 
+#  * * Administered by digiBlitz Foundation. www.digiblitz.org/dpl/
+#  * * 
+#  * * Inventor: Suresh Kannan (Maya Suresh Kannan Balabisegan ) (www.sureshkannan.org)
+#  * * 
+#  * * Authors: Suresh Kannan (Maya Suresh Kannan Balabisegan )& digiBlitz.
+#  * * 
+#  * * "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software in accordance to the rules & restrictions of the digiBlitz Public License."
+#-------------------------------------------------------------------------------
+   <HTML>
+   <TITLE>eBlitz BPEL Engine</TITLE>
+   <HEAD> 
+
+   <style type="text/css">
+
+/*-------------------------------------
+    SiteNav
+---------------------------------------*/
+
+#siteNav ul {
+    margin-left: 15px;
+    padding-top: 4px;
+    z-index: 1;
+}
+
+#siteNav li {
+    float: left;
+    position: relative;
+	padding-left: 5px;
+    top: 0;
+    left: 0;
+}
+
+#siteNav li a {
+    padding: 8px 20px 8px 12px;
+}
+
+#siteNav li.current a {
+    margin-bottom: 0px;
+}
+
+#siteNav li ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#siteNav ul:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#siteNav li ul li ul {
+    position: relative;
+}
+
+#siteNav li ul li {
+    width: 175px;
+}
+
+#siteNav li > ul {
+    top: auto;
+    left: auto;
+}
+
+#siteNav li:hover ul {
+    display: block;
+}
+
+#siteNav li.current ul {
+    padding-bottom: 1px;
+}
+
+#siteNav li {
+    font-size: 20px;
+    text-align: center;
+}
+
+#siteNav li li {
+    padding-left: 11px;
+}
+
+#siteNav li li li {
+    text-indent: 10px;
+}
+
+#siteNav a {
+    text-decoration: none;
+    display: block;
+}
+
+#siteNav li {
+text-align:"left";
+}
+
+#siteNav li a:link, #siteNav li a:visited {
+    background: transparent url( ../images/site_nav_borders.gif ) bottom right no-repeat;
+    color: #000000;
+}
+
+#siteNav li a:hover {
+    background: #baced7 url( ../images/site_nav_hover_bg.gif ) bottom left repeat-x;
+    color: #24495e;
+}
+
+#siteNav li.current a:link, #siteNav li.current a:visited {
+    background: #f0f5f8 url( ../images/tab-selected-mid.png ) bottom left repeat-x;
+    color: #37454e; /*border-bottom:            1px solid #d7e5ed;*/
+}
+
+#siteNav li ul, #siteNav li.current ul {
+    border-left: 1px solid #bcd1df;
+    border-bottom: 1px solid #bcd1df;
+    border-right: 1px solid #bcd1df;
+}
+
+#siteNav li.over {
+    color: yellow;
+    border: 1px solid red;
+}
+
+/*-------------------------------------
+    SiteNav Ended
+---------------------------------------*/
+
+            #nav ul {
+                margin-left: 0;
+                padding-left: 0;
+                display: inline;
+                font-size: 12 px;
+                font-family: Georgia;
+                color: #ffffff;
+                font-weight: bold;
+                font-style: normal;
+            }
+            
+            #nav ul li {
+                margin-left: 0;
+                /*padding: 3px 15px;*/
+                list-style: none;
+                display: inline;
+            }
+            
+            #nav ul li a {
+                background: transparent none no-repeat scroll left center;
+                /*line-height:80px;*/
+                padding-top: 14.5px;
+                padding-bottom: 14.5px;
+                padding-left: 50px;
+                padding-right: 5px;
+            }
+            
+            #nav ul li a:hover {
+                color: #000;
+            }
+            
+            #nav ul li a.home {
+			       
+                background-image: url(images/home.png);
+            }
+            
+            #nav ul li a.uguide {
+                background-image: url(images/guide.png);
+            }
+            
+            #nav ul li a.dguide {
+                background-image: url(images/dguide.png);
+            }
+            #summary_chart{
+                width:370px;
+                height:250px;
+                float:left;
+            }
+            .sub_h{
+                font-family:Georgia;
+                border-top:#0099FF solid 1px;
+                border-bottom:#0099FF solid 1px;
+                line-height:25px;
+                font-style:normal;	
+                font-weight:normal;
+				font-size:20px;
+                color: 	#006699;			
+            }
+			.sub_h1{
+                font-family:Georgia;
+                line-height:25px;
+                font-style:normal;	
+                font-weight:normal;
+                color: 	#006699;			
+            }
+            #summary_tb{
+                text-align:left;
+                font-family:Georgia;
+                font-style:normal;	
+                font-weight:normal;
+                font-size:11px;
+            }
+            .bl{
+                color:#000;
+            }
+			.b2{
+			font-family:Georgia;
+			 padding-left: 0px;
+			color: #ffffff;
+                font-weight: bold;
+                font-style: normal;
+			}
+			.b3{
+			font-family:Georgia;
+			 padding-left: 50px;
+			color: #000000;
+                font-weight: bold;
+                font-style: normal;
+			}
+.footerTextOne
+	{font-family:Arial,Verdana, Tahoma;
+	font-size:10px;
+	font-weight:bold; 
+	color:#CD5050;
+	text-align:left;
+	padding-top:10px;}
+
+	.footerBg{
+	vertical-align:top; background-color:#fff; background-image:url(../images/bgFooter.jpg); background-repeat:repeat-x; 
+		 background-position:top; height:79px; text-align:left; border-top:1px solid #40668D;}
+        </style>
+     
+
+   </head>
+
+    <body bgcolor= "#ffffff">
+    
+	<table width="1356" >
+	  <tr><td width="1351" height="121" background="images/newHeaderGrad.gif" > 
+	    </td>
+	</tr>
+<tr>
+  <td><p>&nbsp;</p>
+    <p><strong>Getting Started</strong>
+     #  </p>
+    <p>&nbsp; </p>
+    <tr><td><b>1.In a Web Application </b></td></tr>
+		<tr><td>  <b>-Deploying the WAR</b></td></tr>
+		
+		<tr>
+		  <td>
+Get the WAR file in the distribution root directory, rename it to ode.war and copy this file to Tomcat's webapp directory. Start Tomcat and Ode should be up and running. You should get the Axis2 welcome page under http://localhost:8085/ode. The Ode WAR includes its own embedded database (Derby) so you don't have to worry about configuring any external database for now .
+<br></td></tr>
+<br>
+		<tr><td><b><br>-Deploying a Process in Ode</b></br></td></tr>
+		<tr><td>
+Each deployment is a directory with all relevant deployment artifacts. At the minimum it will contain the deployment descriptor, one or more process definitions (BPEL or .cbp), WSDL and XSDs (excluding those compiled into the .cbp). It may also contain other files, such as SVGs or XSLs. The deployment descriptor is a file named deploy.xml (see the next paragraoh for its description).
+
+During deployment, the process engine loads all documents from the deployment descriptor. Loading documents allow it to reference processes, service and schema definitions using fully qualified names, and import based on namespaces instead of locations.
+
+To deploy in Ode, just copy the whole directory containing your artifacts (the directory itself, not only its content) in the path %DEPLOYMENT_ROOT%/WEB-INF/processes (in Tomcat it would be %TOMCAT_HOME%/webapps/ode/WEB-INF/processes).
+
+</td></tr>
+    	
+	
+</table>
+	
+	
+	</body>
+	</html>

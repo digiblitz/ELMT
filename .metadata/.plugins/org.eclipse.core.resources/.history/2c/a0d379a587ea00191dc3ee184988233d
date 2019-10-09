@@ -1,0 +1,17 @@
+
+package com.hlcevent.edu;
+
+import java.rmi.RemoteException;
+import javax.ejb.CreateException;
+import javax.ejb.EJBHome;
+
+
+/**
+ * This is the home interface for EducationalSession enterprise bean.
+ */
+public interface HLCEducationalSessionRemoteHome extends EJBHome {
+    
+    HLCEducationalSessionRemote create()  throws CreateException, RemoteException;
+    
+    
+}

@@ -1,0 +1,49 @@
+//========================== For Entity Name ==================================
+function mgtEntityAdd(){
+	if(document.frmRoleMgtEntityCreate.txtEntityName.value==""){
+		alert("Enter Entity Name.");
+		document.frmRoleMgtEntityCreate.txtEntityName.focus();
+		return false;
+	}
+	if(document.frmRoleMgtEntityCreate.txtEntityName.value.length>80){
+		alert("Entered Entity Name is out of Range.");
+		document.frmRoleMgtEntityCreate.txtEntityName.focus();
+		return false;
+	}
+	if(document.frmRoleMgtEntityCreate.txtEntityName.value.indexOf(' ')==0){
+		alert("Enter valid Entity Name.");
+		document.frmRoleMgtEntityCreate.txtEntityName.focus();
+		return false;
+	}
+	if(document.frmRoleMgtEntityCreate.txtEntityName.value.indexOf('  ')!==-1){
+		alert("Enter valid Entity Name.");
+		document.frmRoleMgtEntityCreate.txtEntityName.focus();
+		return false;
+	}
+	return true;
+}
+
+//======================= For Edit =========================================
+function mgtEntityEdit(){
+	if(document.frmRoleMgtEntityEdit.txtEntityName.value==""){
+		alert("Enter Entity Name.");
+		document.frmRoleMgtEntityEdit.txtEntityName.focus();
+		return false;
+	}
+	if(document.frmRoleMgtEntityEdit.txtEntityName.value.length>80){
+		alert("Entered Entity Name is out of Range.");
+		document.frmRoleMgtEntityEdit.txtEntityName.focus();
+		return false;
+	}
+	if(document.frmRoleMgtEntityEdit.txtEntityName.value.indexOf(' ')==0){
+		alert("Enter valid Entity Name.");
+		document.frmRoleMgtEntityEdit.txtEntityName.focus();
+		return false;
+	}
+	if(document.frmRoleMgtEntityEdit.txtEntityName.value.indexOf('  ')!==-1){
+		alert("Enter valid Entity Name.");
+		document.frmRoleMgtEntityEdit.txtEntityName.focus();
+		return false;
+	}
+	return true;
+}

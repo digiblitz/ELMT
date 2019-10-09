@@ -1,0 +1,17 @@
+
+package com.hlcmrm.rolemanagement;
+
+import java.rmi.RemoteException;
+import javax.ejb.CreateException;
+import javax.ejb.EJBHome;
+
+
+/**
+ * This is the home interface for BrahmaputraSession enterprise bean.
+ */
+public interface HLCBrahmaputraSessionRemoteHome extends EJBHome {
+    
+    HLCBrahmaputraSessionRemote create()  throws CreateException, RemoteException;
+    
+    
+}

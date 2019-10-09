@@ -1,0 +1,10 @@
+
+package com.hlcevent.activity;
+
+
+/**
+ * This is the business interface for ActivityOrganizer enterprise bean.
+ */
+public interface HLCActivityOrganizerLocalBusiness {
+    
+}

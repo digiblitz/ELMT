@@ -1,0 +1,29 @@
+
+/* 
+    Document   : css
+    Created on : Dec 1, 2009, 3:35:27 PM
+    Author     : ravi dhyani
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.ToolText{position:relative; } 
+.ToolTextHover{position:relative;} 
+.ToolText span{display: none;}     
+
+.ToolTextHover span{ 
+  display:block; 
+  position:absolute; 
+  border:1px solid black; 
+  top:1.3em; 
+  left:5px; 
+  background-color:Yellow; color:Grey; 
+  text-align:left; 
+} 
+
+ 

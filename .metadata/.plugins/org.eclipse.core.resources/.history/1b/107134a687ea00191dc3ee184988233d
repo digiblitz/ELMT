@@ -1,0 +1,57 @@
+// JavaScript Document
+function isnotAlpha(str){
+	stringCheck="!@#$%^&*()_+|:;{}[]<>?=~.,'`0123456789;:"+"\\"+"\""+"\'";
+	f1=1;
+	for(j=0;j<str.length;j++){
+		if(stringCheck.indexOf(str.charAt(j))!=-1){
+			f1=0;
+		}
+	}
+	if(f1==0){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+
+function myvalidate(){
+if(document.frmRolMgtCreatePriv.txtPrivName.value==""){
+		alert("Privilege Name cannot be empty");
+		document.frmRolMgtCreatePriv.txtPrivName.focus();
+		return false;
+	}
+
+	if(document.frmRolMgtCreatePriv.txtPrivName.value.length>80){
+		alert("Privilege Name exceeds the maximum of 80 characters");
+		document.frmRolMgtCreatePriv.txtPrivName.focus();
+		return false;
+	}
+
+	if(isnotAlpha(document.frmRolMgtCreatePriv.txtPrivName.value)){
+		alert("Enter valid Privilege Name");
+		document.frmRolMgtCreatePriv.txtPrivName.focus();
+	    	return false;
+	}
+	
+	if(document.frmRolMgtCreatePriv.txtPrivName.value.indexOf(' ')==0){
+		alert("Enter Valid Privilege Name");
+		document.frmRolMgtCreatePriv.txtPrivName.focus();
+		return false;
+	}
+	
+	if(document.frmRolMgtCreatePriv.txtPrivName.value.indexOf('  ')!==-1){
+		alert("Enter Valid Privilege Name");
+		document.frmRolMgtCreatePriv.txtPrivName.focus();
+		return false;
+	}
+
+	if(Number(document.frmRolMgtCreatePriv.txtPrivName.value)){
+		alert("Enter valid Privilege Name");
+		document.frmRolMgtCreatePriv.txtPrivName.focus();
+		return false;
+	}
+
+
+return true;
+}

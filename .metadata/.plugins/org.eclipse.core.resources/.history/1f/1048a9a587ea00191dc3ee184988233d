@@ -1,0 +1,14 @@
+
+package com.hlcpayment;
+
+import java.rmi.RemoteException;
+import javax.ejb.CreateException;
+import javax.ejb.EJBHome;
+
+
+/**
+ * This is the home interface for PaymentSession enterprise bean.
+ */
+public interface HLCPaymentSessionRemoteHome extends EJBHome {
+    HLCPaymentSessionRemote create()  throws CreateException, RemoteException;
+}

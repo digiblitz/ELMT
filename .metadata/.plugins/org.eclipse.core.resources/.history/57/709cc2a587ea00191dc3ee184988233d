@@ -1,0 +1,21 @@
+
+package com.hlcmro.masters;
+
+import javax.ejb.EJBLocalObject;
+
+
+/**
+ * This is the local interface for HorseDressage enterprise bean.
+ */
+public interface HLCHorseDressageLocal extends EJBLocalObject, HLCHorseDressageLocalBusiness {
+    // getters
+    public String getDressageId();
+    public String getEventId();
+    public String getDressageMapId();
+    public String getArenaSizeId();
+    //setter
+    public void setDressageId(String dressageId);
+    public void setEventId(String eventId);
+    public void setDressageMapId(String dressageMapId);
+    public void setArenaSizeId(String arenaSizeId);
+}

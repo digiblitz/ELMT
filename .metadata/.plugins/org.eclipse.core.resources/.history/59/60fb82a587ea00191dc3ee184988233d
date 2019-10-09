@@ -1,0 +1,17 @@
+
+package com.hlchorse.stateless;
+
+import java.rmi.RemoteException;
+import javax.ejb.CreateException;
+import javax.ejb.EJBHome;
+
+
+/**
+ * This is the home interface for KaveryHorseStateless enterprise bean.
+ */
+public interface HLCKaveryHorseStatelessRemoteHome extends EJBHome {
+    
+    public HLCKaveryHorseStatelessRemote create()  throws CreateException, RemoteException;
+    
+    
+}

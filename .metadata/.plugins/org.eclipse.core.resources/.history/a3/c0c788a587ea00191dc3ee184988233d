@@ -1,0 +1,18 @@
+
+
+package com.hlcform.stateless;
+
+import java.rmi.RemoteException;
+import javax.ejb.CreateException;
+import javax.ejb.EJBHome;
+
+
+/**
+ * This is the home interface for kaverystateless enterprise bean.
+ */
+public interface HLCkaverystatelessRemoteHome extends EJBHome {
+    
+    public HLCkaverystatelessRemote create()  throws CreateException, RemoteException;
+    
+    
+}

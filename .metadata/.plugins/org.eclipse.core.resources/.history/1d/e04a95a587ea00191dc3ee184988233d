@@ -1,0 +1,19 @@
+package com.hlcICP.user.reg;
+
+import com.hlcmeeting.util.HLCMeeICPUserDetails;
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.CreateException;
+
+/**
+ * This is the local-home interface for MullaiyarDamICPUser enterprise bean.
+ */
+public interface HLCMullaiyarDamICPUserLocalHome extends EJBLocalHome {
+    
+    public HLCMullaiyarDamICPUserLocal findByPrimaryKey(String key)  throws FinderException;
+    
+    public HLCMullaiyarDamICPUserLocal create(HLCMeeICPUserDetails objMICPUser)
+        throws CreateException;
+    
+    
+}

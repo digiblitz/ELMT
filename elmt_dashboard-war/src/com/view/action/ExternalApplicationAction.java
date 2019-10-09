@@ -1,0 +1,88 @@
+/*******************************************************************************
+ * * * Copyright: 2019 digiBlitz Foundation
+ *  * * 
+ *  * * License: digiBlitz Public License 1.0 (DPL) 
+ *  * * Administered by digiBlitz Foundation. www.digiblitz.org/dpl/
+ *  * * 
+ *  * * Inventor: Suresh Kannan (Maya Suresh Kannan Balabisegan ) (www.sureshkannan.org)
+ *  * * 
+ *  * * Authors: Suresh Kannan (Maya Suresh Kannan Balabisegan )& digiBlitz.
+ *  * * 
+ *  * * "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software in accordance to the rules & restrictions of the digiBlitz Public License."
+ ******************************************************************************/
+package com.view.action;
+
+
+
+import java.io.File;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.rmi.PortableRemoteObject;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts.action.Action;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.actions.ForwardAction;
+import org.apache.struts.util.MessageResources;
+
+import com.hlccommon.util.Debug;
+import com.hlcrole.management.HLCBrahmaputraSessionRemote;
+import com.hlcrole.management.HLCBrahmaputraSessionRemoteHome;
+
+
+
+public class ExternalApplicationAction extends Action {
+	
+	 public ActionForward execute(ActionMapping mapping, ActionForm  form,
+	            HttpServletRequest request, HttpServletResponse response)
+	            throws Exception {
+	        try{
+	        	 MessageResources mr=getResources(request);
+	            String namingfactory=mr.getMessage("ejbclient.namingfactory");
+                String contextfactory=mr.getMessage("ejbclient.contextfactory");
+                String urlprovider=mr.getMessage("ejbclient.urlprovider");
+                String lookupip=mr.getMessage("ejbclient.ip");
+                String jndiname=mr.getMessage("jndi.rolemanagement");
+
+                System.setProperty(namingfactory,contextfactory);
+                System.setProperty(urlprovider,lookupip);
+                Context jndiContext = new InitialContext();
+                Object objref = jndiContext.lookup(jndiname);
+                Debug.print("ExternalApplicationAction.jndiname:" + jndiname);
+
+
+                HttpSession session = request.getSession(true);
+                String userId = (String) session.getAttribute("userId");
+                HLCBrahmaputraSessionRemoteHome roleHome = (HLCBrahmaputraSessionRemoteHome)PortableRemoteObject.narrow(objref,HLCBrahmaputraSessionRemoteHome.class);
+                HLCBrahmaputraSessionRemote roleRemote = roleHome.create();
+	        	String process = request.getParameter("process");
+	        	String appName = request.getParameter("app");
+	        	
+	        	if(process.equalsIgnoreCase("extApp"))
+	        	{        		
+	        	
+	            
+	        	String url = roleRemote.getExternalAppURL(appName);
+	        		
+	                // String url=mr.getMessage(appName);
+	        	Debug.print("URL==============>"+url);
+	        	request.setAttribute("url", url);
+	        	return mapping.findForward("frmExternalApp");
+	        	}else{
+	        		return mapping.findForward("frmSLNApp");	
+	        	}
+	               
+	        }
+	        catch(Exception exp){
+               exp.printStackTrace();
+            }
+	        return null;
+	 }
+}
+	
+	           

@@ -1,0 +1,23 @@
+
+package com.hlcnonhlc.stateless;
+
+import com.hlcnonhlc.org.util.HLCNonHLCOrgMaster;
+import javax.ejb.EJBObject;
+import javax.ejb.FinderException;
+import java.rmi.RemoteException;
+import java.util.*;
+
+/**
+ * This is the remote interface for KaveryNonUSEAOrgSession enterprise bean.
+ */
+public interface HLCKaveryNonHLCOrgSessionRemote extends EJBObject, HLCKaveryNonHLCOrgSessionRemoteBusiness {
+    
+    public boolean addNonUSEAOrgMaster(HLCNonHLCOrgMaster objNonUSEA) throws RemoteException;
+    public boolean editNonUSEAOrgMaster(HLCNonHLCOrgMaster objNonUSEA) throws RemoteException, FinderException;
+    public boolean deleteNonUSEAOrgMaster(String nonuseaOrgId) throws RemoteException,FinderException;
+   // public Collection getNonUSEAOrgId(String nonuseaOrgName) throws RemoteException, FinderException;
+    
+    public ArrayList getNonUSEAOrgDetails() throws RemoteException, FinderException;
+    
+    public Vector displayNonUSEAOrgDetails() throws RemoteException, FinderException;
+}

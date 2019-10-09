@@ -1,0 +1,17 @@
+
+package com.hlcnonhlc.stateless;
+
+import java.rmi.RemoteException;
+import javax.ejb.CreateException;
+import javax.ejb.EJBHome;
+
+
+/**
+ * This is the home interface for KaveryNonUSEAOrgSession enterprise bean.
+ */
+public interface HLCKaveryNonHLCOrgSessionRemoteHome extends EJBHome {
+    
+    HLCKaveryNonHLCOrgSessionRemote create()  throws CreateException, RemoteException;
+    
+    
+}

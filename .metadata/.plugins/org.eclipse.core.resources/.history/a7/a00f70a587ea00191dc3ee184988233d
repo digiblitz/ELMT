@@ -1,0 +1,19 @@
+
+package com.hlcadv.masters;
+
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.CreateException;
+import java.util.*;
+
+
+/**
+ * This is the local-home interface for Dimension enterprise bean.
+ */
+public interface HLCDimensionLocalHome extends EJBLocalHome {
+    public HLCDimensionLocal findByPrimaryKey(String dimensionTypeId)  throws FinderException;
+    public HLCDimensionLocal create(String dimensionTypeName) throws CreateException;
+    public Collection findByAll() throws FinderException;
+    public Collection findByDimensionTypeName(String dimensionTypeName) throws FinderException;
+    public Collection findByDimensionEditTypeName(String dimensionTypeId, String dimensionTypeName) throws FinderException;    
+}

@@ -1,0 +1,18 @@
+
+package com.hlcmrm.rolemanagement.masters;
+
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.CreateException;
+import java.util.*;
+
+
+/**
+ * This is the local-home interface for Privilege enterprise bean.
+ */
+public interface HLCPrivilegeLocalHome extends EJBLocalHome {
+    public HLCPrivilegeLocal findByPrimaryKey(String privilegeId)  throws FinderException;
+    public HLCPrivilegeLocal create(String privilegeName, String privilegePath) throws CreateException;
+    public Collection findByAll() throws FinderException;
+    public Collection findByPrivilegeName(String privilegeName) throws FinderException;
+}

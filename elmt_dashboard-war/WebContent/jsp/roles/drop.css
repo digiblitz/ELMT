@@ -1,0 +1,105 @@
+#-------------------------------------------------------------------------------
+# * * Copyright: 2019 digiBlitz Foundation
+#  * * 
+#  * * License: digiBlitz Public License 1.0 (DPL) 
+#  * * Administered by digiBlitz Foundation. www.digiblitz.org/dpl/
+#  * * 
+#  * * Inventor: Suresh Kannan (Maya Suresh Kannan Balabisegan ) (www.sureshkannan.org)
+#  * * 
+#  * * Authors: Suresh Kannan (Maya Suresh Kannan Balabisegan )& digiBlitz.
+#  * * 
+#  * * "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software in accordance to the rules & restrictions of the digiBlitz Public License."
+#-------------------------------------------------------------------------------
+/* CSS Document */
+
+/* CSS Document */
+
+
+	body {
+		background-image: url("bluelines.png");
+		background-color:#FFFFFF;
+		font-size: 13;
+		font-family: Arial;
+	}
+	#tabsE {float:left; width:100%; font-size:10px; line-height:normal; font-family:Tahoma, Verdana, Arial; font-weight:bold;
+		color:#000; }
+#tabsE ul { margin:0; padding:10px 10px 0 10px; list-style:none;}
+#tabsE li { display:inline; margin:0; padding:0; }
+#tabsE a { float:left; /*background:url("../tabImgs/tableftE.gif") no-repeat left top;*/ background: no-repeat left top;
+			margin:0; padding:0 0 0 4px; text-decoration:none; border-left:2px outset #fff; }
+#tabsE a span { float:left; display:block; font-weight:bold; font-size:10px; /*background:url("../tabImgs/tabrightE.gif") no-repeat right top; */ 
+				background:url(../My Documents/Unnamed Site 1/tabRight.jpg) no-repeat right top; padding:5px 15px 4px 6px; color:#fff;}
+
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#tabsE a span {float:none;}
+/* End IE5-Mac hack */
+
+#tabsE a:hover span { color:#000; }
+#tabsE a:hover {/*background-position:0% -42px;*/ }
+#tabsE a:hover span { /*background-position:100% -42px;*/ }  
+
+#tabsE #current a { background-position:0% -42px; color:#000; cursor:text; }
+#tabsE #current a span { background-position:100% -42px; color:#000; cursor:text; }
+#tabsF { float:left; width:100%; font-size:10px; line-height:normal; font-family:Tahoma, Verdana, Arial; font-weight:bold; color:#000; }
+#tabsF ul { margin:0; padding:7px 8px 0 6px; list-style:none; }
+#tabsF li { display:inline; margin:0; padding:0; }
+#tabsF a { float:left; /*background:url("../tabImgs/tableftE.gif") no-repeat left top;*/ background:url("../images/entityTabLeft.jpg") no-repeat left top;
+			margin:0; padding:0 0 0 4px; text-decoration:none; /*border-left:2px outset #fff;*/ }
+#tabsF a span { float:left; display:block; /*background:url("../tabImgs/tabrightE.gif") no-repeat right top; */
+				background:url("../images/entityTabRight.jpg") no-repeat right top; padding:4px 6px 4px 5px; color:#000; }
+
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#tabsF a span {float:none; padding-left:14px; }
+/* End IE5-Mac hack */
+
+#tabsF a:hover span { color:#333; }
+#tabsF a:hover { /*background-position:0% -42px;*/ }
+#tabsF a:hover span { /*background-position:100% -42px;*/ }  
+
+#tabsF #current2 a { background-position:0% -20px; color:#AB3333; cursor:text;}
+#tabsF #current2 a span { background-position:100% -20px; color:#AB3333; cursor:text; }
+
+
+
+	a {
+
+		color:#33CCFF;
+		text-decoration: none;
+		border: 1 solid #c4d7ff;
+		width: 100%;
+		padding-left: 5;
+	}
+	a:hover {
+		width: 100%;
+		border: 1 solid #006699;
+		background-color: white;
+	}
+	.Menu_Head {
+		filter:alpha(opacity=60);
+		background-color: #6699cc;
+		color: white;
+		font-weight: bold;
+		cursor: pointer;
+		width: 100%;
+	}
+	.Menu_Items {
+		filter:alpha(opacity=100);
+		background-color: #c4d7ff;
+		padding: 10;
+		width: 180;
+		display: block;
+	}
+	
+	.Description {
+	
+		background-color: #6699cc;
+		display: none;
+		width: 190;
+		position: absolute;
+		border: 1 solid #006699;
+	}
+	.DescTitle {
+		background-color: #006699;
+		color: white;
+		font-weight: bold;
+	}

@@ -1,0 +1,189 @@
+package com.digiSuite;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts.action.Action;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+
+public class ETEngineAction extends Action {
+	
+	 public ActionForward execute(ActionMapping mapping, ActionForm  form,
+	            HttpServletRequest request, HttpServletResponse response)
+	            throws Exception {
+	        
+	        try{
+	
+	        	String cmdPro=request.getParameter("process");
+	        	String proPath="K:/Workspace-Server/elmt/elmt_dashboard-war/src";
+	        	
+	        	 if(cmdPro!=null && cmdPro.equalsIgnoreCase("initScreen")){
+	        		 
+	        		 return mapping.findForward("frmEngine");	 
+	        	 }
+	
+	        	 else if(cmdPro!=null && cmdPro.equalsIgnoreCase("startSOABin")){
+	        		 
+	        		 String[] command = {"cmd.exe", "/K", "Start", "K:/Workspace-Server/digiBlitz/digiBlitz_Suite/openSOAbin/startall.bat"};
+	        			Process process = Runtime.getRuntime().exec(command);
+	        			//Thread.sleep(500);
+	        			
+	        			//Process process = Runtime.getRuntime().exec("C:\\openSOAbin\\apache-tomcat-5.5.26\\bin\\startup.bat");
+	        		
+	        			BufferedReader input = new BufferedReader(new
+	        		    InputStreamReader(process.getInputStream()));
+	        		    int ch;
+	        			StringBuffer sb = new StringBuffer("");
+	        			while ((ch = input.read()) != -1) {
+	        				sb.append(ch);
+	        			}
+	        			System.out.println(sb.toString());
+	        			input.close();
+	        			
+	        				 
+	        		 
+	        		 
+	        	 }else if(cmdPro!=null && cmdPro.equalsIgnoreCase("stopSOABin")){
+	        		 
+	        		 String[] command = {"cmd.exe", "/K", "Start", "K:/Workspace-Server/digiBlitz/digiBlitz_Suite/openSOAbin/db-derby-10.4.2.0-bin/bin/stopNetworkServer.bat"};
+	        			Process process = Runtime.getRuntime().exec(command);
+	        			//Thread.sleep(500);
+	        			
+	        			//Process process = Runtime.getRuntime().exec("C:\\openSOAbin\\apache-tomcat-5.5.26\\bin\\startup.bat");
+	        			
+	        			BufferedReader input = new BufferedReader(new
+	        		    InputStreamReader(process.getInputStream()));
+	        		    int ch;
+	        			StringBuffer sb = new StringBuffer("");
+	        			while ((ch = input.read()) != -1) {
+	        				sb.append(ch);
+	        			}
+	        			System.out.println(sb.toString());
+	        			input.close();
+	        			
+	        		 
+	        	 }
+	        	 else if(cmdPro!=null && cmdPro.equalsIgnoreCase("startEngines")){
+	        		 
+	        		 String processVal=request.getParameter("proc");
+	        			//PrintWriter pw = response.getWriter();
+	        			//pw.print("Hello world!!!!");
+	        			//String[] command = {"cmd.exe", "/C", "Start", "C:/apache-tomcat-6.0.18/bin/startup.bat"};
+	        			//String[] command = {"C:/eBlitz/eBlitz_Suite/apache tomcat/start.bat"};
+	        			String command="";
+	        			if(processVal!=null && processVal.equalsIgnoreCase("bpel")){
+	        				command = (proPath+"/ETEngine/digiBlitz/digiBlitz_Suite/apache tomcat/start.bat");
+	        			}else if(processVal!=null && processVal.equalsIgnoreCase("esb")){
+	        			command = (proPath+"/ETEngine/digiBlitz/digiBlitz_Suite/apache-servicemix/start.bat");
+	        			}/*else if(processVal!=null && processVal.equalsIgnoreCase("bpm")){
+	        				command = ("K:/Workspace-Server/jbpm-installer/jboss-as-7.1.1.Final/bin/standalone.bat");
+	        			}*/
+	        			Process process = Runtime.getRuntime().exec(command);
+	        			
+	        			System.out.println("process in the testing::::"+process);
+	        			BufferedReader input = new BufferedReader(new
+	        			InputStreamReader(process.getInputStream()));
+	        			int ch;
+	        			StringBuffer sb = new StringBuffer("");
+	        			while ((ch = input.read()) != -1) {
+	        				sb.append(ch);
+	        			}
+	        			//System.out.println("sb in the testing"+sb.toString());
+	        			input.close();
+	        			
+	        			 return mapping.findForward("frmEngine");
+	        		 
+	        		 
+	        	 }
+
+	        	 else if(cmdPro!=null && cmdPro.equalsIgnoreCase("stopEngines")){
+	        		 String processVal=request.getParameter("proc");
+	        			String command="";
+	        			if(processVal!=null && processVal.equalsIgnoreCase("bpelStop")){
+	        				command = (proPath+"/digiBlitz/digiBlitz_Suite/apache tomcat/apache-tomcat-6.0.18/bin/shutdown.bat");
+	        			}else if(processVal!=null && processVal.equalsIgnoreCase("esbStop")){
+	        			command = (proPath+"/digiBlitz/digiBlitz_Suite/apache-servicemix/apache-servicemix-4.4.2/bin/stop.bat");
+	        			}/*else if(processVal!=null && processVal.equalsIgnoreCase("Stopbpm")){
+	        				command = ("K:/Workspace-Server/jbpm-installer/jboss-as-7.1.1.Final/bin/jboss-cli.bat --connect --controller=127.0.0.1:9999 command=:shutdown");
+	        			}*/
+	        			
+	        			//String command = {"cmd.exe", "/C", "Stop", "C:/eBlitz/eBlitz_Suite/apache-servicemix/stop.bat"};
+	        			Process process = Runtime.getRuntime().exec(command);
+	        			BufferedReader input = new BufferedReader(new
+	        			InputStreamReader(process.getInputStream()));
+	        			int ch;
+	        			StringBuffer sb = new StringBuffer("");
+	        			while ((ch = input.read()) != -1) {
+	        				sb.append(ch);
+	        			}
+	        			System.out.println(sb.toString());
+	        			input.close();
+	        			
+	        			 return mapping.findForward("frmEngine");
+	        	 }
+	        	 
+	       /*  else if(cmdPro!=null && cmdPro.equalsIgnoreCase("startSLEngines")){
+	        		 String processVal=request.getParameter("proc");
+	        			String command="";
+	        			//String command1="";
+	        			if(processVal!=null && processVal.equalsIgnoreCase("slhn")){
+	        				command = ("K:/Workspace/Moodle/start.bat");
+	        				
+	        			}
+	        	
+	        			Process process = Runtime.getRuntime().exec(command);
+	        			BufferedReader input = new BufferedReader(new
+	        			InputStreamReader(process.getInputStream()));
+	        			int ch;
+	        			StringBuffer sb = new StringBuffer("");
+	        			while ((ch = input.read()) != -1) {
+	        				sb.append(ch);
+	        			}
+	        			System.out.println(sb.toString());
+	        			input.close();
+	        			
+	        			
+	        			
+	        			 return mapping.findForward("frmEngine");
+	        	 } 	 
+	         else if(cmdPro!=null && cmdPro.equalsIgnoreCase("stopSLEngines")){
+        		 String processVal=request.getParameter("proc");
+        			String command="";
+        			//String command1="";
+        			if(processVal!=null && processVal.equalsIgnoreCase("StopSlhn")){
+        				command = ("K:/Workspace/Moodle/stop.bat");
+        				
+        			}
+        	
+        			Process process = Runtime.getRuntime().exec(command);
+        			BufferedReader input = new BufferedReader(new
+        			InputStreamReader(process.getInputStream()));
+        			int ch;
+        			StringBuffer sb = new StringBuffer("");
+        			while ((ch = input.read()) != -1) {
+        				sb.append(ch);
+        			}
+        			System.out.println(sb.toString());
+        			input.close();
+        			
+        		
+        			 return mapping.findForward("frmEngine");
+        	 } 	 
+	        */	 
+	        	
+	        	 
+	
+	        }catch(Exception e){
+				System.out.println("1 Exception block");
+	            e.printStackTrace();
+	        }
+	        return null;
+	
+	 }
+
+}

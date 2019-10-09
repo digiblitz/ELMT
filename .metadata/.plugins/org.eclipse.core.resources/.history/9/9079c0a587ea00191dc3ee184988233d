@@ -1,0 +1,18 @@
+package com.hlcmro.masters;
+
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.CreateException;
+import java.util.Collection;
+
+
+/**
+ * This is the local-home interface for CogginsDetail enterprise bean.
+ */
+public interface HLCCogginsDetailLocalHome extends EJBLocalHome {
+    public HLCCogginsDetailLocal findByPrimaryKey(String cogginsId) throws FinderException;
+    public HLCCogginsDetailLocal create(String eventId,String allState,
+	        String inState,String outOfState,String noState,String others) throws CreateException;
+    public Collection findByAll() throws FinderException;
+    public Collection findByEventId(String eventId) throws FinderException; 
+}

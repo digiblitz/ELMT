@@ -1,0 +1,15 @@
+
+package com.hlcpayment;
+
+import com.hlccommon.util.HLCPaymentDetailVO;
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.CreateException;
+
+/**
+ * This is the local-home interface for Payment enterprise bean.
+ */
+public interface HLCPaymentLocalHome extends EJBLocalHome {
+   public HLCPaymentLocal findByPrimaryKey(String paymentId)  throws FinderException;
+   public HLCPaymentLocal create(HLCPaymentDetailVO objPayDet)  throws CreateException;
+}

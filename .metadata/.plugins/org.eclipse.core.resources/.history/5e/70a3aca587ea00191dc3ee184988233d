@@ -1,0 +1,19 @@
+
+package com.hlcmrm.rolemanagement.masters;
+
+import javax.ejb.EJBLocalObject;
+
+
+/**
+ * This is the local interface for Privilege enterprise bean.
+ */
+public interface HLCPrivilegeLocal extends EJBLocalObject, HLCPrivilegeLocalBusiness {
+    public void setPrivilegeId(String privilegeId);
+    public void setPrivilegeName(String privilegeName);
+    public void setPrivilegePath(String privilegePath);
+    public void setActiveStatus(boolean activeStatus);
+    public String getPrivilegeId();
+    public String getPrivilegeName();
+    public String getPrivilegePath();
+    public boolean isActiveStatus();
+}

@@ -1,0 +1,10 @@
+
+package com.hlcinv.session;
+
+
+/**
+ * This is the business interface for SaraswathySession enterprise bean.
+ */
+public interface HLCSaraswathySessionRemoteBusiness {
+    
+}

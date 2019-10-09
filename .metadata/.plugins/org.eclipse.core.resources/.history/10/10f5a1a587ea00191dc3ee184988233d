@@ -1,0 +1,10 @@
+
+package com.hlcnonhlc.org.master;
+
+
+/**
+ * This is the business interface for ArabianSeaNonUSEAOrgMaster enterprise bean.
+ */
+public interface HLCArabianSeaNonHLCOrgMasterLocalBusiness {
+    
+}

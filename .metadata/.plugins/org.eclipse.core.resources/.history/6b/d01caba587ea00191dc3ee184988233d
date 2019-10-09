@@ -1,0 +1,21 @@
+
+package com.hlcmrm.maps;
+
+import javax.ejb.EJBLocalObject;
+
+
+/**
+ * This is the local interface for MapUser enterprise bean.
+ */
+public interface HLCMapUserLocal extends EJBLocalObject, HLCMapUserLocalBusiness {
+        public void setUserMapId(String userMapId);
+        public void setUserId(String userId);
+        public void setMapPrivilegeId(String mapPrivilegeId);
+        public void setUserPrivilegePath(String userPrivilegePath);
+        public void setActiveStatus(String activeStatus);
+        public String getUserMapId();
+        public String getUserId();
+        public String getMapPrivilegeId();
+        public String getUserPrivilegePath();
+        public String isActiveStatus();
+}

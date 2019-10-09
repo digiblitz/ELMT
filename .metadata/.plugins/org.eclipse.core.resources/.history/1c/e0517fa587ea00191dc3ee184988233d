@@ -1,0 +1,10 @@
+
+package com.hlchorse.member.status;
+
+
+/**
+ * This is the business interface for ArabianSeaHorseMembershipStatus enterprise bean.
+ */
+public interface HLCArabianSeaHorseMembershipStatusLocalBusiness {
+    
+}

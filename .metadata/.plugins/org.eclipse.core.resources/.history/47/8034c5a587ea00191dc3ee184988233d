@@ -1,0 +1,23 @@
+
+package com.hlcmro.masters;
+
+import javax.ejb.EJBLocalObject;
+
+
+/**
+ * This is the local interface for RefundRuleDetail enterprise bean.
+ */
+public interface HLCRefundRuleDetailLocal extends EJBLocalObject, HLCRefundRuleDetailLocalBusiness {
+    //getter
+    public String getRefundId ();
+    public String getEventId();
+    public String getRefundMapId();
+    public String getAmount();
+    
+    //setter
+    public void setRefundId (String refundId);
+    public void setEventId(String eventId);
+    public void setRefundMapId(String refundMapId);
+    public void setAmount(String amount);
+    
+}

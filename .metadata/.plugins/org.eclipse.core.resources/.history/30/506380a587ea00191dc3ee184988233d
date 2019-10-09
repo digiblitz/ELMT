@@ -1,0 +1,17 @@
+
+package com.hlcmembership.stateless;
+
+import java.rmi.RemoteException;
+import javax.ejb.CreateException;
+import javax.ejb.EJBHome;
+
+
+/**
+ * This is the home interface for KaveryStatelessMembershipService enterprise bean.
+ */
+public interface HLCKaveryStatelessMembershipServiceRemoteHome extends EJBHome {
+    
+    public HLCKaveryStatelessMembershipServiceRemote create()  throws CreateException, RemoteException;
+    
+    
+}

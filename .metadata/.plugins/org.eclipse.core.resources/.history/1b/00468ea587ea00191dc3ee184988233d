@@ -1,0 +1,10 @@
+
+package com.hlcmrm.admin;
+
+
+/**
+ * This is the business interface for ArabianSeaAdmin enterprise bean.
+ */
+public interface HLCArabianSeaAdminLocalBusiness {
+    
+}

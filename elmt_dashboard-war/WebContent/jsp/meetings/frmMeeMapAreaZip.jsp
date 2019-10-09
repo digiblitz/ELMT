@@ -1,0 +1,211 @@
+#-------------------------------------------------------------------------------
+# * * Copyright: 2019 digiBlitz Foundation
+#  * * 
+#  * * License: digiBlitz Public License 1.0 (DPL) 
+#  * * Administered by digiBlitz Foundation. www.digiblitz.org/dpl/
+#  * * 
+#  * * Inventor: Suresh Kannan (Maya Suresh Kannan Balabisegan ) (www.sureshkannan.org)
+#  * * 
+#  * * Authors: Suresh Kannan (Maya Suresh Kannan Balabisegan )& digiBlitz.
+#  * * 
+#  * * "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software in accordance to the rules & restrictions of the digiBlitz Public License."
+#-------------------------------------------------------------------------------
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title><%=(String)session.getAttribute("title")%></title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<script src="javascripts/basic.js" type="text/javascript" ></script>
+<script src="javascripts/frmMeeICPAssessment.js" type="text/javascript" ></script>
+
+<script language="javascript">
+	function validateMapAreaZip(){
+		if(document.frmMeeMapACAreaMaster.areaId.value == "" ){
+			alert ( "Please select Area Name." );
+			document.frmMeeMapACAreaMaster.areaId.focus();
+			return false;
+    	}
+		
+		if(document.frmMeeMapACAreaMaster.stateId.value == "" ){
+			alert ( "Please select any one State." );
+			document.frmMeeMapACAreaMaster.stateId.focus();
+			return false;
+    	}
+		
+		if(document.frmMeeMapACAreaMaster.zipCodeFrom.value == "" ){
+			alert ( "Enter From Zip Code." );
+			document.frmMeeMapACAreaMaster.zipCodeFrom.focus();
+			return false;
+    	}
+		
+		if(document.frmMeeMapACAreaMaster.zipCodeTo.value == "" ){
+			alert ( "Enter To Zip Code." );
+			document.frmMeeMapACAreaMaster.zipCodeTo.focus();
+			return false;
+    	}
+		
+		return true;
+	}
+</script>
+
+</head>
+
+<body>
+<table width="760" border="0" align="center" cellpadding="0" cellspacing="0" id="mainTab">
+  <tr>
+    <td class="alignTop">
+		<!-- HEADER STARTS HERE -->
+		<%@ include file = "../../include/header.jsp" %>
+		<!-- HEADER ENDS HERE -->
+	</td>
+  </tr>
+  <tr>
+    <td class="infoBar">
+		<!-- INFO BAR STARTS HERE -->
+		<%@ include file = "../../include/infobar.jsp" %>
+		<!-- INFO BAR ENDS HERE -->	
+	</td>
+  </tr>
+  <tr>
+    <td class="tableCommonBg">
+		
+		<table width="760" border="0" align="center" cellpadding="0" cellspacing="5" id="centerTab">
+		  
+		  <tr>
+			<td width="230" class="menuTablePad">
+			<!-- LEFT MENU STARTS HERE -->
+			<%@ include file = "../../include/menu-roles-leftmenu.jsp" %>
+			<!-- LEFT MENU ENDS HERE -->
+
+		    </td>
+			<td width="500" class="subDeptTablePad">
+				<!-- CONTENTS START HERE -->
+				<table width="100" border="0" align="center" cellpadding="0" cellspacing="0" class="formLayout">
+				  <tr>
+					<td colspan="2">
+						<form name="frmMeeMapACAreaMaster" id="frmMeeMapACAreaMaster" action="EventOrgRenewal.do" onsubmit="return validateMapAreaZip();">
+						<input type="hidden" name="eventProcess" value="mapAreaState">
+							
+						<table width="597" border="0" align="center" cellpadding="0" cellspacing="0" class="formLayout">
+						<tr>
+						<td colspan="2" class="tblMainHead"><strong></strong> Meetings:  <span class="styleBoldTwo">Map Area To State &amp; Zipcode </span></td>
+						</tr>
+						
+						  <tr> 
+							<td colspan="2" class="tblRowHead"> <span class="rowHead">Mapping Information</span></td>
+						  </tr>
+						   <tr> 
+							<td colspan="2"> <div class="rowHead">Fields mark with asterisk(*) are mandatory
+	</div></td>
+						  </tr>
+						  
+						  <%
+						  	String err = (String) request.getAttribute("err");
+							if(err!=null){
+						  %>
+						   <tr> 
+							<td colspan="2" class="tableRight">
+								<div class="asterisk">
+								The zip code range provided by you for this area and state already exists and the data got replaced with new data.</div>
+							 </td>
+						  </tr>
+						  <%
+						  }
+						  %>
+						  
+						  
+						  <tr> 
+							<td width="300" class="tableLeft">Area: </td>
+							<td width="297" class="tableRight">
+							<select name="areaId" id="areaId" class="selectboxOne" >
+							<option selected="selected" value="">Select One</option>
+							<%
+									ArrayList arrayAreaList = (ArrayList)request.getAttribute("allAreaList");
+									if(arrayAreaList!=null && arrayAreaList.size()!=0){
+										Iterator itAreaList = arrayAreaList.iterator();
+										while(itAreaList.hasNext()){
+											String[] strAreaList = (String [])itAreaList.next(); 
+											//String[] strAreaList = {area_id, area_code, area_name};
+											String areaId = strAreaList[0];
+											String areaCode = strAreaList[1];
+											String areaName = strAreaList[2];
+											%>
+											<option value="<%=areaId%>" ><%=areaName%></option>
+											 <%
+										}
+									}
+							%>
+							</select><span class="asterisk">&nbsp;*</span>							</td>
+						  </tr>
+						  <tr>
+                            <td class="tableLeft">State: </td>
+						    <td class="tableRight">
+							<select name="stateId" id="stateId" class="selectboxOne" >
+							<option selected="selected" value="">Select One</option>
+							<%
+								ArrayList arrayStateList = (ArrayList)request.getAttribute("allStateList");
+								if(arrayStateList!=null && arrayStateList.size()!=0){
+									Iterator itStateList = arrayStateList.iterator();
+									while(itStateList.hasNext()){
+										String[] strStateList = (String [])itStateList.next(); 
+										//String[] strStateList = {state_id, state_name, state_code};
+										String stateId = strStateList[0];
+										String stateName = strStateList[1];
+										String stateCode = strStateList[2];
+										%>
+										<option value="<%=stateId%>" ><%=stateName%></option>
+										 <%
+									}
+								}
+							%>
+							</select>
+							<span class="asterisk">*</span>							</td>
+					      </tr>
+						  <tr>
+                            <td class="tableLeft"> Zipcode From:</td>
+						    <td class="tableRight"><input name="zipCodeFrom" type="text" class="textboxOne" />
+					        <span class="asterisk">*</span></td>
+					      </tr>
+						  <tr>
+                            <td class="tableLeft">Zipcode To:</td>
+						    <td class="tableRight"><input name="zipCodeTo" type="text" class="textboxOne" />
+					        <span class="asterisk">*</span></td>
+					      </tr>
+						  
+						  <tr>
+							<td class="tableLeft">&nbsp;</td>
+							<td class="tableRight">
+						<input name="Submit" type="submit" class="gradBtn" value="Submit" />
+						<input name="Submit" type="reset" class="gradBtn" value="Reset" />						</td>
+						  </tr>
+					  </table>
+					  </form>
+				  <tr>
+						<td >&nbsp; 
+					   <!-- DO NOT DELETE THIS ROW -->
+						</td>
+						
+				  </tr>
+				</table>
+			<!-- CONTENTS END HERE -->		
+			</td>
+		  </tr>
+	  </table>
+	
+	</td>
+  </tr>
+  <tr>
+    <td class="footerBg">
+		<!-- FOOTER STARTS HERE -->
+			<%@ include file = "../../include/footer.jsp" %>
+		<!-- FOOTER ENDS HERE -->
+	</td>
+  </tr>
+</table>
+
+
+ 
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+// JavaScript Document
+
+//========================= For ADVT Dimension Add ===================
+
+function advDimCheck(){
+	if(document.frmAdvDimensionAdd.txtDimensionName.value==""){
+		alert(" Dimension Name cannot be empty.");
+		document.frmAdvDimensionAdd.txtDimensionName.focus();
+		return false;
+	}
+
+	if(document.frmAdvDimensionAdd.txtDimensionName.value.length>80){
+		alert("Dimension Name is out of range.");
+		document.frmAdvDimensionAdd.txtDimensionName.focus();
+		return false;
+	}
+
+	if(document.frmAdvDimensionAdd.txtDimensionName.value.indexOf(' ')==0){
+		alert("Enter Valid Dimension Name.");
+		document.frmAdvDimensionAdd.txtDimensionName.focus();
+		return false;
+	}
+
+	if(document.frmAdvDimensionAdd.txtDimensionName.value.indexOf('  ')!==-1){
+		alert("Enter Valid Dimension Name.");
+		document.frmAdvDimensionAdd.txtDimensionName.focus();
+		return false;
+	}
+
+	return true;
+}
+
+//============================ For ADVT Dimension Edit ==============================
+
+function advDimEditCheck(){
+		if(document.frmAdvDimensionEdit.txtDimensionEditName.value==""){
+		alert("Dimension Name cannot be empty.");
+		document.frmAdvDimensionEdit.txtDimensionEditName.focus();
+		return false;
+	}
+
+	if(document.frmAdvDimensionEdit.txtDimensionEditName.value.length>80){
+		alert("Dimension Name is out of range.");
+		document.frmAdvDimensionEdit.txtDimensionEditName.focus();
+		return false;
+	}
+
+	if(document.frmAdvDimensionEdit.txtDimensionEditName.value.indexOf(' ')==0){
+		alert("Enter Valid Dimension Name.");
+		document.frmAdvDimensionEdit.txtDimensionEditName.focus();
+		return false;
+	}
+
+	if(document.frmAdvDimensionEdit.txtDimensionEditName.value.indexOf('  ')!==-1){
+		alert("Enter Valid Dimension Name.");
+		document.frmAdvDimensionEdit.txtDimensionEditName.focus();
+		return false;
+	}
+//<%=dimEditName%>
+	return true;
+}

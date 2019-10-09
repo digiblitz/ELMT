@@ -1,0 +1,26 @@
+
+package com.hlcmro.masters;
+
+import javax.ejb.EJBLocalObject;
+import java.util.*;
+
+
+/**
+ * This is the local interface for EventType enterprise bean.
+ */
+public interface HLCEventTypeLocal extends EJBLocalObject, HLCEventTypeLocalBusiness {
+    
+// getters
+public String getEventDetailId();
+public String getEventId();
+public String getMapTypeId();
+
+//Setters methods
+public void setEventDetailId(String eventDetailId);
+public void setEventId(String eventId);
+public void setMapTypeId(String mapTypeId);
+
+public void setEvTypeList(String [] evTypeList);
+public String [] getEvTypeList();
+
+}

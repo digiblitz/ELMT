@@ -1,0 +1,10 @@
+
+package com.hlckavery.statful;
+
+
+/**
+ * This is the business interface for KaverySessionBeanStatful enterprise bean.
+ */
+public interface HLCKaverySessionBeanStatfulRemoteBusiness {
+    
+}

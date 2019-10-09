@@ -1,0 +1,372 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>eBlitz BPEL Engine | Deployment</title>
+        <link rel="stylesheet" href="js/yui/css/container.css" media="screen, projection"/>
+        <link rel="stylesheet" href="js/yui/css/button.css" media="screen, projection"/>
+        <link rel="stylesheet" href="js/bubbling/assets/accordion.css" media="screen, projection"/>
+        <link rel="stylesheet" type="text/css" href="js/yui/tab/skins/sam/tabview.css"/>
+        <link rel="stylesheet" type=="text/css" href="js/codepress/codepress.css"/>
+        <script type="text/javascript" src="js/WSRequest.js">
+        </script>
+        <script type="text/javascript" src="js/codepress/codepress.js">
+        </script>
+        <script type="text/javascript" src="js/ProcessManagementAPI.js">
+        </script>
+        <script type="text/javascript" src="js/InstanceManagementAPI.js">
+        </script>
+        <script type="text/javascript" src="js/DeploymentService.js">
+        </script>
+        <script type="text/javascript" src="js/yui/utilities.js">
+        </script>
+        <script type="text/javascript" src="js/yui/container.js"></script>
+        <script type="text/javascript" src="js/yui/button.js">
+        </script>
+         <script type="text/javascript" src="js/yui/animation.js">
+        </script>
+        <script type="text/javascript" src="js/bubbling/bubbling.js">
+        </script>
+        <script type="text/javascript" src="js/bubbling/accordion.js">
+        </script>
+        <script type="text/javascript" src="js/ODE.js">
+        </script>
+        <script type="text/javascript" src="js/yui/tabview.js">
+        </script>
+        <script type="text/javascript">
+            
+            function init(){
+                org.apache.ode.DeploymentHandling.populateDeployedPacks();
+                setInterval('org.apache.ode.DeploymentHandling.populateDeployedPacks()', 15000);
+                var myTabs = new YAHOO.widget.TabView("tabt");
+            }
+            
+            YAHOO.util.Event.onDOMReady(init);
+        </script>
+        <style type="text/css">
+            button {
+                background: transparent url(../button/assets/add.gif) no-repeat scroll 10% 50%;
+                padding-left: 2em;
+            }
+            
+            .link {
+                margin-left: 5px;
+                color: blue;
+            }
+            
+            .myAccordion .yui-cms-accordion .yui-cms-item {
+                margin-bottom: 10px;
+            }
+            
+            .bd {
+                background: #FFFFFF none repeat scroll 0 0;
+            }
+            
+            ul.deployed {
+                padding: 10px 0px;
+                list-style-image: url(images/process.png);
+                margin-left: 30px;
+            }
+            
+            ul.deployed li {
+                font-family: serif;
+                font-size: 1.2em;
+                font-weight: bold;
+                padding: 5px 10px 5px 0px;
+                line-height: 20px;
+            }
+            
+            .depn, .createn{
+                margin-top:30px;
+            }
+						/*-------------------------------------
+    SiteNav
+---------------------------------------*/
+
+#siteNav ul {
+    margin-left: 15px;
+    padding-top: 4px;
+    z-index: 1;
+}
+
+#siteNav li {
+    float: left;
+    position: relative;
+	padding-left: 5px;
+    top: 0;
+    left: 0;
+}
+
+#siteNav li a {
+    padding: 8px 20px 8px 12px;
+}
+
+#siteNav li.current a {
+    margin-bottom: 0px;
+}
+
+#siteNav li ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#siteNav ul:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#siteNav li ul li ul {
+    position: relative;
+}
+
+#siteNav li ul li {
+    width: 175px;
+}
+
+#siteNav li > ul {
+    top: auto;
+    left: auto;
+}
+
+#siteNav li:hover ul {
+    display: block;
+}
+
+#siteNav li.current ul {
+    padding-bottom: 1px;
+}
+
+#siteNav li {
+    font-size: 20px;
+    text-align: center;
+}
+
+#siteNav li li {
+    padding-left: 11px;
+}
+
+#siteNav li li li {
+    text-indent: 10px;
+}
+
+#siteNav a {
+    text-decoration: none;
+    display: block;
+}
+
+#siteNav li {
+text-align:"left";
+}
+
+#siteNav li a:link, #siteNav li a:visited {
+    background: transparent url( ../images/site_nav_borders.gif ) bottom right no-repeat;
+    color: #000000;
+}
+
+#siteNav li a:hover {
+    background: #baced7 url( ../images/site_nav_hover_bg.gif ) bottom left repeat-x;
+    color: #24495e;
+}
+
+#siteNav li.current a:link, #siteNav li.current a:visited {
+    background: #f0f5f8 url( ../images/tab-selected-mid.png ) bottom left repeat-x;
+    color: #37454e; /*border-bottom:            1px solid #d7e5ed;*/
+}
+
+#siteNav li ul, #siteNav li.current ul {
+    border-left: 1px solid #bcd1df;
+    border-bottom: 1px solid #bcd1df;
+    border-right: 1px solid #bcd1df;
+}
+
+#siteNav li.over {
+    color: yellow;
+    border: 1px solid red;
+}
+
+/*-------------------------------------
+    SiteNav Ended
+---------------------------------------*/
+
+            #nav ul {
+                margin-left: 0;
+                padding-left: 0;
+                display: inline;
+                font-size: 16px;
+                font-family: Georgia;
+                color: #ffffff;
+                font-weight: bold;
+                font-style: normal;
+            }
+            
+            #nav ul li {
+                margin-left: 0;
+                /*padding: 3px 15px;*/
+                list-style: none;
+                display: inline;
+            }
+            
+            #nav ul li a {
+                background: transparent none no-repeat scroll left center;
+                /*line-height:80px;*/
+                padding-top: 14.5px;
+                padding-bottom: 14.5px;
+                padding-left: 50px;
+                padding-right: 5px;
+            }
+            
+            #nav ul li a:hover {
+                color: #000;
+            }
+            
+            #nav ul li a.home {
+			       
+                background-image: url(images/home.png);
+            }
+            
+            #nav ul li a.uguide {
+                background-image: url(images/guide.png);
+            }
+            
+            #nav ul li a.dguide {
+                background-image: url(images/dguide.png);
+            }
+            #summary_chart{
+                width:370px;
+                height:250px;
+                float:left;
+            }
+            .sub_h{
+                font-family:Georgia;
+                border-top:#0099FF solid 1px;
+                border-bottom:#0099FF solid 1px;
+                line-height:25px;
+                font-style:normal;	
+                font-weight:normal;
+                color: 	#006699;			
+            }
+			.sub_h1{
+                font-family:Georgia;
+                line-height:25px;
+                font-style:normal;	
+                font-weight:normal;
+                color: 	#006699;			
+            }
+            #summary_tb{
+                text-align:left;
+                font-family:Georgia;
+                font-style:normal;	
+                font-weight:normal;
+                font-size:1.5em;
+            }
+            .bl{
+                color:#000;
+            }
+			.b2{
+			font-family:Georgia;
+			 padding-left: 0px;
+			color: #ffffff;
+                font-weight: bold;
+                font-style: normal;
+			}
+			.b3{
+			font-family:Georgia;
+			 padding-left: 50px;
+			color: #000000;
+                font-weight: bold;
+                font-style: normal;
+			}
+
+        </style>
+</head>
+<body bgcolor= "#ffffff">
+    <table><tr><td width="1352" height="121" background="images/newHeaderGrad.gif" > 
+	   <p>&nbsp;</p>
+    </td></tr>
+	         
+      <tr><td><div id="siteNav">
+         <ul>
+             <li>
+                 <a href="index.html">Home</a>             </li>
+             <li>
+                 <a href="processes.html">Processes</a>             </li>
+             <li>
+                 <a href="instances.html">Instances</a>             </li>
+             <li class="current">
+                 <a href="#">Deployment</a>             </li>
+         </ul>
+        </div>
+        <div id="wrapper">
+         <dir id="insideW">
+             <div id="insideL">
+                 <div id="content" class="yui-skin-sam">
+                        
+                     <h2>Deployed Packages</h2>
+                     <div id="deployed" class="yui-skin-sam">                     </div>
+                        
+                     <h2 class="depn">Deploy New Process</h2>
+                     <p>
+                       <script type="text/javascript">
+                        // Removes leading whitespaces
+                        function LTrim( value ) {
+                            var re = /\s*((\S+\s*)*)/;
+                            return value.replace(re, "$1");
+                        }
+
+                        // Removes ending whitespaces
+                        function RTrim( value ) {
+                            var re = /((\s*\S+)*)\s*/;
+                            return value.replace(re, "$1");
+                        }
+
+                        // Removes leading and ending whitespaces
+                        function trim( value ) {
+                            return LTrim(RTrim(value));
+                        }   
+
+                        function clearOpstat(){
+                            var opStatDiv = document.getElementById('opstat');
+                            opStatDiv.value = "";
+                        }
+
+                        function handleSuccess(o){
+                            document.getElementById('opstat').innerHTML = '<h2 style="color:red;border-bottom:0px;">'+ trim(o.responseText).replace(/\n/g, "") + '</h2>';
+                            org.apache.ode.DeploymentHandling.populateDeployedPacks();
+                        }
+                        function handleFailure(o){
+                            document.getElementById('opstat').innerHTML = trim(o.responseText).replace(/\n/g, "");
+                        }
+
+                        var callback = {
+                            success:handleSuccess,
+                            failure:handleFailure,
+                            upload:handleSuccess
+                        }
+
+                        function submitFormAsync(fomrID){
+                            clearOpstat();
+                            var form = document.getElementById(fomrID);
+                            if(document.getElementById('uploadfile').value == ""){
+                                alert('Please select a package to deploy!');
+                            }else{
+                                YAHOO.util.Connect.setForm(form, true, true);
+                                YAHOO.util.Connect.asyncRequest("POST", form.getAttribute("action"), callback, null);
+                            }
+                        }
+                        </script>
+                        
+                        <form action="/ode/OdeServlet">
+                       Source Directory  <input type="text" name= "Source" >
+                      <input type ="submit" name="Deploy" Value ="Deploy">
+                        </form>
+                        </div></div></dir></div>
+                        </td></tr></table>
+                        </body>
+                        </html>                        
+                        

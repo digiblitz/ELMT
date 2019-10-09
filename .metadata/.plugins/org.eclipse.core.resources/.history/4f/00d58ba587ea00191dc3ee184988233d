@@ -1,0 +1,17 @@
+
+package com.hlcinv.session;
+
+import java.rmi.RemoteException;
+import javax.ejb.CreateException;
+import javax.ejb.EJBHome;
+
+
+/**
+ * This is the home interface for SaraswathySession enterprise bean.
+ */
+public interface HLCSaraswathySessionRemoteHome extends EJBHome {
+    
+    public HLCSaraswathySessionRemote create()  throws CreateException, RemoteException;
+    
+    
+}

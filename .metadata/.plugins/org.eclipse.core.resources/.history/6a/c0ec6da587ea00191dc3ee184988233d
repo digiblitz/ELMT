@@ -1,0 +1,17 @@
+
+package com.hlcadv.advertise;
+
+import java.rmi.RemoteException;
+import javax.ejb.CreateException;
+import javax.ejb.EJBHome;
+
+
+/**
+ * This is the home interface for AdvertiseSession enterprise bean.
+ */
+public interface HLCAdvertiseSessionRemoteHome extends EJBHome {
+    
+    HLCAdvertiseSessionRemote create()  throws CreateException, RemoteException;
+    
+    
+}

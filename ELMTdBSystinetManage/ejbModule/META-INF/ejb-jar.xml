@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" "http://java.sun.com/dtd/ejb-jar_2_0.dtd">
+<ejb-jar id="ejb-jar_ID">
+	<display-name>dBSystinetManage</display-name>
+	 <enterprise-beans>
+        <session>
+            <display-name>systinetstatelessSB</display-name>
+            <ejb-name>SystinetStatelessBean</ejb-name>
+            <home>com.systinet.info.SystinetStatelessRemoteHome</home>
+            <remote>com.systinet.info.SystinetStatelessRemote</remote>
+            <ejb-class>com.systinet.info.SystinetStatelessBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+        </session>
+        </enterprise-beans>
+</ejb-jar>

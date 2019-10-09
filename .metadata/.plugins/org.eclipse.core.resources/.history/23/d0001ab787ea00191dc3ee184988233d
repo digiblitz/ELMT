@@ -1,0 +1,40 @@
+// Decompiled by DJ v3.12.12.96 Copyright 2011 Atanas Neshkov  Date: 19-03-2012 10:24:46
+// Home Page: http://members.fortunecity.com/neshkov/dj.html  http://www.neshkov.com/dj.html - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   Demo.java
+
+package com.mrm.action;
+
+
+public class Demo
+{
+
+    public Demo()
+    {
+        quaters = null;
+        values = null;
+    }
+
+    public String getQuaters()
+    {
+        return quaters;
+    }
+
+    public void setQuaters(String quaters)
+    {
+        this.quaters = quaters;
+    }
+
+    public Double getValues()
+    {
+        return values;
+    }
+
+    public void setValues(Double values)
+    {
+        this.values = values;
+    }
+
+    String quaters;
+    Double values;
+}

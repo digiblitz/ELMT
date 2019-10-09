@@ -1,0 +1,29 @@
+
+package com.hlcmro.masters;
+
+import javax.ejb.EJBLocalObject;
+
+
+/**
+ * This is the local interface for CrossCountry enterprise bean.
+ */
+public interface HLCCrossCountryLocal extends EJBLocalObject, HLCCrossCountryLocalBusiness {
+    public String getCrossCountryId();
+    public String getEventId();
+    public String getDivision();
+    public String getLength();
+    public String getSpeed();
+    public String getCourseDescription();
+    public String getAddInformation();
+
+    //Setters methods
+    public void setCrossCountryId(String crossCountryId);
+    public void setEventId(String eventId);
+    public void setDivision(String division);
+    public void setLength(String length);
+    public void setSpeed(String speed);
+    public void setCourseDescription(String courseDescription);
+    public void setAddInformation(String addInformation);
+    
+    
+}

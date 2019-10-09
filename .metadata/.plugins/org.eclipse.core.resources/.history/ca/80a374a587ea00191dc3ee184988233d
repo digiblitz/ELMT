@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss>
+   <enterprise-beans>
+    <entity>
+        <ejb-name>HLCActivityOrganizerBean</ejb-name>
+        <local-jndi-name>HLCActivityOrganizerLocalHome</local-jndi-name>
+    </entity>
+    
+    <entity>
+        <ejb-name>HLCPublicationBean</ejb-name>
+        <local-jndi-name>HLCPublicationLocalHome</local-jndi-name>
+    </entity>
+    
+     <entity>
+        <ejb-name>HLCActivityUserBean</ejb-name>
+        <local-jndi-name>HLCActivityUserLocalHome</local-jndi-name>
+    </entity>
+    
+    <entity>
+        <ejb-name>HLCOrganizerRecapBean</ejb-name>
+        <local-jndi-name>HLCOrganizerRecapLocalHome</local-jndi-name>
+    </entity>
+ 
+ 
+    <session>
+        <ejb-name>HLCEducationalSessionBean</ejb-name>
+        <jndi-name>ejb/HLCEducationalSessionBean</jndi-name>
+    </session>
+    
+   </enterprise-beans>
+</jboss>

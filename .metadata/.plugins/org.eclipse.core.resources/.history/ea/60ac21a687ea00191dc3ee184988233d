@@ -1,0 +1,67 @@
+function editValidate()
+{
+	//--------------------------------drop down--------------------------------
+	if(document.frmEditAdvSubType.mediaType.selectedIndex == 0 ){
+        alert ( "Please select a Media Type." );
+		document.frmEditAdvSubType.mediaType.focus();
+        return false;
+    }
+	if(document.frmEditAdvSubType.displayType.selectedIndex == 0 ){
+        alert ( "Please select a display Type." );
+		document.frmEditAdvSubType.displayType.focus();
+        return false;
+    }
+  
+	//-----------------------------Display Sub-Type Name----------------------------------
+	if(document.frmEditAdvSubType.txtDisplaySubType.value==""){
+		alert(" Display Sub-Type Name cannot be empty.");
+		document.frmEditAdvSubType.txtDisplaySubType.focus();
+		return false;
+	}
+
+	if(document.frmEditAdvSubType.txtDisplaySubType.value.length>80){
+		alert("Display Sub-Type Name exceeds the maximum of 80 characters.");
+		document.frmEditAdvSubType.txtDisplaySubType.focus();
+		return false;
+	}
+	
+   if(document.frmEditAdvSubType.txtDisplaySubType.value.indexOf('  ')!==-1){
+		alert("Enter valid Display Sub-Type Name.");
+		document.frmEditAdvSubType.txtDisplaySubType.focus();
+		return false;
+	}
+	
+
+	if(document.frmEditAdvSubType.txtDisplaySubType.value.indexOf(' ')==0){
+		alert("Enter valid Display Sub-Type Name.");
+		document.frmEditAdvSubType.txtDisplaySubType.focus();
+		return false;
+	}
+	
+	//-------------------------------------Description---------------------------------
+	if(document.frmEditAdvSubType.txtAreaDesc.value==""){
+		alert("Description cannot be empty");
+		document.frmEditAdvSubType.txtAreaDesc.focus();
+		return false;
+	}
+
+	if(document.frmEditAdvSubType.txtAreaDesc.value.indexOf(' ')==0){
+		alert("Please avoid white spaces");
+		document.frmEditAdvSubType.txtAreaDesc.focus();
+		return false;
+	}
+
+	if(document.frmEditAdvSubType.txtAreaDesc.value.length>1024){
+		alert("Description exceeds the maximum of 1024 characters.");
+		document.frmEditAdvSubType.txtAreaDesc.focus();
+		return false;
+	}
+
+	if(document.frmEditAdvSubType.txtAreaDesc.value.indexOf('  ')!==-1){
+		alert("Please avoid white spaces");
+		document.frmEditAdvSubType.txtAreaDesc.focus();
+		return false;
+	}
+	//alert('advDispSubTypeInsert');
+	return true;
+}// JavaScript Document

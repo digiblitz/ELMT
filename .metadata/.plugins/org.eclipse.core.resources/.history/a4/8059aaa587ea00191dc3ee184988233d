@@ -1,0 +1,17 @@
+
+package com.hlcmrm.maps;
+
+import javax.ejb.EJBLocalObject;
+
+
+/**
+ * This is the local interface for MapPrevilege enterprise bean.
+ */
+public interface HLCMapPrevilegeLocal extends EJBLocalObject, HLCMapPrevilegeLocalBusiness {
+    public void setMapPrivilegeId(String mapPrivilegeId);
+    public void setRoleId(String roleId);
+    public void setPrivilegeId(String privilegeId);
+    public String getMapPrivilegeId();
+    public String getRoleId();
+    public String getPrivilegeId();
+}

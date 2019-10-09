@@ -1,0 +1,10 @@
+
+package com.hlcaccounts.session;
+
+
+/**
+ * This is the business interface for MahanadhiSession enterprise bean.
+ */
+public interface HLCMahanadhiSessionRemoteBusiness {
+    
+}

@@ -1,0 +1,10 @@
+
+package com.hlcmember.type.master;
+
+
+/**
+ * This is the business interface for ArabianSeaMembershipTypeMaster enterprise bean.
+ */
+public interface HLCArabianSeaMembershipTypeMasterLocalBusiness {
+    
+}

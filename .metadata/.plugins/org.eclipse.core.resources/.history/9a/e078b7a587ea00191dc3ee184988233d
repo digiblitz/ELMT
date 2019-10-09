@@ -1,0 +1,21 @@
+
+package com.hlcspnr.plan;
+
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.*;
+import java.util.*;
+
+
+/**
+ * This is the local-home interface for SponsorPlan enterprise bean.
+ */
+
+public interface HLCSponsorPlanLocalHome extends EJBLocalHome {
+   public HLCSponsorPlanLocal findByPrimaryKey(String planId)  throws FinderException;
+   public HLCSponsorPlanLocal create(String planName , String planDescription ,String planAmount) throws CreateException;
+   public Collection findByPlanId(String planId) throws FinderException;
+   public Collection findByAll() throws FinderException;
+   public Collection findByPlanName(String planName) throws FinderException;
+   public Collection findByEditPlanName(String planId, String planName) throws FinderException;
+}

@@ -1,0 +1,10 @@
+
+package com.hlcmeeting;
+
+
+/**
+ * This is the business interface for mullaiyarDamEntity enterprise bean.
+ */
+public interface HLCmullaiyarDamEntityLocalBusiness {
+    
+}

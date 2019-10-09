@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss>
+   <enterprise-beans>
+    <entity>
+        <ejb-name>HLCKrishnaRajaSaragEntityBean</ejb-name>
+        <local-jndi-name>HLCKrishnaRajaSaragEntityLocalHome</local-jndi-name>
+    </entity>
+    
+    <entity>
+        <ejb-name>HLCSponsorPlanBean</ejb-name>
+        <local-jndi-name>HLCSponsorPlanLocalHome</local-jndi-name>
+    </entity>
+    
+      <entity>
+        <ejb-name>HLCSponsorPaymentScheduleBean</ejb-name>
+        <local-jndi-name>HLCSponsorPaymentScheduleLocalHome</local-jndi-name>
+    </entity>
+    
+     <session>
+        <ejb-name>HLCSponsorSessionBean</ejb-name>
+        <jndi-name>ejb/HLCSponsorSessionBean</jndi-name>
+    </session>
+    
+   </enterprise-beans>
+</jboss>

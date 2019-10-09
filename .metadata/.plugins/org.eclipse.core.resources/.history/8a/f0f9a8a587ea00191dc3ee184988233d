@@ -1,0 +1,16 @@
+
+package com.hlcpayment;
+
+import com.hlccommon.util.HLCPaymentDetailVO;
+import javax.ejb.EJBObject;
+import java.rmi.*;
+
+/**
+ * This is the remote interface for PaymentSession enterprise bean.
+ */
+public interface HLCPaymentSessionRemote extends EJBObject, HLCPaymentSessionRemoteBusiness {
+     public boolean createPayment(HLCPaymentDetailVO objPayDet) throws RemoteException;
+
+    public boolean updateDeclinePaymentStatus(HLCPaymentDetailVO objPayDet) throws RemoteException;
+     
+}

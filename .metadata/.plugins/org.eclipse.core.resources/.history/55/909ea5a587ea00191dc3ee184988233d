@@ -1,0 +1,17 @@
+
+package com.hlcsessionbean.krishna;
+
+import java.rmi.RemoteException;
+import javax.ejb.CreateException;
+import javax.ejb.EJBHome;
+
+
+/**
+ * This is the home interface for KrishnaStateless enterprise bean.
+ */
+public interface HLCKrishnaStatelessRemoteHome extends EJBHome {
+    
+    HLCKrishnaStatelessRemote create()  throws CreateException, RemoteException;
+    
+    
+}

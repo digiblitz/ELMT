@@ -1,0 +1,16 @@
+package com.hlckavery.statful;
+
+import java.rmi.RemoteException;
+import javax.ejb.CreateException;
+import javax.ejb.EJBHome;
+
+
+/**
+ * This is the home interface for KaverySessionBeanStatful enterprise bean.
+ */
+public interface HLCKaverySessionBeanStatfulRemoteHome extends EJBHome {
+    
+    HLCKaverySessionBeanStatfulRemote create()  throws CreateException, RemoteException;
+    
+    
+}

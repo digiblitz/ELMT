@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jboss>
+    <enterprise-beans>
+        <entity>
+            <ejb-name>HLCRefundDetailsBean</ejb-name>
+            <local-jndi-name>ejb/HLCRefundEntityJNDI</local-jndi-name>
+        </entity>
+        <session>
+         <ejb-name>HLCRefundSessionBean</ejb-name>
+         <jndi-name>ejb/HLCRefundSessionJNDI</jndi-name>
+      </session>
+    </enterprise-beans>
+</jboss>

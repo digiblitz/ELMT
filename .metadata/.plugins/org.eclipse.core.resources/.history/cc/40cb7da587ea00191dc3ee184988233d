@@ -1,0 +1,10 @@
+
+package com.hlcHorse.Form.Display;
+
+
+/**
+ * This is the business interface for kaverySessionBeanStatless enterprise bean.
+ */
+public interface HLCkaverySessionBeanStatlessRemoteBusiness {
+    
+}

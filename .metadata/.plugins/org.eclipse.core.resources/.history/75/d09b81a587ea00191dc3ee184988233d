@@ -1,0 +1,25 @@
+
+package com.hlchorse.service;
+
+import javax.ejb.EJBLocalObject;
+
+
+/**
+ * This is the local interface for ArabianSeaHorseServiceType enterprise bean.
+ */
+public interface HLCArabianSeaHorseServiceTypeLocal extends EJBLocalObject, HLCArabianSeaHorseServiceTypeLocalBusiness {
+    
+    public void setHorseServiceTypeId(String horseServiceTypeId);
+    public void setHorseServiceTypeName(String horseServiceTypeName);
+    public void setHorseServiceTypeAmount(String horseServiceTypeAmount );
+    public void setActiveStatus(int active_status);//12042011
+    public void setUserTypeId(String user_type_id);//12042011
+    
+    public String getHorseServiceTypeId();
+    public String getHorseServiceTypeName();
+    public String getHorseServiceTypeAmount();
+    public String getUserTypeId();//12042011
+    public int getActiveStatus();//12042011
+
+    
+}

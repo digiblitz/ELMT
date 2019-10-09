@@ -1,0 +1,21 @@
+
+package com.hlcspnr.plan;
+
+import javax.ejb.EJBLocalObject;
+import java.util.*;
+
+
+/**
+ * This is the local interface for SponsorPlan enterprise bean.
+ */
+public interface HLCSponsorPlanLocal extends EJBLocalObject, HLCSponsorPlanLocalBusiness {
+        public Collection getPlan();
+        public void setPlanId(String planId);
+        public void setPlanName(String planName);
+        public void setPlanDescription(String planDescription);
+        public void setPlanAmount(String planAmount);
+        public String getPlanId();
+        public String getPlanName();
+        public String getPlanDescription();
+        public String getPlanAmount();        
+}

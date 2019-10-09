@@ -1,0 +1,388 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>eBlitz BPEL ENGINE | Home</title>
+	
+        <script type="text/javascript" src="js/WSRequest.js">
+        </script>
+        <script type="text/javascript" src="js/ProcessManagementAPI.js">
+        </script>
+        <script type="text/javascript" src="js/yui/utilities.js">
+        </script>
+        <script type="text/javascript" src="js/yui/button.js"></script>
+        <script type="text/javascript" src="js/yui/container.js"></script>
+        <script type="text/javascript" src="js/bubbling/bubbling.js">
+        </script>
+        <script type="text/javascript" src="js/bubbling/accordion.js">
+        </script>
+        <script type="text/javascript" src="js/yui/tabview.js">
+        </script>
+        <script type="text/javascript" src="js/yui/animation.js">
+        </script>
+    <script type="text/javascript" src="js/yui/json-min.js">
+        </script>
+    <script type="text/javascript" src="js/yui/datasource-beta-min.js">
+        </script>
+    <script type="text/javascript" src="js/yui/charts-experimental-min.js">
+        </script>
+    
+        <script type="text/javascript" src="js/ODE.js">
+        </script>
+		 <script type="text/javascript">
+            YAHOO.widget.Chart.SWFURL = "js/yui/charts.swf";
+            function populateStats(){
+                var stat = org.apache.ode.ProcessHandling.stats();
+                var html = '<table><tr><td class="bl">Total Number of Processes in the System: </td><td>'+
+                    stat.numOfProcesses+ '</td><td class="bl">Total Number of Instances in the System:</td><td>'+
+                    stat.totalInst+ '</td></tr></table>';
+                
+                var statEle = document.getElementById('summary_tb');
+                statEle.innerHTML = html;
+                var chart_data = 
+                    [
+                        {instances: "Active", count:stat.activeInst},
+                        {instances: "Completed", count:stat.completedInst},
+                        {instances: "Terminated", count:stat.terminatedInst},
+                        {instances: "Error", count:stat.errorInst},
+                        {instances: "Failed", count:stat.failedInst},
+                        {instances: "Suspended", count:stat.suspendedInst}
+                    ]
+                var ds = new YAHOO.util.DataSource(chart_data);
+                ds.responseType = YAHOO.util.DataSource.TYPE_JSARRAY;
+                ds.responseSchema = {fields:["instances", "count"]};
+                var chartPie = new YAHOO.widget.PieChart("summary_chart", ds,
+                    {
+                        dataField: "count",
+                        categoryField: "instances",
+                        style:
+                        {
+                            padding: 10,
+                            legend:
+                            {
+                                display: "right",
+                                padding: 10,
+                                spacing: 5,
+                                font:
+                                {
+                                    family: "Arial",
+                                    size: 13
+                                }
+                            }
+                        }
+                    }
+					
+					);
+            }
+            
+            function init(){
+                populateStats();
+                setInterval("populateStats()", 10000);
+            }
+
+            YAHOO.util.Event.onDOMReady(init);
+            
+        </script>
+       
+	
+       <style type="text/css">
+	   .logoRow{
+	   vertical-align:top;
+	   background-image:url(../images/newHeaderGrad.jpg);
+	   background-position:right;
+	   background-repeat:repeat-y;
+	   height:49px;
+	   }
+
+/*-------------------------------------
+    SiteNav
+---------------------------------------*/
+
+#siteNav ul {
+    margin-left: 15px;
+    padding-top: 4px;
+    z-index: 1;
+}
+
+#siteNav li {
+    float: left;
+    position: relative;
+	padding-left: 5px;
+    top: 0;
+    left: 0;
+}
+
+#siteNav li a {
+    padding: 8px 20px 8px 12px;
+}
+
+#siteNav li.current a {
+    margin-bottom: 0px;
+}
+
+#siteNav li ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#siteNav ul:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#siteNav li ul li ul {
+    position: relative;
+}
+
+#siteNav li ul li {
+    width: 175px;
+}
+
+#siteNav li > ul {
+    top: auto;
+    left: auto;
+}
+
+#siteNav li:hover ul {
+    display: block;
+}
+
+#siteNav li.current ul {
+    padding-bottom: 1px;
+}
+
+#siteNav li {
+    font-size: 20px;
+    text-align: center;
+}
+
+#siteNav li li {
+    padding-left: 11px;
+}
+
+#siteNav li li li {
+    text-indent: 10px;
+}
+
+#siteNav a {
+    text-decoration: none;
+    display: block;
+}
+
+#siteNav li {
+text-align:"left";
+}
+
+#siteNav li a:link, #siteNav li a:visited {
+    background: transparent url( ../images/site_nav_borders.gif ) bottom right no-repeat;
+    color: #000000;
+}
+
+#siteNav li a:hover {
+    background: #baced7 url( ../images/site_nav_hover_bg.gif ) bottom left repeat-x;
+    color: #24495e;
+}
+
+#siteNav li.current a:link, #siteNav li.current a:visited {
+    background: #f0f5f8 url( ../images/tab-selected-mid.png ) bottom left repeat-x;
+    color: #37454e; /*border-bottom:            1px solid #d7e5ed;*/
+}
+
+#siteNav li ul, #siteNav li.current ul {
+    border-left: 1px solid #bcd1df;
+    border-bottom: 1px solid #bcd1df;
+    border-right: 1px solid #bcd1df;
+}
+
+#siteNav li.over {
+    color: yellow;
+    border: 1px solid red;
+}
+
+/*-------------------------------------
+    SiteNav Ended
+---------------------------------------*/
+
+            #nav ul {
+                margin-left: 0;
+                padding-left: 0;
+                display: inline;
+                font-size: 12 px;
+                font-family: Georgia;
+                color: #ffffff;
+                font-weight: bold;
+                font-style: normal;
+            }
+            
+            #nav ul li {
+                margin-left: 0;
+                /*padding: 3px 15px;*/
+                list-style: none;
+                display: inline;
+            }
+            
+            #nav ul li a {
+                background: transparent none no-repeat scroll left center;
+                /*line-height:80px;*/
+                padding-top: 14.5px;
+                padding-bottom: 14.5px;
+                padding-left: 50px;
+                padding-right: 5px;
+            }
+            
+            #nav ul li a:hover {
+                color: #000;
+            }
+            
+            #nav ul li a.home {
+			       
+                background-image: url(images/home.png);
+            }
+            
+            #nav ul li a.uguide {
+                background-image: url(images/guide.png);
+            }
+            
+            #nav ul li a.dguide {
+                background-image: url(images/dguide.png);
+            }
+            #summary_chart{
+                width:370px;
+                height:250px;
+                float:left;
+            }
+            .sub_h{
+                font-family:Georgia;
+                border-top:#0099FF solid 1px;
+                border-bottom:#0099FF solid 1px;
+                line-height:25px;
+                font-style:normal;	
+                font-weight:normal;
+				font-size:20px;
+                color: 	#006699;			
+            }
+			.sub_h1{
+                font-family:Georgia;
+                line-height:25px;
+                font-style:normal;	
+                font-weight:normal;
+                color: 	#006699;			
+            }
+            #summary_tb{
+                text-align:left;
+                font-family:Georgia;
+                font-style:normal;	
+                font-weight:normal;
+                font-size:11px;
+            }
+            .bl{
+                color:#000;
+            }
+			.b2{
+			font-family:Georgia;
+			 padding-left: 0px;
+			color: #ffffff;
+                font-weight: bold;
+                font-style: normal;
+				background-image:url(../images/newHeaderGrad.jpg);
+	            
+			}
+			.b3{
+			font-family:Georgia;
+			 padding-left: 50px;
+			color: #000000;
+                font-weight: bold;
+                font-style: normal;
+			}
+ 			.b4{
+             font-family:Georgia;
+			 padding-left: 50px;
+			 background-color:B4D1E3;
+
+			}
+
+.footerTextOne
+	{font-family:Arial,Verdana, Tahoma;
+	font-size:10px;
+	font-weight:bold; 
+	color:#CD5050;
+	text-align:left;
+	padding-top:10px;}
+
+	.footerBg{
+	vertical-align:top; background-color:#fff; background-image:url(../images/bgFooter.jpg); background-repeat:repeat-x; 
+		 background-position:top; height:79px; text-align:left; border-top:1px solid #40668D;}
+        </style>
+        <script type="text/javascript">
+        </script>
+
+
+    </head>
+
+    <body bgcolor= "#ffffff">
+    
+	 <table><tr><td width="1352" height="121" background="images/newHeaderGrad.gif" > 
+	   <p>&nbsp;</p>
+    </td></tr>
+	         	
+	 <tr><td>
+   <div id="siteNav" class ="sub_h1">
+   
+	   <ul>
+                <li class="current"><a href="#">Home</a>                </li>
+				<li>
+                    <a href="processes.html">Processes</a>                </li>
+				
+                <li>
+                    <a href="instances.html">Instances</a>                </li>
+                <li>
+                    <a href="deployment.html">Deployment</a>                </li>
+         </ul>
+    </div>
+	
+	
+		<div id="wrapper">
+            <dir id="insideW">
+                <div id="insideL">
+                    <div id="content_index">
+                        <div id="images/test.gif">
+                            <div id="nav" >
+                                    <font font-color:#ffffff>                         
+                                    <a class="home" href=""> Eblitz BPEL Engine</a> 
+									<br></br>
+                                    <a class="uguide" href="UserGuide.html ">User Guide</a>                              
+                                    <br></br>
+                                     <a class="dguide" href="Dguide.html">Developer Guide</a>                                     </font>                            </div>
+                        </div>
+						
+					
+                             <div id="stats">
+                            <div id="chart">
+                                <h2 class="sub_h" > Summary of Instances</h2>
+                               
+                                <div align="left">
+                                    <div id="summary_tb">                                        </div>
+                                        <div id="summary_chart">                                        </div>
+										                               </div>
+                            </div>
+                        </div>
+				
+                        <div id="events">                        </div>
+                    </div>
+                </div>
+            </dir>
+			</td></tr>
+	 <tr>
+	   <td>&nbsp;</td>
+	   </tr>
+			</table>
+
+    </body>
+	
+</html>

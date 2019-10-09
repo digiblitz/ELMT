@@ -1,0 +1,10 @@
+
+package com.hlcreg.form;
+
+
+/**
+ * This is the business interface for ArabianSeaEntity enterprise bean.
+ */
+public interface HLCArabianSeaEntityLocalBusiness {
+    
+}

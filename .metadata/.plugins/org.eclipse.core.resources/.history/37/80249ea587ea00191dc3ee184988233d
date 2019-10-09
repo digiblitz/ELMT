@@ -1,0 +1,10 @@
+
+package com.hlcmsg.entity;
+
+
+/**
+ * This is the business interface for MessagingEntity enterprise bean.
+ */
+public interface HLCMessagingEntityLocalBusiness {
+    
+}

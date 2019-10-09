@@ -1,0 +1,10 @@
+
+package com.hlchorse.form.display;
+
+
+/**
+ * This is the business interface for KaverySessionStateful enterprise bean.
+ */
+public interface HLCKaverySessionStatefulRemoteBusiness {
+    
+}

@@ -1,0 +1,21 @@
+
+package com.hlcevent.activity;
+
+import javax.ejb.CreateException;
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import java.util.*;
+
+
+/**
+ * This is the local-home interface for Publication enterprise bean.
+ */
+public interface HLCPublicationLocalHome extends EJBLocalHome {
+    
+    public HLCPublicationLocal findByPrimaryKey(String publicationId)  throws FinderException;
+    
+    public HLCPublicationLocal create(String activityMeetingId , String publicationEmail,  String mailingFormat, 
+          String mailingBy, String mailingSortBy, String noOfCopies, String mailListValues)  throws CreateException;
+    public Collection findByActivityMeetingId(String activityMeetingId) throws FinderException;
+    
+}

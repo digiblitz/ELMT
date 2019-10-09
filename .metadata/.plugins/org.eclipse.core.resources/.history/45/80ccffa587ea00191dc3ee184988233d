@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Business Service Center</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/ddlevelsmenu-base.css" />
+<link rel="stylesheet" type="text/css" href="css/ddlevelsmenu-topbar.css" />
+<link rel="stylesheet" type="text/css" href="css/ddlevelsmenu-sidebar.css" />
+<link rel="stylesheet" type="text/css" href="css/bluemenu-topbar.css" />
+
+<link rel="stylesheet" type="text/css" href="css/greymenu-bar.css" />
+<link rel="stylesheet" type="text/css" href="css/blue.css" />
+
+
+</head>
+
+<body>
+<!-- Code starts for setting width and border of Web Page -->
+<table align="center" width="100%" cellpadding="0" bgcolor="#CCCCCC">
+<tr>
+<td>
+<table align="center"  width="799" bgcolor="#FFFFFF"  >
+<tr>
+<td>
+<!-- Code Ends -->
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+ 
+  
+ 
+
+  
+ <tr>
+  <td>
+   <table width="950" border="0" cellspacing="0" cellpadding="0">
+    <tr>	  
+  <td align="center"><img src="images/view.JPG" width="411" height="296" /></td>
+  </tr>
+  </table>  </td>
+  </tr>
+	 </table>
+
+<!-- Code starts for setting width and border of Web Page -->	 
+	    </td>
+	   </tr>
+	 </table>  
+	 
+	 </td>
+	 </tr>
+	 </table>
+	  
+<!-- Code Ends --> 
+
+ 
+
+</body>
+</html>

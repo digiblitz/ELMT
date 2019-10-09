@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss>
+   <enterprise-beans>
+        <entity>
+            <ejb-name>HLCPrivilegeBean</ejb-name>
+            <local-jndi-name>HLCPrivilegeLocalHome</local-jndi-name>
+        </entity>
+        
+        <entity>
+            <ejb-name>HLCRoleMasterBean</ejb-name>
+            <local-jndi-name>HLCRoleMasterLocalHome</local-jndi-name>
+        </entity>
+        
+         <entity>
+            <ejb-name>HLCMapPrevilegeBean</ejb-name>
+            <local-jndi-name>HLCMapPrevilegeLocalHome</local-jndi-name>
+        </entity>
+        
+         <entity>
+            <ejb-name>HLCMapUserBean</ejb-name>
+            <local-jndi-name>HLCMapUserLocalHome</local-jndi-name>
+        </entity>
+        
+        
+        <session>
+            <ejb-name>HLCBrahmaputraSessionBean</ejb-name>
+            <jndi-name>ejb/HLCBrahmaputraSession</jndi-name>
+        </session>
+   </enterprise-beans>
+</jboss>
+

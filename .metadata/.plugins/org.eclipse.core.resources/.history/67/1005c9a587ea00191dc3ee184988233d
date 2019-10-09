@@ -1,0 +1,10 @@
+
+package com.hlcmro.org;
+
+
+/**
+ * This is the business interface for VaigaiSession enterprise bean.
+ */
+public interface HLCVaigaiSessionRemoteBusiness {
+    
+}

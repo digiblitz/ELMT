@@ -1,0 +1,17 @@
+
+package com.hlcnonhlc.org.master;
+
+import javax.ejb.EJBLocalObject;
+
+
+/**
+ * This is the local interface for ArabianSeaNonUSEAOrgMaster enterprise bean.
+ */
+public interface HLCArabianSeaNonHLCOrgMasterLocal extends EJBLocalObject, HLCArabianSeaNonHLCOrgMasterLocalBusiness {
+    
+    public void setNonuseaOrgId(String nonuseaOrgId);
+    public void setNonuseaOrgName(String nonuseaOrgName);
+    
+    public  String  getNonuseaOrgId();
+    public  String  getNonuseaOrgName();
+}

@@ -1,0 +1,10 @@
+
+package com.hlcpayment;
+
+
+/**
+ * This is the business interface for PaymentSession enterprise bean.
+ */
+public interface HLCPaymentSessionRemoteBusiness {
+    
+}

@@ -1,0 +1,26 @@
+//-------------function for doublespace validation -----------------------------
+
+function Dospace(str){
+	if(str.indexOf("  ")!=-1 || str.indexOf(' ')==0){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+function offValidate(){
+	var s = document.getElementById("judgeName").value;
+	
+	if(Dospace(s)|| s==""){
+		alert("Enter Judge Type Name");
+		document.getElementById("judgeName").focus();
+		return false;
+	}
+	if(s.length>80){
+		alert("Enter valid Judge Type Name");
+		document.getElementById("judgeName").focus();
+		return false;
+	}
+	return true;
+	
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jboss>
+    <enterprise-beans>
+        <entity>
+            <ejb-name>HLCArabianSeaNonHLCOrgMasterBean</ejb-name>
+            <local-jndi-name>ejb/HLCArabianSeaNonHLCJNDI</local-jndi-name>
+        </entity>
+        <session>
+         <ejb-name>HLCKaveryNonHLCOrgSessionBean</ejb-name>
+         <jndi-name>ejb/HLCKaveryNonHLCJNDI</jndi-name>
+      </session>
+    </enterprise-beans>
+</jboss>

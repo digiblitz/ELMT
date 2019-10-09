@@ -1,0 +1,10 @@
+
+package com.hlcmeeting.ICP;
+
+
+/**
+ * This is the business interface for MullaiyarDamICPEntity enterprise bean.
+ */
+public interface HLCMullaiyarDamICPEntityLocalBusiness {
+    
+}

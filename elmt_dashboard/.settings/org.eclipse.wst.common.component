@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="elmt_dashboard">
+        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+        <dependent-module archiveName="elmt_dashboard-war.war" deploy-path="/" handle="module:/resource/elmt_dashboard-war/elmt_dashboard-war">
+            <dependent-object>WebModule_1455518023006</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="elmt_dashboard-ejb.jar" deploy-path="/" handle="module:/resource/elmt_dashboard-ejb/elmt_dashboard-ejb">
+            <dependent-object>EjbModule_1455518023057</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTAccountsEJB.jar" deploy-path="/" handle="module:/resource/ELMTAccountsEJB/ELMTAccountsEJB">
+            <dependent-object>EjbModule_1455518128012</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTAdvertiseEJB.jar" deploy-path="/" handle="module:/resource/ELMTAdvertiseEJB/ELMTAdvertiseEJB">
+            <dependent-object>EjbModule_1455518567258</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTdBSystinetManage.jar" deploy-path="/" handle="module:/resource/ELMTdBSystinetManage/ELMTdBSystinetManage">
+            <dependent-object>EjbModule_1455518597914</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTEducationalActivityEJB.jar" deploy-path="/" handle="module:/resource/ELMTEducationalActivityEJB/ELMTEducationalActivityEJB">
+            <dependent-object>EjbModule_1455518658015</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTFormRegistration.jar" deploy-path="/" handle="module:/resource/ELMTFormRegistration/ELMTFormRegistration">
+            <dependent-object>EjbModule_1455518688624</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTHorseForm.jar" deploy-path="/" handle="module:/resource/ELMTHorseForm/ELMTHorseForm">
+            <dependent-object>EjbModule_1455518715046</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTHorseMembershipStatusMaster.jar" deploy-path="/" handle="module:/resource/ELMTHorseMembershipStatusMaster/ELMTHorseMembershipStatusMaster">
+            <dependent-object>EjbModule_1455518743036</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTHorseServiceTypeMaster.jar" deploy-path="/" handle="module:/resource/ELMTHorseServiceTypeMaster/ELMTHorseServiceTypeMaster">
+            <dependent-object>EjbModule_1455518770900</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTHorseStateful.jar" deploy-path="/" handle="module:/resource/ELMTHorseStateful/ELMTHorseStateful">
+            <dependent-object>EjbModule_1455518807089</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTHumanMember.jar" deploy-path="/" handle="module:/resource/ELMTHumanMember/ELMTHumanMember">
+            <dependent-object>EjbModule_1455518842984</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTInventory.jar" deploy-path="/" handle="module:/resource/ELMTInventory/ELMTInventory">
+            <dependent-object>EjbModule_1455518875316</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTMeetings.jar" deploy-path="/" handle="module:/resource/ELMTMeetings/ELMTMeetings">
+            <dependent-object>EjbModule_1455518900014</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTMembershipTypeMaster.jar" deploy-path="/" handle="module:/resource/ELMTMembershipTypeMaster/ELMTMembershipTypeMaster">
+            <dependent-object>EjbModule_1455518927323</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTMessage.jar" deploy-path="/" handle="module:/resource/ELMTMessage/ELMTMessage">
+            <dependent-object>EjbModule_1455518978474</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTMessageEJB.jar" deploy-path="/" handle="module:/resource/ELMTMessageEJB/ELMTMessageEJB">
+            <dependent-object>EjbModule_1455519010072</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTMRMAdmin.jar" deploy-path="/" handle="module:/resource/ELMTMRMAdmin/ELMTMRMAdmin">
+            <dependent-object>EjbModule_1455519045734</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTMRMAdminCountryMailPrice.jar" deploy-path="/" handle="module:/resource/ELMTMRMAdminCountryMailPrice/ELMTMRMAdminCountryMailPrice">
+            <dependent-object>EjbModule_1455519079849</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTMRMRefund.jar" deploy-path="/" handle="module:/resource/ELMTMRMRefund/ELMTMRMRefund">
+            <dependent-object>EjbModule_1455519119365</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTNonUSEAOrgMaster.jar" deploy-path="/" handle="module:/resource/ELMTNonUSEAOrgMaster/ELMTNonUSEAOrgMaster">
+            <dependent-object>EjbModule_1455519138083</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTOnlineEntries.jar" deploy-path="/" handle="module:/resource/ELMTOnlineEntries/ELMTOnlineEntries">
+            <dependent-object>EjbModule_1455519161305</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTPaymentBeanEJB.jar" deploy-path="/" handle="module:/resource/ELMTPaymentBeanEJB/ELMTPaymentBeanEJB">
+            <dependent-object>EjbModule_1455519188907</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTRoleManagementEJB.jar" deploy-path="/" handle="module:/resource/ELMTRoleManagementEJB/ELMTRoleManagementEJB">
+            <dependent-object>EjbModule_1455519212168</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTRoleManagementSubSystemEJB.jar" deploy-path="/" handle="module:/resource/ELMTRoleManagementSubSystemEJB/ELMTRoleManagementSubSystemEJB">
+            <dependent-object>EjbModule_1455519243245</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTSponsorEJB.jar" deploy-path="/" handle="module:/resource/ELMTSponsorEJB/ELMTSponsorEJB">
+            <dependent-object>EjbModule_1455519268274</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTStrategicViewManagament.jar" deploy-path="/" handle="module:/resource/ELMTStrategicViewManagament/ELMTStrategicViewManagament">
+            <dependent-object>EjbModule_1455519291396</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTUserManagement.jar" deploy-path="/" handle="module:/resource/ELMTUserManagement/ELMTUserManagement">
+            <dependent-object>EjbModule_1455519311377</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ELMTVaigaiEJB.jar" deploy-path="/" handle="module:/resource/ELMTVaigaiEJB/ELMTVaigaiEJB">
+            <dependent-object>EjbModule_1455519335115</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,17 @@
+
+package com.hlcHorse.Form.Display;
+
+import java.rmi.RemoteException;
+import javax.ejb.CreateException;
+import javax.ejb.EJBHome;
+
+
+/**
+ * This is the home interface for kaverySessionBeanStatless enterprise bean.
+ */
+public interface HLCkaverySessionBeanStatlessRemoteHome extends EJBHome {
+    
+   public HLCkaverySessionBeanStatlessRemote create()  throws CreateException, RemoteException;
+    
+    
+}

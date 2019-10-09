@@ -1,0 +1,28 @@
+
+package com.hlcspnr.sponsor;
+
+import com.hlcspnr.util.HLCSponsorDetails;
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.*;
+import java.util.*;
+
+
+/**
+ * This is the local-home interface for KrishnaRajaSaragEntity enterprise bean.
+ */
+public interface HLCKrishnaRajaSaragEntityLocalHome extends EJBLocalHome {
+    public HLCKrishnaRajaSaragEntityLocal create(HLCSponsorDetails objSponsor)  throws CreateException;
+    public HLCKrishnaRajaSaragEntityLocal findByPrimaryKey(String sponsorId)  throws FinderException;
+    
+    public Collection findBySponsorId(String sponsorId) throws FinderException;
+    public Collection findByAll() throws FinderException;
+    public Collection findByRequestStatus(String requestStatus) throws FinderException;
+    public Collection findByPlanId(String planId) throws FinderException;
+    public Collection findByCompanyName(String companyName) throws FinderException;
+    public Collection findBySalesPerson(String salesPersonId) throws FinderException;
+    public Collection findBySponsor(String userId) throws FinderException;
+    public Collection findByDates(Date fromDate, Date toDate) throws FinderException;
+    public Collection findByPendingRequestForAdmin() throws FinderException;
+    public Collection findByAllRequestStatusSponsors(String salesPersonId, String requestStatus) throws FinderException;
+}

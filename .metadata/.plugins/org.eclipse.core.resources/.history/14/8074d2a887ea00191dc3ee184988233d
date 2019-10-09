@@ -1,0 +1,259 @@
+/*  CSS Document 
+******************************************************************************************************************
+	Product Name: Integrated Enterprise Dashboard - Association / Club V0.5
+	Organization: digiBlitz Technologies (P) Ltd.
+    Created by: K.N.Sathish
+    Created Date: 07/08/2006  
+*****************************************************************************************************************
+*/
+
+<style type="text/css">
+<!--
+
+/***********************************
+	Scrollbar CSS
+************************************/
+html, body{ scrollbar-face-color:#E7E7E7; scrollbar-base-color:#666; scrollbar-arrow-color:black; scrollbar-track-color:#999;
+			scrollbar-shadow-color:#666; scrollbar-highlight-color:#fff; scrollbar-3dlight-color:#999;
+			scrollbar-darkshadow-Color:#999; }
+
+
+/***********************************
+	General CSS
+************************************/
+html, body { height:100%; text-align:center;	margin:0px 0px 0px 0px; background-color:#B1B5C2; font-family:Tahoma, Arial, Verdana; font-size:11px;}
+.tableCommonBg{ vertical-align:top; background-color:#E3E0D0;}
+.title{	margin-left:3%;	font-family:Tahoma, Arial; font-size:18px; font-weight:bold; color:#66CCFF; }
+.slogan{ margin-left:3%; font-family:Tahoma, Arial; font-size:11px;	color:#FFFFFF; }
+p {	font-family:Tahoma, Arial, Verdana;	padding:0px; text-align:left; }
+.bulletOne{ list-style:inside; list-style-type:square; color:#A0A0A0; margin-left:17px; }
+li.inline {  display: inline;  padding-left: 3px;  padding-right: 7px;  border-right: 1px dotted #066000;  }
+li.last {  display: inline;  padding-left: 3px;  padding-right: 3px;  border-right: 0px;  } 
+abbr, acronym, .help {  border-bottom: 1px dotted #333000; cursor: help; }
+.labelOne{font-family:Tahoma, Arial, Verdana; font-size:11px; font-weight:bold; color:#2C353F; height:25px; background-color:#D8E1E7;}
+.labelTwo{font-family:Tahoma, Arial, Verdana; font-size:11px; font-weight:normal; color:#2C353F;}
+.labelTabHead{font-family:Tahoma, Arial, Verdana; font-size:11px; font-weight:bold; color:#CC0000;}
+.textOne{font-family:Tahoma, Arial, Verdana; font-size:11px; font-weight:normal; color:#FFFFFF; text-align:left;}
+.textTwo{font-family:Tahoma, Arial, Verdana; font-size:10px; font-weight:normal; color:#4374A4; text-align:left;}
+.textCommon{font-family:Tahoma, Arial, Verdana; font-size:11px; font-weight:normal; color:#2C353F; text-align:left; padding:8px;}
+.textBold{font-family:Tahoma, Arial, Verdana; font-size:11px; font-weight:bold; color:#2C353F; height:25px;}
+.floatLeft{float:left; text-align:left; padding:3px;}
+.floatRight{float:right; padding-right:8px; padding-top:3px;}
+.floatLeftTwo{ border-bottom:1px solid #CCD9DD; height:25px; text-align:left; padding-left:2px;}
+.floatLeftThree{ border-bottom:0px solid #CCD9DD; height:20px; text-align:left; padding-left:2px;}
+.rowHeightOne{ border-bottom:1px solid #CCD9DD; height:35px; text-align:left; padding-left:2px;}
+.imgFloatLeft{ float:left; padding-right:8px; padding-bottom:8px;}
+.imgFloatRight{ float:right; padding-left:8px; padding-bottom:8px;}
+.imgFloatLeftTwo{ float:left; }
+.imgFloatRightTwo{ float:right; }
+.styleBoldOne { font-size: 11px; font-weight: bold; color:#990000;}
+.styleBoldTwo { font-size: 11px; font-weight: bold; color:#669900;}
+.styleBoldThree { font-size: 11px; font-weight: bold; color:#3B4B5B;}
+.styleBoldFour { font-size: 10px; font-weight: bold; color:#C45A5A;}
+.styleBoldFive { font-size: 11px; font-weight: bold; color:#84929F;}
+.alignCenter{ text-align:center;}
+.alignLeft{ text-align:left;}
+.alignRight{ text-align:right;}
+.alignTop{ vertical-align:top;}
+.alignMiddle{ vertical-align:middle;}
+.legendOne{ width:15px; height:15px; border:1px solid #666; background-color:#CC3300; float:left;}
+.legendTwo{ width:15px; height:15px; border:1px solid #666; background-color:#FFCC00; float:left;}
+.listCellBg{background-color:#FDFDEE; border-bottom:1px solid #ccc; height:25px; text-align:left; padding-left:0px;}
+.listCellBgTwo{background-color:#FDFDEE; border-bottom:1px solid #ccc; height:25px; text-align:right; padding-left:8px; padding-right:3px; font-weight:bold;}
+.msgHead{ font-family: Arial, Tahoma, Verdana; font-size:15px; font-weight:bold; color:#000; }
+.linkHead{ font-family: Tahoma, Verdana, Arial; font-size:12px; font-weight:bold; color:#3B4B5B; 
+			border-bottom:1px solid #B9BDC0; height:20px;}
+
+/****** Header Class********/
+.welcome{font-family:Verdana,Tahoma, Arial; font-size:9px; font-weight:bold; color:#CC9933; }	
+.logoRow{vertical-align:top; background-image:url(../images/bgHeader.jpg); background-repeat:repeat-x; height:49px;}
+.mainTabOne{vertical-align:middle; background-image:url(../images/btn_bgMainNavibar.jpg); background-repeat:repeat-x; 
+			width:120px; height:31px; cursor:hand; padding-left:4px; text-align:left;}
+.mainTabTwo{vertical-align:top; background-image:url(../images/btn_bgSubNavibar.jpg); background-repeat:repeat-x; 
+			width:120px; height:20px; cursor:hand; padding-right:7px; text-align:right;}
+.logo{vertical-align:middle; background-image:url(../images/logo.jpg); background-repeat:no-repeat; 
+	  height:49px; padding-left:4px; text-align:left; cursor:hand;}
+.divider{font-family:Tahoma, Arial, Verdana; font-size:9px; font-weight:normal; color:#4C7D94; text-align:left; vertical-align:top;}
+.tabPad{padding:9px; text-align:left;}
+.tabTwoPad{padding:2px;}
+
+/****** Searchbar Class********/
+.searchBar{vertical-align:middle; background-color:#D7E9A1; height:30px; text-align:left;}
+
+
+/****** Center table Class********/			 
+.cenTablePad{padding-left:8px; padding-top:8px; padding-bottom:8px; padding-right:0px; text-align:left; vertical-align:top; background-color:#FFFFFF;}
+
+
+/****** Panel Class********/
+.lpClass{vertical-align:top; background-color:#FFFFFF; text-align:left; border-right:1px solid #628EBC;}
+.rpClass{padding-left:8px; vertical-align:top; background-color:#FFFFFF; text-align:left; border-left:1px solid #628EBC;}
+.centerClass{vertical-align:top; background-color:#FFFFFF; text-align:left; width:407px; }
+.smallText{font-family: Tahoma, Arial, Verdana; font-size: 10px; font-weight:normal;}
+.linkBg{font-family: Tahoma, Arial, Verdana; font-size: 10px; font-weight:normal; padding-left:8px; 
+		background-color:#EBEEF1; height:17px;}		
+
+
+/****** Sample Cart Class********/
+.sampleCart{ padding:8px; background-color:#F4F4DC; font-family:Tahoma, Arial, Verdana; font-size:10px;}
+
+
+
+/****** Login table Class********/
+.styleError{ font-family:Verdana, Arial, Tahoma; font-size:10px; font-weight:normal; color:#ff0000; border:1px solid #999;
+			  background-color:#FFFFCC; padding-left:25px; padding-right:5px;  background-image:url(../images/warning.gif);
+			  background-position:3px;; background-repeat:no-repeat;}
+
+TABLE.tblInnerContainer { width:500px; text-decoration: none; margin-top:5px; font-family: Tahoma, Arial, Verdana; font-size: 11px; border: 0px solid #999;
+						color: #000000; background-color: #f6f6f6;}
+TABLE.formLayout { width:100%; text-decoration: none; font-family: Tahoma, Arial, Verdana; font-size: 11px; border: 0px solid #999;
+					color: #000000; padding:0px;}
+TABLE.tableInner { width:100%; text-decoration: none; font-family: Tahoma, Arial, Verdana; font-size: 11px; border: 0px solid #999;
+					color: #000000;  padding:0px;}
+TABLE.hiddenLayout { width:450px; text-decoration: none; font-family: Tahoma, Arial, Verdana; font-size: 11px; border: 1px solid #999;
+					color: #000000; background-color: #f6f6f6;}
+.tableLeft{  width: 195px; height: 20px; text-align: left; font-size: 11px; padding-left:8px; font-weight: normal; color:#333; 
+			 vertical-align:middle; border-bottom:1px solid #CCD9DD;}
+.tableTopAlign{  width: 195px; height: 25px; text-align: left; font-size: 11px; padding-left:8px; font-weight: normal; color:#333; 
+			 vertical-align:top; border-bottom:1px solid #CCD9DD;}
+.tableLeftTxtArea{  width: 195px; height: 20px; text-align: left; font-size: 11px; padding-left:8px; font-weight: normal; color:#333; 
+			 vertical-align:top; border-bottom:1px solid #CCD9DD;}
+.tableRight{ width: 285px; text-align: left; vertical-align:middle; padding-left:6px; border-bottom:1px solid #CCD9DD;}
+.tableSpan{  height: 20px; text-align: left; font-size: 11px; padding-left:8px; font-weight: normal; color:#333; 
+			 vertical-align:middle; border-bottom:1px solid #CCD9DD;}
+.tableSubSpan{  height: 20px; text-align: left; font-size: 11px; padding:5px; font-weight: normal; color:#333; 
+			   vertical-align:middle; border-bottom:1px solid #CCD9DD;}
+.tblMainHead{ background-color:#E8EBEE; text-align:right; padding-left:5px; border-bottom:1px solid #E4EBED; height:22px; 
+			  font-size: 11px; font-weight: bold; color:#333333; vertical-align:middle;}
+.tblDescrp{ background-color:#FFFFFF; text-align:left; padding:5px; color:#333;}
+.tblRowHead { background-color:#BBD0DF; text-align:left; border-bottom:1px solid #999; height:20px; font-size: 11px; 
+			  font-weight: bold; color:#333; padding-left:8px;}	
+.tblRowHeadTwo { background-color:#DAE4E7; text-align:Center; border-bottom:1px solid #999; height:20px; font-size: 11px; 
+			  font-weight: bold; color:#5F8192; padding-left:8px;}
+.featHead { background-image:url(../images/bgHead.jpg); background-repeat:repeat-x; text-align:left; height:37px; font-size: 11px; 
+			  font-weight: bold; color:#333; padding-left:8px; vertical-align:middle}
+.featHeadTwo { background-color:#F4F4DC; text-align:left; height:37px; font-size: 11px; font-weight: bold; color:#333; 
+			  padding-left:8px; vertical-align:middle}			  
+.catRow{ border-bottom:1px solid #929A82;}
+#chkEnc {  border-bottom:0px solid #CCD9DD; text-align:left; display:block; }
+#chrgCrd {  border-bottom:0px solid #CCD9DD; text-align:left; display:none; }
+
+/***********************************
+	Links CSS
+************************************/
+a.linkFooter {	font-size: 10px; font-weight: normal; font-family: Tahoma, Arial; text-decoration: underline; }
+a.linkFooter:link { color: #FFFFFF; }
+a.linkFooter:visited {	color: #FFFFFF; }
+a.linkFooter:hover { color: #FFFFFF; text-decoration: underline; text-transform: none; font-size: 10px; }
+a.linkFooter:active {	color: #FFFFFF; }
+
+a.linkOne {	font-size: 9px; font-weight: bold; font-family: verdana,Tahoma, Arial; text-decoration: none; }
+a.linkOne:link { color: #FF7800; }
+a.linkOne:visited {	color: #FF7800; }
+a.linkOne:hover { color: #FF7800; text-decoration: none; text-transform: none; font-size: 9px;  cursor:hand; }
+a.linkOne:active {	color: #FF7800; }
+
+a.linkTwo {	font-size: 9px; font-weight: bold; font-family: verdana, Tahoma, Arial; text-decoration: none; }
+a.linkTwo:link { color: #fff; }
+a.linkTwo:visited {	color: #fff; }
+a.linkTwo:hover { color: #fff; text-decoration: none; text-transform: none; font-size: 9px;  cursor:hand; }
+a.linkTwo:active {	color: #fff; }
+
+a.linkThree {	font-size: 9px; font-weight: bold; font-family: verdana, Tahoma, Arial; text-decoration: none; }
+a.linkThree:link { color: #000; }
+a.linkThree:visited { color: #000; }
+a.linkThree:hover { color: #000; text-decoration: none; text-transform: none; font-size: 9px;  cursor:hand; }
+a.linkThree:active { color: #000; }
+
+a.linkFour {	font-size: 10px; font-weight: bold; font-family: Tahoma, verdana, Arial; text-decoration: none; }
+a.linkFour:link { color: #C83737; }
+a.linkFour:visited { color: #C83737; }
+a.linkFour:hover { color: #C83737; text-decoration: none; text-transform: none; font-size: 10px;  cursor:hand; }
+a.linkFour:active { color: #C83737; }
+
+a.linkFive {	font-size: 11px; font-weight: normal; font-family: Tahoma, verdana, Arial; text-decoration: none; }
+a.linkFive:link { color: #2D5CAA; }
+a.linkFive:visited { color: #2D5CAA; }
+a.linkFive:hover { color: #003399; text-decoration: none; text-transform: none; font-size: 11px;  cursor:hand; }
+a.linkFive:active { color: #2D5CAA; }
+
+a.linkSix {	font-size: 11px; font-weight: bold; font-family: Tahoma, verdana, Arial; text-decoration: none; }
+a.linkSix:link { color: #84929F; }
+a.linkSix:visited { color: #84929F; }
+a.linkSix:hover { color: #84929F; text-decoration: none; text-transform: none; font-size: 11px;  cursor:hand; }
+a.linkSix:active { color: #84929F; }
+
+a.linkSeven {	font-size: 11px; font-weight: normal; font-family: Tahoma, verdana, Arial; text-decoration: none; }
+a.linkSeven:link { color: #84929F; }
+a.linkSeven:visited { color: #84929F; }
+a.linkSeven:hover { color: #84929F; text-decoration: none; text-transform: none; font-size: 11px;  cursor:hand; }
+a.linkSeven:active { color: #84929F; }
+
+a.linkMail {	font-size: 11px; font-weight: bold; font-family: Arial, verdana, Tahoma; text-decoration: underline; }
+a.linkMail:link { color: #003399; }
+a.linkMail:visited { color: #0066CC; font-size: 10px; font-weight: bold; font-family: Arial, verdana, Tahoma; text-decoration: underline; }
+a.linkMail:hover { color: #003399; font-weight: bold; text-decoration: underline; text-transform: none; font-size: 11px;  cursor:hand; }
+a.linkMail:active { color: #003399; }
+
+
+/***********************************
+	Form Elements CSS
+************************************/
+.gradBtn{	font-family:Tahoma;	color:#FFF;	font-size:11px;	font-weight:bold; background:url(../images/grad_02.jpg); cursor:hand;
+			height:20px; background-color:#33FFFF; border:1px solid #003366; }
+.oneBtn{	font-family:tahoma; color:#000; font-size:10px; font-weight:bold; background-color:#FFCC00; cursor:hand;
+			height:18px; border:1px outset #666; padding:0px; }
+.twoBtn{	font-family:tahoma; color:#fff; font-size:10px; font-weight:bold; background-color:#CC3300; cursor:hand;
+			height:18px; border:1px outset #666; padding:0px; }
+.gradTwoBtn{	font-family:verdana; color:#A3550F;	font-size:10px;	font-weight:bold; background:url(../images/btn_bgMain.jpg); cursor:hand;
+				height:20px; background-color:#FA8B11; border:1px solid #504F4F; }
+.textboxOne{ border:1px inset #999; font-size: 11px; font-family: Tahoma, Arial, Verdana; font-weight:normal; background-color: #FFFFFF; 
+			color: #000000; text-align:left; padding-left:2px; height:16px; }
+.selectboxOne{ border:1px inset #999; font-size: 11px; font-family: Tahoma, Arial, Verdana; font-weight:normal; background-color: #FFFFFF; 
+			color: #000000; text-align:left; width:auto; height:16px; }
+.textAreaOne{ border:1px inset #999; font-size: 11px; font-family: Tahoma, Arial, Verdana; font-weight:normal; background-color: #FFFFFF; 
+			color: #000000; text-align:left; width:200px;}
+				
+
+/***********************************
+	Footer CSS
+************************************/
+
+.footerBg{vertical-align:top; background-color:#fff; background-image:url(../images/bgFooter.jpg); background-repeat:repeat-x; 
+		 background-position:top; height:79px; text-align:left; border-top:1px solid #628EBC;}
+.footerLogo{vertical-align:top; background-image:url(../images/img_Footer.jpg); background-repeat:no-repeat;}		 
+.footerTextOne{font-family:Arial,Verdana, Tahoma; font-size:10px; font-weight:bold; color:#CD5050; text-align:left; padding-top:10px;}
+.disclaimer{font-family:Arial,Verdana, Tahoma; font-size:10px; font-weight:bold; color:#40668D; text-align:left; padding-right:10px;}
+
+/***********************************
+	Extras CSS
+************************************/
+.date { text-decoration: none; font-size: 9px; font-weight: bold; font-family: tahoma,verdana, Arial; color: #C45A5A; }
+.time{	/*background-color: #BD2821; */	background-image:url(image.jpg); text-align:right;	width:23px;	height:10px;
+		vertical-align:bottom;	color: #FFFFFF; font-size: 9px;	font-family: Arial;	font-weight: bold; 	border: 0px solid #BD2821; }	
+.asterisk{ color:#FF0000; font-family:tahoma; font-weight:bold;	font-size:10px; }
+
+<!-- TABS TWO STARTS -->
+
+.container{width:100%; border:1px solid #999; border-top:0px; border-bottom:0px;}
+.tabHighlight {background-color:#D9E9F6; filter:progid:DXImageTransform.Microsoft.Gradient
+	    (GradientType:0,StartColorStr:'#B7CDD9',EndColorStr:'#F6F6F6'); text-align:center; border-top:1px solid #999; 
+		width:80px; border-left:1px solid #999; border-right:1px solid #999; height:22px; cursor:text;}
+.tabLowlight{background-color:#E7E7E7; border-right:1px solid #999; border-top:1px solid #999; cursor:hand; 
+		width:80px; border-left:1px solid #999; border-bottom:1px solid #999; text-align:center; height:22px;}	
+.holderDivOne{border-right: 0px solid #999; border-top: 0px; border-left: 0px solid #999; border-bottom: 1px solid #999; 
+			 display: block; visibility: visible; padding:5px; }	
+.holderDivTwo{visibility:hidden; display:none; border-bottom:1px solid #999; border-top:0px; padding:5px;}
+.tabHead {font-family: Tahoma, Arial, Verdana; font-size: 11px; font-weight:bold}
+
+a.inactive:link {color: #000000; text-decoration: none; }
+a.inactive:visited {color: #000000; text-decoration: none; }
+a.active:link {color: #CC0000; text-decoration: none; cursor:text}
+a.active:visited {color: #CC0000; text-decoration: none; cursor:text}
+
+<!-- TABS TWO ENDS -->
+
+
+-->
+</style>
+

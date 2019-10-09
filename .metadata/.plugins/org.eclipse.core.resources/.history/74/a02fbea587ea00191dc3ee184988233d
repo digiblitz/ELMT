@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss>
+   <enterprise-beans>
+    <entity>
+        <ejb-name>HLCMetturDamEntityBean</ejb-name>
+        <local-jndi-name>HLCMetturDamEntityLocalHome</local-jndi-name>
+    </entity>
+    
+    <entity>
+        <ejb-name>HLCMetturDamEntityBeanRenewal</ejb-name>
+        <local-jndi-name>HLCMetturDamEntityLocalHomeRenewal</local-jndi-name>
+    </entity>
+    
+    <entity>
+        <ejb-name>HLCAccommodationDetailBean</ejb-name>
+        <local-jndi-name>HLCAccommodationDetailLocalHome</local-jndi-name>
+    </entity>
+    
+     <entity>
+        <ejb-name>HLCEventTypeBean</ejb-name>
+        <local-jndi-name>HLCEventTypeLocalHome</local-jndi-name>
+    </entity>
+    
+     <entity>
+        <ejb-name>HLCJudgeDetailBean</ejb-name>
+        <local-jndi-name>HLCJudgeDetailLocalHome</local-jndi-name>
+    </entity>
+    
+     <entity>
+        <ejb-name>HLCHorseDressageBean</ejb-name>
+        <local-jndi-name>HLCHorseDressageLocalHome</local-jndi-name>
+    </entity>
+    
+     <entity>
+        <ejb-name>HLCCrossCountryBean</ejb-name>
+        <local-jndi-name>HLCCrossCountryLocalHome</local-jndi-name>
+    </entity>
+    
+     <entity>
+        <ejb-name>HLCOtherDetailBean</ejb-name>
+        <local-jndi-name>HLCOtherDetailLocalHome</local-jndi-name>
+    </entity>
+    
+     <entity>
+        <ejb-name>HLCCogginsDetailBean</ejb-name>
+        <local-jndi-name>HLCCogginsDetailLocalHome</local-jndi-name>
+    </entity>
+    
+     <entity>
+        <ejb-name>HLCRefundRuleDetailBean</ejb-name>
+        <local-jndi-name>HLCRefundRuleDetailLocalHome</local-jndi-name>
+    </entity>
+    
+     <entity>
+        <ejb-name>HLCTentativeTimeScheduleBean</ejb-name>
+        <local-jndi-name>HLCTentativeTimeScheduleLocalHome</local-jndi-name>
+    </entity>
+    
+    
+     <entity>
+        <ejb-name>HLCPaymentBean</ejb-name>
+        <local-jndi-name>HLCPaymentLocalHome</local-jndi-name>
+    </entity>
+    
+     <session>
+        <ejb-name>HLCVaigaiSessionBean</ejb-name>
+        <jndi-name>ejb/HLCVaigaiSessionBean</jndi-name>
+    </session>
+    
+   </enterprise-beans>
+</jboss>

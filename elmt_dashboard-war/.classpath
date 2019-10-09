@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.6.0_23">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.generic.runtimeTarget/JBoss v4.2">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/elmt_dashboard-ejb"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTAccountsEJB"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTAdvertiseEJB"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTdBSystinetManage"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTEducationalActivityEJB"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTFormRegistration"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTHorseForm"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTHorseMembershipStatusMaster"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTHorseServiceTypeMaster"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTHorseStateful"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTHumanMember"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTInventory"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTMeetings"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTMembershipTypeMaster"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTMessage"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTMessageEJB"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTMRMAdmin"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTMRMAdminCountryMailPrice"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTMRMRefund"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTNonUSEAOrgMaster"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTOnlineEntries"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTPaymentBeanEJB"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTRoleManagementEJB"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTRoleManagementSubSystemEJB"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTSponsorEJB"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTStrategicViewManagament"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTUserManagement"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ELMTVaigaiEJB"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

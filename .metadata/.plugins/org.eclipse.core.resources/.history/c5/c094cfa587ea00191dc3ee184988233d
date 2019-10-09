@@ -1,0 +1,10 @@
+
+package com.lmsstock.stateless;
+
+
+/**
+ * This is the business interface for kaverystateless enterprise bean.
+ */
+public interface LMSStockstatelessRemoteBusiness {
+    
+}

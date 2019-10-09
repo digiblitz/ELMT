@@ -1,0 +1,51 @@
+// JavaScript Document
+
+//============================for Special char=============================
+
+function isnotAlpha(str){
+	
+	stringCheck="!@#$%^&*()_+|:;{}[]<>?/=-~.,'`;:1234567890"+"\\"+"\'";
+	f1=1;
+	for(j=0;j<str.length;j++){
+		if(stringCheck.indexOf(str.charAt(j))!=-1){
+			f1=0;
+		}
+	}
+	if(f1==0){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+function myvalidate(){
+//-------------------------------------First name------------------------------------------------------------
+
+	if(document.frmRoleMgtRolePrev.rolename.value==""){
+		alert(" Role Name cannot be empty ");
+		document.frmRoleMgtRolePrev.rolename.focus();
+		return false;
+	}
+	
+	if((document.frmRoleMgtRolePrev.rolename.value.length >80 )){
+		alert("Role Name exceeds the maximum of 80 characters"); 
+		document.frmRoleMgtRolePrev.rolename.focus();
+		return false;
+	}	
+
+
+if((document.frmRoleMgtRolePrev.rolename.value.indexOf('  ')!=-1)||(document.frmRoleMgtRolePrev.rolename.value.indexOf(' ')==0)){
+		alert("Enter Valid Role Name");
+		document.frmRoleMgtRolePrev.rolename.focus();
+		return false;
+	}
+	if(isnotAlpha(document.frmRoleMgtRolePrev.rolename.value)){
+		alert("Enter valid Role Name");
+		document.frmRoleMgtRolePrev.rolename.focus();
+		return false;
+	}
+	
+	
+
+return true;
+}

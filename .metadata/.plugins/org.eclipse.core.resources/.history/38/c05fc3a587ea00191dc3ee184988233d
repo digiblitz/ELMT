@@ -1,0 +1,22 @@
+
+package com.hlcmro.masters;
+
+import javax.ejb.EJBLocalObject;
+
+
+/**
+ * This is the local interface for JudgeDetail enterprise bean.
+ */
+public interface HLCJudgeDetailLocal extends EJBLocalObject, HLCJudgeDetailLocalBusiness {
+    // getters
+    public String getJudgeId();
+    public String getEventId();
+    public String getJudgeTypeId();
+    public String getJudgeNames();
+
+    //setter
+    public void setJudgeId(String judgeId);
+    public void setEventId(String eventId);
+    public void setJudgeTypeId(String judgeTypeId);
+    public void setJudgeNames(String judgeNames);
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss>
+   <enterprise-beans>
+     <entity>
+        <ejb-name>HLCPaymentProcessBean</ejb-name>
+        <local-jndi-name>HLCPaymentProcessBeanHomeJNDI</local-jndi-name>
+    </entity>
+    
+     <session>
+        <ejb-name>HLCPaymentSessionBean</ejb-name>
+        <jndi-name>ejb/HLCPaymentSessionBean</jndi-name>
+    </session>
+    
+   </enterprise-beans>
+</jboss>

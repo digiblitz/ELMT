@@ -1,0 +1,35 @@
+//--------------------------------------------------------------------------------
+//-------------function for doublespace validation -----------------------------
+
+function Dospace(str){
+if(str.indexOf("  ")!=-1 || str.indexOf(' ')==0)
+{return true;}
+else {return false;}
+}
+//----------------------------------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------------
+
+function myvalidate(){
+	var s = document.getElementById("refundType").value;
+	
+	if(s==""){
+		alert("Enter Refund Type Name");
+		document.getElementById("refundType").focus();
+		return false;
+	}
+	if(Dospace(s)){
+		alert("Enter valid Refund Type Name");
+		document.getElementById("refundType").focus();
+		return false;
+	}
+	if(s.length>80){
+		alert("Enter a valid Refund Type Name");
+		document.getElementById("refundType").focus();
+		return false;
+	}
+	return true;
+	
+}
+
+	

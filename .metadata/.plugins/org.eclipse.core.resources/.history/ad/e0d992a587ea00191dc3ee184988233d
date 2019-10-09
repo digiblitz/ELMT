@@ -1,0 +1,10 @@
+
+package com.hlcmrm.refund;
+
+
+/**
+ * This is the business interface for RefundDetails enterprise bean.
+ */
+public interface HLCRefundDetailsLocalBusiness {
+    
+}

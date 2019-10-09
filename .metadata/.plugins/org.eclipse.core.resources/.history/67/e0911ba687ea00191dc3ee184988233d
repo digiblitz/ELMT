@@ -1,0 +1,57 @@
+// JavaScript Document
+//========================= For ADVT Media===================
+
+function advMediaCheck(){
+	if(document.frmAdvMediaMaster.mediaName.value==""){
+		alert("Enter Media Name.");
+		document.frmAdvMediaMaster.mediaName.focus();
+		return false;
+	}
+
+	if(document.frmAdvMediaMaster.mediaName.value.length>80){
+		alert("Entered Media Name Should be Below 80 Characters.");
+		document.frmAdvMediaMaster.mediaName.focus();
+		return false;
+	}
+
+	
+	if(document.frmAdvMediaMaster.mediaName.value.indexOf(' ')==0){
+		alert("Enter Valid Media Name.");
+		document.frmAdvMediaMaster.mediaName.focus();
+		return false;
+	}
+
+	if(document.frmAdvMediaMaster.mediaName.value.indexOf('  ')!==-1){
+		alert("Enter Valid Media Name.");
+		document.frmAdvMediaMaster.mediaName.focus();
+		return false;
+	}
+
+	
+	if(document.frmAdvMediaMaster.mediaDescription.value==""){
+		alert("Enter Some Comments.");
+		document.frmAdvMediaMaster.mediaDescription.focus();
+		return false;
+	}
+
+	if(document.frmAdvMediaMaster.mediaDescription.value.indexOf(' ')==0){
+		alert("Enter Valid Comments.");
+		document.frmAdvMediaMaster.mediaDescription.focus();
+		return false;
+	}
+
+	if(document.frmAdvMediaMaster.mediaDescription.value.indexOf('  ')!==-1){
+		alert("Enter Valid Comments.");
+		document.frmAdvMediaMaster.mediaDescription.focus();
+		return false;
+	}
+	
+	if(document.frmAdvMediaMaster.mediaDescription.value.length >1024){
+		alert("Comments are out of range.");
+		document.frmAdvMediaMaster.mediaDescription.focus();
+		return false;
+	}
+
+	return true;
+}
+

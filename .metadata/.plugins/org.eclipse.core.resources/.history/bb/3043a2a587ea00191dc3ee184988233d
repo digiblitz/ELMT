@@ -1,0 +1,23 @@
+
+package com.hlcnonhlc.org.master;
+
+import com.hlcnonhlc.org.util.HLCNonHLCOrgMaster;
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.CreateException;
+import java.util.*;
+
+/**
+ * This is the local-home interface for ArabianSeaNonUSEAOrgMaster enterprise bean.
+ */
+public interface HLCArabianSeaNonHLCOrgMasterLocalHome extends EJBLocalHome {
+    
+    public HLCArabianSeaNonHLCOrgMasterLocal findByPrimaryKey(String key)  throws FinderException;
+        
+    public HLCArabianSeaNonHLCOrgMasterLocal create(HLCNonHLCOrgMaster objNonUsaOrg) throws CreateException;
+    
+    public Collection findByNonUSEAOrgName(String Name) throws FinderException;
+    
+    public Collection findByNonUSEAOrgDetails() throws FinderException;
+    
+}

@@ -1,0 +1,10 @@
+
+package com.hlcentitybean.ujanidam;
+
+
+/**
+ * This is the business interface for UjaniDamEntity enterprise bean.
+ */
+public interface HLCUjaniDamEntityLocalBusiness {
+    
+}

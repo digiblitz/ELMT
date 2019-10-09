@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  * * Copyright: 2019 digiBlitz Foundation
+   * * 
+   * * License: digiBlitz Public License 1.0 (DPL) 
+   * * Administered by digiBlitz Foundation. www.digiblitz.org/dpl/
+   * * 
+   * * Inventor: Suresh Kannan (Maya Suresh Kannan Balabisegan ) (www.sureshkannan.org)
+   * * 
+   * * Authors: Suresh Kannan (Maya Suresh Kannan Balabisegan )& digiBlitz.
+   * * 
+   * * "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software in accordance to the rules & restrictions of the digiBlitz Public License."
+-->
+<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:FunctionProcess.bpel="http://FunctionProcess.bpel" xmlns:FunctionProcessService.wsdl="http://FunctionProcessService.wsdl" xmlns:AdderService.wsdl="http://AdderService.wsdl" xmlns:MultiplierService.wsdl="http://MultiplierService.wsdl" xmlns:SquareService.wsdl="http://SquareService.wsdl">
+
+  <process name="FunctionProcess.bpel:FunctionProcess">
+    <process-events generate="all"/>
+    <provide partnerLink="FunctionProcessPartnerLink">
+      <service name="FunctionProcessService.wsdl:FunctionProcessServiceService" port="FunctionProcessServicePort"/>
+    </provide>
+    <invoke partnerLink="SquarePartnerLink">
+      <service name="SquareService.wsdl:SquareService" port="SquareServiceSOAP11port_http"/>
+    </invoke>
+    <invoke partnerLink="MultiplierPartnerLink">
+      <service name="MultiplierService.wsdl:MultiplierService" port="MultiplierServiceSOAP11port_http"/>
+    </invoke>
+    <invoke partnerLink="AdderPartnerLink">
+      <service name="AdderService.wsdl:AdderService" port="AdderServiceSOAP11port_http"/>
+    </invoke>
+  </process>
+
+</deploy>

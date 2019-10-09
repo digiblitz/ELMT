@@ -1,0 +1,10 @@
+
+package com.systinet.info;
+
+
+/**
+ * This is the business interface for kaverystateless enterprise bean.
+ */
+public interface SystinetStatelessRemoteBusiness {
+    
+}

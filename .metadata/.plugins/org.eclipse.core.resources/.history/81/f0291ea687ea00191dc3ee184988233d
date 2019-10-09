@@ -1,0 +1,139 @@
+//======================== Functions Used =============================
+
+function isnotSpecial(str){
+	stringSpecialCheck="!#$%^&*()+|<>?/=-~,;:][{}"+"\\"+"\'";
+	f4=1;
+	for(j=0;j<str.length;j++){
+		if(stringSpecialCheck.indexOf(str.charAt(j))!=-1){
+			f4=0;
+		}
+	}
+	if(f4==0){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+
+function isMessage(str){
+	message="abcdefghijklmnopqrstuvwxyz0123456789!#$%^&*()+|<>?/=-~,;:][{}"+"\\"+"\'";
+	fzip=1;
+	for(j=0;j<str.length;j++){
+		if(message.indexOf(str.charAt(j))!=-1){
+			fzip=0;
+		}
+	}
+	if(fzip==0){
+		return false;
+	}
+	else{
+		return true;
+	}
+}
+
+function composeOnCheck(){
+
+//======================== For To Address =============================
+
+	if(document.frmMsgCompose.txtEmail.value==""){
+		alert("To Address cannot be Empty");
+		document.frmMsgCompose.txtEmail.focus();
+		return false;
+	}
+
+	if(!(document.frmMsgCompose.txtEmail.value== "")){
+		var str=document.frmMsgCompose.txtEmail.value;
+		
+	while(str!=""){
+		var strmail1 = "";
+		if(str!="" && str.indexOf(';')!=-1){
+			strmail1 = str.substring(0,str.indexOf(';'));
+		}else if(str!="" && str.indexOf(';')==-1){
+			strmail1 = str.substring(0,str.length);
+		}
+		firstat1 = strmail1.indexOf("@");
+		lastat1 = strmail1.lastIndexOf("@");
+		strmain1=strmail1.substring(0,firstat1);
+		strsub1=strmail1.substring(firstat1,document.frmMsgCompose.txtEmail.value.length);
+		if(strmail1.length>120){
+			alert("To Address is out of range.");
+			document.frmMsgCompose.txtEmail.focus();
+			return false;
+		}
+		if(strmain1.indexOf('  ')!=-1 || firstat1==0 || strsub1.indexOf('  ')!=-1 ){
+			alert("Enter valid To Address.");
+			document.frmMsgCompose.txtEmail.focus();
+			return false;
+		}
+		if(isnotSpecial(strmain1) || isnotSpecial(strsub1)){
+			alert("Enter valid To Address.");
+			document.frmMsgCompose.txtEmail.focus();
+			return false;
+		}
+		k1=0;
+		strlen1=strsub1.length;
+		for(i1=0;i1<strlen1-1;i1++){
+			if(strsub1.charAt(i1)=='.'){
+				k1=k1+1;
+			}
+		}
+		if(k1>2){
+			alert("Enter valid To Address.");
+			document.frmMsgCompose.txtEmail.focus();
+			return false;
+		}
+		if(firstat1==-1 || lastat1==-1){
+			alert("Enter valid To Address.");
+			document.frmMsgCompose.txtEmail.focus();
+			return false;
+		}
+		if(Number(strmain1)){
+			alert("Enter valid To Address.");
+			document.frmMsgCompose.txtEmail.focus();
+			return false;
+		}
+		if(firstat1 != lastat1){
+			alert("Enter valid To Address.");
+			document.frmMsgCompose.txtEmail.focus();
+			return false;
+		}
+		firstdot1=strmail1.indexOf(".",firstat1);
+		lastdot1=strmail1.lastIndexOf(".");
+		if(firstdot1 == -1 || lastdot1 == -1 || lastdot1==strmail1.length-1){
+			alert("Enter valid To Address.");
+			document.frmMsgCompose.txtEmail.focus();
+			return false;
+		}
+		if(str!="" && str.indexOf(';')!=-1){
+			str = str.substring(1+(Number(str.indexOf(";"))));
+		}else if(str!="" && str.indexOf(';')==-1){
+			str = str.substring(1+(Number(str.length)));
+		}
+	}
+	}
+//============================== For Subject ==================================
+
+	if(!(document.frmMsgCompose.txtSubject.value=="")){
+		if(document.frmMsgCompose.txtSubject.value.length>255){
+			alert("Entered Subject Field is out of range.");
+			document.frmMsgCompose.txtSubject.focus();
+			return false;
+		}
+		if(isMessage(document.frmMsgCompose.txtSubject.value)){
+			alert("Enter valid Subject.");
+			document.frmMsgCompose.txtSubject.focus();
+			return false;
+		}
+	}
+//============================ For Message ====================================
+
+	if(!(document.frmMsgCompose.txtMessage.value=="")){
+		if(isMessage(document.frmMsgCompose.txtMessage.value)){
+			alert("Enter valid Message.");
+			document.frmMsgCompose.txtMessage.focus();
+			return false;
+		}
+	}
+	return true;
+}

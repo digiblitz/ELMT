@@ -1,0 +1,10 @@
+
+package com.hlcICP.user.reg;
+
+
+/**
+ * This is the business interface for MullaiyarDamICPUser enterprise bean.
+ */
+public interface HLCMullaiyarDamICPUserLocalBusiness {
+        
+}

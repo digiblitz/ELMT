@@ -1,0 +1,18 @@
+
+package com.hlcadv.advertise;
+
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import java.util.Collection;
+import javax.ejb.CreateException;
+
+
+/**
+ * This is the local-home interface for AdsDetail enterprise bean.
+ */
+public interface HLCAdsDetailLocalHome extends EJBLocalHome {
+    public HLCAdsDetailLocal findByPrimaryKey(String advDetailId)  throws FinderException;
+    public HLCAdsDetailLocal create(String advertisementId , String issueId, String advMapId, String dimensionId, String placement, String discount,String  amount) throws CreateException;
+    public Collection findByAll() throws FinderException;
+    public Collection findByAdsId(String advertisementId) throws FinderException; 
+}

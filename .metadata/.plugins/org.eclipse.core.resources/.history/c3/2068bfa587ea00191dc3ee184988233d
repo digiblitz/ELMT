@@ -1,0 +1,10 @@
+
+package com.hlcmro.masters;
+
+
+/**
+ * This is the business interface for AccommodationDetail enterprise bean.
+ */
+public interface HLCAccommodationDetailLocalBusiness {
+    
+}

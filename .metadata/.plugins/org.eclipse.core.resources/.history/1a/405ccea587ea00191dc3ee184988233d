@@ -1,0 +1,18 @@
+
+
+package com.systinet.info;
+
+import java.rmi.RemoteException;
+import javax.ejb.CreateException;
+import javax.ejb.EJBHome;
+
+
+/**
+ * This is the home interface for kaverystateless enterprise bean.
+ */
+public interface SystinetStatelessRemoteHome extends EJBHome {
+    
+    public SystinetStatelessRemote create()  throws CreateException, RemoteException;
+    
+    
+}

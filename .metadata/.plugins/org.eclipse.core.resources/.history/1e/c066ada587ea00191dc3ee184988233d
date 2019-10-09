@@ -1,0 +1,19 @@
+
+package com.hlcmrm.rolemanagement.masters;
+
+import javax.ejb.EJBLocalObject;
+
+
+/**
+ * This is the local interface for RoleMaster enterprise bean.
+ */
+public interface HLCRoleMasterLocal extends EJBLocalObject, HLCRoleMasterLocalBusiness {
+    public void setRoleId(String roleId);
+    public void setRoleName(String roleName);
+    public void setRolePath(String rolePath);
+    public void setActiveStatus(boolean activeStatus);
+    public String getRoleId();
+    public String getRoleName();
+    public String getRolePath();
+    public boolean isActiveStatus();
+}

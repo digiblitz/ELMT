@@ -1,0 +1,18 @@
+
+package com.hlcmrm.maps;
+
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.CreateException;
+import java.util.*;
+
+/**
+ * This is the local-home interface for MapUser enterprise bean.
+ */
+public interface HLCMapUserLocalHome extends EJBLocalHome {
+    public HLCMapUserLocal findByPrimaryKey(String userMapId)  throws FinderException;
+    public HLCMapUserLocal create(String userId, String mapPrivilegeId, String userPrivilegePath) throws CreateException;
+    public Collection findByAll() throws FinderException;
+    public Collection findByUserId(String userId) throws FinderException;
+    public Collection findByMapPrivilegeId(String mapPrivilegeId) throws FinderException;
+}

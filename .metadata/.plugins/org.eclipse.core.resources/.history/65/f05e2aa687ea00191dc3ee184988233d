@@ -1,0 +1,15 @@
+// JavaScript Document
+function myvalidate(){
+	s = document.getElementById("divisionEvent").value;
+	if(s.indexOf("  ")!=-1 || s.indexOf(' ')==0 || s==""){
+		alert("Enter an Event Division ");
+		document.getElementById("divisionEvent").focus();
+		return false;
+	}
+	if(s.length>80){
+		alert("Enter a valid Event Division");
+		document.getElementById("divisionEvent").focus();
+		return false;
+	}
+	return true;
+}

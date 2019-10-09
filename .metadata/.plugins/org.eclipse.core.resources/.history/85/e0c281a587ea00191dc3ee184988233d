@@ -1,0 +1,10 @@
+
+package com.hlchorse.service;
+
+
+/**
+ * This is the business interface for ArabianSeaHorseServiceType enterprise bean.
+ */
+public interface HLCArabianSeaHorseServiceTypeLocalBusiness {
+    
+}

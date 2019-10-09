@@ -1,0 +1,26 @@
+
+
+package com.StrgViewMgmnt;
+
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.upload.FormFile;
+
+public class StrategicViewManagementForm extends ActionForm
+{
+
+    public StrategicViewManagementForm()
+    {
+    }
+    private FormFile fileUpload;
+    public FormFile getFileUpload()
+    {
+        return fileUpload;
+    }
+
+    public void setFileUpload(FormFile fileUpload)
+    {
+        this.fileUpload = fileUpload;
+    }
+
+    
+}

@@ -1,0 +1,11 @@
+
+package com.hlcmsg.session;
+
+
+/**
+ * This is the business interface for MessageSession enterprise bean.
+ */
+public interface HLCMessageSessionRemoteBusiness {
+   
+    
+}

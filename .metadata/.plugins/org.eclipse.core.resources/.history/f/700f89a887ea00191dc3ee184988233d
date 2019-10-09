@@ -1,0 +1,19 @@
+<table width="165" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+	 <td width="165" height="400" valign="top">
+	 <div id="ddleftmenubar" class="markermenu" >
+<ul>
+<li><a href="roles.do?roleProcess=intCreateEntity" rel="ddsubmenu7">Create View</a></li>
+<li><a href="roles.do?roleProcess=entityList" rel="ddsubmenu8">Display View</a></li>
+<li><a href="roles.do?roleProcess=initeditEntity" rel="ddsubmenu7">Edit View</a></li>
+<li><a href="#" rel="ddsubmenu8">Delete View</a></li>
+
+</ul>
+  </div>
+<script type="text/javascript">
+ddlevelsmenu.setup("ddleftmenubar", "sidebar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
+     </script>
+  
+	 </td>
+	</tr>
+   </table>

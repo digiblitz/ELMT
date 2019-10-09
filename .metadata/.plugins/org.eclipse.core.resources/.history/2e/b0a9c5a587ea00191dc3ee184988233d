@@ -1,0 +1,20 @@
+
+package com.hlcmro.masters;
+
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.CreateException;
+import java.util.Collection;
+
+
+/**
+ * This is the local-home interface for RefundRuleDetail enterprise bean.
+ */
+public interface HLCRefundRuleDetailLocalHome extends EJBLocalHome {
+    public HLCRefundRuleDetailLocal findByPrimaryKey(String refundId)  throws FinderException;
+    public HLCRefundRuleDetailLocal create(String eventId,String refundMapId,String amount) throws CreateException;
+    public Collection findByAll() throws FinderException;
+    public Collection findByEventId(String eventId) throws FinderException;
+    public Collection findByEventId1(String eventId) throws FinderException;
+    
+}

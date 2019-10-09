@@ -1,0 +1,22 @@
+
+package com.hlcmsg.distribution;
+
+import com.hlcmsg.util.HLCMsgDistributionListMaster;
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.CreateException;
+import java.util.*;
+
+/**
+ * This is the local-home interface for MessagedistributionEntity enterprise bean.
+ */
+public interface HLCMessagedistributionEntityLocalHome extends EJBLocalHome {
+    
+    public HLCMessagedistributionEntityLocal findByPrimaryKey(String key)  throws FinderException;
+    
+    public HLCMessagedistributionEntityLocal create(HLCMsgDistributionListMaster objMsgDist) throws CreateException;
+    
+    public Collection findByDistribitionListName(String listName) throws FinderException;
+    
+    
+}

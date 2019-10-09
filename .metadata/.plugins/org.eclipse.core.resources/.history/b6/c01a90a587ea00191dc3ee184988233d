@@ -1,0 +1,10 @@
+
+package com.hlccountry.mail.price;
+
+
+/**
+ * This is the business interface for ArabianSeaCountryMailPrice enterprise bean.
+ */
+public interface HLCArabianSeaCountryMailPriceLocalBusiness {
+    
+}

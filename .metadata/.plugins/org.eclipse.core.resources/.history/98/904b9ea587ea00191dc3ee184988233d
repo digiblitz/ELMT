@@ -1,0 +1,24 @@
+
+package com.hlcmsg.entity;
+
+import com.hlcmsg.util.HLCMsgContactListMaster;
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.CreateException;
+import java.util.*;
+
+/**
+ * This is the local-home interface for MessagingEntity enterprise bean.
+ */
+public interface HLCMessagingEntityLocalHome extends EJBLocalHome {
+    
+    public HLCMessagingEntityLocal create(HLCMsgContactListMaster ObjMsgList) throws CreateException;
+    
+    public HLCMessagingEntityLocal findByPrimaryKey(String key)  throws FinderException;
+    
+    public Collection findByContactListId(String userId) throws FinderException;
+    
+    
+    
+    
+}

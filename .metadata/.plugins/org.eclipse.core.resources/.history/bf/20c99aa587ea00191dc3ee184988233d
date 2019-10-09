@@ -1,0 +1,38 @@
+package com.hlcmember.type.master;
+
+import javax.ejb.EJBLocalObject;
+import java.util.*;
+
+
+/**
+ * This is the local interface for ArabianSeaMembershipTypeMaster enterprise bean.
+ */
+public interface HLCArabianSeaMembershipTypeMasterLocal extends EJBLocalObject, HLCArabianSeaMembershipTypeMasterLocalBusiness {
+    public  void setMembershipTypeId(String membershipTypeId);
+    public  void setMembershipTypeName(String membershipTypeName);
+    public  void setUserTypeId(String userTypeId);
+    public  void setMembershipAmount(String membershipAmount);
+    //for bug starts
+    public void setDuration(String duration);
+    public void setActive_Status(int active_status);
+    //for bug ends
+    public  void setModifyDate(Date modifyDate);
+    public void setUserTypeName(String userTypeName);
+    public void setPeriodValue(String periodValue);
+    public void setTransaction_type_id(String transaction_type_id);
+    public void setMembership_year(int membershipYear);
+    public  String getMembershipTypeId();
+    public  String getMembershipTypeName();
+    public  String getUserTypeId();
+    public String getUserTypeName();
+    public  String getMembershipAmount();
+    //for bug starts
+    public String getDuration();
+    public  int getActive_Status();
+    //for bug ends
+    public  Date getModifyDate();
+    public String getPeriodValue();
+    public String getTransaction_type_id();
+    public int getMembership_year();
+
+}

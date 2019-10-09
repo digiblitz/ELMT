@@ -1,0 +1,10 @@
+
+package com.hlcspnr.sponsor;
+
+
+/**
+ * This is the business interface for KrishnaRajaSaragEntity enterprise bean.
+ */
+public interface HLCKrishnaRajaSaragEntityLocalBusiness {
+    
+}

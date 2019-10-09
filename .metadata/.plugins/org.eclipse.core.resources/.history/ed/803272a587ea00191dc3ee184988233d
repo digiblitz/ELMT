@@ -1,0 +1,10 @@
+
+package com.hlcadv.masters;
+
+
+/**
+ * This is the business interface for IssueMaster enterprise bean.
+ */
+public interface HLCIssueMasterLocalBusiness {
+    
+}

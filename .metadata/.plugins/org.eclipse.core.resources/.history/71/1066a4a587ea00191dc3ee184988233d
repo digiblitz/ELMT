@@ -1,0 +1,13 @@
+
+package com.hlcentitybean.ujanidam;
+
+import javax.ejb.EJBLocalObject;
+
+
+/**
+ * This is the local interface for UjaniDamEntity enterprise bean.
+ */
+public interface HLCUjaniDamEntityLocal extends EJBLocalObject, HLCUjaniDamEntityLocalBusiness {
+    
+    
+}

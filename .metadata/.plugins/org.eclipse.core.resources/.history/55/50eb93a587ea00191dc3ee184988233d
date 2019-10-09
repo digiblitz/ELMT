@@ -1,0 +1,17 @@
+
+package com.hlcmrm.statless;
+
+import java.rmi.RemoteException;
+import javax.ejb.CreateException;
+import javax.ejb.EJBHome;
+
+
+/**
+ * This is the home interface for RefundSession enterprise bean.
+ */
+public interface HLCRefundSessionRemoteHome extends EJBHome {
+    
+    HLCRefundSessionRemote create()  throws CreateException, RemoteException;
+    
+    
+}

@@ -1,0 +1,18 @@
+
+package com.hlcmrm.rolemanagement.masters;
+
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.CreateException;
+import java.util.*;
+
+
+/**
+ * This is the local-home interface for RoleMaster enterprise bean.
+ */
+public interface HLCRoleMasterLocalHome extends EJBLocalHome {
+    public HLCRoleMasterLocal findByPrimaryKey(String roleId)  throws FinderException;
+    public HLCRoleMasterLocal create(String roleName, String rolePath) throws CreateException;
+    public Collection findByAll() throws FinderException;
+    public Collection findByRoleName(String roleName) throws FinderException;    
+}

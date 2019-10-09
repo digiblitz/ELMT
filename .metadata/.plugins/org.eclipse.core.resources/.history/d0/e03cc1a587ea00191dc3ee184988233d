@@ -1,0 +1,20 @@
+
+package com.hlcmro.masters;
+
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
+import javax.ejb.CreateException;
+import java.util.Collection;
+
+
+/**
+ * This is the local-home interface for CrossCountry enterprise bean.
+ */
+public interface HLCCrossCountryLocalHome extends EJBLocalHome {
+    public HLCCrossCountryLocal findByPrimaryKey(String accommodationId)  throws FinderException;
+    public HLCCrossCountryLocal create(String eventId , String division,
+	               String length,String speed,String courseDescription,String addInformation) throws CreateException;
+    public Collection findByAll() throws FinderException;
+    public Collection findByEventId(String eventId) throws FinderException;
+    
+}

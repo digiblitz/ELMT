@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+ <HEAD>
+  <TITLE> eBlitz BPEL Engine Developers Guide </TITLE>
+ </HEAD>
+    <body bgcolor= "#ffffff">
+    
+	 <table width="1345">
+	   <tr><td width="1349" height="121" background="newHeaderGradBPEL.gif" > 
+	   <p>&nbsp;</p>
+    </td></tr>
+<tr><td height="426">
+  <p><strong>eBlitz BPEL Engine </strong>executes business processes written following the <a href="http://ode.apache.org/ws-bpel-20.html" title="WS-BPEL 2.0">WS-BPEL</a> standard. It talks to web services, sending and receiving messages as described by the process definition.</p>
+  <p><strong>WS-BPEL</strong> is an XML-based language defining several constructs to write  business processes. It defines a set of basic control structures like  conditions or loops as well as elements to invoke web services and  receive messages from services. It relies on WSDL to express web  services interfaces. Message structures can be manipulated, assigning  parts or the whole of them to variables that can in turn be used to  send other messages.</p>
+  <p><strong><u>Manual : </u></strong></p>
+  <p>This document is intended for those of you want an in-depth look into eBlitz BPEL Engine.<br>
+   </p>
+ 
+  <UL> 
+                        
+	<LI><A href="arch.html" title="Architectural Overview"><strong>Architectural Overview</strong></A></LI>
+	<LI><A href="http://ws.apache.org/axis2/" rel="nofollow">Apache Axis2 </A>: Web service stack Apache Axis2 is a core engine for Web services. It is a complete re-design and re-write of the widely used Apache Axis SOAP stack. Implementations of Axis2 are available in Java and C.
+
+        Axis2 not only provides the capability to add Web services interfaces to Web applications, but can also function as a standalone server application.</LI>
+    <LI><A href="http://www.soapui.org/" rel="nofollow">SoapUI</A>: Free and open source desktop application for inspecting, invoking, developing, simulating/mocking and functional/load/compliance testing of web services.</LI>
+    <LI><A href="http://www.eclipse.org/bpel/" rel="nofollow">Eclipse BPEL designer </A> :The designer plugins provide the capability to design the BPEL processes and deploy the same to the ODE server.</LI>
+    </UL>
+	</td>
+</tr></table>
+ </BODY>
+</HTML>

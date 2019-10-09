@@ -1,0 +1,10 @@
+
+package com.hlcmeeting.session;
+
+
+/**
+ * This is the business interface for VaigaiSession enterprise bean.
+ */
+public interface HLCVaigaiSessionRemoteBusiness {
+    
+}

@@ -1,0 +1,17 @@
+
+package com.hlccountry.mail.stateless;
+
+import java.rmi.RemoteException;
+import javax.ejb.CreateException;
+import javax.ejb.EJBHome;
+
+
+/**
+ * This is the home interface for KaveryCountryMailPriceSeaaion enterprise bean.
+ */
+public interface HLCKaveryCountryMailPriceSeaaionRemoteHome extends EJBHome {
+    
+   public HLCKaveryCountryMailPriceSeaaionRemote create()  throws CreateException, RemoteException;
+    
+    
+}

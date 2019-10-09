@@ -1,0 +1,18 @@
+
+package com.hlcadv.masters;
+
+import javax.ejb.EJBLocalObject;
+import java.util.Collection;
+
+/**
+ * This is the local interface for Dimension enterprise bean.
+ */
+public interface HLCDimensionLocal extends EJBLocalObject, HLCDimensionLocalBusiness {
+    public Collection getDimension();
+    public void setDimensionTypeId(String dimensionTypeId);
+    public void setDimensionTypeName(String dimensionTypeName);
+    public void setActiveStatus(boolean activeStatus);
+    public String getDimensionTypeId();
+    public String getDimensionTypeName();
+    public boolean isActiveStatus();
+}

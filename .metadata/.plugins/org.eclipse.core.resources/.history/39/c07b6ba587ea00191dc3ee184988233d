@@ -1,0 +1,29 @@
+
+
+package com.hlcadv.advertise;
+
+import com.hlccommon.util.HLCAdvertiseDetVO;
+import javax.ejb.EJBLocalObject;
+
+/**
+ * This is the local interface for AdsDetail enterprise bean.
+ */
+public interface HLCAdsDetailLocal extends EJBLocalObject, HLCAdsDetailLocalBusiness {
+    public HLCAdvertiseDetVO getAdvertiseDetVO();
+    public void setAdvDetailId(String advDetailId);
+    public void setAdvertisementId(String advertisementId);
+    public void setIssueId(String issueId);
+    public void setAdvMapId(String advMapId);
+    public void setDimensionId(String dimensionId);
+    public void setPlacement(String placement);
+    public void setDiscount(String discount);
+    public void setAmount(String amount);
+    public String getAdvDetailId();
+    public String getAdvertisementId();
+    public String getIssueId();
+    public String getAdvMapId();
+    public String getDimensionId();
+    public String getPlacement();
+    public String getDiscount();
+    public String getAmount();
+}
